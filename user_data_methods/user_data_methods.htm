@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="06 4, 2002 10:17:27 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>User Data Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Data Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > User Data Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>User Data</h1>
+<p>The Rhino SDK allows plug-in developers to store custom data inside 
+ of Rhino's 3DM file. &#160;This data is referred to as <span style="font-style: italic;"><i>User 
+ Data</i></span>. &#160;There are two types of user data:</p>
+<ol type="1">
+	<li class="p"><p>Document user data - custom data that is stored at 
+	 the document level of the 3DM file.</p></li>
+	<li class="p"><p>Object user data - custom data that is attached to 
+	 either an object's geometry or an object's attributes.</p></li>
+</ol>
+<p><span style="font-weight: bold;"><b>Important</b></span>. When storing custom 
+ data on an object, the data can be stored on either the object's geometry 
+ (e.g. curve, surfaces, etc), or on the object's attributes. An object's 
+ attributes maintain it's layer, color and other non-geometric properties. 
+ The difference between the two storage methods is that adding or modifying 
+ user data that is located on an object's geometry will cause Rhino to 
+ place a copy of the object on the Undo stack. Thus, if you are working 
+ with large geometric object or lots of user data, it is more efficient 
+ to store object user data on an object's attributes.</p>
+<p>RhinoScript supports both document user data and object user data. &#160;The 
+ RhinoScript user data object organizes custom information similar to that 
+ of a Windows-style initialization (INI) file. &#160;For example:</p>
+<p>&#160;</p>
+<p class="Code">[Section1]</p>
+<p class="Code">Entry1 = String1</p>
+<p class="Code">Entry2 = String2</p>
+<p class="Code">...</p>
+<p class="Code">[Section2]</p>
+<p class="Code">Entry1 = String1</p>
+<p class="Code">Entry2 = String2</p>
+<p class="Code">...</p>
+<p>&#160;</p>
+<p>If you find this data structure is too limiting, you might consider 
+ creating a plug-in, using the Rhino SDK. &#160;Also, RhinoScript's user 
+ data object only stores string values for VBScript string can be easily 
+ converted from one data type to another.</p>
+<h1>User Text Methods</h1>
+<p>Rhino provides a standardized mechanism for users, script writers, and 
+ plug-in developers to store and retrieve simple text information on an 
+ object and in the document. This mechanism called <span style="font-style: italic;"><i>User 
+ Text</i></span>.</p>
+<p>Unlike RhinoScript's User Data methods, which stores data as Section/Entry/String, 
+ Rhino stores User Text key/value pairs.</p>
+<p>Rhino supports this method of storing object data with its <span style="font-weight: bold;"><b>GetUserText, 
+ SetUserText, GetDocumentUserText and SetDocumentUserText</b></span> commands. 
+ RhinoScript supports this mechanism with the <a href="getusertext.htm">GetUserText</a>, 
+ <a href="setusertext.htm">SetUserText</a>, <a href="getdocumentusertext.htm">GetDocumentUserText</a>, 
+ and <a href="setdocumentusertext.htm">SetDocumentUserText</a> methods. 
+ User text can be stored on layers by using the <a href="../layer_methods/getlayerusertext.htm">GetLayerUserText</a> 
+ and <a href="../layer_methods/setlayerusertext.htm">SetLayerUserText</a> 
+ methods. User text can be stored on groups using the <a href="../group_methods/getgroupusertext.htm">GetGroupUserText</a> 
+ and <a href="../group_methods/setgroupusertext.htm">SetGroupUserText</a> 
+ methods.</p>
+<h1>Runtime Data</h1>
+<p>When you declare a variable within a procedure, the variable can only 
+ be accessed within that procedure. When the procedure exits, the variable 
+ is destroyed. These variables are called <span style="font-style: italic;"><i>local 
+ variables</i></span>.</p>
+<p>If you declare a variable outside a procedure, all procedures can access 
+ it. These variables are called <span style="font-style: italic;"><i>global 
+ variables</i></span>. The lifetime of these variables starts when they are 
+ declared, and ends when Rhino is closed. Note, if the <span style="font-style: italic;"><i><a href="../introduction/scripting_options.htm">Reinitialize script engine 
+ when opening new models</a></i></span> option is enabled, all variables and 
+ procedures are destroyed when a new model is opened.</p>
+<p>RhinoScript maintains a runtime data dictionary that you can use to 
+ store data. Runtime data is similar to global variables in that it can 
+ be accessed from all procedures. But unlike global variables, the runtime 
+ data will not be destroyed if the script engine is reinitialized. Runtime 
+ data persists until Rhino is closed. Runtime data can be stored and retrieved 
+ using the <a href="getruntimedata.htm">GetRuntimeData</a> and <a href="setruntimedata.htm">SetRuntimeData</a> 
+ methods.</p>
+<h1>User Data Methods</h1>
+<table cellspacing="0" width="100%">
+	<col style="width: 19.879%;" />
+	<col style="width: 80.121%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Head">Method</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="attributedatacount.htm">AttributeDataCount</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the number of RhinoScript user data items stored on an object's 
+		 attributes.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="deleteattributedata.htm">DeleteAttributeData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Removes 
+		 RhinoScript user data stored on an object's attributes.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="deletedocumentdata.htm">DeleteDocumentData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Removes 
+		 RhinoScript user data stored in the current document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="deleteobjectdata.htm">DeleteObjectData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Removes 
+		 RhinoScript user data stored on an object's geometry.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="documentdatacount.htm">DocumentDataCount</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the number of RhinoScript user data items stored in the current 
+		 document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getattributedata.htm">GetAttributeData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 a RhinoScript user data item stored on an object's attributes.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getdocumentdata.htm">GetDocumentData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 a RhinoScript user data item stored in the current document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getdocumentusertext.htm">GetDocumentUserText</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 user text that is stored in the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-weight: normal;"><a href="../group_methods/getgroupusertext.htm">GetGroupUserText</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 user text that is stored on a group.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-weight: normal;"><a href="../layer_methods/getlayerusertext.htm">GetLayerUserText</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 user text that is stored on a layer.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getobjectdata.htm">GetObjectData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 a RhinoScript user data item stored on an object's geometry.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getruntimedata.htm">GetRuntimeData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Retrieves 
+		 data from RhinoScript's runtime data dictionary.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getusertext.htm">GetUserText</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 user text that is stored on an object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="isattributedata.htm">IsAttributeData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Verifies 
+		 that an object's attributes contains RhinoScript user data.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="isdocumentdata.htm">IsDocumentData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Verifies 
+		 that the current document contains RhinoScript user data.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="isdocumentusertext.htm">IsDocumentUserText</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Verifies 
+		 that the document contains user text.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="isobjectdata.htm">IsObjectData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Verifies 
+		 that an object's geometry contains RhinoScript user data.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="isusertext.htm">IsUserText</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Verifies 
+		 that an object contains user text.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="objectdatacount.htm">ObjectDataCount</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the number of RhinoScript user data items stored on an object's 
+		 geometry.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="runtimedatacount.htm">RuntimeDataCount</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the number of key/value pairs in RhinoScript's runtime data dictionary.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="setattributedata.htm">SetAttributeData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Adds 
+		 or sets a RhinoScript user data item stored on an object's attributes.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="setdocumentdata.htm">SetDocumentData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Adds 
+		 or sets a RhinoScript user data item stored in the current document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="setdocumentusertext.htm">SetDocumentUserText</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Sets 
+		 or removes user text stored in the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="../group_methods/setgroupusertext.htm">SetGroupUserText</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Sets 
+		 or removes user text stored on a group.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="../layer_methods/setlayerusertext.htm">SetLayerUserText</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Sets 
+		 or removes user text stored on a layer.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="setobjectdata.htm">SetObjectData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Adds 
+		 or sets a RhinoScript user data item stored on an object's geometry.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="setruntimedata.htm">SetRuntimeData</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Adds, 
+		 modifies, or removes data from RhinoScript's runtime data dictionary.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="setusertext.htm">SetUserText</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Sets 
+		 or removes user text stored on an object.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

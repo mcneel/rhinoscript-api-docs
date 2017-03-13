@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="06 5, 2002 4:26:15 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddNamedView</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nView Methods\nAddNamedView");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"view_methods.htm\">View Methods<\/a> > AddNamedView<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddNamedView</h1>
+<p>Adds a new named view to the document.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddNamedView (strName [, strView])</p>
+<h3>Parameters</h3>
+<table style="left: 0px; top: 152px;" cellspacing="0" width="100%">
+<col style="width: 7.783%;" />
+<col style="width: 92.217%;" />
+<tr style="height: 20px;" valign="top">
+<td style="width: 7.783%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strName</p>
+</td>
+<td style="width: 92.217%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The name of the new named view.</p>
+</td>
+</tr>
+<tr style="height: 20px;" valign="top">
+<td style="width: 7.783%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strView</p>
+</td>
+<td style="width: 92.217%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;String. &#160;The title or identifier of the view to save. &#160;If omitted, the current active view is saved.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table style="left: 0px; top: 152px;" cellspacing="0" width="100%">
+<col style="width: 8.424%;" />
+<col style="width: 91.576%;" />
+<tr style="height: 20px;" valign="top">
+<td style="width: 8.424%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String</p>
+</td>
+<td style="width: 91.576%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The name of the newly created named view if successful.</p>
+</td>
+</tr>
+<tr style="height: 20px;" valign="top">
+<td style="width: 8.424%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 91.576%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrViews, strView, strName</p>
+<p class="Code" style="margin-left: 12px;">arrViews = Rhino.ViewNames</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrViews) Then</p>
+<p class="Code" style="margin-left: 24px;">For Each strView In arrViews</p>
+<p class="Code" style="margin-left: 36px;">strName = strView &amp; "_view"</p>
+<p class="Code" style="margin-left: 36px;">Rhino.AddNamedView strName, strView</p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="code">Also See</h3>
+<p><a href="deletenamedview.htm">DeleteNamedView</a></p>
+<p><a href="namedviews.htm">NamedViews</a></p>
+<p><a href="restorenamedview.htm">RestoreNamedView</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+ <title>Rhino.rvb</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nRhino.rvb");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > Rhino.rvb<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>
+Rhino.rvb</h1>
+<p>
+Rhino.rvb is a sample RhinoScript file that included with Rhino. &#160;The file contains many constant declarations that are useful when using RhinoScript methods. &#160;The following is a code listing of the 
+Rhino.rvb file.</p>
+<h3>Example</h3>
+<p class="Code">Option Explicit</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' Appearance color constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhColorViewportBackground &#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhColorMajorGridLine &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhColorMinorGridLine &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhColorXAxisLine &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 3</p>
+<p class="Code">Public Const rhColorYAxisLine &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4</p>
+<p class="Code">Public Const rhColorSelectedObject &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 5</p>
+<p class="Code">Public Const rhColorLockedObject &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 6</p>
+<p class="Code">Public Const rhColorNewLayer &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 7</p>
+<p class="Code">Public Const rhColorFeedback &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 8</p>
+<p class="Code">Public Const rhColorTracking &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 9</p>
+<p class="Code">Public Const rhColorCrosshair &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 10</p>
+<p class="Code">Public Const rhColorText &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 11</p>
+<p class="Code">Public Const rhColorTextBackground &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 12</p>
+<p class="Code">Public Const rhColorTextHover &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 13</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' Units and precision constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhUnitNone &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhUnitMicrons &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhUnitMillimeters &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhUnitCentimeters &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 3</p>
+<p class="Code">Public Const rhUnitMeters &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4</p>
+<p class="Code">Public Const rhUnitKilometers &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 5</p>
+<p class="Code">Public Const rhUnitMicroInches &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 6</p>
+<p class="Code">Public Const rhUnitMils &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 7</p>
+<p class="Code">Public Const rhUnitInches &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 8</p>
+<p class="Code">Public Const rhUnitFeet &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 9</p>
+<p class="Code">Public Const rhUnitMiles &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 10</p>
+<p class="Code">Public Const rhUnitCustom &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 11</p>
+<p class="Code">Public Const rhUnitDisplayDecimal &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhUnitDisplayFractional &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhUnitDisplayFeetInches &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' Object type and material source constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhObjectAll &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhObjectPoint &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhObjectPointCloud &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhObjectCurve &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4</p>
+<p class="Code">Public Const rhObjectSurface &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 8</p>
+<p class="Code">Public Const rhObjectPolySurface &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 16</p>
+<p class="Code">Public Const rhObjectMesh &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 32</p>
+<p class="Code">Public Const rhObjectLayer &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 64</p>
+<p class="Code">Public Const rhObjectMaterial &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 128</p>
+<p class="Code">Public Const rhObjectLight &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 256</p>
+<p class="Code">Public Const rhObjectAnnotation &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 512</p>
+<p class="Code">Public Const rhObjectUserData &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1024</p>
+<p class="Code">Public Const rhObjectDefinition &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2048</p>
+<p class="Code">Public Const rhObjectReference &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4096</p>
+<p class="Code">Public Const rhObjectTextDot &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 8192</p>
+<p class="Code">Public Const rhObjectGrip &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 16384</p>
+<p class="Code">Public Const rhObjectScreenArrow &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 32768</p>
+<p class="Code">Public Const rhObjectMaterialByLayer &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhObjectMaterialByObject &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' MessageBeep constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhBeepSimple &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhBeepAsterisk &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhBeepExclamation &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhBeepHand &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 3</p>
+<p class="Code">Public Const rhBeepQuestion &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4</p>
+<p class="Code">Public Const rhBeepDefault &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 5</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' MessageBox constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhOKOnly &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhOKCancel &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhAbortRetryIgnore &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhYesNoCancel &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 3</p>
+<p class="Code">Public Const rhYesNo &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4</p>
+<p class="Code">Public Const rhRetryCancel &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 5</p>
+<p class="Code">Public Const rhCritical &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 16</p>
+<p class="Code">Public Const rhQuestion &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 32</p>
+<p class="Code">Public Const rhExclamation &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 48</p>
+<p class="Code">Public Const rhInformation &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 64</p>
+<p class="Code">Public Const rhDefaultButton1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhDefaultButton2 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 256</p>
+<p class="Code">Public Const rhDefaultButton3 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 512</p>
+<p class="Code">Public Const rhDefaultButton4 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 768</p>
+<p class="Code">Public Const rhApplicationModal &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhSystemModal &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4096</p>
+<p class="Code">Public Const rhOK &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhCancel &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhAbort &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 3</p>
+<p class="Code">Public Const rhRetry &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4</p>
+<p class="Code">Public Const rhIgnore &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 5</p>
+<p class="Code">Public Const rhYes &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 6</p>
+<p class="Code">Public Const rhNo &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 7</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' Render option constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhRenderAmbientLightColor &#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhRenderBackgroundColor &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhRenderAntialiasNone &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhRenderAntialiasNormal &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhRenderAntialiasBest &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhRenderShadows &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhRenderHiddenLights &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhRenderCurves &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4</p>
+<p class="Code">Public Const rhRenderAnnotations &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 8</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' GetRectangle and GetBox constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhRectangleModeAll &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhRectangleModeCorners &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhRectangleMode3Point &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhRectangleModeVertical &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 3</p>
+<p class="Code">Public Const rhRectangleModeCenter &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' Layer state constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhLayerNormal &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhLayerHidden &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhLayerLocked &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' View display and projection constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhDisplayModeWireframe &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhDisplayModeShaded &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhDisplayModeRenderPreview &#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhProjectionParallel &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhProjectionPerspective &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' Plug-in type constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhPlugInAll &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhPlugInRender &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhPlugInExport &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhPlugInImport &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4</p>
+<p class="Code">Public Const rhPlugInDigitizer &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 8</p>
+<p class="Code">Public Const rhPlugInUtility &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 16</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' Object snap mode constants</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Const rhOsnapModeNone &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 0</p>
+<p class="Code">Public Const rhOsnapModeNear &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1</p>
+<p class="Code">Public Const rhOsnapModeFocus &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 2</p>
+<p class="Code">Public Const rhOsnapModeCenter &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 4</p>
+<p class="Code">Public Const rhOsnapModeKnot &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 8</p>
+<p class="Code">Public Const rhOsnapModeQuadrant &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 16</p>
+<p class="Code">Public Const rhOsnapModeMidpoint &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 32</p>
+<p class="Code">Public Const rhOsnapModeIntersection &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 64</p>
+<p class="Code">Public Const rhOsnapModeEnd &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 128</p>
+<p class="Code">Public Const rhOsnapModePerpendicula &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 256</p>
+<p class="Code">Public Const rhOsnapModeTangent &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 512</p>
+<p class="Code">Public Const rhOsnapModePoint &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= 1024</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' Subroutine: &#160;Include</p>
+<p class="CodeComment">' Purpose: &#160;&#160;&#160;&#160;Includes, or loads, other RhinoScript files</p>
+<p class="CodeComment">' Argument: &#160;&#160;&#160;A script file name to include</p>
+<p class="CodeComment">' Example: &#160;&#160;&#160;&#160;Include "C:\Scripts\MyScriptFile.rvb"</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code">Public Function Include (strScriptName)</p>
+<p class="Code" style="margin-left: 24px;">Dim oFS, oFile</p>
+<p class="Code">&#160;&#160;Set oFS = CreateObject("Scripting.FileSystemObject")</p>
+<p class="Code">&#160;&#160;Set oFile = oFS.OpenTextFile(strScriptName)</p>
+<p class="Code">&#160;&#160;ExecuteGlobal oFile.ReadAll()</p>
+<p class="Code">&#160;&#160;oFile.Close</p>
+<p class="Code">&#160;&#160;Include = Null</p>
+<p class="Code">End Function</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

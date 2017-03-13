@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>VBScript Procedures</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("VBScript Fundamentals\nVBScript Procedures");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"vbscript_fundamentals.htm\">VBScript Fundamentals<\/a> > VBScript Procedures<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>VBScript Procedures</h1>
+<p>In VBScript, there are two kinds of procedures; the <span style="font-weight: bold;"><b>Sub</b></span> procedure and the <span style="font-weight: bold;"><b>Function</b></span> procedure.</p>
+<h2>Sub Procedures</h2>
+<p>A <span style="font-weight: bold;"><b>Sub</b></span> procedure is a series of VBScript statements (enclosed by <span style="font-weight: bold;"><b>Sub</b></span> and <span style="font-weight: bold;"><b>End Sub</b></span> statements) that perform actions but don't return a value. A <span style="font-weight: bold;"><b>Sub</b></span> procedure can take arguments (constants, variables, or expressions that are passed by a calling procedure). If a <span style="font-weight: bold;"><b>Sub</b></span> procedure has no arguments, its <span style="font-weight: bold;"><b>Sub</b></span> statement should include an empty set of parentheses ().</p>
+<p>The following <span style="font-weight: bold;"><b>Sub</b></span> procedure uses two intrinsic, or built-in, VBScript functions, <span style="font-weight: bold;"><b>MsgBox</b></span> and <span style="font-weight: bold;"><b>InputBox</b></span>, to prompt a user for information. It then displays the results of a calculation based on that information. The calculation is performed in a <span style="font-weight: bold;"><b>Function</b></span> procedure created using VBScript. The <span style="font-weight: bold;"><b>Function</b></span> procedure is shown after the following discussion.</p>
+<p class="Code" style="margin-left: 12px;">Sub ConvertTemp()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;temp = InputBox("Please enter the temperature in degrees F.", 1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox "The temperature is " &amp; Celsius(temp) &amp; " degrees C."</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h2>Function Procedures</h2>
+<p>A <span style="font-weight: bold;"><b>Function</b></span> procedure is a series of VBScript statements enclosed by the <span style="font-weight: bold;"><b>Function</b></span> and <span style="font-weight: bold;"><b>End Function</b></span> statements. A <span style="font-weight: bold;"><b>Function</b></span> procedure is similar to a <span style="font-weight: bold;"><b>Sub</b></span> procedure, but can also return a value. A <span style="font-weight: bold;"><b>Function</b></span> procedure can take arguments (constants, variables, or expressions that are passed to it by a calling procedure). If a <span style="font-weight: bold;"><b>Function</b></span> procedure has no arguments, its <span style="font-weight: bold;"><b>Function</b></span> statement should include an empty set of parentheses. A <span style="font-weight: bold;"><b>Function</b></span> returns a value by assigning a value to its name in one or more statements of the procedure. The return type of a <span style="font-weight: bold;"><b>Function</b></span> is always a <span style="font-weight: bold;"><b>Variant</b></span>.</p>
+<p>In the following example, the <span style="font-style: italic;"><i>Celsius</i></span> function calculates degrees Celsius from degrees Fahrenheit. When the function is called from the <span style="font-style: italic;"><i>ConvertTemp</i></span> <span style="font-weight: bold;"><b>Sub</b></span> procedure, a variable containing the argument value is passed to the function. The result of the calculation is returned to the calling procedure and displayed in a message box.</p>
+<p class="Code" style="margin-left: 12px;">Sub ConvertTemp()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;temp = InputBox("Please enter the temperature in degrees F.", 1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox "The temperature is " &amp; Celsius(temp) &amp; " degrees C."</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">Function Celsius(fDegrees)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Celsius = (fDegrees - 32) * 5 / 9</p>
+<p class="Code" style="margin-left: 12px;">End Function</p>
+<h2>Getting Data into and out of Procedures</h2>
+<p>Each piece of data is passed into your procedures using an argument. Arguments serve as placeholders for the data you want to pass into your procedure. You can name your arguments any valid variable name. When you create a procedure using either the <span style="font-weight: bold;"><b>Sub</b></span> statement or the <span style="font-weight: bold;"><b>Function</b></span> statement, parentheses must be included after the name of the procedure. Any arguments are placed inside these parentheses, separated by commas. For example, in the following example, fDegrees is a placeholder for the value being passed into the <span style="font-style: italic;"><i>Celsius</i></span> function for conversion.</p>
+<p class="Code" style="margin-left: 12px;">Function Celsius(fDegrees)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Celsius = (fDegrees - 32) * 5 / 9</p>
+<p class="Code" style="margin-left: 12px;">End Function</p>
+<p>To get data out of a procedure, you must use a <span style="font-weight: bold;"><b>Function</b></span>. Remember, a <span style="font-weight: bold;"><b>Function</b></span> procedure can return a value; a <span style="font-weight: bold;"><b>Sub</b></span> procedure cannot.</p>
+<h2>Using Sub and Function Procedures in Code</h2>
+<p>A <span style="font-weight: bold;"><b>Function</b></span> in your code must always be used on the right side of a variable assignment or in an expression. For example:</p>
+<p class="Code" style="margin-left: 12px;">Temp = Celsius(fDegrees)</p>
+<p>or</p>
+<p class="Code" style="margin-left: 12px;">MsgBox "The Celsius temperature is " &amp; Celsius(fDegrees) &amp; " degrees."</p>
+<p>To call a <span style="font-weight: bold;"><b>Sub</b></span> procedure from another procedure, type the name of the procedure along with values for any required arguments, each separated by a comma. The <span style="font-weight: bold;"><b>Call</b></span> statement is not required, but if you do use it, you must enclose any arguments in parentheses.</p>
+<p>The following example shows two calls to the <span style="font-style: italic;"><i>MyProc</i></span> procedure. One uses the <span style="font-weight: bold;"><b>Call</b></span> statement in the code; the other does not. Both do exactly the same thing.</p>
+<p class="Code" style="margin-left: 12px;">Call MyProc(firstarg, secondarg)</p>
+<p class="Code" style="margin-left: 12px;">MyProc firstarg, secondarg</p>
+<p>Notice that the parentheses are omitted in the call when the <span style="font-weight: bold;"><b>Call</b></span> statement is not used.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

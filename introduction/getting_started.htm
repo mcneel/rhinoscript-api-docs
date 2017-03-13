@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Getting Started</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Introduction\nGetting Started");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../introduction.htm\">Introduction<\/a> > Getting Started<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Getting Started</h1>
+<p>This tutorial shows you how to display a message box in Rhino that says 
+ &quot;Hello World&quot;. It covers the most basic concepts for editing, 
+ &#160;loading and running scripts.</p>
+<h2>The Complete Script</h2>
+<p class="Code">MsgBox &quot;Hello World&quot;</p>
+<h2>Test the Script</h2>
+<ul type="disc">
+	<li class="p"><p>Start Rhino</p></li>
+	<li class="p"><p>At the command prompt, type <span style="font-weight: bold;"><b>EditScript</b></span> 
+	 and press Enter.</p></li>
+	<li class="p"><p>The Edit Script dialog box appears.</p></li>
+	<li class="p"><p>In the script Code window, type</p></li>
+</ul>
+<p class="Code" style="margin-left: 48px;">MsgBox &quot;Hello World&quot;</p>
+<ul type="disc">
+	<li class="p"><p>Click the &quot;Run the script&quot; button.</p></li>
+	<li class="p"><p>The Edit Script dialog box disappears, and the message 
+	 below appears:</p></li>
+</ul>
+<p style="margin-left: 48px;"><img src="../images/hello.jpg" alt="hello.jpg" style="border: none;" width="154" height="154" border="0" /></p>
+<h2>The HelloWorld Subroutine</h2>
+<p>If you were writing a more complex script, and wanted to display &quot;Hello 
+ World&quot; at strategic points throughout the script, you could write 
+ this code every time you wanted the message to appear.</p>
+<p>But if you changed your mind and wanted it to say &quot;Howdy World&quot; 
+ instead, you'd have to search for all the places &quot;Hello World&quot; 
+ was used, and replace them.</p>
+<p>An easier way to solve this problem is to write a Subroutine (Sub for 
+ short). &#160;At several places throughout your script, you call the Sub. 
+ &#160;The Sub handles displaying the message, so you only have to change 
+ the message in one place.</p>
+<p>Here's what the subroutine looks like:</p>
+<p class="Code" style="margin-left: 12px;">Sub HelloWorld()</p>
+<p class="Code" style="margin-left: 24px;"><span style="margin-left: 24px;">MsgBox 
+ &quot;Hello World&quot;</span></p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p>To call this subroutine, simply type:</p>
+<p class="Code" style="margin-left: 12px;">HelloWorld</p>
+<h2>Testing HelloWorld</h2>
+<ul type="disc">
+	<li class="p"><p>At the command prompt, type <span style="font-weight: bold;"><b>EditScript</b></span> 
+	 and press Enter.</p></li>
+	<li class="p"><p>The Edit Script dialog box appears.</p></li>
+	<li class="p"><p>In the script Code window, type</p></li>
+</ul>
+<p class="Code" style="margin-left: 48px;">Sub HelloWorld()</p>
+<p class="Code" style="margin-left: 60px;">MsgBox &quot;Hello World&quot;</p>
+<p class="Code" style="margin-left: 48px;">End Sub</p>
+<ul type="disc">
+	<li class="p"><p>Click the Run button.</p></li>
+</ul>
+<p style="margin-left: 48px;">Nothing happened? That's because the RhinoScript 
+ defined the Subroutine but did not actually call it.</p>
+<ul type="disc">
+	<li class="p"><p>To call the subroutine, either add this line of code 
+	 and click Run.</p></li>
+</ul>
+<p class="Code" style="margin-left: 48px;">Sub HelloWorld()</p>
+<p class="Code" style="margin-left: 60px;">MsgBox &quot;Hello World&quot;</p>
+<p class="Code" style="margin-left: 48px;">End Sub</p>
+<p class="Code" style="margin-left: 48px;">HelloWorld</p>
+<h2>Saving HelloWorld</h2>
+<p>When you do more than write a couple lines of script, it becomes necessary 
+ to save the script to a file so that you can run the script without typing 
+ it every time.</p>
+<p>To save your script:</p>
+<ul type="disc">
+	<li class="p"><p>In the Edit Script dialog box, Click the Save button.</p></li>
+	<li class="p"><p>Save the file as &quot;Hello World.rvb&quot;.</p></li>
+</ul>
+<h2>Running HelloWorld.rvb</h2>
+<ul type="disc">
+	<li class="p"><p>At the Command prompt, type <span style="font-weight: bold;"><b>LoadScript</b></span> 
+	 and press Enter.</p></li>
+	<li class="p"><p>In the Load Scrip Filet dialog box, click Add...</p></li>
+	<li class="p"><p>Select &quot;Hello World.rvb&quot; and click Open.</p></li>
+	<li class="p"><p>In the Select Script File list, select &quot;Hello 
+	 World.rvb&quot;.</p></li>
+	<li class="p"><p>Click Load.</p></li>
+</ul>
+<p>Your script will run, and display the familiar &quot;Hello World&quot; 
+ dialog box.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

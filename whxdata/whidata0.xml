@@ -1,0 +1,433 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<indexdata>
+<key name="ACos" >
+  <topic name="ACos" url="math_methods/acos.htm" />
+</key>
+<key name="ACosH" >
+  <topic name="ACosH" url="math_methods/acosh.htm" />
+</key>
+<key name="AddAlias" >
+  <topic name="AddAlias" url="application_methods/addalias.htm" />
+</key>
+<key name="AddAlignedDimension" >
+  <topic name="AddAlignedDimension" url="dimension_methods/addaligneddimension.htm" />
+</key>
+<key name="AddArc" >
+  <topic name="AddArc" url="curve_methods/addarc.htm" />
+</key>
+<key name="AddArc3Pt" >
+  <topic name="AddArc3Pt" url="curve_methods/curve_addarc3pt.htm" />
+</key>
+<key name="AddArcPtTanPt" >
+  <topic name="AddArcPtTanPt" url="curve_methods/addarcpttanpt.htm" />
+</key>
+<key name="AddBlendCurve" >
+  <topic name="AddBlendCurve" url="curve_methods/addblendcurve.htm" />
+</key>
+<key name="AddBlock" >
+  <topic name="AddBlock" url="block_methods/addblock.htm" />
+</key>
+<key name="AddBox" >
+  <topic name="AddBox" url="surface_and_polysurface_methods/addbox.htm" />
+</key>
+<key name="AddCircle" >
+  <topic name="AddCircle" url="curve_methods/addcircle.htm" />
+</key>
+<key name="AddCircle3Pt" >
+  <topic name="AddCircle3Pt" url="curve_methods/addcircle3pt.htm" />
+</key>
+<key name="AddCirclePtTanPt" >
+  <topic name="AddCirclePtTanPt" url="curve_methods/addcirclepttanpt.htm" />
+</key>
+<key name="AddClippingPlane" >
+  <topic name="AddClippingPlane" url="geometry_methods/addclippingplane.htm" />
+</key>
+<key name="AddCone" >
+  <topic name="AddCone" url="surface_and_polysurface_methods/addcone.htm" />
+</key>
+<key name="AddCurve" >
+  <topic name="AddCurve" url="curve_methods/addcurve.htm" />
+</key>
+<key name="AddCutPlane" >
+  <topic name="AddCutPlane" url="surface_and_polysurface_methods/addcutplane.htm" />
+</key>
+<key name="AddCylinder" >
+  <topic name="AddCylinder" url="surface_and_polysurface_methods/addcylinder.htm" />
+</key>
+<key name="AddDimStyle" >
+  <topic name="AddDimStyle" url="dimension_methods/adddimstyle.htm" />
+</key>
+<key name="AddDirectionalLight" >
+  <topic name="AddDirectionalLight" url="light_methods/adddirectionallight.htm" />
+</key>
+<key name="AddEdgeSrf" >
+  <topic name="AddEdgeSrf" url="surface_and_polysurface_methods/addedgesrf.htm" />
+</key>
+<key name="AddEllipse" >
+  <topic name="AddEllipse" url="curve_methods/addellipse.htm" />
+</key>
+<key name="AddEllipse3Pt" >
+  <topic name="AddEllipse3Pt" url="curve_methods/addellipse3pt.htm" />
+</key>
+<key name="AddExtrusion" >
+  <topic name="AddExtrusion" url="surface_and_polysurface_methods/addextrusion.htm" />
+</key>
+<key name="AddFilletCurve" >
+  <topic name="AddFilletCurve" url="curve_methods/addfilletcurve.htm" />
+</key>
+<key name="AddGroup" >
+  <topic name="AddGroup" url="group_methods/addgroup.htm" />
+</key>
+<key name="AddHatch" >
+  <topic name="AddHatch" url="hatch_methods/addhatch.htm" />
+</key>
+<key name="AddHatches" >
+  <topic name="AddHatches" url="hatch_methods/addhatches.htm" />
+</key>
+<key name="AddHatchPatterns" >
+  <topic name="AddHatchPatterns" url="hatch_methods/addhatchpatterns.htm" />
+</key>
+<key name="AddInterpCrvOnSrf" >
+  <topic name="AddInterpCrvOnSrf" url="curve_methods/addinterpcrvonsrf.htm" />
+</key>
+<key name="AddInterpCrvOnSrfUV" >
+  <topic name="AddInterpCrvOnSrfUV" url="curve_methods/addinterpcrvonsrfuv.htm" />
+</key>
+<key name="AddInterpCurve" >
+  <topic name="AddInterpCurve" url="curve_methods/addinterpcurve.htm" />
+</key>
+<key name="AddInterpCurveEx" >
+  <topic name="AddInterpCurveEx" url="curve_methods/addinterpcurveex.htm" />
+</key>
+<key name="AddLayer" >
+  <topic name="AddLayer" url="layer_methods/addlayer.htm" />
+</key>
+<key name="AddLeader" >
+  <topic name="AddLeader" url="dimension_methods/addleader.htm" />
+</key>
+<key name="AddLine" >
+  <topic name="AddLine" url="curve_methods/addline.htm" />
+</key>
+<key name="AddLinearDimension" >
+  <topic name="AddLinearDimension" url="dimension_methods/addlineardimension.htm" />
+</key>
+<key name="AddLinearLight" >
+  <topic name="AddLinearLight" url="light_methods/addlinearlight.htm" />
+</key>
+<key name="AddLoftSrf" >
+  <topic name="AddLoftSrf" url="surface_and_polysurface_methods/addloftsurface.htm" />
+</key>
+<key name="AddMaterialToLayer" >
+  <topic name="AddMaterialToLayer" url="material_methods/addmaterialtolayer.htm" />
+</key>
+<key name="AddMaterialToObject" >
+  <topic name="AddMaterialToObject" url="material_methods/addmaterialtoobject.htm" />
+</key>
+<key name="AddMesh" >
+  <topic name="AddMesh" url="mesh_methods/addmesh.htm" />
+</key>
+<key name="AddNamedCPlane" >
+  <topic name="AddNamedCPlane" url="view_methods/addnamedcplane.htm" />
+</key>
+<key name="AddNamedView" >
+  <topic name="AddNamedView" url="view_methods/addnamedview.htm" />
+</key>
+<key name="AddNetworkSrf" >
+  <topic name="AddNetworkSrf" url="surface_and_polysurface_methods/addnetworksrf.htm" />
+</key>
+<key name="AddNetworkSrfEx" >
+  <topic name="AddNetworkSrfEx" url="surface_and_polysurface_methods/addnetworksrfex.htm" />
+</key>
+<key name="AddNurbsCurve" >
+  <topic name="AddNurbsCurve" url="curve_methods/addnurbscurve.htm" />
+</key>
+<key name="AddNurbsSurface" >
+  <topic name="AddNurbsSurface" url="surface_and_polysurface_methods/addnurbssurface.htm" />
+</key>
+<key name="AddObjectDisplayMode" >
+  <topic name="AddObjectDisplayMode" url="object_methods/addobjectdisplaymode.htm" />
+</key>
+<key name="AddObjectMesh" >
+  <topic name="AddObjectMesh" url="object_methods/addobjectmesh.htm" />
+</key>
+<key name="AddObjectsToGroup" >
+  <topic name="AddObjectsToGroup" url="group_methods/addobjectstogroup.htm" />
+</key>
+<key name="AddObjectToGroup" >
+  <topic name="AddObjectToGroup" url="group_methods/addobjecttogroup.htm" />
+</key>
+<key name="AddPatch" >
+  <topic name="AddPatch" url="surface_and_polysurface_methods/addpatch.htm" />
+</key>
+<key name="AddPictureFrame" >
+  <topic name="AddPictureFrame" url="geometry_methods/addpictureframe.htm" />
+</key>
+<key name="AddPipe" >
+  <topic name="AddPipe" url="surface_and_polysurface_methods/addpipe.htm" />
+</key>
+<key name="AddPlanarMesh" >
+  <topic name="AddPlanarMesh" url="mesh_methods/addplanarmesh.htm" />
+</key>
+<key name="AddPlanarSrf" >
+  <topic name="AddPlanarSrf" url="surface_and_polysurface_methods/addplanarsrf.htm" />
+</key>
+<key name="AddPlaneSurface" >
+  <topic name="AddPlaneSurface" url="surface_and_polysurface_methods/addplanesurface.htm" />
+</key>
+<key name="AddPoint" >
+  <topic name="AddPoint" url="geometry_methods/addpoint.htm" />
+</key>
+<key name="AddPointCloud" >
+  <topic name="AddPointCloud" url="geometry_methods/addpointcloud.htm" />
+</key>
+<key name="AddPointLight" >
+  <topic name="AddPointLight" url="light_methods/addpointlight.htm" />
+</key>
+<key name="AddPoints" >
+  <topic name="AddPoints" url="geometry_methods/addpoints.htm" />
+</key>
+<key name="AddPolygon" >
+  <topic name="AddPolygon" url="curve_methods/addpolygon.htm" />
+</key>
+<key name="AddPolyline" >
+  <topic name="AddPolyline" url="curve_methods/addpolyline.htm" />
+</key>
+<key name="AddRadialDimension" >
+  <topic name="AddRadialDimension" url="dimension_methods/addradialdimension.htm" />
+</key>
+<key name="AddRailRevSrf" >
+  <topic name="AddRailRevSrf" url="surface_and_polysurface_methods/addrailrevsrf.htm" />
+</key>
+<key name="AddRectangularLight" >
+  <topic name="AddRectangularLight" url="light_methods/addrectangularlight.htm" />
+</key>
+<key name="AddRevSrf" >
+  <topic name="AddRevSrf" url="surface_and_polysurface_methods/addrevsrf.htm" />
+</key>
+<key name="AddSearchPath" >
+  <topic name="AddSearchPath" url="application_methods/addsearchpath.htm" />
+</key>
+<key name="AddSphere" >
+  <topic name="AddSphere" url="surface_and_polysurface_methods/addsphere.htm" />
+</key>
+<key name="AddSpiral" >
+  <topic name="AddSpiral" url="curve_methods/addspiral.htm" />
+</key>
+<key name="AddSpiral2" >
+  <topic name="AddSpiral2" url="curve_methods/addspiral2.htm" />
+</key>
+<key name="AddSpotLight" >
+  <topic name="AddSpotLight" url="light_methods/addspotlight.htm" />
+</key>
+<key name="AddSrfContourCrvs" >
+  <topic name="AddSrfContourCrvs" url="surface_and_polysurface_methods/addsrfcontourcrvs.htm" />
+</key>
+<key name="AddSrfControlPtGrid" >
+  <topic name="AddSrfControlPtGrid" url="surface_and_polysurface_methods/addsrfcontrolptgrid.htm" />
+</key>
+<key name="AddSrfPt" >
+  <topic name="AddSrfPt" url="surface_and_polysurface_methods/addsrfpt.htm" />
+</key>
+<key name="AddSrfPtGrid" >
+  <topic name="AddSrfPtGrid" url="surface_and_polysurface_methods/addsrfptgrid.htm" />
+</key>
+<key name="AddSrfSectionCrvs" >
+  <topic name="AddSrfSectionCrvs" url="surface_and_polysurface_methods/addsrfsectioncrvs.htm" />
+</key>
+<key name="AddStarPolygon" >
+  <topic name="AddStarPolygon" url="curve_methods/addstarpolygon.htm" />
+</key>
+<key name="AddStartupScript" >
+  <topic name="AddStartupScript" url="application_methods/addstartupscript.htm" />
+</key>
+<key name="AddSubCrv" >
+  <topic name="AddSubCrv" url="curve_methods/addsubcrv.htm" />
+</key>
+<key name="AddSweep1" >
+  <topic name="AddSweep1" url="surface_and_polysurface_methods/addsweep1.htm" />
+</key>
+<key name="AddSweep2" >
+  <topic name="AddSweep2" url="surface_and_polysurface_methods/addsweep2.htm" />
+</key>
+<key name="AddText" >
+  <topic name="AddText" url="geometry_methods/addtext.htm" />
+</key>
+<key name="AddTextDot" >
+  <topic name="AddTextDot" url="geometry_methods/addtextdot.htm" />
+</key>
+<key name="AddThickPipe" >
+  <topic name="AddThickPipe" url="surface_and_polysurface_methods/addthickpipe.htm" />
+</key>
+<key name="AddToolbar" >
+  <topic name="AddToolbar" url="toolbar_methods/addtoolbar.htm" />
+</key>
+<key name="AddToolbarButton" >
+  <topic name="AddToolbarButton" url="toolbar_methods/addtoolbarbutton.htm" />
+</key>
+<key name="AddToolbarCollection" >
+  <topic name="AddToolbarCollection" url="toolbar_methods/addtoolbarcollection.htm" />
+</key>
+<key name="AddTorus" >
+  <topic name="AddTorus" url="surface_and_polysurface_methods/addtorus.htm" />
+</key>
+<key name="AddTruncatedCone" >
+  <topic name="AddTruncatedCone" url="surface_and_polysurface_methods/addtruncatedcone.htm" />
+</key>
+<key name="AliasCount" >
+  <topic name="AliasCount" url="application_methods/aliascount.htm" />
+</key>
+<key name="AliasMacro" >
+  <topic name="AliasMacro" url="application_methods/aliasmacro.htm" />
+</key>
+<key name="AliasNames" >
+  <topic name="AliasNames" url="application_methods/aliasnames.htm" />
+</key>
+<key name="AllObjects" >
+  <topic name="AllObjects" url="selection_methods/allobjects.htm" />
+</key>
+<key name="AllProcedures" >
+  <topic name="AllProcedures" url="utility_methods/allprocedures.htm" />
+</key>
+<key name="Angle" >
+  <topic name="Angle" url="math_methods/angle.htm" />
+</key>
+<key name="Angle2" >
+  <topic name="Angle2" url="math_methods/angle2.htm" />
+</key>
+<key name="AnnotateCurveEndPoints" >
+  <topic name="AnnotateCurveEndPoints" url="sample_scripts/annotatecurveendpoints.htm" />
+</key>
+<key name="AppearanceColor" >
+  <topic name="AppearanceColor" url="application_methods/appearancecolor.htm" />
+</key>
+<key name="AppearanceDisplay" >
+  <topic name="AppearanceDisplay" url="application_methods/appearancedisplay.htm" />
+</key>
+<key name="ArcAngle" >
+  <topic name="ArcAngle" url="curve_methods/arcangle.htm" />
+</key>
+<key name="ArcCenterPoint" >
+  <topic name="ArcCenterPoint" url="curve_methods/arccenterpoint.htm" />
+</key>
+<key name="ArcMidPoint" >
+  <topic name="ArcMidPoint" url="curve_methods/arcmidpoint.htm" />
+</key>
+<key name="ArcRadius" >
+  <topic name="ArcRadius" url="curve_methods/arcradius.htm" />
+</key>
+<key name="ArrayPointsOnSurface" >
+  <topic name="ArrayPointsOnSurface" url="sample_scripts/arraypointsonsurface.htm" />
+</key>
+<key name="Arrays" >
+  <topic name="Arrays of Points" url="rhinoscript_fundamentals/arrays_of_points.htm" />
+  <key name="Points" >
+    <topic name="Arrays of Points" url="rhinoscript_fundamentals/arrays_of_points.htm" />
+  </key>
+</key>
+<key name="ASin" >
+  <topic name="ASin" url="math_methods/asin.htm" />
+</key>
+<key name="ASinH" >
+  <topic name="ASinH" url="math_methods/asinh.htm" />
+</key>
+<key name="ATan2" >
+  <topic name="ATan2" url="math_methods/atan2.htm" />
+</key>
+<key name="ATanH" >
+  <topic name="ATanH" url="math_methods/atanh.htm" />
+</key>
+<key name="AttributeDataCount" >
+  <topic name="AttributeDataCount" url="user_data_methods/attributedatacount.htm" />
+</key>
+<key name="AutosaveFile" >
+  <topic name="AutosaveFile" url="application_methods/autosavefile.htm" />
+</key>
+<key name="AutosaveInterval" >
+  <topic name="AutosaveInterval" url="application_methods/autosaveinterval.htm" />
+</key>
+<key name="BackgroundBitmap" >
+  <topic name="BackgroundBitmap" url="view_methods/backgroundbitmap.htm" />
+</key>
+<key name="BendObject" >
+  <topic name="BendObject" url="object_methods/bendobject.htm" />
+</key>
+<key name="Block Methods" >
+  <topic name="Block Methods" url="block_methods/block_methods.htm" />
+</key>
+<key name="BlockContainerCount" >
+  <topic name="BlockContainerCount" url="block_methods/blockcontainercount.htm" />
+</key>
+<key name="BlockContainers" >
+  <topic name="BlockContainers" url="block_methods/blockcontainers.htm" />
+</key>
+<key name="BlockCount" >
+  <topic name="BlockCount" url="block_methods/blockcount.htm" />
+</key>
+<key name="BlockDescription" >
+  <topic name="BlockDescription" url="block_methods/blockdescription.htm" />
+</key>
+<key name="BlockInstanceCount" >
+  <topic name="BlockInstanceCount" url="block_methods/blockinstancecount.htm" />
+</key>
+<key name="BlockInstanceInsertPoint" >
+  <topic name="BlockInstanceInsertPoint" url="block_methods/blockinstanceinsertpoint.htm" />
+</key>
+<key name="BlockInstanceName" >
+  <topic name="BlockInstanceName" url="block_methods/blockinstancename.htm" />
+</key>
+<key name="BlockInstances" >
+  <topic name="BlockInstances" url="block_methods/blockinstances.htm" />
+</key>
+<key name="BlockInstanceXform" >
+  <topic name="BlockInstanceXform" url="block_methods/blockinstancexform.htm" />
+</key>
+<key name="BlockNames" >
+  <topic name="BlockNames" url="block_methods/blocknames.htm" />
+</key>
+<key name="BlockObjectCount" >
+  <topic name="BlockObjectCount" url="block_methods/blockobjectcount.htm" />
+</key>
+<key name="BlockObjects" >
+  <topic name="BlockObjects" url="block_methods/blockobjects.htm" />
+</key>
+<key name="BlockPath" >
+  <topic name="BlockPath" url="block_methods/blockpath.htm" />
+</key>
+<key name="BlockStatus" >
+  <topic name="BlockStatus" url="block_methods/blockstatus.htm" />
+</key>
+<key name="BlockURL" >
+  <topic name="BlockURL" url="block_methods/blockurl.htm" />
+</key>
+<key name="BlockURLTag" >
+  <topic name="BlockURLTag" url="block_methods/blockurltag.htm" />
+</key>
+<key name="BooleanDifference" >
+  <topic name="BooleanDifference" url="surface_and_polysurface_methods/booleandifference.htm" />
+</key>
+<key name="BooleanIntersection" >
+  <topic name="BooleanIntersection" url="surface_and_polysurface_methods/booleanintersection.htm" />
+</key>
+<key name="BooleanUnion" >
+  <topic name="BooleanUnion" url="surface_and_polysurface_methods/booleanunion.htm" />
+</key>
+<key name="BoundingBox" >
+  <topic name="BoundingBox" url="geometry_methods/boundingbox.htm" />
+</key>
+<key name="BoxMorphObject" >
+  <topic name="BoxMorphObject" url="object_methods/boxmorphobject.htm" />
+</key>
+<key name="BoxPoints" >
+  <topic name="BoxPoints" url="surface_and_polysurface_methods/boxpoints.htm" />
+</key>
+<key name="BrepClosestPoint" >
+  <topic name="BrepClosestPoint" url="surface_and_polysurface_methods/brepclosestpoint.htm" />
+</key>
+<key name="BrowseForFolder" >
+  <topic name="BrowseForFolder" url="user_interface_methods/browseforfolder.htm" />
+</key>
+<key name="BuildDate" >
+  <topic name="BuildDate" url="application_methods/builddate.htm" />
+</key>
+
+</indexdata>

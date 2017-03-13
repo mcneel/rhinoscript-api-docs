@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddInterpCrvOnSrf</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nAddInterpCrvOnSrf");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > AddInterpCrvOnSrf<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddInterpCrvOnSrf</h1>
+<p>Adds an interpolated curve object that lies on a specified surface. Note, this function will not create periodic curves, but it will create closed curves.</p>
+<h3>Syntax</h3>
+<p class="Code" style="font-style: normal;">Rhino.AddInterpCrvOnSrf (strObject, arrPoints)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 8.991%;" />
+<col style="width: 91.009%;" />
+<tr valign="top">
+<td style="width: 8.991%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: normal;">strObject</p>
+</td>
+<td style="width: 91.009%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The surface object's identifier.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.991%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: normal;">arrPoints</p>
+</td>
+<td style="width: 91.009%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array. &#160;An array of 3-D points that lie on the specified surface. The array must contain at least two points.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.834%;" />
+<col style="width: 90.166%;" />
+<tr valign="top">
+<td style="width: 9.834%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String</p>
+</td>
+<td style="width: 90.166%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The identifier of the new object if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.834%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 90.166%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Const rhObjectSurface = 8</p>
+<p class="Code" style="margin-left: 12px;">Dim strObject, arrPt1, arrPt2</p>
+<p class="Code" style="margin-left: 12px;">strObject = Rhino.GetObject("Select surface to draw curve on", rhObjectSurface)</p>
+<p class="Code" style="margin-left: 12px;">If VarType(strObject) = vbString Then</p>
+<p class="Code" style="margin-left: 24px;">arrPt1 = Rhino.GetPointOnSurface(strObject, "First point on surface")</p>
+<p class="Code" style="margin-left: 24px;">If IsArray(arrPt1) Then</p>
+<p class="Code" style="margin-left: 36px;">arrPt2 = Rhino.GetPointOnSurface(strObject, "Second point on surface")</p>
+<p class="Code" style="margin-left: 36px;">If IsArray(arrPt2) Then</p>
+<p class="Code" style="margin-left: 48px;">Rhino.AddInterpCrvOnSrf strObject, Array(arrPt1, arrPt2)</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="addcurve.htm">AddCurve</a></p>
+<p><a href="addinterpcurve.htm">AddInterpCurve</a></p>
+<p><a href="addinterpcrvonsrfuv.htm">AddInterpCrvOnSrfUV</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

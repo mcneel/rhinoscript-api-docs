@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>ShootRay</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSurface & Polysurface Methods\nShootRay");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"surface_methods.htm\">Surface & Polysurface Methods<\/a> > ShootRay<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>ShootRay</h1>
+<p>Shoots a ray at a collection of surfaces.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.ShootRay (strSurface, arrPoint, arrDirection [, intReflections 
+ [, blnObjects]])</p>
+<p class="Code">Rhino.ShootRay (arrSurfaces, arrPoint, arrDirection [, 
+ intReflections&#160;[, blnObjects]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 13.513%;" />
+	<col style="width: 86.487%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 13.513%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strSurface</p></td>
+		<td style="width: 86.487%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The identifier 
+		 of a reflecting surface and polysurface object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 13.513%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrSurfaces</p></td>
+		<td style="width: 86.487%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The identifiers 
+		 of one or more reflecting surface and polysurface objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 13.513%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPoint</p></td>
+		<td style="width: 86.487%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;A 3-D point 
+		 identifying the starting point of the ray.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 13.513%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrDirection</p></td>
+		<td style="width: 86.487%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;A 3-D vector 
+		 identifying the direction of the ray.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 13.513%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intReflections</p></td>
+		<td style="width: 86.487%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The maximum 
+		 number of times the ray will be reflected. &#160;The default is 
+		 10 reflections.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 13.513%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnObjects</p></td>
+		<td style="width: 86.487%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Boolean. &#160;If False 
+		 (Default), then a one-dimensional array of 3-D points of reflection 
+		 is returned if successful. In this case, the first element of 
+		 the array is the starting point of the ray, or <span style="font-style: italic;"><i>arrPoint</i></span>. 
+		 If True, then a two-dimensional array, with the first dimension 
+		 containing the reflection point and the second dimension containing 
+		 the identifier of the surface or polysurface that was hit at that 
+		 point, is returned if successful. In this case, the first row 
+		 of the array contains the starting point of the ray, or <span 
+		 style="font-style: italic;"><i>arrPoint, </i></span><span>in the first 
+		 dimension, and a null value in the second dimension.</span></p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 13.428%;" />
+	<col style="width: 86.572%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 13.428%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 86.572%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">See the comments regarding <span style="font-style: italic;"><i>blnObjects</i></span> 
+		 above.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 13.428%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 86.572%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub TestRayShooter</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim corners(7), 
+ box, dir, reflections</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;corners(0) = Array(0,0,0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;corners(1) = Array(10,0,0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;corners(2) = Array(10,10,0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;corners(3) = Array(0,10,0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;corners(4) = Array(0,0,10)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;corners(5) = Array(10,0,10)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;corners(6) = Array(10,10,10)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;corners(7) = Array(0,10,10)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;box = Rhino.AddBox(corners)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;dir = Rhino.VectorCreate(Array(10,7,7), 
+ corners(0))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;reflections = Rhino.ShootRay(box, 
+ corners(0), dir)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.AddPolyline 
+ reflections</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.AddPoints 
+ reflections</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3 class="Code">Also See</h3>
+<p><a href="ispolysurface.htm">IsPolysurface</a></p>
+<p><a href="issurface.htm">IsSurface</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

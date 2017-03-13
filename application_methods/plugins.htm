@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>PlugIns</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nApplication Methods\nPlugIns");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"application_methods.htm\">Application Methods<\/a> > PlugIns<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>PlugIns</h1>
+<p>Returns the names of all registered plug-ins.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.PlugIns ([intTypes [, intStatus]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.679%;" />
+	<col style="width: 90.321%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intTypes</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. The type or types 
+		 of plug-ins to return. &#160;Plug-in types can be added together 
+		 to filter several different kinds of plug-ins. &#160;If omitted, 
+		 all plug-in types are returned.</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 6.876%;" />
+			<col style="width: 93.124%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 6.876%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="width: 93.124%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 6.876%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 93.124%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">All plug-ins</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 6.876%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 93.124%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Render plug-ins</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 6.876%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 93.124%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">File export plug-ins</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 6.876%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">4</p></td>
+				<td style="width: 93.124%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">File import plug-ins</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 6.876%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">8</p></td>
+				<td style="width: 93.124%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Digitizer plug-ins</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 6.876%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">16</p></td>
+				<td style="width: 93.124%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Utility plug-ins</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intStatus</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The status, 
+		 either loaded or unloaded, of the plug-ins to return. &#160;If 
+		 omitted, both loaded and unloaded plug-ins are returned.</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 7.04%;" />
+			<col style="width: 92.96%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 7.04%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="width: 92.96%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.04%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 92.96%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Both loaded or unloaded plug-ins..</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.04%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 92.96%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Loaded plug-ins.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.04%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 92.96%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Unloaded plug-ins.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.756%;" />
+	<col style="width: 90.244%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">An array of plug-in names successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrPlugins, strPlugin</p>
+<p class="Code" style="margin-left: 12px;">arrPlugins = Rhino.PlugIns(0, 
+ 1)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrPlugins) Then</p>
+<p class="Code" style="margin-left: 24px;">For Each strPlugin In arrPlugins</p>
+<p class="Code" style="margin-left: 36px;">Rhino.Print strPlugin</p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="code">Also See</h3>
+<p><a href="enableplugin.htm">EnablePlugIn</a></p>
+<p><a href="isplugin.htm">IsPlugIn</a></p>
+<p><a href="pluginid.htm">PlugInId</a></p>
+<p><a href="pluginids.htm">PlugInIds</a></p>
+<p><a href="plugininfo.htm">PlugInInfo</a></p>
+<p><a href="pluginname.htm">PlugInName</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

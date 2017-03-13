@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>SetRuntimeData</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Data Methods\nSetRuntimeData");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"user_data_methods.htm\">User Data Methods<\/a> > SetRuntimeData<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>SetRuntimeData</h1>
+<p>Adds, modifies, or removes data from RhinoScript's <a href="user_data_methods.htm">runtime 
+ data dictionary</a>.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.SetRuntimeData (strKey, varValue)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 6.509%;" />
+	<col style="width: 93.491%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strKey</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;String. &#160;The key that identifies the element to be 
+		 returned.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">varValue</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Variant. &#160;The value to either add or set. &#160;Note, 
+		 if this value is Null or empty, the key will be removed.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 6.623%;" />
+	<col style="width: 93.377%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Bool</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">True 
+		 or False indicating success or failure.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">On 
+		 error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub MyCircle</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim arrPoint, dblRadius0, 
+ dblRadius1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrPoint = Rhino.GetPoint(&quot;Center 
+ point&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsNull(arrPoint) 
+ Then Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;dblRadius0 = Rhino.GetRuntimeData(&quot;Radius&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsNull(dblRadius0) 
+ Then dblRadius0 = 1.0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;dblRadius1 = Rhino.GetReal(&quot;Radius&quot;, 
+ dblRadius0, 0.1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsNull(dblRadius1) 
+ Then Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Call Rhino.AddCircle(arrPoint, 
+ dblRadius1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If dblRadius1 &lt;&gt; 
+ dblRadius0 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.SetRuntimeData(&quot;Radius&quot;, dblRadius1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3>Also See</h3>
+<p><a href="getruntimedata.htm">GetRuntimeData</a></p>
+<p><a href="runtimedatacount.htm">RuntimeDataCount</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

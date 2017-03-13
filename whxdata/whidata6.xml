@@ -1,0 +1,393 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<indexdata>
+<key name="ObjectName" >
+  <topic name="ObjectName" url="object_methods/objectname.htm" />
+</key>
+<key name="ObjectNames" >
+  <topic name="ObjectNames" url="object_methods/objectnames.htm" />
+</key>
+<key name="ObjectParents" >
+  <topic name="ObjectParents" url="object_methods/objectparents.htm" />
+</key>
+<key name="ObjectPrintColor" >
+  <topic name="ObjectPrintColor" url="object_methods/objectprintcolor.htm" />
+</key>
+<key name="ObjectPrintColorSource" >
+  <topic name="ObjectPrintColorSource" url="object_methods/objectprintcolorsource.htm" />
+</key>
+<key name="ObjectPrintWidth" >
+  <topic name="ObjectPrintWidth" url="object_methods/objectprintwidth.htm" />
+</key>
+<key name="ObjectPrintWidthSource" >
+  <topic name="ObjectPrintWidthSource" url="object_methods/objectprintwidthsource.htm" />
+</key>
+<key name="Objects" >
+  <topic name="Objects" url="rhinoscript_fundamentals/objects.htm" />
+  <topic name="Object Methods" url="object_methods/object_methods.htm" />
+  <topic name="Object Grip Methods" url="object_grip_methods/object_grip_methods.htm" />
+</key>
+<key name="ObjectsByColor" >
+  <topic name="ObjectsByColor" url="selection_methods/objectsbycolor.htm" />
+</key>
+<key name="ObjectsByGroup" >
+  <topic name="ObjectsByGroup" url="selection_methods/objectsbygroup.htm" />
+</key>
+<key name="ObjectsByLayer" >
+  <topic name="ObjectsByLayer" url="selection_methods/objectsbylayer.htm" />
+</key>
+<key name="ObjectsByMaterialIndex" >
+  <topic name="ObjectsByMaterialIndex" url="selection_methods/objectsbymaterialindex.htm" />
+</key>
+<key name="ObjectsByMaterialSource" >
+  <topic name="ObjectsByMaterialSource" url="selection_methods/objectsbymaterialsource.htm" />
+</key>
+<key name="ObjectsByName" >
+  <topic name="ObjectsByName" url="selection_methods/objectsbyname.htm" />
+</key>
+<key name="ObjectsByRegion" >
+  <topic name="ObjectsByRegion" url="selection_methods/objectsbyregion.htm" />
+</key>
+<key name="ObjectsByType" >
+  <topic name="ObjectsByType" url="selection_methods/objectsbytype.htm" />
+</key>
+<key name="ObjectsByURL" >
+  <topic name="ObjectsByURL" url="selection_methods/objectsbyurl.htm" />
+</key>
+<key name="ObjectTopGroup" >
+  <topic name="ObjectTopGroup" url="object_methods/objecttopgroup.htm" />
+</key>
+<key name="ObjectType" >
+  <topic name="ObjectType" url="object_methods/objecttype.htm" />
+</key>
+<key name="ObjectURL" >
+  <topic name="ObjectURL" url="object_methods/objecturl.htm" />
+</key>
+<key name="OffsetBrep" >
+  <topic name="OffsetBrep" url="surface_and_polysurface_methods/offsetbrep.htm" />
+</key>
+<key name="OffsetCurve" >
+  <topic name="OffsetCurve" url="curve_methods/offsetcurve.htm" />
+</key>
+<key name="OffsetCurveNormal" >
+  <topic name="OffsetCurveNormal" url="curve_methods/offsetcurvenormal.htm" />
+</key>
+<key name="OffsetCurveOnSurface" >
+  <topic name="OffsetCurveOnSurface" url="curve_methods/offsetcurveonsurface.htm" />
+</key>
+<key name="OffsetSurface" >
+  <topic name="OffsetSurface" url="surface_and_polysurface_methods/offsetsurface.htm" />
+</key>
+<key name="OnCancelScript" >
+  <topic name="OnCancelScript" url="utility_methods/oncancelscript.htm" />
+</key>
+<key name="OpenFileName" >
+  <topic name="OpenFileName" url="user_interface_methods/openfilename.htm" />
+</key>
+<key name="OpenFileNames" >
+  <topic name="OpenFileNames" url="user_interface_methods/openfilenames.htm" />
+</key>
+<key name="OpenToolbarCollection" >
+  <topic name="OpenToolbarCollection" url="toolbar_methods/opentoolbarcollection.htm" />
+</key>
+<key name="Options" >
+  <topic name="Scripting Options" url="introduction/scripting_options.htm" />
+  <key name="Scripting" >
+    <topic name="Scripting Options" url="introduction/scripting_options.htm" />
+  </key>
+</key>
+<key name="OrderListBox" >
+  <topic name="OrderListBox" url="user_interface_methods/orderlistbox.htm" />
+</key>
+<key name="OrientObject" >
+  <topic name="OrientObject" url="object_methods/orientobject.htm" />
+</key>
+<key name="OrientObjects" >
+  <topic name="OrientObjects" url="object_methods/orientobjects.htm" />
+</key>
+<key name="Ortho" >
+  <topic name="Ortho" url="application_methods/ortho.htm" />
+</key>
+<key name="Osnap" >
+  <topic name="Osnap" url="application_methods/osnap.htm" />
+</key>
+<key name="OsnapDialog" >
+  <topic name="OsnapDialog" url="application_methods/osnapdialog.htm" />
+</key>
+<key name="OsnapMode" >
+  <topic name="OsnapMode" url="application_methods/osnapmode.htm" />
+</key>
+<key name="ParentDimStyle" >
+  <topic name="ParentDimStyle" url="dimension_methods/parentdimstyle.htm" />
+</key>
+<key name="ParentLayer" >
+  <topic name="ParentLayer" url="layer_methods/parentlayer.htm" />
+</key>
+<key name="PI" >
+  <topic name="PI" url="math_methods/pi.htm" />
+</key>
+<key name="Planar" >
+  <topic name="Planar" url="application_methods/planar.htm" />
+</key>
+<key name="PlanarClosedCurveContainment" >
+  <topic name="PlanarClosedCurveContainment" url="curve_methods/planarclosedcurvecontainment.htm" />
+</key>
+<key name="PlanarCurveCollision" >
+  <topic name="PlanarCurveCollision" url="curve_methods/planarcurvecollision.htm" />
+</key>
+<key name="Plane Methods" >
+  <topic name="Plane Methods" url="line_and_plane_methods/plane_methods.htm" />
+</key>
+<key name="PlaneAngle" >
+  <topic name="PlaneAngle" url="line_and_plane_methods/planeangle.htm" />
+</key>
+<key name="PlaneArcIntersection" >
+  <topic name="PlaneArcIntersection" url="line_and_plane_methods/planearcintersection.htm" />
+</key>
+<key name="PlaneCircleIntersection" >
+  <topic name="PlaneCircleIntersection" url="line_and_plane_methods/planecircleintersection.htm" />
+</key>
+<key name="PlaneClosestPoint" >
+  <topic name="PlaneClosestPoint" url="line_and_plane_methods/planeclosestpoint.htm" />
+</key>
+<key name="PlaneCurveIntersection" >
+  <topic name="PlaneCurveIntersection" url="line_and_plane_methods/planecurveintersection.htm" />
+</key>
+<key name="PlaneEquation" >
+  <topic name="PlaneEquation" url="line_and_plane_methods/planeequation.htm" />
+</key>
+<key name="PlaneFitFromPoints" >
+  <topic name="PlaneFitFromPoints" url="line_and_plane_methods/planefitfrompoints.htm" />
+</key>
+<key name="PlaneFromFrame" >
+  <topic name="PlaneFromFrame" url="line_and_plane_methods/planefromframe.htm" />
+</key>
+<key name="PlaneFromNormal" >
+  <topic name="PlaneFromNormal" url="line_and_plane_methods/planefromnormal.htm" />
+</key>
+<key name="PlaneFromPoints" >
+  <topic name="PlaneFromPoints" url="line_and_plane_methods/planefrompoints.htm" />
+</key>
+<key name="PlanePlaneIntersection" >
+  <topic name="PlanePlaneIntersection" url="line_and_plane_methods/planeplaneintersection.htm" />
+</key>
+<key name="Planes" >
+  <topic name="Planes" url="rhinoscript_fundamentals/planes.htm" />
+  <topic name="Line and Plane Methods" url="line_and_plane_methods/plane_methods.htm" />
+</key>
+<key name="PlaneSphereIntersection" >
+  <topic name="PlaneSphereIntersection" url="line_and_plane_methods/planesphereintersection.htm" />
+</key>
+<key name="PlaneTransform" >
+  <topic name="PlaneTransform" url="line_and_plane_methods/planetransform.htm" />
+</key>
+<key name="PlugInIds" >
+  <topic name="PlugInIds" url="application_methods/pluginids.htm" />
+  <topic name="PlugInId" url="application_methods/pluginid.htm" />
+</key>
+<key name="PlugInInfo" >
+  <topic name="PlugInInfo" url="application_methods/plugininfo.htm" />
+</key>
+<key name="PlugInName" >
+  <topic name="PlugInName" url="application_methods/pluginname.htm" />
+</key>
+<key name="PlugIns" >
+  <topic name="PlugIns" url="application_methods/plugins.htm" />
+</key>
+<key name="Point" >
+  <topic name="Point and Vector Methods" url="point_and_vector_methods/point_and_vector_methods.htm" />
+  <topic name="Points" url="rhinoscript_fundamentals/points.htm" />
+</key>
+<key name="PointAdd" >
+  <topic name="PointAdd" url="point_and_vector_methods/pointadd.htm" />
+</key>
+<key name="PointArrayBoundingBox" >
+  <topic name="PointArrayBoundingBox" url="point_and_vector_methods/pointarrayboundingbox.htm" />
+</key>
+<key name="PointArrayClosestPoint" >
+  <topic name="PointArrayClosestPoint" url="point_and_vector_methods/pointarrayclosestpoint.htm" />
+</key>
+<key name="PointArrayTransform" >
+  <topic name="PointArrayTransform" url="point_and_vector_methods/pointarraytransform.htm" />
+</key>
+<key name="PointClosestObject" >
+  <topic name="PointClosestObject" url="point_and_vector_methods/pointclosestobject.htm" />
+</key>
+<key name="PointCloudCount" >
+  <topic name="PointCloudCount" url="geometry_methods/pointcloudcount.htm" />
+</key>
+<key name="PointCloudHasHiddenPoints" >
+  <topic name="PointCloudHasHiddenPoints" url="geometry_methods/pointcloudhashiddenpoints.htm" />
+</key>
+<key name="PointCloudHasPointColors" >
+  <topic name="PointCloudHasPointColors" url="geometry_methods/pointcloudhaspointcolors.htm" />
+</key>
+<key name="PointCloudHidePoints" >
+  <topic name="PointCloudHidePoints" url="geometry_methods/pointcloudhidepoints.htm" />
+</key>
+<key name="PointCloudPointColors" >
+  <topic name="PointCloudPointColors" url="geometry_methods/pointcloudpointcolors.htm" />
+</key>
+<key name="PointCloudPoints" >
+  <topic name="PointCloudPoints" url="geometry_methods/pointcloudpoints.htm" />
+</key>
+<key name="PointCompare" >
+  <topic name="PointCompare" url="point_and_vector_methods/pointcompare.htm" />
+</key>
+<key name="PointCoordinates" >
+  <topic name="PointCoordinates" url="geometry_methods/pointcoordinates.htm" />
+</key>
+<key name="PointDivide" >
+  <topic name="PointDivide" url="point_and_vector_methods/pointdivide.htm" />
+</key>
+<key name="PointInPlanarClosedCurve" >
+  <topic name="PointInPlanarClosedCurve" url="curve_methods/pointinplanarclosedcurve.htm" />
+</key>
+<key name="PointPick" >
+  <topic name="PointPick" url="selection_methods/pointpick.htm" />
+</key>
+<key name="Points" >
+  <topic name="Arrays of Points" url="rhinoscript_fundamentals/arrays_of_points.htm" />
+  <topic name="Point and Vector Methods" url="point_and_vector_methods/point_and_vector_methods.htm" />
+  <topic name="Points" url="rhinoscript_fundamentals/points.htm" />
+  <key name="Arrays" >
+    <topic name="Arrays of Points" url="rhinoscript_fundamentals/arrays_of_points.htm" />
+  </key>
+</key>
+<key name="PointsAreCoplanar" >
+  <topic name="PointsAreCoplanar" url="point_and_vector_methods/pointsarecoplanar.htm" />
+</key>
+<key name="PointScale" >
+  <topic name="PointScale" url="point_and_vector_methods/pointscale.htm" />
+</key>
+<key name="PointSubtract" >
+  <topic name="PointSubtract" url="point_and_vector_methods/pointsubtract.htm" />
+</key>
+<key name="PointTransform" >
+  <topic name="PointTransform" url="point_and_vector_methods/pointtransform.htm" />
+</key>
+<key name="Polar" >
+  <topic name="Polar" url="math_methods/polar.htm" />
+</key>
+<key name="PolyCurveCount" >
+  <topic name="PolyCurveCount" url="curve_methods/polycurvecount.htm" />
+</key>
+<key name="PolylineVertices" >
+  <topic name="PolylineVertices" url="curve_methods/polylinevertices.htm" />
+</key>
+<key name="PopupMenu" >
+  <topic name="PopupMenu" url="user_interface_methods/popupmenu.htm" />
+</key>
+<key name="PrevObjectGrip" >
+  <topic name="PrevObjectGrip" url="object_grip_methods/prevobjectgrip.htm" />
+</key>
+<key name="PrevSelectedObjects" >
+  <topic name="PrevSelectedObjects" url="selection_methods/prevselectedobjects.htm" />
+</key>
+<key name="Print" >
+  <topic name="Print" url="application_methods/print.htm" />
+</key>
+<key name="PrinterNames" >
+  <topic name="PrinterNames" url="utility_methods/printernames.htm" />
+</key>
+<key name="PrintEx" >
+  <topic name="PrintEx" url="application_methods/printex.htm" />
+</key>
+<key name="ProjectCurveToMesh" >
+  <topic name="ProjectCurveToMesh" url="curve_methods/projectcurvetomesh.htm" />
+</key>
+<key name="ProjectCurveToSurface" >
+  <topic name="ProjectCurveToSurface" url="curve_methods/projectcurvetosurface.htm" />
+</key>
+<key name="ProjectOsnaps" >
+  <topic name="ProjectOsnaps" url="application_methods/projectosnaps.htm" />
+</key>
+<key name="ProjectPointToMesh" >
+  <topic name="ProjectPointToMesh" url="point_and_vector_methods/projectpointtomesh.htm" />
+</key>
+<key name="ProjectPointToSurface" >
+  <topic name="ProjectPointToSurface" url="point_and_vector_methods/projectpointtosurface.htm" />
+</key>
+<key name="Prompt" >
+  <topic name="Prompt" url="application_methods/prompt.htm" />
+</key>
+<key name="PropertyListBox" >
+  <topic name="PropertyListBox" url="user_interface_methods/propertylistbox.htm" />
+</key>
+<key name="Pt2Str" >
+  <topic name="Pt2Str" url="utility_methods/pt2str.htm" />
+</key>
+<key name="PullCurve" >
+  <topic name="PullCurve" url="surface_and_polysurface_methods/pullcurve.htm" />
+</key>
+<key name="PullCurveToMesh" >
+  <topic name="PullCurveToMesh" url="mesh_methods/pullcurvetomesh.htm" />
+</key>
+<key name="PullPoints" >
+  <topic name="PullPoints" url="point_and_vector_methods/pullpoints.htm" />
+</key>
+<key name="PurgeLayer" >
+  <topic name="PurgeLayer" url="layer_methods/purgelayer.htm" />
+</key>
+<key name="ReadDelimitedFile" >
+  <topic name="ReadDelimitedFile" url="utility_methods/readdelimitedfile.htm" />
+</key>
+<key name="ReadFileVersion" >
+  <topic name="ReadFileVersion" url="document_methods/readfileversion.htm" />
+</key>
+<key name="ReadTextFile" >
+  <topic name="ReadTextFile" url="sample_scripts/readtextfile.htm" />
+  <topic name="ReadTextFile" url="utility_methods/readtextfile.htm" />
+</key>
+<key name="RealBox" >
+  <topic name="RealBox" url="user_interface_methods/realbox.htm" />
+</key>
+<key name="RebuildCurve" >
+  <topic name="RebuildCurve" url="curve_methods/rebuildcurve.htm" />
+</key>
+<key name="RebuildSurface" >
+  <topic name="RebuildSurface" url="surface_and_polysurface_methods/rebuildsurface.htm" />
+</key>
+<key name="RectangularLightPlane" >
+  <topic name="RectangularLightPlane" url="light_methods/rectangularlightplane.htm" />
+</key>
+<key name="Redraw" >
+  <topic name="Redraw" url="document_methods/redraw.htm" />
+</key>
+<key name="ReduceMesh" >
+  <topic name="ReduceMesh" url="mesh_methods/reducemesh.htm" />
+</key>
+<key name="ReferenceObjects" >
+  <topic name="ReferenceObjects" url="selection_methods/referenceobjects.htm" />
+</key>
+<key name="RegistryKey" >
+  <topic name="RegistryKey" url="application_methods/registrykey.htm" />
+</key>
+<key name="Reinitializing RhinoScript" >
+  <topic name="Reinitializing RhinoScript" url="introduction/reinitializing_rhinoscript.htm" />
+</key>
+<key name="RemapObject" >
+  <topic name="RemapObject" url="object_methods/remapobject.htm" />
+</key>
+<key name="RemapObjects" >
+  <topic name="RemapObjects" url="object_methods/remapobjects.htm" />
+</key>
+<key name="RemoveCurveKnot" >
+  <topic name="RemoveCurveKnot" url="curve_methods/removecurveknot.htm" />
+</key>
+<key name="RemoveObjectDisplayMode" >
+  <topic name="RemoveObjectDisplayMode" url="object_methods/removeobjectdisplaymode.htm" />
+</key>
+<key name="RemoveObjectFromAllGroups" >
+  <topic name="RemoveObjectFromAllGroups" url="group_methods/removeobjectfromallgroups.htm" />
+</key>
+<key name="RemoveObjectFromGroup" >
+  <topic name="RemoveObjectFromGroup" url="group_methods/removeobjectfromgroup.htm" />
+</key>
+<key name="RemoveObjectFromTopGroup" >
+  <topic name="RemoveObjectFromTopGroup" url="group_methods/removeobjectfromtopgroup.htm" />
+</key>
+<key name="RemoveObjectsFromGroup" >
+  <topic name="RemoveObjectsFromGroup" url="group_methods/removeobjectsfromgroup.htm" />
+</key>
+
+</indexdata>

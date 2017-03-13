@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 8" />
+ <title>MeshPart</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nMesh Methods\nMeshPart");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"mesh_methods.htm\">Mesh Methods<\/a> > MeshPart<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>MeshPart</h1>
+<p>Finds faces from a mesh that are bounded by unwelded or naked edges.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.MeshPart (strObject, intFaceIndex, dblBreakAngle, 
+ blnNonManifoldEdges)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.408%;" />
+	<col style="width: 90.592%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strObject</p></td>
+		<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;The identifier 
+		 of a mesh object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intFaceIndex</p></td>
+		<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;The index 
+		 of the mesh to begin the search.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnNonManifoldEdges</p></td>
+		<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Boolean. &#160;If True, 
+		 non-manifold edges will be handled like unwelded edges. &#160;If 
+		 False, non-manifold edges are ignored.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.734%;" />
+	<col style="width: 89.266%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Array</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">An 
+		 array of face indices that identify the connected faces if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Const rhObjectMesh = 32</p>
+<p class="Code" style="margin-left: 12px;">Dim strMesh, arrIndices, arrFaces</p>
+<p class="Code" style="margin-left: 12px;">strMesh = Rhino.GetObject(&quot;Select 
+ mesh&quot;, rhObjectMesh)</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strMesh) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrIndices = Rhino.GetMeshFaces(strMesh, 
+ &quot;Select mesh face&quot;, 1, 1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsArray(arrIndices) 
+ Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;arrFaces 
+ = Rhino.MeshPart(strMesh, arrIndices(0), true)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;If IsArray(arrFaces) 
+ Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(CStr(UBound(arrFaces) + 1) &amp; &quot; faces found.&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;End 
+ If</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="connectedmeshfaces.htm">ConnectedMeshFaces</a></p>
+<p><a href="meshfacecount.htm">MeshFaceCount</a></p>
+<p><a href="meshfaces.htm">MeshFaces</a></p>
+<p><a href="meshfacevertices.htm">MeshFaceVertices</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

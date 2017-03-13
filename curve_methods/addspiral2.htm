@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddSpiral2</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nAddSpiral2");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > AddSpiral2<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddSpiral2</h1>
+<p>Adds a spiral or helical curve object to the document.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddSpiral2 (strCurve, arrInterval, dblPitch, dblTurns, 
+ dblRadius0 [, dblRadius1 [, intTurnCount]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.759%;" />
+	<col style="width: 90.241%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strCurve</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;String. &#160;The curve object's identifier.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrInterval</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Array. &#160;An array of two numbers identifying the starting 
+		 and ending portions of the curve's domain to sweep along.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">dblPitch</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Number. &#160;The pitch, or distance between turns. &#160;If 
+		 <span style="font-style: italic;"><i>dblPitch</i></span> = 0, then <span 
+		 style="font-style: italic;"><i>dblTurns</i></span> must be &lt;&gt; 0 
+		 and the approximate distance between turns will be set to <span 
+		 style="font-style: italic;"><i>dblPitch</i></span>. &#160;Use positive 
+		 values for right-handed helices and negative values for left-handed 
+		 helices.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">dblTurns</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Number. If <span style="font-style: italic;"><i>dblTurns</i></span> 
+		 &lt;&gt; 0, then the resulting helix will have this many turns. 
+		 Use positive values for right-handed helices and negative values 
+		 for left-handed helices.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">dblRadius0 </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Number. &#160;The starting radius. &#160;Note, for a helix, 
+		 you may have <span style="font-style: italic;"><i>dblRadius0 </i></span>= 
+		 <span style="font-style: italic;"><i>dblRadius1</i></span>. For a spiral, 
+		 <span style="font-style: italic;"><i>dblRadius0 </i></span>= <span style="font-style: italic;"><i>dblRadius1</i></span> 
+		 produces a circle. Zero and negative radii are permissible.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">dblRadius1</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Number. &#160;The ending radius. &#160;If omitted, <span 
+		 style="font-style: italic;"><i>dblRadius1</i></span> = <span style="font-style: italic;"><i>dblRadius0</i></span>.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">intTurnCount</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Number. &#160;The Number of points to interpolate per turn. 
+		 Value must be greater than or equal to 4. The default value is 
+		 12.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 8.987%;" />
+	<col style="width: 91.013%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 8.987%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 91.013%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 8.987%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 91.013%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strCurve, arrInterval, dblPitch, 
+ dblTurns, dblRadius0, dblRadius1</p>
+<p class="Code" style="margin-left: 12px;">strCurve = Rhino.GetObject(&quot;Select 
+ curve&quot;, 4)</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strCurve) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrInterval = Rhino.CurveDomain(strCurve)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;dblPitch = 6</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;dblTurns = 0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;dblRadius0 = 5</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;dblRadius1 = 8</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Call Rhino.AddSpiral2(strCurve, 
+ arrInterval, dblPitch, dblTurns, dblRadius0, dblRadius1 )</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="addspiral.htm">AddSpiral</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

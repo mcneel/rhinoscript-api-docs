@@ -1,0 +1,23 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="AddGroup" url="group_methods/addgroup.htm" />
+<item name="AddObjectsToGroup" url="group_methods/addobjectstogroup.htm" />
+<item name="AddObjectToGroup" url="group_methods/addobjecttogroup.htm" />
+<item name="DeleteGroup" url="group_methods/deletegroup.htm" />
+<item name="GetGroupUserText" url="group_methods/getgroupusertext.htm" />
+<item name="GroupCount" url="group_methods/groupcount.htm" />
+<item name="GroupNames" url="group_methods/groupnames.htm" />
+<item name="HideGroup" url="group_methods/hidegroup.htm" />
+<item name="IsGroup" url="group_methods/isgroup.htm" />
+<item name="IsGroupEmpty" url="group_methods/isgroupempty.htm" />
+<item name="LockGroup" url="group_methods/lockgroup.htm" />
+<item name="RemoveObjectFromAllGroups" url="group_methods/removeobjectfromallgroups.htm" />
+<item name="RemoveObjectFromGroup" url="group_methods/removeobjectfromgroup.htm" />
+<item name="RemoveObjectFromTopGroup" url="group_methods/removeobjectfromtopgroup.htm" />
+<item name="RemoveObjectsFromGroup" url="group_methods/removeobjectsfromgroup.htm" />
+<item name="RenameGroup" url="group_methods/renamegroup.htm" />
+<item name="SetGroupUserText" url="group_methods/setgroupusertext.htm" />
+<item name="ShowGroup" url="group_methods/showgroup.htm" />
+<item name="UnlockGroup" url="group_methods/unlockgroup.htm" />
+
+</tocdata>

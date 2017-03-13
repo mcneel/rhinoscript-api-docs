@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>RhinoScript Methods</title>
+<link rel="StyleSheet" href="rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.html", "", ">", "Home", "title.htm");
+document.write("RhinoScript Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>RhinoScript Methods</h1>
+<p>RhinoScript methods fall into one of the following categories.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+<col style="width: 22.912%;" />
+<col style="width: 77.088%;" />
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Category</p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="application_methods/application_methods.htm">Application Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to the Rhino application.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="block_methods/block_methods.htm">Block Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to block instances and their definitions.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="curve_methods/curve_methods.htm">Curve Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to curve objects.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="dimension_methods/dimension_methods.htm">Dimension Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to dimensions and annotations.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="document_methods/document_methods.htm">Document Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to the currently open 3DM file.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="geometry_methods/geometry_methods.htm">Geometry Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to geometric objects.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="group_methods/group_methods.htm">Group Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods used to manipulate groups of objects.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="hatch_methods/hatch_methods.htm">Hatch Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods used to manipulate hatch objects.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="layer_methods/layer_methods.htm">Layer Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods used to manipulate layers.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="layer_state_methods/layer_state_methods.htm">Layer State Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods used to manipulate layer states.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="light_methods/light_methods.htm">Light Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to light objects.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="line_and_plane_methods/plane_methods.htm">Line &amp; Plane Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to manipulating 3-D lines and planes.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="linetype_methods/linetype_methods.htm">Linetype Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to linetypes.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="material_methods/material_methods.htm">Material Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to object rendering materials.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="math_methods/math_methods.htm">Math Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods that extent VBScript's math capabilities.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="mesh_methods/mesh_methods.htm">Mesh Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to mesh objects.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="object_methods/object_methods.htm">Object Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods to manipulate general object properties.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="object_grip_methods/object_grip_methods.htm">Object Grip Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods for manipulating object grips.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="point_and_vector_methods/point_and_vector_methods.htm">Point &amp; Vector Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to creating and manipulating 3-D points and 3-D vectors.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="selection_methods/selection_methods.htm">Selection Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods for selecting objects or obtaining object identifiers.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="surface_and_polysurface_methods/surface_methods.htm">Surface and Polysurface Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to surface and polysurface objects.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="toolbar_methods/toolbar_methods.htm">Toolbar Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to toolbar collections.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="transformation_methods/transformation_methods.htm">Transformation Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to creating transformations.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="user_data_methods/user_data_methods.htm">User Data Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to RhinoScript user data.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="user_interface_methods/user_interface_methods.htm">User Interface Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods used to interact with the user.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="utility_methods/utility_methods.htm">Utility Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Any method that does not fall into any of the above categories.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 22.912%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body"><a href="view_methods/view_methods.htm">View Methods</a></p>
+</td>
+<td style="width: 77.088%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Methods related to manipulate views and construction planes.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

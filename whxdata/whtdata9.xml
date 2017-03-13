@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="DeleteLayerState" url="layer_state_methods/deletelayerstate.htm" />
+<item name="ExportLayerStates" url="layer_state_methods/exportlayerstates.htm" />
+<item name="ImportLayerStates" url="layer_state_methods/importlayerstates.htm" />
+<item name="IsLayerState" url="layer_state_methods/islayerstate.htm" />
+<item name="LayerStateCount" url="layer_state_methods/layerstatecount.htm" />
+<item name="LayerStateNames" url="layer_state_methods/layerstatenames.htm" />
+<item name="RenameLayerState" url="layer_state_methods/renamelayerstate.htm" />
+<item name="RestoreLayerState" url="layer_state_methods/restorelayerstate.htm" />
+<item name="SaveLayerState" url="layer_state_methods/savelayerstate.htm" />
+
+</tocdata>

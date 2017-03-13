@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>CurveCurveIntersection</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nCurveCurveIntersection");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > CurveCurveIntersection<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>CurveCurveIntersection</h1>
+<p>Calculates the intersection of two curve objects.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.CurveCurveIntersection (strObject1 [, strObject2 
+ [, dblTolerance]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 11.813%;" />
+	<col style="width: 88.187%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 11.813%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strObject1</p></td>
+		<td style="width: 88.187%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;The identifier 
+		 of the first curve object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 11.813%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strObject2</p></td>
+		<td style="width: 88.187%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;The identifier 
+		 of the second curve object. &#160;If omitted, the a self-intersection 
+		 test will be performed on <span style="font-style: italic;"><i>strObject1.</i></span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 11.813%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblTolerance</p></td>
+		<td style="width: 88.187%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The intersection 
+		 tolerance.&#160;If omitted, the document's absolute tolerance 
+		 is used.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 11.545%;" />
+	<col style="width: 88.455%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 11.545%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 88.455%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">A two-dimensional array of intersection 
+		 information if successful. &#160;The array will contain one or 
+		 more of the following elements:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 8.444%;" />
+			<col style="width: 12.952%;" />
+			<col style="width: 78.604%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 8.444%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Element</p></td>
+				<td style="width: 12.952%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Type</p></td>
+				<td style="width: 78.604%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.444%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 0)</p></td>
+				<td style="width: 12.952%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.604%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">The intersection event type, either 
+				 Point (1) or Overlap (2).</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.444%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 1)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 12.952%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array (3-D Point)</p></td>
+				<td style="width: 78.604%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the intersection point on the first curve.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then intersection start point on the first curve.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.444%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 2)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 12.952%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array (3-D Point)</p></td>
+				<td style="width: 78.604%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the intersection point on the first curve.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then intersection end point on the first curve.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.444%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 3)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 12.952%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array (3-D Point)</p></td>
+				<td style="width: 78.604%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the intersection point on the second curve.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then intersection start point on the second curve.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.444%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 4)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 12.952%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array (3-D Point)</p></td>
+				<td style="width: 78.604%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the intersection point on the second curve.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then intersection end point on the second curve.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.444%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 5)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 12.952%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.604%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the first curve parameter.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then the start value of the first curve parameter range.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.444%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 6)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 12.952%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.604%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the first curve parameter.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 &#160;then the end value of the first curve parameter 
+				 range.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.444%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 7)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 12.952%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.604%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the second curve parameter.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then the start value of the second curve parameter range.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.444%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 8)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 12.952%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.604%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the second curve parameter.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then the end value of the second curve parameter range.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 11.545%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 88.455%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub CCX()</p>
+<p class="Code" style="margin-left: 24px;">Const rhObjectCurve = 4</p>
+<p class="Code" style="margin-left: 24px;">Dim strCurve1, strCurve2, arrCCX, 
+ i</p>
+<p class="Code" style="margin-left: 24px;">strCurve1 = Rhino.GetObject(&quot;Select 
+ first curve&quot;, rhObjectCurve)</p>
+<p class="Code" style="margin-left: 24px;">If IsNull(strCurve1) Or Rhino.IsCurve(strCurve1) 
+ = False Then Exit Sub</p>
+<p class="Code" style="margin-left: 24px;">strCurve2 = Rhino.GetObject(&quot;Select 
+ second curve&quot;, rhObjectCurve)</p>
+<p class="Code" style="margin-left: 24px;">If IsNull(strCurve2) Or Rhino.IsCurve(strCurve2) 
+ = False Then Exit Sub</p>
+<p class="Code" style="margin-left: 24px;">arrCCX = Rhino.CurveCurveIntersection(strCurve1, 
+ strCurve2)</p>
+<p class="Code" style="margin-left: 24px;">If Not IsArray(arrCCX) Then</p>
+<p class="Code" style="margin-left: 36px;">Rhino.Print &quot;Selected curves 
+ do not intersect.&quot;</p>
+<p class="Code" style="margin-left: 36px;">Exit Sub</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 24px;">For i = 0 To UBound(arrCCX)</p>
+<p class="Code" style="margin-left: 36px;">If arrCCX(i,0) = 1 Then</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;Point&quot;</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;Intersection 
+ point on first curve: &quot; &amp; Rhino.Pt2Str(arrCCX(i,1))</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;Intersection 
+ point on second curve: &quot; &amp; Rhino.Pt2Str(arrCCX(i,3))</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;First curve 
+ parameter: &quot; &amp; CStr(arrCCX(i,5))</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;Second curve 
+ parameter: &quot; &amp; CStr(arrCCX(i,7))</p>
+<p class="Code" style="margin-left: 36px;">Else</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;Overlap&quot;</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;Intersection 
+ start point on first curve: &quot; &amp; Rhino.Pt2Str(arrCCX(i,1))</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;Intersection 
+ end point on first curve: &quot; &amp; Rhino.Pt2Str(arrCCX(i,2))</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;Intersection 
+ start point on second curve: &quot; &amp; Rhino.Pt2Str(arrCCX(i,3))</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;Intersection 
+ end point on second curve: &quot; &amp; Rhino.Pt2Str(arrCCX(i,4))</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;First curve 
+ parameter range: &quot; &amp; CStr(arrCCX(i,5)) &amp; &quot; to &quot; 
+ &amp; CStr(arrCCX(i,6))</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print &quot;Second curve 
+ parameter range: &quot; &amp; CStr(arrCCX(i,7)) &amp; &quot; to &quot; 
+ &amp; CStr(arrCCX(i,8))</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3>Also See</h3>
+<p><a href="curvesurfaceintersection.htm">CurveSurfaceIntersection</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

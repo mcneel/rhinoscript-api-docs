@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>GetOption</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Interface Methods\nGetOption");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"user_interface_methods.htm\">User Interface Methods<\/a> > GetOption<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>GetOption</h1>
+<p>Prompts the user for one or more command-line options.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.GetOption (strPrompt, arrOptions)</p>
+<h3>Parameters</h3>
+<table style="left: 0px; top: 152px;" cellspacing="0" width="100%">
+	<col style="width: 10.627%;" />
+	<col style="width: 89.373%;" />
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strPrompt</p></td>
+		<td style="width: 89.373%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;A prompt 
+		 or message.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrOptions</p></td>
+		<td style="width: 89.373%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;An array containing 
+		 one or more command line option arrays.</p></td>
+	</tr>
+</table>
+<p>A command-line option array contains information that defines the command-line 
+ option. The first element of a command-line option array identifies the 
+ type of command line option. The type of command-line option determines 
+ how many additional elements the command-line option array must contain. 
+ </p>
+<p>There are 5 types of command-line options:</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 6.978%;" />
+	<col style="width: 93.022%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 6.978%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Value</p></td>
+		<td style="width: 93.022%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 6.978%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">0</p></td>
+		<td style="width: 93.022%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Single, or one, shot option. This option 
+		 array will show a click-able single-shot option in the form of 
+		 &lt;<span style="font-style: italic;"><i>strName</i></span>&gt; on the 
+		 command line. The default option value is always False. If clicked, 
+		 a True value will be returned indicating that it was clicked. 
+		 The array elements are as follows:</p>
+		<table style="border-collapse: separate;" cellspacing="0" width="100%">
+			<col style="width: 8.318%;" />
+			<col style="width: 14.322%;" />
+			<col style="width: 77.36%;" />
+			<tr>
+				<td><p class="Table-Head">Element</p></td>
+				<td><p class="Table-Head">Parameter</p></td>
+				<td><p class="Table-Head">Description</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">1</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">strName</p></td>
+				<td><p class="Table-Body">Required. &#160;String. &#160;The 
+				 name of the command-line option, as it will appear on 
+				 the command-line.</p></td>
+			</tr>
+		</table>
+		<p class="Table-Body">&#160;</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 6.978%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">1</p></td>
+		<td style="width: 93.022%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Boolean option. This option array will 
+		 show a click-able Boolean option in the form of &lt;<span style="font-style: italic;"><i>strName</i></span>=<span 
+		 style="font-style: italic;"><i>strFalse/strTrue</i></span>&gt; on the 
+		 command line. The array elements are as follows:</p>
+		<table style="border-collapse: separate;" cellspacing="0" width="100%">
+			<col style="width: 8.518%;" />
+			<col style="width: 14.236%;" />
+			<col style="width: 77.247%;" />
+			<tr>
+				<td><p class="Table-Head">Element</p></td>
+				<td><p class="Table-Head">Parameter</p></td>
+				<td><p class="Table-Head">Description</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">1</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">strName</p></td>
+				<td><p class="Table-Body">Required. &#160;String. &#160;The 
+				 name of the command-line option, as it will appear on 
+				 the command-line.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">2</p></td>
+				<td><p class="Table-Body">strFalse</p></td>
+				<td><p class="Table-Body">Required. &#160;String. &#160;A 
+				 string identifying the False value.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">3</p></td>
+				<td><p class="Table-Body">strTrue</p></td>
+				<td><p class="Table-Body">Required. &#160;String. &#160;A 
+				 string identifying the True value.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">4</p></td>
+				<td><p class="Table-Body">blnValue</p></td>
+				<td><p class="Table-Body">Required. &#160;Boolean. &#160;The 
+				 default option value.</p></td>
+			</tr>
+		</table>
+		<p class="Table-Body">&#160;</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 6.978%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">2</p></td>
+		<td style="width: 93.022%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Integer option. This option array will 
+		 show a click-able integer option in the form of &lt;<span style="font-style: italic;"><i>strName</i></span>=<span 
+		 style="font-style: italic;"><i>intValue</i></span>&gt; on the command 
+		 line. The array elements are as follows:</p>
+		<table style="border-collapse: separate;" cellspacing="0" width="100%">
+			<col style="width: 8.757%;" />
+			<col style="width: 14.331%;" />
+			<col style="width: 76.911%;" />
+			<tr>
+				<td><p class="Table-Head">Element</p></td>
+				<td><p class="Table-Head">Parameter</p></td>
+				<td><p class="Table-Head">Description</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">1</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">strName</p></td>
+				<td><p class="Table-Body">Required. &#160;String. &#160;The 
+				 name of the command-line option, as it will appear on 
+				 the command-line.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">2</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">intValue</p></td>
+				<td><p class="Table-Body">Required. &#160;Number. &#160;The 
+				 default option value.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">3</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">strPrompt</p></td>
+				<td><p class="Table-Body">Optional. &#160;String. &#160;The 
+				 prompt that will appear on the command-line when clicked.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">4</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">intLowerLimit</p></td>
+				<td><p class="Table-Body">Optional. &#160;Number. &#160;The 
+				 smallest allowable value.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">5</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">intUpperLimit</p></td>
+				<td><p class="Table-Body">Optional. &#160;Number. &#160;The 
+				 largest allowable value.</p></td>
+			</tr>
+		</table>
+		<p class="Table-Body">&#160;</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 6.978%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">3</p></td>
+		<td style="width: 93.022%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Number option. This option array will show 
+		 a click-able number option in the form of &lt;<span style="font-style: italic;"><i>strName</i></span>=<span 
+		 style="font-style: italic;"><i>dblValue</i></span>&gt; on the command 
+		 line. The array elements are as follows:</p>
+		<table style="border-collapse: separate;" cellspacing="0" width="100%">
+			<col style="width: 8.885%;" />
+			<col style="width: 14.317%;" />
+			<col style="width: 76.799%;" />
+			<tr>
+				<td><p class="Table-Head">Element</p></td>
+				<td><p class="Table-Head">Parameter</p></td>
+				<td><p class="Table-Head">Description</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">1</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">strName</p></td>
+				<td><p class="Table-Body">Required. &#160;String. &#160;The 
+				 name of the command-line option, as it will appear on 
+				 the command-line.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">2</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">dblValue</p></td>
+				<td><p class="Table-Body">Required. &#160;Number. &#160;The 
+				 default option value.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">3</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">strPrompt</p></td>
+				<td><p class="Table-Body">Optional. &#160;String. &#160;The 
+				 prompt that will appear on the command-line when clicked.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">4</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">dblLowerLimit</p></td>
+				<td><p class="Table-Body">Optional. &#160;Number. &#160;The 
+				 smallest allowable value.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: normal;">5</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">dblUpperLimit</p></td>
+				<td><p class="Table-Body">Optional. &#160;Number. &#160;The 
+				 largest allowable value.</p></td>
+			</tr>
+		</table>
+		<p class="Table-Body">&#160;</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 6.978%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">4</p></td>
+		<td style="width: 93.022%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">List option. This option array will show 
+		 a click-able list option in the form of &lt;<span style="font-style: italic;"><i>strName</i></span>=<span 
+		 style="font-style: italic;"><i>intIndex</i></span>&gt; on the command 
+		 line. Then the item is clicked, a list of click-able items will 
+		 appear. The array elements are as follows:</p>
+		<table style="border-collapse: separate;" cellspacing="0" width="100%">
+			<col style="width: 8.869%;" />
+			<col style="width: 14.443%;" />
+			<col style="width: 76.688%;" />
+			<tr>
+				<td><p class="Table-Head">Element</p></td>
+				<td><p class="Table-Head">Parameter</p></td>
+				<td><p class="Table-Head">Description</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="font-style: italic;">1</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">strName</p></td>
+				<td><p class="Table-Body">Required. &#160;String. &#160;The 
+				 name of the command-line option, as it will appear on 
+				 the command-line.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body">2</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">arrList</p></td>
+				<td><p class="Table-Body">Required. &#160;Array. &#160;An 
+				 array of strings that will appear on the command-line 
+				 when the option is clicked.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body">3</p></td>
+				<td><p class="Table-Body" style="font-style: italic;">intIndex</p></td>
+				<td><p class="Table-Body">Required. &#160;Array. &#160;The 
+				 default option value, which is the index of the current 
+				 item in <span style="font-style: italic;"><i>arrList</i></span>.</p></td>
+			</tr>
+		</table>
+		<p class="Table-Body">&#160;</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 7.25%;" />
+	<col style="width: 92.75%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Array</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">An 
+		 array of command-line option values, updated by the user, in the 
+		 order in which they were passed to the function, if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub TestOptions</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Const OPT_SGL = 
+ 0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Const OPT_BLN = 
+ 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Const OPT_INT = 
+ 2</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Const OPT_DBL = 
+ 3</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Const OPT_LST = 
+ 4</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim arr0, arr1, 
+ arr2, arr3, arr4</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim lst, opt, rc, 
+ i</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;lst = Array(&quot;One&quot;, 
+ &quot;Two&quot;, &quot;Three&quot;, &quot;Four&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arr0 = Array(OPT_SGL, 
+ &quot;Single&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arr1 = Array(OPT_BLN, 
+ &quot;Boolean&quot;, &quot;Off&quot;, &quot;On&quot;, false)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arr2 = Array(OPT_INT, 
+ &quot;Integer&quot;, 4, &quot;New value&quot;, 2, 10)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arr3 = Array(OPT_DBL, 
+ &quot;Double&quot;, 34.76, &quot;New value&quot;, 1.0, 100.0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arr4 = Array(OPT_LST, 
+ &quot;List&quot;, lst, 0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;opt = Array(arr0, 
+ arr1, arr2, arr3, arr4)</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;rc = Rhino.GetOption(&quot;Scripting 
+ options&quot;, opt)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsArray(rc) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;For 
+ Each i in rc</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(i)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3 class="Code">Also See</h3>
+<p><a href="getboolean.htm">GetBoolean</a></p>
+<p><a href="getstring.htm">GetString</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

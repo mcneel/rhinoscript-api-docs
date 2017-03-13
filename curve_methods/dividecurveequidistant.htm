@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>DivideCurveEquidistant</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nDivideCurveEquidistant");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > DivideCurveEquidistant<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>DivideCurveEquidistant</h1>
+<p>Divides a curve such that the linear distance between the points is 
+ equal.</p>
+<p>Unlike the <a href="dividecurve.htm">DivideCurve</a> and <a href="dividecurvelength.htm">DivideCurveLength</a>, 
+ which divides a curve based on arc length, or the distance along the curve 
+ between two points, this function divides a curve based on the linear 
+ distance between points.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.DivideCurveEquidistant (strObject, dblDistance [, 
+ blnCreate [, blnPoints [, arrInterval]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.989%;" />
+	<col style="width: 89.011%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 10.989%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strObject</p></td>
+		<td style="width: 89.011%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. String. The object's identifier.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.989%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblDistance</p></td>
+		<td style="width: 89.011%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. Number. The linear distance between 
+		 division points.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.989%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnCreate</p></td>
+		<td style="width: 89.011%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. Boolean. Create the division 
+		 points. If omitted or False, points are not created.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.989%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnPoints</p></td>
+		<td style="width: 89.011%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. Boolean. Return an array of 3-D 
+		 points. If omitted or True, points are returned. If False, then 
+		 an array of curve parameters are returned.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.989%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrInterval</p></td>
+		<td style="width: 89.011%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Array. &#160;An array of 
+		 two number identifying the interval to divide. Portions of the 
+		 curve before domain(0) and after domain(1) will be ignored. If 
+		 the input curve is open, the interval must be increasing. If the 
+		 input curve is closed and the interval is decreasing, then the 
+		 portion of the curve across the start and end of the curve is 
+		 divided.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.9%;" />
+	<col style="width: 89.1%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 10.9%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 89.1%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If <span style="font-style: italic;"><i>blnPoints</i></span> 
+		 is not specified or True, then an array containing 3-D division 
+		 points if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.9%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 89.1%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If <span style="font-style: italic;"><i>blnPoints</i></span> 
+		 is False, then an array containing division curve parameters if 
+		 successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.9%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 89.1%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strObject, arrPoints, arrPoint</p>
+<p class="Code" style="margin-left: 12px;">strObject = Rhino.GetObject(&quot;Select 
+ a curve&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If Rhino.IsCurve(strObject) 
+ Then</p>
+<p class="Code" style="margin-left: 24px;">arrPoints = Rhino.DivideCurveEquidistant(strObject, 
+ 4)</p>
+<p class="Code" style="margin-left: 24px;">For Each arrPoint In arrPoints</p>
+<p class="Code" style="margin-left: 36px;">Rhino.AddPoint arrPoint</p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="dividecurve.htm">DivideCurve</a></p>
+<p><a href="dividecurvelength.htm">DivideCurveLength</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

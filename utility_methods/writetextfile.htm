@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>WriteTextFile</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUtility Methods\nWriteTextFile");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"utility_methods.htm\">Utility Methods<\/a> > WriteTextFile<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>WriteTextFile</h1>
+<p>Writes an array of strings to a text file. ANSI, UTF-8 and Unicode encoded 
+ text files are supported.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.WriteTextFile (strFileName, arrStrings [, blnAppend 
+ [, intEncoding]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.331%;" />
+	<col style="width: 89.669%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 10.331%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strFileName</p></td>
+		<td style="width: 89.669%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;The name 
+		 of an existing text file to write. &#160;</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.331%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrStrings 
+		 </p></td>
+		<td style="width: 89.669%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The array 
+		 of strings to write to the text file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.331%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnAppend </p></td>
+		<td style="width: 89.669%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Boolean. &#160;If omitted 
+		 or False (Default), the file will be overwritten if it already 
+		 exists. If True, then the will be appended to if it already exists.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.331%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intEncoding</p></td>
+		<td style="width: 89.669%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The text 
+		 file encoding, where:</p>
+		<table style="border-collapse: separate;" cellspacing="0" width="100%">
+			<col style="width: 19.453%;" />
+			<col style="width: 80.547%;" />
+			<tr>
+				<td><p class="Table-Head">Value</p></td>
+				<td><p class="Table-Head">Description</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body">0</p></td>
+				<td><p class="Table-Body">ANSI Encoding</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body">1 (Default)</p></td>
+				<td><p class="Table-Body">UTF-8 Encoding</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body">2</p></td>
+				<td><p class="Table-Body">UTF-16 Encoding</p></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.803%;" />
+	<col style="width: 89.197%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Array</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">An 
+		 array of strings, if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">On 
+		 error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strFile, arrStrings(4)</p>
+<p class="Code" style="margin-left: 12px;">arrStrings(0) = &quot;Every&quot;</p>
+<p class="Code" style="margin-left: 12px;">arrStrings(1) = &quot;good&quot;</p>
+<p class="Code" style="margin-left: 12px;">arrStrings(2) = &quot;boy&quot;</p>
+<p class="Code" style="margin-left: 12px;">arrStrings(3) = &quot;deserves&quot;</p>
+<p class="Code" style="margin-left: 12px;">arrStrings(4) = &quot;fudge.&quot;</p>
+<p class="Code" style="margin-left: 12px;">strFile = Rhino.SaveFileName(&quot;Save&quot;, 
+ &quot;Text Files (*.txt)|*.txt||&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strFile) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Call Rhino.WriteTextFile(strFile, 
+ arrStrings)</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="readtextfile.htm">ReadTextFile</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

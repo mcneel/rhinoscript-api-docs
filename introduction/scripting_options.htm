@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Scripting Options</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Introduction\nScripting Options");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../introduction.htm\">Introduction<\/a> > Scripting Options<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Scripting Options</h1>
+<p>There are several options that you can set to customize your RhinoScript 
+ environment. &#160;These options from either Rhino's Tools menu, or by 
+ entering &quot;Options&quot; on Rhino's command line.</p>
+<p>&#160;</p>
+<p><img src="../images/rhinooptions.jpg" alt="rhinooptions.jpg" style="border: none;" width="631" height="548" border="0" /></p>
+<h2>RhinoScript options</h2>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.256%;" />
+	<col style="width: 90.744%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Reinitialize</p></td>
+		<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If the reinitialize options is selected, 
+		 then all script subroutines, functions, classes and variables 
+		 loaded during a modeling session will be erased upon opening a 
+		 new Rhino model. &#160;If the option is not selected (default), 
+		 then any all script subroutines, functions, classes and variables 
+		 loaded during a modeling session will be retained when a new model 
+		 is opened.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Startup</p></td>
+		<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The startup options allows you to specify 
+		 one or more script files that will be automatically loaded every 
+		 time you run Rhino. Using startup scripts is also a great way 
+		 to ensure the commonly used utility functions - functions that 
+		 are used by more than one script in more than one script file 
+		 - are always loaded and read for use. Note, if the reinitialize 
+		 option is selected, then the startup file will be loaded every 
+		 time a new model is opened. &#160;Also note, if relative paths 
+		 are specified, Rhino will search for the startup script files 
+		 in the following locations:</p>
+		<p class="Table-Body">&#160;</p>
+		<p class="Table-Body">1. The current model's folder.</p>
+		<p>2. Every folder listed in Rhino's user-defined search path. 
+		 (Use the <span style="font-weight: bold;"><b>Options</b></span> command 
+		 (Files page) to either view or modify this path.)</p>
+		<p>3. All Rhino system folders.</p>
+		<p>4. The Rhino executable folder.</p></td>
+	</tr>
+</table>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

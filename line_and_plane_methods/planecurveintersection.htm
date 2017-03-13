@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>PlaneCurveIntersection</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nLine & Plane Methods\nPlaneCurveIntersection");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"plane_methods.htm\">Line & Plane Methods<\/a> > PlaneCurveIntersection<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>PlaneCurveIntersection</h1>
+<p>Intersect an infinite plane and a curve object.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.PlaneCurveIntersection (arrPlane, strCurve [, dblTolerance])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 11.813%;" />
+	<col style="width: 88.187%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 11.813%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPlane</p></td>
+		<td style="width: 88.187%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The plane 
+		 to intersect.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 11.813%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strCurve </p></td>
+		<td style="width: 88.187%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;The identifier 
+		 of the curve object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 11.813%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblTolerance</p></td>
+		<td style="width: 88.187%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The intersection 
+		 tolerance.&#160;If omitted, the document's absolute tolerance 
+		 is used.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 11.545%;" />
+	<col style="width: 88.455%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 11.545%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 88.455%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">A two-dimensional array of intersection 
+		 information if successful. &#160;The array will contain one or 
+		 more of the following elements:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 8.533%;" />
+			<col style="width: 13.128%;" />
+			<col style="width: 78.339%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Element</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Type</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 0)</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">The intersection event type, either 
+				 Point (1) or Overlap (2).</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 1)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array (3-D Point)</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the intersection point on the curve.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then intersection start point on the curve.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 2)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array (3-D Point)</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the intersection point on the curve.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then intersection end point on the curve.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 3)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array (3-D Point)</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the intersection point on the plane.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then intersection start point on the plane.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 4)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array (3-D Point)</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the intersection point on the plane.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then intersection end point on the plane.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 5)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the curve parameter.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then the start value of the curve parameter range.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 6)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the curve parameter.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 &#160;then the end value of the curve parameter range.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 7)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the U plane parameter.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then the U plane parameter for curve at (n, 5).</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 8)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the V plane parameter.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then the V plane parameter for curve at (n, 5).</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 9)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the U plane parameter.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then the U plane parameter for curve at (n, 6).</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">(n, 10)</p>
+				<p class="table-body">&#160;</p></td>
+				<td style="width: 13.128%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number</p></td>
+				<td style="width: 78.339%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If the event type is Point (1), 
+				 then the V plane parameter.</p>
+				<p class="Table-Body">If the event type is Overlap (2), 
+				 then the V plane parameter for curve at (n, 6).</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 11.545%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 88.455%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub TestPlaneCurveIntersection</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim strCurve, arrPlane, 
+ arrX, i</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;strCurve = Rhino.GetObject(&quot;Select 
+ curve&quot;, 4)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsNull(strCurve) 
+ Then Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrPlane = Rhino.WorldXYPlane</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrX = Rhino.PlaneCurveIntersection(arrPlane, 
+ strCurve)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsArray(arrX) 
+ Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;For 
+ i = 0 To UBound(arrX)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;Rhino.AddPoint 
+ arrX(i,1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3>Also See</h3>
+<p><a href="intersectplanes.htm">IntersectPlanes</a></p>
+<p><a href="planearcintersection.htm">PlaneArcIntersection</a></p>
+<p><a href="planecircleintersection.htm">PlaneCircleIntersection</a></p>
+<p><a href="planeplaneintersection.htm">PlanePlaneIntersection</a></p>
+<p><a href="planesphereintersection.htm">PlaneSphereIntersection</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

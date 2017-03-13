@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddSpiral</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nAddSpiral");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > AddSpiral<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddSpiral</h1>
+<p>Adds a spiral or helical curve object to the document.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddSpiral (arrPoint0, arrPoint1, dblPitch, dblTurns, 
+ dblRadius0 [, dblRadius1])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 8.73%;" />
+	<col style="width: 91.27%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPoint0</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;Helix's axis 
+		 starting point or center of spiral.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPoint1</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;Helix's axis 
+		 end point or point normal to spiral's plane.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblPitch</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;The pitch, 
+		 or distance between turns. If 0, then a spiral. If &gt; 0, then 
+		 the distance between helix's &quot;threads&quot;.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblTurns</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;A non-zero 
+		 value indicating the number of turns in spiral or helix. Values 
+		 &gt; 0 will produce a right-handed, or counter-clockwise, orientation. 
+		 A value &lt; 0 will produce a left-handed, or clockwise, orientation. 
+		 Note, for a helix, <span style="font-style: italic;"><i>dblPitch</i></span> 
+		 * <span style="font-style: italic;"><i>dblTurns</i></span> = length of 
+		 the helix's axis.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblRadius0 
+		 </p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;The starting 
+		 radius. &#160;Note, for a helix, you may have <span style="font-style: italic;"><i>dblRadius0 
+		 </i></span>= <span style="font-style: italic;"><i>dblRadius1</i></span>. 
+		 For a spiral, <span style="font-style: italic;"><i>dblRadius0 </i></span>= 
+		 <span style="font-style: italic;"><i>dblRadius1</i></span> produces a 
+		 circle. Zero and negative radii are permissible. &#160;At least 
+		 one radii must be non-zero.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblRadius1</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The ending 
+		 radius. &#160;If omitted, <span style="font-style: italic;"><i>dblRadius1</i></span> 
+		 = <span style="font-style: italic;"><i>dblRadius0</i></span>.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 8.987%;" />
+	<col style="width: 91.013%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 8.987%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 91.013%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 8.987%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 91.013%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrPoint0, arrPoint1, <span 
+	 style="margin-left: 12px;">dblPitch, dblTurns, dblRadius0, dblRadius1</span></p>
+<p class="Code" style="margin-left: 12px;">arrPoint0 = array(0,0,0)</p>
+<p class="Code" style="margin-left: 12px;">arrPoint1 = Array(0,0,10)</p>
+<p class="Code" style="margin-left: 12px;">dblPitch = 1</p>
+<p class="Code" style="margin-left: 12px;">dblTurns = 10</p>
+<p class="Code" style="margin-left: 12px;">dblRadius0 = 5.0</p>
+<p class="Code" style="margin-left: 12px;">dblRadius1 = 8.0</p>
+<p class="Code" style="margin-left: 12px;">Call Rhino.AddSpiral(arrPoint0, 
+ arrPoint1, dblPitch, dblTurns, dblRadius0, dblRadius1)</p>
+<h3>Also See</h3>
+<p><a href="addspiral2.htm">AddSpiral2</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

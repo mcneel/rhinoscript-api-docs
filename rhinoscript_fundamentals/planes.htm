@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Planes</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Fundamentals\nPlanes");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"rhinoscript_fundamentals.htm\">RhinoScript Fundamentals<\/a> > Planes<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Planes</h1>
+<p>Several RhinoScript methods either require as an argument or return 
+ as a result a plane. &#160;Planes are represented as zero-based, &#160;one-dimensional 
+ array containing four elements: the plane's origin (3-D point), the plane's 
+ X axis direction (3-D vector), the plane's Y axis direction (3-D vector), 
+ and the plane's Z axis direction (3-D vector).</p>
+<p>Planes can be constructed in a number of ways. &#160;For example,</p>
+<p class="Code" style="margin-left: 12px;">Dim arrPlane(3)</p>
+<p class="Code" style="margin-left: 12px;">arrPlane(0) = Array(0.0, 0.0, 
+ 0.0) ' origin point</p>
+<p class="Code" style="margin-left: 12px;">arrPlane(1) = Array(1.0, 0.0, 
+ 0.0) ' x-axis vector</p>
+<p class="Code" style="margin-left: 12px;">arrPlane(2) = Array(0.0, 1.0, 
+ 0.0) ' y-axis vector</p>
+<p class="Code" style="margin-left: 12px;">arrPlane(3) = Array(0.0, 0.0, 
+ 1.0) ' z-axis vector</p>
+<p class="Table-Body">Planes can also be created using the <a href="../line_and_plane_methods/planefromframe.htm">PlaneFromFrame</a>, 
+ <a href="../line_and_plane_methods/planefromnormal.htm">PlaneFromNormal</a>, 
+ and <a href="../line_and_plane_methods/planefrompoints.htm">PlaneFromPoints</a> 
+ methods.</p>
+<p class="Table-Body">RhinoScript contains a number of methods to manipulate 
+ planes. &#160;See <a href="../line_and_plane_methods/plane_methods.htm">Lines 
+ and Planes</a> for details.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

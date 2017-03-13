@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>SaveView</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nSaveView");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > SaveView<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>SaveView</h1>
+<p>The following example demonstrates how to write a scripted version of Rhino 2.0's SaveView command.</p>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Option Explicit</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="CodeComment">' SaveView</p>
+<p class="CodeComment">' RhinoScript version of the Rhino 2.0 SaveView command.</p>
+<p class="CodeComment">' ---------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Sub SaveView</p>
+<p class="CodeComment" style="margin-left: 24px;"><span style="margin-left: 24px;">' Prompt for the name of the view to save.</span></p>
+<p class="CodeComment" style="margin-left: 24px;">' Use the title of the current view as the default name.</p>
+<p class="Code" style="margin-left: 24px;">Dim sName</p>
+<p class="Code" style="margin-left: 24px;">sName = Rhino.StringBox(, Rhino.CurrentView, "Name of view")</p>
+<p class="Code" style="margin-left: 24px;">If IsNull(sName) Then Exit Sub</p>
+<p class="Code" style="margin-left: 24px;">&#160;</p>
+<p class="CodeComment" style="margin-left: 24px;">' Get all of the named views</p>
+<p class="Code" style="margin-left: 24px;">Dim aViews</p>
+<p class="Code" style="margin-left: 24px;">aViews = Rhino.NamedViews</p>
+<p class="Code" style="margin-left: 24px;">If Not IsArray(aViews) Then</p>
+<p class="CodeComment" style="margin-left: 36px;">' If we got here, then no other named views exist.</p>
+<p class="CodeComment" style="margin-left: 36px;">' Thus, we will add the named view and exit.</p>
+<p class="Code" style="margin-left: 36px;">Rhino.AddNamedView sName</p>
+<p class="Code" style="margin-left: 36px;">Exit Sub</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="CodeComment" style="margin-left: 24px;">' See if the named view specified by the user matches</p>
+<p class="CodeComment" style="margin-left: 24px;">' one that has already been saved.</p>
+<p class="Code" style="margin-left: 24px;">Dim sView, bFound</p>
+<p class="Code" style="margin-left: 24px;">bFound = False</p>
+<p class="Code" style="margin-left: 24px;">For Each sView In aViews</p>
+<p class="Code" style="margin-left: 36px;">If (StrComp(sName, sView, 1) = 0) Then</p>
+<p class="CodeComment" style="margin-left: 48px;">' If we got here, then the named view already exists.</p>
+<p class="Code" style="margin-left: 48px;">bFound = True</p>
+<p class="Code" style="margin-left: 48px;">Exit For</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="CodeComment" style="margin-left: 24px;">' If the named view already exists, ask the user what he wants to do.</p>
+<p class="Code" style="margin-left: 24px;">If (bFound = True) Then</p>
+<p class="Code" style="margin-left: 36px;">Dim sMsg</p>
+<p class="Code" style="margin-left: 36px;">sMsg = "A view named " &amp; sName &amp; " already exists." &amp; Chr(13) &amp; Chr(10) &amp; "Do you want to replace it?"</p>
+<p class="Code" style="margin-left: 36px;">If (MsgBox(sMsg, vbYesNo + vbExclamation, "Save View") = vbNo) Then</p>
+<p class="CodeComment" style="margin-left: 48px;">' If we got here, the user pressed the "Cancel" button.</p>
+<p class="Code" style="margin-left: 48px;">Exit Sub</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="CodeComment" style="margin-left: 24px;">' Add the named view</p>
+<p class="Code" style="margin-left: 24px;">Rhino.AddNamedView sName</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

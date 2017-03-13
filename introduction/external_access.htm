@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>External Access</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Introduction\nExternal Access");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../introduction.htm\">Introduction<\/a> > External Access<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>External Access</h1>
+<p>Although the RhinoScript Automation object resides in a Rhino plug-in, 
+ external access to this object is available outside of Rhino. &#160;External 
+ access to the RhinoScript object is available through Rhino's application 
+ object. &#160;Thus, it is possible to access all of the methods provided 
+ by the RhinoScript object from other automation aware products and development 
+ environments, such as Microsoft Visual Basic.</p>
+<h2>Rhino Objects</h2>
+<p>There are several different Rhino object that you can create:</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 13.941%;" />
+	<col style="width: 86.059%;" />
+	<tr>
+		<td><p class="Table-Head">Object</p></td>
+		<td><p class="Table-Head">Platform</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Rhino4.Application</p></td>
+		<td><p class="Table-Body">Rhino 4 and 5, 32-bit only.</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Rhino4.Interface</p></td>
+		<td><p class="Table-Body">Rhino 4 and 5, 32-bit only.</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Rhino5.Application</p></td>
+		<td><p class="Table-Body">Rhino 5, 32-bit only.</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Rhino5.Interface</p></td>
+		<td><p class="Table-Body">Rhino 5, 32-bit only.</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Rhino5x64.Automation</p></td>
+		<td><p class="Table-Body">Rhino 5, 64-bit only.</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Rhino5x64.Interface</p></td>
+		<td><p class="Table-Body">Rhino 5, 64-bit only.</p></td>
+	</tr>
+</table>
+<h2>Application verses Interface Objects</h2>
+<p>Creating a Rhino Application object will always result in a new running 
+ instance of Rhino. </p>
+<p>When you create a Rhino Interface object, if an instance of Rhino is 
+ already running, you will be given a reference to this existing Interface 
+ object. If Rhino is not running, it will be launched and you be given 
+ a reference to this newly created object. Note, if more than one instance 
+ of Rhino is already running, there is no way to determine in advance which 
+ running instance to which you will be given reference.</p>
+<h2>What To Use?</h2>
+<p>If you are planning on writing an application that will automate Rhino 
+ 4.0, you will have to decide which automation object to use. </p>
+<ul type="disc">
+	<li><p>If your application will be using Rhino as a file conversion 
+	 engine or to create geometry without displaying the interface, you 
+	 will want to use Rhino's Application object.</p></li>
+	<li><p>If your application must always create a new running instance 
+	 of Rhino, then you will want to use Rhino's Application object.</p></li>
+	<li><p>If your application contains tools to automate tasks or to assist 
+	 the Rhino user in generating geometry, then you will want to use Rhino's 
+	 Interface object.</p></li>
+</ul>
+<h2>Connecting to Rhino</h2>
+<p>To create a reference to Rhino's Application object using Visual Basic, 
+ use the <span style="font-weight: bold;"><b>CreateObject</b></span> function. 
+ &#160;For example:</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">' Create Application 
+ object</p>
+<p class="Code" style="margin-left: 12px;">Dim objRhino as Object</p>
+<p class="Code" style="margin-left: 12px;">On Error Resume Next</p>
+<p class="Code" style="margin-left: 12px;">objRhino = CreateObject(&quot;Rhino4.Application&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If (Err.Number &lt;&gt; 0) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox(&quot;Failed 
+ to create Rhino4 object&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<p>If you wanted to reference an instance of Rhino that was already running, 
+ then you could create an Interface object.</p>
+<p class="Code" style="margin-left: 12px; color: #008000;"><span style="color: #008000;"><font color="green" >' 
+ Create Interface object</font></span></p>
+<p class="Code" style="margin-left: 12px;">Dim objRhino as Object</p>
+<p class="Code" style="margin-left: 12px;">On Error Resume Next</p>
+<p class="Code" style="margin-left: 12px;">objRhino = CreateObject(&quot;Rhino4.Interface&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If (Err.Number &lt;&gt; 0) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox(&quot;Failed 
+ to create Rhino4 object&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h2>Showing Rhino</h2>
+<p>There are very few properties methods on the Rhino objects, as it is 
+ expected the Rhino plug-ins will provided additional objects with properties 
+ and methods. One useful property is the <span style="font-weight: bold;"><b>Visible</b></span> 
+ property, which allows you to control Rhino's visibility. For example:</p>
+<p class="Code" style="color: #008000;">' Shows the Rhino window</p>
+<p class="Code">Private Sub ShowButton_Click()</p>
+<p class="Code">&#160;&#160;Rhino.Visible = True</p>
+<p class="Code">End Sub</p>
+<p class="Code" style="color: #008000;">' Hides the Rhino window</p>
+<p class="Code">Private Sub HideButton_Click()</p>
+<p class="Code">&#160;&#160;Rhino.Visible = False</p>
+<p class="Code">End Sub</p>
+<h2>Connecting to RhinoScript</h2>
+<p>The RhinoScript object resides in a Rhino plug-in (DLL). Having the 
+ RhinoScript object reside in a plug-in allows us to fix bug and add additional 
+ features between Rhino releases. </p>
+<p>But, this flexibility can also cause some problems when trying to get 
+ this object from an automation-aware application. As is often the case, 
+ by the time your application has created the Automation (or Interface) 
+ object and is ready to ask that object for RhinoScript, Rhino has not 
+ had sufficient time to load the RhinoScript plug-in. Thus, you get a runtime 
+ error. </p>
+<p>The solution to this problem is to make your application to wait, after 
+ creating the Application (or Interface) object, before attempting to get 
+ RhinoScript. This delay can be performed by using the Win32 API <span 
+	 style="font-weight: bold;"><b>Sleep</b></span> function. For example: </p>
+<p class="Code" style="color: #008000;">' Make attempts to get RhinoScript, 
+ s<span style="color: #008000;"><font color="green" >leep between each attempt.</font></span></p>
+<p class="Code">Dim objRhinoScript As Object</p>
+<p class="Code">Dim nCount as Integer</p>
+<p class="Code">nCount = 0</p>
+<p class="Code">Do While (nCount &lt; 10)</p>
+<p class="Code">&#160;&#160;On Error Resume Next</p>
+<p class="Code">&#160;&#160;objRhinoScript = objRhino.GetScriptObject()</p>
+<p class="Code">&#160;&#160;If Err.Number &lt;&gt; 0 Then</p>
+<p class="Code">&#160;&#160;&#160;&#160;Err.Clear()</p>
+<p class="Code">&#160;&#160;&#160;&#160;Sleep(500)</p>
+<p class="Code">&#160;&#160;&#160;&#160;nCount = nCount + 1</p>
+<p class="Code">&#160;&#160;Else</p>
+<p class="Code">&#160;&#160;&#160;&#160;Exit Do</p>
+<p class="Code">&#160;&#160;End If</p>
+<p class="Code">Loop</p>
+<p class="Code" style="color: #008000;"><span style="color: #008000;"><font color="green" >' 
+ Display an error if needed.</font></span></p>
+<p class="Code">If (objRhinoScript Is Nothing) Then</p>
+<p class="Code">&#160;&#160;MsgBox(&quot;Failed to get RhinoScript&quot;)</p>
+<p class="Code">End If</p>
+<h2>Schemes</h2>
+<p>Rhino Schemes are different sets of Rhino Options that are stored in 
+ the Windows Registry. Everything in the Options section of Rhino can be 
+ stored in a scheme. In this way, Rhino can be started with different combinations 
+ of workspaces, languages, colors, etc. depending on the need or the user, 
+ just by starting Rhino from the appropriate desktop shortcut. The schemes 
+ exist independently of each other, and can be modified as desired. </p>
+<p>If Rhino is launched via ActiveX automation, there is no way to specify 
+ an alternate scheme (being that you cannot pass command line arguments 
+ when creating COM objects). But, we have provided a hidden registry key 
+ that you can use to specify an alternate scheme. Note, this registry key 
+ only works if Rhino is launched via ActiveX automation. The registry key 
+ is: </p>
+<p class="Code">HKEY_CURRENT_USER\Software\McNeel\Rhinoceros\4.0\Global 
+ Options\Automation</p>
+<p class="Code">Name: Scheme</p>
+<p class="Code">Type: REG_SZ</p>
+<p class="Code">Value: &lt;scheme_name&gt;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

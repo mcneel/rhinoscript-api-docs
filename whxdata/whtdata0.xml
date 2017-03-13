@@ -1,0 +1,61 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="RhinoScript" url="title.htm" />
+<item name="What's New?" url="what_s_new_.htm" />
+<book name="Introduction" url="introduction.htm" >
+  <item name="Getting Started" url="introduction/getting_started.htm" />
+  <item name="Loading Scripts" url="introduction/loading_scripts.htm" />
+  <item name="Running Scripts" url="introduction/running_scripts.htm" />
+  <item name="Cancelling Scripts" url="introduction/cancelling_scripts.htm" />
+  <item name="Editing Scripts" url="introduction/editing_scripts.htm" />
+  <item name="Scripting Options" url="introduction/scripting_options.htm" />
+  <item name="Reinitializing RhinoScript" url="introduction/reinitializing_rhinoscript.htm" />
+  <item name="External Access" url="introduction/external_access.htm" />
+</book>
+<book name="VBScript Fundamentals" url="vbscript_fundamentals/vbscript_fundamentals.htm" >
+  <item name="VBScript Data Types" url="vbscript_fundamentals/vbscript_data_types.htm" />
+  <item name="VBScript Variables" url="vbscript_fundamentals/vbscript_variables.htm" />
+  <item name="VBScript Constants" url="vbscript_fundamentals/vbscript_constants.htm" />
+  <item name="VBScript Operators" url="vbscript_fundamentals/vbscript_operators.htm" />
+  <item name="VBScript Statements" url="vbscript_fundamentals/vbscript_statements.htm" />
+  <item name="VBScript Conditional Statements" url="vbscript_fundamentals/vbscript_conditional_statements.htm" />
+  <item name="VBScript Looping" url="vbscript_fundamentals/vbscript_looping.htm" />
+  <item name="VBScript Procedures" url="vbscript_fundamentals/vbscript_procedures.htm" />
+  <item name="VBScript Coding Conventions" url="vbscript_fundamentals/vbscript_coding_conventions.htm" />
+</book>
+<book name="RhinoScript Fundamentals" url="rhinoscript_fundamentals/rhinoscript_fundamentals.htm" >
+  <item name="Points" url="rhinoscript_fundamentals/points.htm" />
+  <item name="Arrays of Points" url="rhinoscript_fundamentals/arrays_of_points.htm" />
+  <item name="Vectors" url="rhinoscript_fundamentals/vectors.htm" />
+  <item name="Lines" url="rhinoscript_fundamentals/lines.htm" />
+  <item name="Planes" url="rhinoscript_fundamentals/planes.htm" />
+  <item name="Objects" url="rhinoscript_fundamentals/objects.htm" />
+</book>
+<book name="RhinoScript Methods" url="rhinoscript_methods.htm" >
+<chunk name="RhinoScript Methods" url="rhinoscript_methods.htm" ref="whtdata1.xml" />
+</book>
+<book name="Sample Scripts" url="sample_scripts/sample_scripts.htm" >
+  <item name="AnnotateCurveEndPoints" url="sample_scripts/annotatecurveendpoints.htm" />
+  <item name="ArrayPointsOnSurface" url="sample_scripts/arraypointsonsurface.htm" />
+  <item name="CircleFromCircumference" url="sample_scripts/circlefromcircumference.htm" />
+  <item name="CopyObjectsToLayer" url="sample_scripts/copyobjectstolayer.htm" />
+  <item name="CreateShortcut" url="sample_scripts/createshortcut.htm" />
+  <item name="CurrentModelInfo" url="sample_scripts/currentmodelinfo.htm" />
+  <item name="CurveLength" url="sample_scripts/curvelength.htm" />
+  <item name="DrawParametricCurve" url="sample_scripts/drawparametriccurve.htm" />
+  <item name="DumpDocumentData" url="sample_scripts/dumpdocumentdata.htm" />
+  <item name="DynamicArray" url="sample_scripts/dynamicarray.htm" />
+  <item name="ExportPoints" url="sample_scripts/exportpoints.htm" />
+  <item name="FormatMessage" url="sample_scripts/formatmessage.htm" />
+  <item name="GardenPath" url="sample_scripts/gardenpath.htm" />
+  <item name="GetArrayDim" url="sample_scripts/getarraydim.htm" />
+  <item name="ImportCurveFromExcel" url="sample_scripts/importcurvefromexcel.htm" />
+  <item name="MakeNurbsCurve" url="sample_scripts/makenurbscurve.htm" />
+  <item name="ReadTextFile" url="sample_scripts/readtextfile.htm" />
+  <item name="RGB Helpers" url="sample_scripts/rgb_helpers.htm" />
+  <item name="Rhino.rvb" url="sample_scripts/rhino_rvb.htm" />
+  <item name="RingTorus" url="sample_scripts/ringtorus.htm" />
+  <item name="SaveView" url="sample_scripts/saveview.htm" />
+</book>
+
+</tocdata>

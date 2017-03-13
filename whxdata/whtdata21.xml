@@ -1,0 +1,23 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="AddToolbar" url="toolbar_methods/addtoolbar.htm" />
+<item name="AddToolbarButton" url="toolbar_methods/addtoolbarbutton.htm" />
+<item name="AddToolbarCollection" url="toolbar_methods/addtoolbarcollection.htm" />
+<item name="CloseToolbarCollection" url="toolbar_methods/closetoolbarcollection.htm" />
+<item name="DeleteToolbar" url="toolbar_methods/deletetoolbar.htm" />
+<item name="HideToolbar" url="toolbar_methods/hidetoolbar.htm" />
+<item name="IsToolbar" url="toolbar_methods/istoolbar.htm" />
+<item name="IsToolbarCollection" url="toolbar_methods/istoolbarcollection.htm" />
+<item name="IsToolbarDocked" url="toolbar_methods/istoolbardocked.htm" />
+<item name="IsToolbarVisible" url="toolbar_methods/istoolbarvisible.htm" />
+<item name="OpenToolbarCollection" url="toolbar_methods/opentoolbarcollection.htm" />
+<item name="SaveToolbarCollection" url="toolbar_methods/savetoolbarcollection.htm" />
+<item name="SaveToolbarCollectionAs" url="toolbar_methods/savetoolbarcollectionas.htm" />
+<item name="ShowToolbar" url="toolbar_methods/showtoolbar.htm" />
+<item name="ToolbarCollectionCount" url="toolbar_methods/toolbarcollectioncount.htm" />
+<item name="ToolbarCollectionNames" url="toolbar_methods/toolbarcollectionnames.htm" />
+<item name="ToolbarCollectionPath" url="toolbar_methods/toolbarcollectionpath.htm" />
+<item name="ToolbarCount" url="toolbar_methods/toolbarcount.htm" />
+<item name="ToolbarNames" url="toolbar_methods/toolbarnames.htm" />
+
+</tocdata>

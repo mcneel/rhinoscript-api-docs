@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>CopyObjectsToLayer</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nCopyObjectsToLayer");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > CopyObjectsToLayer<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>CopyObjectsToLayer</h1>
+<p>The following example demonstrates how to copy selected objects to a different layer.</p>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Option Explicit</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Subroutine: CopyObjectsToLayer</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: &#160;&#160;&#160;Copy selected objects to a different layer.</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Sub CopyObjectsToLayer()</p>
+<p class="Code" style="margin-left: 24px;">Dim arrObjects, arrLayers, strLayer, arrNew, strNew</p>
+<p class="CodeComment" style="margin-left: 24px;">' Get the objects to copy</p>
+<p class="Code" style="margin-left: 24px;">arrObjects = Rhino.GetObjects("Select objects")</p>
+<p class="Code" style="margin-left: 24px;">If IsArray(arrObjects) Then</p>
+<p class="CodeComment" style="margin-left: 36px;">' Make sure select objects are unselected</p>
+<p class="Code" style="margin-left: 36px;">Rhino.UnselectObjects arrObjects</p>
+<p class="CodeComment" style="margin-left: 36px;">' Get all layer names</p>
+<p class="Code" style="margin-left: 36px;">arrLayers = Rhino.LayerNames</p>
+<p class="Code" style="margin-left: 36px;">If IsArray(arrLayers) Then</p>
+<p class="Code" style="margin-left: 48px;">arrLayers = Rhino.Sort(arrLayers)</p>
+<p class="CodeComment" style="margin-left: 48px;">' Get the destination layer</p>
+<p class="Code" style="margin-left: 48px;">strLayer = Rhino.ComboListBox(arrLayers, "Destination Layer " &amp; "&lt;" &amp; Rhino.CurrentLayer &amp; "&gt;")</p>
+<p class="Code" style="margin-left: 48px;">If Not IsNull(strLayer) Then</p>
+<p class="CodeComment" style="margin-left: 60px;">' Add the new layer if necessary</p>
+<p class="Code" style="margin-left: 60px;">If Not Rhino.IsLayer(strLayer) Then Rhino.AddLayer(strLayer)</p>
+<p class="CodeComment" style="margin-left: 60px;">' Copy the objects</p>
+<p class="Code" style="margin-left: 60px;">arrNew = Rhino.CopyObjects(arrObjects)</p>
+<p class="Code" style="margin-left: 60px;">If IsArray(arrNew) Then</p>
+<p class="Code" style="margin-left: 72px;">For Each strNew In arrNew</p>
+<p class="CodeComment" style="margin-left: 84px;">' Set the layer of the copied objects</p>
+<p class="Code" style="margin-left: 84px;">Rhino.ObjectLayer strNew, strLayer</p>
+<p class="Code" style="margin-left: 72px;">Next</p>
+<p class="Code" style="margin-left: 60px;">End If</p>
+<p class="CodeComment" style="margin-left: 60px;">' Select the newly copied objects</p>
+<p class="Code" style="margin-left: 60px;">Rhino.SelectObjects arrNew</p>
+<p class="Code" style="margin-left: 48px;">End If</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code">End Sub</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

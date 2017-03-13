@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>VBScript Coding Conventions</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("VBScript Fundamentals\nVBScript Coding Conventions");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"vbscript_fundamentals.htm\">VBScript Fundamentals<\/a> > VBScript Coding Conventions<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>VBScript Coding Conventions</h1>
+<p>Coding conventions are suggestions are designed to help you write VBScript and RhinoScript code. Coding conventions can include the following:</p>
+<ul type="disc">
+<li class="p">
+<p>Naming conventions for objects, variables, and procedures</p>
+</li>
+<li class="p">
+<p>Commenting conventions</p>
+</li>
+<li class="p">
+<p>Text formatting and indenting guidelines</p>
+</li>
+</ul>
+<p>The main reason for using a consistent set of coding conventions is to standardize the structure and coding style of a script or set of scripts so that you and others can easily read and understand the code. Using good coding conventions results in clear, precise, and readable source code that is consistent with other language conventions and is intuitive.</p>
+<h2>Constant Naming Conventions</h2>
+<p>Earlier versions of VBScript had no mechanism for creating user-defined constants. Constants, if used, were implemented as variables and distinguished from other variables using all uppercase characters. Multiple words were separated using the <span style="font-weight: bold;"><b>underscore (_)</b></span> character. For example:</p>
+<p class="Code" style="margin-left: 12px;">USER_LIST_MAX</p>
+<p class="Code" style="margin-left: 12px;">NEW_LINE</p>
+<p>While this is still an acceptable way to identify your constants, you may want to use an alternative naming scheme, now that you can create true constants using the <span style="font-weight: bold;"><b>Const</b></span> statement. This convention uses a mixed-case format in which constant names have a "con" prefix. For example:</p>
+<p class="Code" style="margin-left: 12px;">conYourOwnConstant</p>
+<h2>Variable Naming Conventions</h2>
+<p>To enhance readability and consistency, use the following prefixes with descriptive names for variables in your VBScript code.</p>
+<table cellspacing="0" width="100%">
+<col style="width: 11.54%;" />
+<col style="width: 6.621%;" />
+<col style="width: 81.839%;" />
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Subtype</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Prefix</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Example</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">arr</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">arrLayers</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Boolean</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">bln</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">blnFound</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Byte</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">byt</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">bytRasterData</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Date (Time)</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">dtm</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">dtmStart</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Double</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">dbl</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">dblTolerance</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Error</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">err</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">errInvalidValue</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Integer (Short)</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">int</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">intQuantity</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Long</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">lng</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">lngDistance</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Object</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">obj</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">objShell</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Single</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">sng</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">sngAverage</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.54%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String</p>
+</td>
+<td style="width: 6.621%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">str</p>
+</td>
+<td style="width: 81.839%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">strFirstName</p>
+</td>
+</tr>
+</table>
+<h2>Variable Scope</h2>
+<p>Variables should always be defined with the smallest scope possible. VBScript variables can have the following scope.</p>
+<table cellspacing="0" width="100%">
+<col style="width: 14.653%;" />
+<col style="width: 21.067%;" />
+<col style="width: 64.28%;" />
+<tr valign="top">
+<td style="width: 14.653%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Scope</p>
+</td>
+<td style="width: 21.067%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Where Variable Is Declared</p>
+</td>
+<td style="width: 64.28%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Visibility</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 14.653%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Procedure-level</p>
+</td>
+<td style="width: 21.067%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Event, Function, or Sub procedure.</p>
+</td>
+<td style="width: 64.28%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Visible in every procedure in the script.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 14.653%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Script-level</p>
+</td>
+<td style="width: 21.067%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Outside any procedure.</p>
+</td>
+<td style="width: 64.28%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Visible in every procedure in the script.</p>
+</td>
+</tr>
+</table>
+<h2>Variable Scope Prefixes</h2>
+<p>As script size grows, so does the value of being able to quickly differentiate the scope of variables. A one-letter scope prefix preceding the type prefix provides this, without unduly increasing the size of variable names.</p>
+<table cellspacing="0" width="100%">
+<col style="width: 14.778%;" />
+<col style="width: 21.005%;" />
+<col style="width: 64.217%;" />
+<tr valign="top">
+<td style="width: 14.778%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Scope</p>
+</td>
+<td style="width: 21.005%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Prefix</p>
+</td>
+<td style="width: 64.217%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Example</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 14.778%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Procedure-level</p>
+</td>
+<td style="width: 21.005%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">None</p>
+</td>
+<td style="width: 64.217%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">dblVelocity</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 14.778%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Script-level</p>
+</td>
+<td style="width: 21.005%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">s</p>
+</td>
+<td style="width: 64.217%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">sdblVelocity</p>
+</td>
+</tr>
+</table>
+<h2>Descriptive Variable and Procedure Names</h2>
+<p>The body of a variable or procedure name should use mixed case and should be as descriptive as necessary. In addition, procedure names should begin with a verb, such as InitNameArray or ValidateLayer.</p>
+<p>For frequently used or long terms, standard abbreviations are recommended to help keep name length reasonable. In general, variable names greater than 32 characters can be difficult to read. When using abbreviations, make sure they are consistent throughout the entire script. For example, randomly switching between Cnt and Count within a script or set of scripts may lead to confusion.</p>
+<h2>Code Commenting Conventions</h2>
+<p>All procedures should begin with a brief comment describing what they do. This description should not describe the implementation details (how it does it) because these often change over time, resulting in unnecessary comment maintenance work, or worse, erroneous comments. The code itself and any necessary inline comments describe the implementation.</p>
+<p>Arguments passed to a procedure should be described when their purpose is not obvious and when the procedure expects the arguments to be in a specific range. Return values for functions and variables that are changed by a procedure, especially through reference arguments, should also be described at the beginning of each procedure.</p>
+<p>Procedure header comments should include the following section headings.</p>
+<table cellspacing="0" width="100%">
+<col style="width: 15.131%;" />
+<col style="width: 84.869%;" />
+<tr valign="top">
+<td style="width: 15.131%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Section Heading</p>
+</td>
+<td style="width: 84.869%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Comment Contents</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 15.131%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Purpose</p>
+</td>
+<td style="width: 84.869%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">What the procedure does (not how).</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 15.131%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Assumptions</p>
+</td>
+<td style="width: 84.869%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">List of any external variable, control, or other element whose state affects this procedure.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 15.131%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Effects</p>
+</td>
+<td style="width: 84.869%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">List of the procedure's effect on each external variable, control, or other element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 15.131%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Inputs</p>
+</td>
+<td style="width: 84.869%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Explanation of each argument that is not obvious. Each argument should be on a separate line with inline comments.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 15.131%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Return Values</p>
+</td>
+<td style="width: 84.869%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Explanation of the value returned.</p>
+</td>
+</tr>
+</table>
+<p>Remember the following points:</p>
+<ul type="disc">
+<li class="p">
+<p>Every important variable declaration should include an inline comment describing the use of the variable being declared.</p>
+</li>
+<li class="p">
+<p>Variables, controls, and procedures should be named clearly to ensure that inline comments are only needed for complex implementation details.</p>
+</li>
+<li class="p">
+<p>At the beginning of your script, you should include an overview that describes the script, enumerating objects, procedures, algorithms, dialog boxes, and other system dependencies. Sometimes a piece of pseudo-code describing the algorithm can be helpful.</p>
+</li>
+</ul>
+<h2>Formatting Your Code</h2>
+<p>Screen space should be conserved as much as possible, while still allowing code formatting to reflect logic structure and nesting. Here are a few suggestions:</p>
+<ul type="disc">
+<li class="p">
+<p>Indent standard nested blocks two spaces.</p>
+</li>
+<li class="p">
+<p>Indent the overview comments of a procedure one space.</p>
+</li>
+<li class="p">
+<p>Indent the highest level statements that follow the overview comments two spaces, with each nested block indented an additional two spaces.</p>
+</li>
+</ul>
+<p>The following code adheres to VBScript coding conventions.</p>
+<p class="Code">&#160;&#160;'**************************************************************</p>
+<p class="Code">&#160;&#160;' Purpose: Locates the first occurrence of a specified</p>
+<p class="Code">&#160;&#160;' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;layer in the LayerList array.</p>
+<p class="Code">&#160;&#160;' Inputs: &#160;arrLayerList: the list of layers to be searched.</p>
+<p class="Code">&#160;&#160;' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;strTargetLayer: the name of the layer to search for.</p>
+<p class="Code">&#160;&#160;' Returns: The index of the first occurrence of the</p>
+<p class="Code">&#160;&#160;' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;strTargetLayer in the strLayerList array.</p>
+<p class="Code">&#160;&#160;' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;If the target layer is not found, return -1.</p>
+<p class="Code">&#160;&#160;'**************************************************************</p>
+<p class="Code">&#160;&#160;Option Explicit</p>
+<p class="Code">&#160;&#160;Function FindLayer(arrLayerList, strTargetLayer)</p>
+<p class="Code">&#160;&#160;&#160;&#160;Dim i &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Loop counter.</p>
+<p class="Code">&#160;&#160;&#160;&#160;Dim blnFound &#160;&#160;' Target found flag</p>
+<p class="Code">&#160;&#160;&#160;&#160;FindLayer = -1 ' Default return value</p>
+<p class="Code">&#160;&#160;&#160;&#160;i = 0 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Initialize loop counter</p>
+<p class="Code">&#160;&#160;&#160;&#160;Do While i &lt;= UBound(arrLayerList) And Not blnFound</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;If arrLayerList(i) = strTargetLayer Then</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;blnFound = True ' Set flag to True</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;FindLayer = i &#160;&#160;' Set return value to loop count</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;End If</p>
+<p class="Code">&#160;&#160;&#160;&#160;&#160;&#160;i = i + 1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Increment loop counter</p>
+<p class="Code">&#160;&#160;&#160;&#160;Loop</p>
+<p class="Code">&#160;&#160;End Function</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

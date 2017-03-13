@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="06 7, 2002 11:29:27 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>SaveSettings</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUtility Methods\nSaveSettings");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"utility_methods.htm\">Utility Methods<\/a> > SaveSettings<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>SaveSettings</h1>
+<p>Saves a string to a specified section in a Windows-style initialization 
+ file. &#160;The initialization file must have the following form:</p>
+<p class="Code">[AppName]</p>
+<p class="Code">KeyName = String</p>
+<p class="Code">.</p>
+<p class="Code">.</p>
+<p class="Code">.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.SaveSettings (strFilename [, strAppName [, strKeyName 
+ [, strString]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 7.993%;" />
+	<col style="width: 92.007%;" />
+	<tr valign="top">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strFilename</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;String. &#160;The name of the initialization file. &#160;If 
+		 <span style="font-style: italic;"><i>strFilename </i></span>contains 
+		 a full path and file name and the file does not exist, then a 
+		 new file will be created. The specified directory must already 
+		 exist. &#160;If <span style="font-style: italic;"><i>strFilename 
+		 </i></span>does not contain a full path and file name for the file, 
+		 then the Windows directory is searched. &#160;If the file does 
+		 not exist, this function creates the file in the Windows directory.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strAppName </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;String. &#160;The name of the section to which the string 
+		 will be copied. &#160;If the section does not exist, it is created. 
+		 &#160;The name of the section is case-independent; the string 
+		 can be any combination of uppercase and lowercase letters.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strKeyName </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;String. &#160;The name of the key to be associated with 
+		 a string. &#160;If the key does not exist in the specified section, 
+		 it is created. &#160;If this parameter is omitted, the entire 
+		 section, including all entries within the section, is deleted.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strString</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;String. &#160;A string to be written to the file. &#160;If 
+		 this parameter is omitted, the key pointed to by the <span style="font-style: italic;"><i>strKeyName 
+		 </i></span>parameter is deleted. </p></td>
+	</tr>
+</table>
+<p>Note, parameters are not case sensitive, so <span style="font-style: italic;"><i>strAppName 
+ </i></span>and <span style="font-style: italic;"><i>strKeyName </i></span>may be 
+ in any combination of uppercase and lowercase characters. &#160;Also, 
+ to improve performance, Windows keeps a cached version of the most recently 
+ accessed initialization file. &#160;If <span style="font-style: italic;"><i>strFilename</i></span> 
+ is specified and the other parameters are omitted, Windows flushes the 
+ cache. &#160;This function always returns False after flushing the cache, 
+ regardless of whether the flush succeeds or fails.</p>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 8.134%;" />
+	<col style="width: 91.866%;" />
+	<tr valign="top">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Boolean</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">True 
+		 or False indicating success or failure.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">On 
+		 error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Rhino.SaveSettings &quot;MySettings.ini&quot;</p>
+<p class="Code" style="margin-left: 12px;">Rhino.SaveSettings &quot;MySettings.ini&quot;, 
+ &quot;Section1&quot;</p>
+<p class="Code" style="margin-left: 12px;">Rhino.SaveSettings &quot;MySettings.ini&quot;, 
+ &quot;Section2&quot;, &quot;Entry1&quot;</p>
+<p class="Code" style="margin-left: 12px;">Rhino.SaveSettings &quot;MySettings.ini&quot;, 
+ &quot;Section3, &quot;Entry2&quot;, &quot;String1&quot;</p>
+<h3>Also See</h3>
+<p><a href="getsettings.htm">GetSettings</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

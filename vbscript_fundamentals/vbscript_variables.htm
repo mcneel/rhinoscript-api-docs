@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>VBScript Variables</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("VBScript Fundamentals\nVBScript Variables");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"vbscript_fundamentals.htm\">VBScript Fundamentals<\/a> > VBScript Variables<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>VBScript Variables</h1>
+<p>A variable is a convenient placeholder that refers to a computer memory location where you can store program information that may change during the time your script is running. For example, you might create a variable called <span style="font-style: italic;"><i>Count</i></span> to store the number of times a user performs a certain operation. Where the variable is stored in computer memory is unimportant. What is important is that you only have to refer to a variable by name to see or change its value. In VBScript, variables are always of one fundamental data type, Variant.</p>
+<h2>Declaring Variables</h2>
+<p>You declare variables explicitly in your script using the <span style="font-weight: bold;"><b>Dim</b></span> statement, the <span style="font-weight: bold;"><b>Public</b></span> statement, and the <span style="font-weight: bold;"><b>Private</b></span> statement. For example:</p>
+<p class="Code" style="margin-left: 12px;">Dim 
+AngleDegrees</p>
+<p>You declare multiple variables by separating each variable name with a comma. For example:</p>
+<p class="Code" style="margin-left: 12px;">Dim Top, Bottom, Left, Right</p>
+<p>You can also declare a variable implicitly by simply using its name in your script. That is not generally a good practice because you could misspell the variable name in one or more places, causing unexpected results when your script is run. For that reason, the <span style="font-weight: bold;"><b>Option Explicit</b></span> statement is available to require explicit declaration of all variables. The <span style="font-weight: bold;"><b>Option Explicit</b></span> statement should be the first statement in your script.</p>
+<h2>Naming Restrictions</h2>
+<p>Variable names follow the standard rules for naming anything in VBScript. A variable name:</p>
+<ul type="disc">
+<li class="p">
+<p>Must begin with an alphabetic character.</p>
+</li>
+<li class="p">
+<p>Cannot contain an embedded period.</p>
+</li>
+<li class="p">
+<p>Must not exceed 255 characters.</p>
+</li>
+<li class="p">
+<p>Must be unique in the scope in which it is declared.</p>
+</li>
+</ul>
+<h2>Scope and Lifetime of Variables</h2>
+<p>A variable's scope is determined by where you declare it. When you declare a variable within a procedure, only code within that procedure can access or change the value of that variable. It has local scope and is a procedure-level variable. If you declare a variable outside a procedure, you make it recognizable to all the procedures in your script. This is a script-level variable, and it has script-level scope.</p>
+<p>The lifetime of a variable depends on how long it exists. The lifetime of a script-level variable extends from the time it is declared until the time the script is finished running. At procedure level, a variable exists only as long as you are in the procedure. When the procedure exits, the variable is destroyed. Local variables are ideal as temporary storage space when a procedure is executing. You can have local variables of the same name in several different procedures because each is recognized only by the procedure in which it is declared.</p>
+<h2>Assigning Values to Variables</h2>
+<p>Values are assigned to variables creating an expression as follows: the variable is on the left side of the expression and the value you want to assign to the variable is on the right. For example:</p>
+<p class="Code" style="margin-left: 12px;">B = 200</p>
+<h2>Scalar Variables and Array Variables</h2>
+<p>Much of the time, you only want to assign a single value to a variable you have declared. A variable containing a single value is a scalar variable. Other times, it is convenient to assign more than one related value to a single variable. Then you can create a variable that can contain a series of values. This is called an array variable. Array variables and scalar variables are declared in the same way, except that the declaration of an array variable uses parentheses ( ) following the variable name. In the following example, a single-dimension array containing 11 elements is declared:</p>
+<p class="Code" style="margin-left: 12px;">Dim A(10)</p>
+<p>Although the number shown in the parentheses is 10, all arrays in VBScript are zero-based, so this array actually contains 11 elements. In a zero-based array, the number of array elements is always the number shown in parentheses plus one. This kind of array is called a fixed-size array.</p>
+<p>You assign data to each of the elements of the array using an index into the array. Beginning at zero and ending at 10, data can be assigned to the elements of an array as follows:</p>
+<p class="Code" style="margin-left: 12px;">A(0) = 256</p>
+<p class="Code" style="margin-left: 12px;">A(1) = 324</p>
+<p class="Code" style="margin-left: 12px;">A(2) = 100</p>
+<p class="Code" style="margin-left: 12px;">. . .</p>
+<p class="Code" style="margin-left: 12px;">A(10) = 55</p>
+<p>Similarly, the data can be retrieved from any element using an index into the particular array element you want. For example:</p>
+<p class="Code" style="margin-left: 12px;">. . .</p>
+<p class="Code" style="margin-left: 12px;">SomeVariable = A(8)</p>
+<p class="Code" style="margin-left: 12px;">. . .</p>
+<p>Arrays aren't limited to a single dimension. You can have as many as 60 dimensions, although most people can't comprehend more than three or four dimensions. You can declare multiple dimensions by separating an array's size numbers in the parentheses with commas. In the following example, the <span style="font-style: italic;"><i>MyTable</i></span> variable is a two-dimensional array consisting of 6 rows and 11 columns:</p>
+<p class="Code" style="margin-left: 12px;">Dim MyTable(5, 10)</p>
+<p>In a two-dimensional array, the first number is always the number of rows; the second number is the number of columns.</p>
+<p>You can also declare an array whose size changes during the time your script is running. This is called a dynamic array. The array is initially declared within a procedure using either the <span style="font-weight: bold;"><b>Dim</b></span> statement or using the <span style="font-weight: bold;"><b>ReDim</b></span> statement. However, for a dynamic array, no size or number of dimensions is placed inside the parentheses. For example:</p>
+<p class="Code" style="margin-left: 12px;">Dim MyArray()</p>
+<p class="Code" style="margin-left: 12px;">ReDim AnotherArray()</p>
+<p>To use a dynamic array, you must subsequently use <span style="font-weight: bold;"><b>ReDim</b></span> to determine the number of dimensions and the size of each dimension. In the following example, <span style="font-weight: bold;"><b>ReDim</b></span> sets the initial size of the dynamic array to 25. A subsequent <span style="font-weight: bold;"><b>ReDim</b></span> statement resizes the array to 30, but uses the <span style="font-weight: bold;"><b>Preserve</b></span> keyword to preserve the contents of the array as the resizing takes place.</p>
+<p class="Code" style="margin-left: 12px;">ReDim MyArray(25)</p>
+<p class="Code" style="margin-left: 12px;">. . .</p>
+<p class="Code" style="margin-left: 12px;">ReDim Preserve MyArray(30)</p>
+<p>There is no limit to the number of times you can resize a dynamic array, although if you make an array smaller, you lose the data in the eliminated elements.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>PopupMenu</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Interface Methods\nPopupMenu");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"user_interface_methods.htm\">User Interface Methods<\/a> > PopupMenu<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>PopupMenu</h1>
+<p>Displays a user-defined, context-style popup menu. The popup menu can appear almost anywhere. And, it can be dismissed by either clicking the left or right mouse buttons.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.PopupMenu (arrItems, arrModes, arrPoint, strView)</p>
+<h3>Parameters</h3>
+<table style="left: 0px; top: 152px;" cellspacing="0" width="100%">
+<col style="width: 9.582%;" />
+<col style="width: 90.418%;" />
+<tr style="height: 20px;" valign="top">
+<td style="width: 9.582%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrrItems</p>
+</td>
+<td style="width: 90.418%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array. &#160;An array of string representing the menu items. An empty string, or "", will create a menu separator item.</p>
+</td>
+</tr>
+<tr style="height: 20px;" valign="top">
+<td style="width: 9.582%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrModes</p>
+</td>
+<td style="width: 90.418%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Array. &#160;A array if numbers identifying the display mode of the corresponding menu items. If omitted, all menu items are enabled. Note, display modes are ignored for menu separators. The display modes are a follows:</p>
+<table cellspacing="0" width="100%">
+<col style="width: 6.028%;" />
+<col style="width: 93.972%;" />
+<tr valign="top">
+<td style="width: 6.028%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">0</p>
+</td>
+<td style="width: 93.972%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The menu item is enabled.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 6.028%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1</p>
+</td>
+<td style="width: 93.972%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The menu item is disabled.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 6.028%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">2</p>
+</td>
+<td style="width: 93.972%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The menu item is checked.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 6.028%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">3</p>
+</td>
+<td style="width: 93.972%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The menu item is disabled and checked.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height: 20px;" valign="top">
+<td style="width: 9.582%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrPoint</p>
+</td>
+<td style="width: 90.418%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Array. &#160;A 3-D point where the menu item is to appear. If omitted, the menu item will appear at the current cursor position.</p>
+</td>
+</tr>
+<tr style="height: 20px;" valign="top">
+<td style="width: 9.582%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strView</p>
+</td>
+<td style="width: 90.418%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;String. &#160;If <span style="font-style: italic;"><i>arrPoint</i></span> is specified, the <span style="font-style: italic;"><i>strView</i></span> is the view in which the menu is to appear. If <span style="font-style: italic;"><i>arrPoint</i></span> is specified but <span style="font-style: italic;"><i>strView</i></span> is omitted, then the menu will be displayed in the active view.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.756%;" />
+<col style="width: 90.244%;" />
+<tr valign="top">
+<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The index of the menu item that was picked.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">-1 if no menu item is picked.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">On error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub ContextMenu</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim arrItems(3), arrModes(3), intResult</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrItems(0) = "Line" &#160;&#160;: arrModes(0) = 2 <span style="color: #008000;"><font color="green" >' checked</font></span></p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrItems(1) = "" &#160;&#160;&#160;&#160;&#160;&#160;: arrModes(1) = 0 <span style="color: #008000;"><font color="green" >' separator</font></span></p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrItems(2) = "Circle" : arrModes(2) = 0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrItems(3) = "Arc" &#160;&#160;&#160;: arrModes(3) = 0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;intResult = Rhino.PopupMenu(arrItems, arrModes)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If (intResult &gt;= 0) Then MsgBox(arrItems(intResult))</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

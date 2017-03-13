@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>PullPoints</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nPoint & Vector Methods\nPullPoints");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"point_and_vector_methods.htm\">Point & Vector Methods<\/a> > PullPoints<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>PullPoints</h1>
+<p>Pulls an array of points to a surface or mesh object. For more information, see the Rhino help file for information on the <span style="font-weight: bold;"><b>Pull</b></span> command.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.PullPoints (strObject, arrPoints)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.632%;" />
+<col style="width: 90.368%;" />
+<tr valign="top">
+<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strObject</p>
+</td>
+<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The identifier of the surface or mesh object that pulls.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrPoints</p>
+</td>
+<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;An array of 3-D points to pull.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.618%;" />
+<col style="width: 90.382%;" />
+<tr valign="top">
+<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">An array of 3-D points if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub TestPullPoints</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim arrObjects, strSurface</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;strSurface = Rhino.GetObject("Select surface that pulls", 8)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrObjects = Rhino.GetObjects("Select points to pull", 1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim nBound, arrPoints</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;nBound = UBound(arrObjects)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;ReDim arrPoints( nBound )</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim i &#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For i = 0 To nBound</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;arrPoints(i) = Rhino.PointCoordinates( arrObjects(i) )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim arrResults</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrResults = Rhino.PullPoints( strSurface, arrPoints )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.AddPoints arrResults</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3 class="Code">Also See</h3>
+<p><a href="../surface_and_polysurface_methods/pullcurve.htm">PullCurve</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

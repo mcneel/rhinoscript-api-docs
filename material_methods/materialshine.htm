@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>MaterialShine</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nMaterial Methods\nMaterialShine");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"material_methods.htm\">Material Methods<\/a> > MaterialShine<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>MaterialShine</h1>
+<p>Returns or modifies a material's shine value.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.MaterialShine (intMaterialIndex [, dblShine])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.408%;" />
+<col style="width: 90.592%;" />
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">intMaterialIndex</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Number. &#160;The zero-based source material index.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">dblShine</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Number. &#160;The new shine value. &#160;A material's shine value ranges from 0.0 to 255.0, with 0.0 being matte and 255.0 being glossy. &#160;If omitted, the current shine value is returned.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 10.575%;" />
+<col style="width: 89.425%;" />
+<tr valign="top">
+<td style="width: 10.575%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 89.425%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If <span style="font-style: italic;"><i>dblShine</i></span> is not specified, the current shine value if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 10.575%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 89.425%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If <span style="font-style: italic;"><i>dblShine</i></span> is specified, the previous shine value if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 10.575%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 89.425%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">It not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Const MAX_SHINE = 255.0</p>
+<p class="Code" style="margin-left: 12px;">Dim strObject, intIndex</p>
+<p class="Code" style="margin-left: 12px;">strObject = Rhino.GetObject("Select object")</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strObject) Then</p>
+<p class="Code" style="margin-left: 24px;">intIndex = Rhino.ObjectMaterialIndex(strObject)</p>
+<p class="Code" style="margin-left: 24px;">If (intIndex &gt; -1) Then</p>
+<p class="Code" style="margin-left: 36px;">Rhino.MaterialShine intIndex, MAX_SHINE/2</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="materialbump.htm">MaterialBump</a></p>
+<p><a href="materialcolor.htm">MaterialColor</a></p>
+<p><a href="materialname.htm">MaterialName</a></p>
+<p><a href="materialreflectivecolor.htm">MaterialReflectiveColor</a></p>
+<p><a href="materialtexture.htm">MaterialTexture</a></p>
+<p><a href="materialtransparency.htm">MaterialTransparency</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

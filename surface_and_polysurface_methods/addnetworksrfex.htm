@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddNetworkSrfEx</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSurface & Polysurface Methods\nAddNetworkSrfEx");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"surface_methods.htm\">Surface & Polysurface Methods<\/a> > AddNetworkSrfEx<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddNetworkSrfEx</h1>
+<p>Creates a surface from a network of crossing curves. Note: All curves 
+ in one direction have to cross all curves in the other direction and cannot 
+ cross each other.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddNetworkSrf (arrUCurves, arrUContinuity, arrVCurves, 
+ arrVContinuity [, dblEdgeTolerance [, dblInteriorTolerance [, dblAngleTolerance]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 12.563%;" />
+	<col style="width: 87.437%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrUCurves </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Array. &#160;The identifiers of the curve object, in the 
+		 U direction, from which to create the surface. Note, the curves 
+		 must be sorted and ordered.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrUContinuity </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Array. &#160;Two values identifying continuity of the first 
+		 and last U (edge) curve segment. The possible values are:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 11.543%;" />
+			<col style="width: 88.457%;" />
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Loose. The surface will match to 
+				 the input edge curves with less accuracy.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Position (G0 continuity) measures 
+				 location only. If the end points of each curve are in 
+				 the same location in space, the curves are position continuous 
+				 (G0) at the ends.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Tangency (G1 continuity) measures 
+				 position and curve direction at the ends. The direction 
+				 is determined by the first and second point on each curve. 
+				 If these all fall on a line then two curves are tangent 
+				 (G1) at the ends. Curves and surfaces with G1 continuity 
+				 are also G0 continuous.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">3</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Curvature continuity (G2 continuity) 
+				 between two curves measures position, direction, and radius 
+				 of curvature at the ends. If the radius of curvature is 
+				 the same at the common end point, curves are curvature 
+				 continuous (G2). This condition is not easy to determine 
+				 by just looking at where the points are located. Curves 
+				 and surfaces with G2 continuity are also G1 and therefore 
+				 G0 continuous.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrVCurves </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Array. &#160;The identifiers of the curve object, in the 
+		 V direction, from which to create the surface. Note, the curves 
+		 must be sorted and ordered.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrVContinuity </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Array. &#160;Two values identifying continuity of the first 
+		 and last V (edge) curve segment. The possible values are:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 11.543%;" />
+			<col style="width: 88.457%;" />
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Loose. The surface will match to 
+				 the input edge curves with less accuracy.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Position (G0 continuity) measures 
+				 location only. If the end points of each curve are in 
+				 the same location in space, the curves are position continuous 
+				 (G0) at the ends.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Tangency (G1 continuity) measures 
+				 position and curve direction at the ends. The direction 
+				 is determined by the first and second point on each curve. 
+				 If these all fall on a line then two curves are tangent 
+				 (G1) at the ends. Curves and surfaces with G1 continuity 
+				 are also G0 continuous.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">3</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Curvature continuity (G2 continuity) 
+				 between two curves measures position, direction, and radius 
+				 of curvature at the ends. If the radius of curvature is 
+				 the same at the common end point, curves are curvature 
+				 continuous (G2). This condition is not easy to determine 
+				 by just looking at where the points are located. Curves 
+				 and surfaces with G2 continuity are also G1 and therefore 
+				 G0 continuous.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">dblEdgeTolerance </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Number. &#160;Sets the tolerance for the edge curves. The 
+		 edges of the surface will be within this value from the edge curves. 
+		 The default is 0.0.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">dblInteriorTolerance </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Number. &#160;Sets the tolerance for the interior curves. 
+		 The interior of the curve's surface will be within this value. 
+		 If the curves themselves are farther apart from each other than 
+		 the tolerance values, the best guess is made at the surface.&#160;The 
+		 default is 0.0.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">dblAngleTolerance</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Number. &#160;If the edge curves are surface edges, and 
+		 you want the surface matching the adjacent surfaces with tangency 
+		 or curvature continuity, this is the accuracy used to match the 
+		 surface normals.&#160;The default is 0.0.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 12.508%;" />
+	<col style="width: 87.492%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">String</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">The 
+		 identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrUCurves, arrVCurves</p>
+<p class="Code" style="margin-left: 12px;">arrUCurves = Rhino.GetObjects(&quot;Select 
+ curves in first direction&quot;, 4)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrUCurves) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrVCurves = Rhino.GetObjects(&quot;Select 
+ curves in second direction&quot;, 4)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsArray(arrVCurves) 
+ Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Rhino.AddNetworkSrfEx 
+ arrUCurves, Array(1,1), arrVCurves, Array(1,1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="addnetworksrf.htm">AddNetworkSrf</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

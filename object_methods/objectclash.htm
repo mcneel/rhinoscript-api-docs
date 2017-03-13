@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>ObjectClash</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nObject Methods\nObjectClash");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"object_methods.htm\">Object Methods<\/a> > ObjectClash<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>ObjectClash</h1>
+<p>Performs clash and clearance analysis on two sets of surface, polysurface, 
+ extrusion, or mesh objects. For more information see the Rhino help file 
+ for details on the <span style="font-weight: bold;"><b>Clash</b></span> command.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.ObjectClash (arrObjects0, arrObjects1, dblClearance)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.679%;" />
+	<col style="width: 90.321%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrObjects0</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The first 
+		 array of object identifiers.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrObjects1</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The first 
+		 array of object identifiers.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblClearance</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;The clearance 
+		 distance. If 0.0, then only clash, or intersection, analysis is 
+		 performed. If &gt; 0.0, then objects are also analyzed to see 
+		 if they violate the defined zone of clearance.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.756%;" />
+	<col style="width: 90.244%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">An array that contains arrays of clash 
+		 and clearance events if successful. The array of event information 
+		 will contain the following:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 7.117%;" />
+			<col style="width: 92.883%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Element</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">String. The identifier of the object 
+				 in <span style="font-style: italic;"><i>arrObjects0</i></span>.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">String. The identifier of the object 
+				 in <span style="font-style: italic;"><i>arrObjects1</i></span>.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array. &#160;An array of 3-D hit 
+				 points where the objects interfere.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Const rhSurface = &amp;h8</p>
+<p class="Code" style="margin-left: 12px;">Const rhPolysrf = &amp;h10</p>
+<p class="Code" style="margin-left: 12px;">Const rhMesh = &amp;h20</p>
+<p class="Code" style="margin-left: 12px;">Const rhExtrusion = &amp;h40000000</p>
+<p class="Code" style="margin-left: 12px;">Dim arrObjects0, arrObjects1, 
+ intFilter, arrEvents, arrEvent</p>
+<p class="Code" style="margin-left: 12px;">intFilter = rhSurface + rhPolysrf 
+ + rhMesh + rhExtrusion</p>
+<p class="Code" style="margin-left: 12px;">arrObjects0 = Rhino.GetObjects(&quot;Select 
+ first set for clash detection&quot;, intFilter)</p>
+<p class="Code" style="margin-left: 12px;">arrObjects1 = Rhino.GetObjects(&quot;Select 
+ second set for clash detection&quot;, intFilter)</p>
+<p class="Code" style="margin-left: 12px;">arrEvents = Rhino.ObjectClash(arrObjects0, 
+ arrObjects1, 2.0)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrEvents) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For Each arrEvent 
+ In arrEvents</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.AddPoints(arrEvent(2))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">End if</p>
+<h3>Also See</h3>
+<p><a href="../surface_and_polysurface_methods/intersectbreps.htm">IntesectBreps</a></p>
+<p><a href="../mesh_methods/meshmeshintersection.htm">MeshMeshIntersection</a></p>
+<p><a href="../surface_and_polysurface_methods/surfacesurfaceintersection.htm">SurfaceSurfaceIntersection</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

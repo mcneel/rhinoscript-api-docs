@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>ColorAdjustLuma</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUtility Methods\nColorAdjustLuma");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"utility_methods.htm\">Utility Methods<\/a> > ColorAdjustLuma<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>ColorAdjustLuma</h1>
+<p>Changes the luminance of a red-green-blue (RGB) value. Hue and saturation are not affected.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.ColorAdjustLuma (lngRGB, intLuma [, bScale])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 7.965%;" />
+<col style="width: 92.035%;" />
+<tr valign="top">
+<td style="width: 7.965%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">lngRGB</p>
+</td>
+<td style="width: 92.035%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Number. &#160;The initial RGB color value.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 7.965%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">intLuma</p>
+</td>
+<td style="width: 92.035%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Number. &#160;The luminance in units of 0.1 percent of the total range. &#160;For example, a value of <span style="font-style: italic;"><i>intLuma</i></span> = 50 corresponds to 5 percent of the maximum luminance.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 7.965%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">bScale</p>
+</td>
+<td style="width: 92.035%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Boolean. &#160;If <span style="font-style: italic;"><i>bScale</i></span> is set to True, <span style="font-style: italic;"><i>intLuma</i></span> specifies how much to increment or decrement the current luminance. &#160;If <span style="font-style: italic;"><i>bScale</i></span> is set to FALSE, <span style="font-style: italic;"><i>intLuma</i></span> specifies the absolute luminance. &#160;The default value is False.</p>
+</td>
+</tr>
+</table>
+<p>If <span style="font-style: italic;"><i>bScale</i></span> is set to TRUE, <span style="font-style: italic;"><i>intLuma</i></span> can range from -1000 to +1000.</p>
+<p>If <span style="font-style: italic;"><i>bScale</i></span> is set to FALSE, <span style="font-style: italic;"><i>intLuma</i></span> can range from 0 to 1000. Available luminance values range from 0 to a maximum. If the requested value is negative or exceeds the maximum, the luminance will be set to either zero or the maximum value, respectively.</p>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 7.808%;" />
+<col style="width: 92.192%;" />
+<tr valign="top">
+<td style="width: 7.808%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 92.192%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The modified RGB color value if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 7.808%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 92.192%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim lngRGB</p>
+<p class="Code" style="margin-left: 12px;">lngRGB = Rhino.ColorAdjustLuma(RGB(128, 128, 128), 50)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print "Red = " &amp; CStr(lngRGB &#160;\ 256 ^ 0 And 255)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print "Green = " &amp; CStr(lngRGB &#160;\ 256 ^ 1 And 255)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print "Blue = " &amp; CStr(lngRGB &#160;\ 256 ^ 2 And 255)</p>
+<h3 class="Code">Also See</h3>
+<p><a href="colorhlstorgb.htm">ColorHLSToRGB</a></p>
+<p><a href="colorrgbtohls.htm">ColorRGBToHLS</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

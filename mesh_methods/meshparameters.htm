@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>MeshParameters</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nMesh Methods\nMeshParameters");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"mesh_methods.htm\">Mesh Methods<\/a> > MeshParameters<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>MeshParameters</h1>
+<p>Returns or modifies meshing parameters. Note, Rhino's meshing parameters 
+ are well documented in the Rhino help file. Just search for &quot;Polygon 
+ Mesh Detailed Options.&quot;</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.MeshParameters (intType [, arrMeshParameters])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.686%;" />
+	<col style="width: 90.314%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">intType</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Number. &#160;The type of mesh parameters to return or modify. 
+		 If omitted, Rhino's current render mesh parameters are returned.</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 7.834%;" />
+			<col style="width: 92.166%;" />
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold; margin-left: 12px; 
+					 text-indent: -12px;">Value</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold; text-indent: -8px;">Description</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">0</p></td>
+				<td><p class="Table-Body">Render mesh parameters. &#160;These 
+				 document settings are used for automatically created rendering 
+				 meshes.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">1</p></td>
+				<td><p class="Table-Body">Analysis mesh parameters. &#160;&#160;These 
+				 document settings are used for automatically created analysis 
+				 meshes.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">2</p></td>
+				<td><p class="Table-Body">Custom render mesh parameters. 
+				 &#160;These document setting can be viewed by using the 
+				 <span style="font-weight: bold;"><b>Options</b></span> command 
+				 and clicking on the <span style="font-weight: bold;"><b>Mesh</b></span> 
+				 tab.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">3</p></td>
+				<td><p class="Table-Body">Fast mesh parameters. &#160;Also 
+				 know as &quot;jagged and faster&quot;, these document 
+				 setting can be viewed by using the <span style="font-weight: bold;"><b>Options</b></span> 
+				 command and clicking on the <span style="font-weight: bold;"><b>Mesh</b></span> 
+				 tab. Note, these parameters cannot be modified.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">4</p></td>
+				<td><p class="Table-Body">Quality mesh parameters. &#160;Also 
+				 know as &quot;smooth and slower&quot;, these document 
+				 setting can be viewed by using the <span style="font-weight: bold;"><b>Options</b></span> 
+				 command and clicking on the <span style="font-weight: bold;"><b>Mesh</b></span> 
+				 tab. Note, these parameters cannot be modified.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrMeshParameters</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Array. &#160;The new mesh parameters to use during meshing. 
+		 A mesh parameters array contains the following information.</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 7.856%;" />
+			<col style="width: 10.773%;" />
+			<col style="width: 79.888%;" />
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold; margin-left: 12px; 
+					 text-indent: -12px;">Element</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold; margin-left: 12px; 
+					 text-indent: -12px;">Value</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold; text-indent: -8px;">Description</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">0</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Number</p></td>
+				<td><p class="Table-Body" style="font-weight: normal;">Density</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">1</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Number</p></td>
+				<td><p class="Table-Body">Maximum angle</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">2</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Number</p></td>
+				<td><p class="Table-Body">Maximum aspect ratio</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">3</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Number</p></td>
+				<td><p class="Table-Body">Minimum edge length</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">4</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Number</p></td>
+				<td><p class="Table-Body">Maximum edge length</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">5</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Number</p></td>
+				<td><p class="Table-Body">Maximum distance, edge to surface</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">6</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Number</p></td>
+				<td><p class="Table-Body">Minimum initial grid quads</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">7</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Boolean</p></td>
+				<td><p class="Table-Body">Refine mesh</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">8</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Boolean</p></td>
+				<td><p class="Table-Body">Jagged seams</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">9</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Boolean</p></td>
+				<td><p class="Table-Body">Simple planes</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">10</p></td>
+				<td><p class="Table-Body" style="margin-left: 12px;">Boolean</p></td>
+				<td><p class="Table-Body">Pack textures</p></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.475%;" />
+	<col style="width: 90.525%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Array</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 <span style="font-style: italic;"><i>arrMeshParameters </i></span>was 
+		 not specified, the current mesh parameters of the specified type 
+		 if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">String</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 <span style="font-style: italic;"><i>arrMeshParameters </i></span>was 
+		 specified, the previous mesh parameters of the specified type 
+		 if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">arrObjects = Rhino.GetObjects(&quot;Select 
+ objects to mesh&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrObjects) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrMP = Rhino.MeshParameters(0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.MeshObjects 
+ arrObjects, -1, arrMP</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="meshobjects.htm">MeshObjects</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

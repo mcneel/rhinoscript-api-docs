@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>GardenPath</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nGardenPath");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > GardenPath<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>
+GardenPath</h1>
+<p>For those familiar with AutoLISP<span style="vertical-align: Super; font-size: 6pt;"><font size="1" style="font-size:6pt;">®</font></span>, the programming language of Autodesk's AutoCAD<span style="vertical-align: Super; font-size: 6pt;"><font size="1" style="font-size:6pt;">®</font></span>, you are probably also familiar with the garden path tutorial. The following sample script subroutine is the RhinoScript equivalent to this tutorial routine. If you study this script carefully and compare it with the AutoLISP tutorial, you will that, other than the differences in language syntax, the two examples are very similar.</p>
+<p>The goal of the garden path tutorial is to develop a script that draws a garden path and fills it with circular concrete tiles.</p>
+<h3>Example</h3>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Subroutine: GardenPath</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: &#160;&#160;&#160;RhinoScript equivalent to AutoLISP's garden path tutorial.</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Sub GardenPath</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;<span style="color: #008000;"><font color="green" >' Acquire information for the garden path</font></span></p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;sp = Rhino.GetPoint( "Start point of path" )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;ep = Rhino.GetPoint( "End point of path", sp )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;hwidth = Rhino.GetDistance( sp, , "Half width of path" )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;trad = Rhino.GetDistance( sp, 1.0, "Radius of tiles" )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;tspac = Rhino.GetDistance( sp, 1.0, "Distance between tiles" )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;<span style="color: #008000;"><font color="green" >' Calculate angles</font></span></p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;temp = Rhino.Angle( sp, ep )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;pangle = temp(0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;plength = Rhino.Distance( sp, ep )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;width = hwidth * 2</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;angp90 = pangle + 90.0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;angm90 = pangle - 90.0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;<span style="color: #008000;"><font color="green" >' To increase speed, disable redrawing</font></span></p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.EnableRedraw False</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;<span style="color: #008000;"><font color="green" >' Draw the outline of the path</font></span></p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;ReDim pline(4)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;pline(0) = Rhino.Polar( sp, angm90, hwidth )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;pline(1) = Rhino.Polar( pline(0), pangle, plength )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;pline(2) = Rhino.Polar( pline(1), angp90, width )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;pline(3) = Rhino.Polar( pline(2), pangle + 180.0, plength )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;pline(4) = pline(0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.AddPolyline pline</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;<span style="color: #008000;"><font color="green" >' Draw the rows of tiles</font></span></p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;plane = Rhino.WorldXYPlane</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;pdist = trad + tspac</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;off = 0.0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;While (pdist &lt;= plength - trad)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;<span style="color: #008000;"><font color="green" >' Place one row of tiles given distance along path</font></span></p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;&#160;&#160;' and possibly offset it</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;pfirst = Rhino.Polar( sp, pangle, pdist )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;pctile = Rhino.Polar( pfirst, angp90, off )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;pltile = pctile</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;While (Rhino.Distance(pfirst, pltile) &lt; hwidth - trad)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;plane = Rhino.MovePlane( plane, pltile )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;Rhino.AddCircle plane, trad</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;pltile = Rhino.Polar( pltile, angp90, tspac + trad + trad )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Wend</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;pltile = Rhino.Polar( pctile, angm90, tspac + trad + trad )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;While (Rhino.Distance(pfirst, pltile) &lt; hwidth - trad)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;plane = Rhino.MovePlane( plane, pltile )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;Rhino.AddCircle plane, trad</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;pltile = Rhino.Polar( pltile, angm90, tspac + trad + trad )</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Wend</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;pdist = pdist + ((tspac + trad + trad) * Sin(Rhino.ToRadians(60)))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;If off = 0.0 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;off = (tspac + trad + trad) * Cos(Rhino.ToRadians(60))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Else</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;off = 0.0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Wend</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;<span style="color: #008000;"><font color="green" >' Don't forget to enable redrawing</font></span></p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.EnableRedraw True</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">End Sub &#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

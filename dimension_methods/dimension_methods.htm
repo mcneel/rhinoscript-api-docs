@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Dimension Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nDimension Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > Dimension Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Dimension Methods</h1>
+<p>The following methods are available for querying or manipulating dimension 
+ styles and dimension objects.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 18.021%;" />
+	<col style="width: 81.979%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-weight: bold;">Method</p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-weight: bold;">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addaligneddimension.htm">AddAlignedDimension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds an aligned dimension object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="adddimstyle.htm">AddDimStyle</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds a new dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addleader.htm">AddLeader</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds an annotation leader object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addlineardimension.htm">AddLinearDimension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds a linear dimension object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addradialdimension.htm">AddRadialDimension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds a radial dimension object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="currentdimstyle.htm">CurrentDimStyle</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or sets the currently active dimension 
+		 style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="deletedimstyle.htm">DeleteDimStyle</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deletes a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimensionstyle.htm">DimensionStyle</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the style of a dimension 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimensiontext.htm">DimensionText</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the display text of a dimension 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimensionusertext.htm">DimensionUserText</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the user text string 
+		 of a dimension object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimensionvalue.htm">DimensionValue</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the value of a dimension object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstyleangleprecision.htm">DimStyleAnglePrecision</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the angle display format 
+		 of a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstylearrowsize.htm">DimStyleArrowSize</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the arrowhead size 
+		 of a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstylecentermarksize.htm">DimStyleCentermarkSize</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the center mark size 
+		 of a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstylecount.htm">DimStyleCount</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the number of dimension styles.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstyledimlineextension.htm">DimStyleDimLineExtension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the dimension line 
+		 extension of a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstyleextension.htm">DimStyleExtension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the extension line 
+		 extension of a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstylefieldoverride.htm">DimStyleFieldOverride</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the overridden state 
+		 of a field of a child dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstylefont.htm">DimStyleFont</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the font used by a 
+		 dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstyleleaderarrowsize.htm">DimStyleLeaderArrowSize</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the leader arrowhead 
+		 size of a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-weight: normal;"><a href="dimstylelengthfactor.htm">DimStyleLengthFactor</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the length factor of 
+		 a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstylelinearprecision.htm">DimStyleLinearPrecision</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the linear precision 
+		 of a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstylenames.htm">DimStyleNames</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns all dimension style names.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstylenumberformat.htm">DimStyleNumberFormat</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the number display 
+		 format of a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstyleoffset.htm">DimStyleOffset</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the extension line 
+		 offset of a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstyleprefix.htm">DimStylePrefix</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the prefix of a dimension 
+		 style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstylescale.htm">DimStyleScale</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the scale of a dimension 
+		 style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstylesuffix.htm">DimStyleSuffix</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the suffix of a dimension 
+		 style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstyletextalignment.htm">DimStyleTextAlignment</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the text alignment 
+		 of a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstyletextgap.htm">DimStyleTextGap</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the text gap of a dimension 
+		 style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dimstyletextheight.htm">DimStyleTextHeight</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the text height of 
+		 a dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isaligneddimension.htm">IsAlignedDimension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is an aligned dimension.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isangulardimension.htm">IsAngularDimension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is an angular dimension.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isdiameterdimension.htm">IsDiameterDimension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a diameter dimension.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isdimension.htm">IsDimension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a dimension.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isdimstyle.htm">IsDimStyle</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies a dimension style exists.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isdimstylechild.htm">IsDimStyleChild</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a dimension style is a child 
+		 dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isdimstylereference.htm">IsDimStyleReference</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies a dimension style is from a reference 
+		 file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isleader.htm">IsLeader</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a dimension leader 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="islineardimension.htm">IsLinearDimension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a linear dimension.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isordinatedimension.htm">IsOrdinateDimension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is an ordinate dimension.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isradialdimension.htm">IsRadialDimension</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a radial dimension.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="leadertext.htm">LeaderText</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies a leader object's text 
+		 string.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="parentdimstyle.htm">ParentDimStyle</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the name of a child dimension style's 
+		 parent dimension style.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.021%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="renamedimstyle.htm">RenameDimStyle</a></p></td>
+		<td style="width: 81.979%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Renames a dimension style.</p></td>
+	</tr>
+</table>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

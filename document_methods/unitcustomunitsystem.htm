@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>UnitCustomUnitSystem</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nDocument Methods\nUnitCustomUnitSystem");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"document_methods.htm\">Document Methods<\/a> > UnitCustomUnitSystem<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>UnitCustomUnitSystem</h1>
+<p>Sets the document's units system to a user-defined system. &#160;This overrides the units system set using the <a href="unitsystem.htm">UnitSystem</a> method. &#160;See Rhino's <span style="font-weight: bold;"><b>DocumentProperties</b></span> command (Units and Page Units windows) for details.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.UnitCustomUnitSystem (dblUnits [, blnScale [, strName [, blnModelUnits]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 11.12%;" />
+<col style="width: 88.88%;" />
+<tr valign="top">
+<td style="width: 11.12%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">dblUnits</p>
+</td>
+<td style="width: 88.88%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Number. &#160;The number of units per meter.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.12%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">blnScale</p>
+</td>
+<td style="width: 88.88%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Boolean. &#160;Scale existing geometry based on the new unit system. &#160;If not specified, any existing geometry is not scaled (False).</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.12%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strName</p>
+</td>
+<td style="width: 88.88%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;String. &#160;The name of the new unit system. &#160;If not specified, the name "Custom" will be assigned.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.12%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">blnModelUnits</p>
+</td>
+<td style="width: 88.88%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Boolean. &#160;Modify the document's model units (True) or the document's page units (False). The default is True.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 11.12%;" />
+<col style="width: 88.88%;" />
+<tr valign="top">
+<td style="width: 11.12%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 88.88%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The previous units system if successful. &#160;See <a href="unitsystem.htm">UnitSystem</a> for details.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.12%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 88.88%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim dblUnits, intUnitSystem</p>
+<p class="Code" style="margin-left: 12px;">dblUnits = 10.0</p>
+<p class="Code" style="margin-left: 12px;">intUnitSystem = Rhino.UnitCustomUnitSystem(dblUnits, False, "Decimeter")</p>
+<h3>Also See</h3>
+<p><a href="unitabsolutetolerance.htm">UnitAbsoluteTolerance</a></p>
+<p><a href="unitangletolerance.htm">UnitAngleTolerance</a></p>
+<p><a href="unitdistancedisplaymode.htm">UnitDistanceDisplayMode</a></p>
+<p><a href="unitdistancedisplayprecision.htm">UnitDistanceDisplayPrecision</a></p>
+<p><a href="unitrelativetolerance.htm">UnitRelativeTolerance</a></p>
+<p><a href="unitsystem.htm">UnitSystem</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

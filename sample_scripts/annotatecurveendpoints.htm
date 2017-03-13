@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AnnotateCurveEndPoints</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nAnnotateCurveEndPoints");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > AnnotateCurveEndPoints<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AnnotateCurveEndPoints</h1>
+<p>The following example demonstrates how to annotate the end points of a curve object.</p>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Option Explicit</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Subroutine: AnnotateCurveEndPoints</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: &#160;&#160;&#160;Annotates the endpoints of curve objects. If the curve is closed</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;then only the starting point is annotated.</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Sub AnnotateCurveEndPoints()</p>
+<p class="Code" style="margin-left: 24px;">Const rhObjectCurve = 4</p>
+<p class="Code" style="margin-left: 24px;">Dim strObject, arrPoint</p>
+<p class="CodeComment" style="margin-left: 24px;">' Get the curve object</p>
+<p class="Code" style="margin-left: 24px;">strObject = Rhino.GetObject("Select curve", rhObjectCurve)</p>
+<p class="Code" style="margin-left: 24px;">If IsNull(strObject) Then <span style="margin-left: 12px;">Exit Sub</span></p>
+<p class="CodeComment" style="margin-left: 24px;">' Add the first annotation</p>
+<p class="Code" style="margin-left: 24px;">arrPoint = Rhino.CurveStartPoint(strObject)</p>
+<p class="Code" style="margin-left: 24px;">Rhino.AddPoint arrPoint</p>
+<p class="Code" style="margin-left: 24px;">Rhino.AddTextDot Rhino.Pt2Str(arrPoint, 3), arrPoint</p>
+<p class="CodeComment" style="margin-left: 24px;">' Add the second annotation if necessary</p>
+<p class="Code" style="margin-left: 24px;">If Not Rhino.IsCurveClosed(strObject) Then</p>
+<p class="Code" style="margin-left: 36px;">arrPoint = Rhino.CurveEndPoint(strObject)</p>
+<p class="Code" style="margin-left: 36px;">Rhino.AddPoint arrPoint</p>
+<p class="Code" style="margin-left: 36px;">Rhino.AddTextDot Rhino.Pt2Str(arrPoint, 3), arrPoint</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

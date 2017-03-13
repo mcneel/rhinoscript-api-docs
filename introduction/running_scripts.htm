@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Running Scripts</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Introduction\nRunning Scripts");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../introduction.htm\">Introduction<\/a> > Running Scripts<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Running Scripts</h1>
+<p>The <span style="font-weight: bold;"><b>RunScript</b></span> command is used 
+ to execute script subroutines that were loaded into the VBScript engine 
+ with the <span style="font-weight: bold;"><b>LoadScript</b></span> command.</p>
+<p>&#160;</p>
+<p>&#160;<img src="../images/runscript.jpg" alt="runscript.jpg" style="border: none;" width="295" height="269" border="0" /></p>
+<h2>RunScript operation</h2>
+<p>The <span style="font-weight: bold;"><b>RunScript</b></span> dialog box will 
+ only display a list of loaded subroutines containing no arguments. &#160;Thus, 
+ if you attempted to load the following script file using the <span style="font-weight: bold;"><b>LoadScript</b></span> 
+ command:</p>
+<p class="Code" style="margin-left: 12px;">Sub Test1()</p>
+<p class="Code" style="margin-left: 24px;">MsgBox &quot;Test1&quot;</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p class="Code" style="margin-left: 12px;">Sub Test2(strMessage)</p>
+<p class="Code" style="margin-left: 24px;">MsgBox strMessage</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p class="Code" style="margin-left: 12px;">Function Test3()</p>
+<p class="Code" style="margin-left: 24px;">MsgBox strMessage</p>
+<p class="Code" style="margin-left: 24px;">Test3 = strMessage</p>
+<p class="Code" style="margin-left: 12px;">End Function</p>
+<p>Only the &quot;Test1&quot; subroutine will appear in the <span style="font-weight: bold;"><b>RunScript</b></span> 
+ dialog box for it is the only procedure declaration that is a subroutine 
+ that contains no arguments. &#160;Note, the procedures &quot;Test2&quot; 
+ and &quot;Test3&quot; are loaded and usable by other VBScript subroutines 
+ or functions. The just are not visible through the <span style="font-weight: bold;"><b>RunScript</b></span> 
+ dialog box.</p>
+<h2>Scripting the RunScript command</h2>
+<p>As is the case with most Rhino command, the <span style="font-weight: bold;"><b>RunScript</b></span> 
+ command can be scripted, thus bypassing the interactive dialog box. &#160;To 
+ script the <span style="font-weight: bold;"><b>RunScript</b></span> command, 
+ simply precede the command name with a hyphen when entering the command 
+ on Rhino's command line. &#160;For example:</p>
+<p class="Code">-RunScript</p>
+<p>After entering the command, you will be prompted to enter the name of 
+ the loaded script subroutine to run.</p>
+<h2>Assigning the RunScript command to a button.</h2>
+<p>The <span style="font-weight: bold;"><b>RunScript</b></span> command can also 
+ be assigned to command aliases or to a toolbar button. &#160;When assigned 
+ to a toolbar button, the <span style="font-weight: bold;"><b>RunScript</b></span> 
+ command can execute subroutines that have already been loaded by the <span 
+	 style="font-weight: bold;"><b>LoadScript</b></span> command, or it can execute 
+ raw VBScript code. &#160;To embed raw VBScript code on a button, make 
+ sure to surround the code with an opening and closing parenthesis.</p>
+<p>&#160;</p>
+<p>&#160;<img src="../images/editbutton.jpg" alt="editbutton.jpg" style="border: none;" width="422" height="385" border="0" /></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
