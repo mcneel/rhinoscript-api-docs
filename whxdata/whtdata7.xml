@@ -1,0 +1,22 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="AddHatch" url="hatch_methods/addhatch.htm" />
+<item name="AddHatches" url="hatch_methods/addhatches.htm" />
+<item name="AddHatchPatterns" url="hatch_methods/addhatchpatterns.htm" />
+<item name="CurrentHatchPattern" url="hatch_methods/currenthatchpattern.htm" />
+<item name="DuplicateHatchBorders" url="hatch_methods/duplicatehatchborders.htm" />
+<item name="ExplodeHatch" url="hatch_methods/explodehatch.htm" />
+<item name="HatchArea" url="hatch_methods/hatcharea.htm" />
+<item name="HatchPattern" url="hatch_methods/hatchpattern.htm" />
+<item name="HatchPatternCount" url="hatch_methods/hatchpatterncount.htm" />
+<item name="HatchPatternDescription" url="hatch_methods/hatchpatterndescription.htm" />
+<item name="HatchPatternFillType" url="hatch_methods/hatchpatternfilltype.htm" />
+<item name="HatchPatternNames" url="hatch_methods/hatchpatternnames.htm" />
+<item name="HatchRotation" url="hatch_methods/hatchrotation.htm" />
+<item name="HatchScale" url="hatch_methods/hatchscale.htm" />
+<item name="IsHatch" url="hatch_methods/ishatch.htm" />
+<item name="IsHatchPattern" url="hatch_methods/ishatchpattern.htm" />
+<item name="IsHatchPatternCurrent" url="hatch_methods/ishatchpatterncurrent.htm" />
+<item name="IsHatchPatternReference" url="hatch_methods/ishatchpatternreference.htm" />
+
+</tocdata>

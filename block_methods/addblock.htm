@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddBlock</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nBlock Methods\nAddBlock");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"block_methods.htm\">Block Methods<\/a> > AddBlock<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddBlock</h1>
+<p>Adds a new block definition to the document.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddBlock (arrObjects, arrPoint [, strName [, blnDelete]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.679%;" />
+	<col style="width: 90.321%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrObjects</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. Array. The identifiers of one 
+		 or more objects that will be included in the block definition. 
+		 Note, the specified objects will be copied.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPoint</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. Array. The 3-D base point of 
+		 the block definition.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strName </p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. String. The name of the block 
+		 definition to add. If omitted, a name will be automatically generated. 
+		 Note, if the name of the block definition already exists, then 
+		 the existing block definition will be modified.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnDelete</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. Boolean. Delete the input objects. 
+		 By default, input objects will not be deleted (False).</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.756%;" />
+	<col style="width: 90.244%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The name of the newly created block definition, 
+		 if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrObjects, arrPoint, strBlock</p>
+<p class="Code" style="margin-left: 12px;">arrObjects = Rhino.GetObjects(&quot;Select 
+ objects to define block&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrObjects) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrPoint = Rhino.GetPoint(&quot;Block 
+ base point&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsArray(arrPoint) 
+ Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;strBlock 
+ = Rhino.AddBlock(arrObjects, arrPoint,,True)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.InsertBlock(strBlock, arrPoint)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="code">Also See</h3>
+<p><a href="insertblock.htm">InsertBlock</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

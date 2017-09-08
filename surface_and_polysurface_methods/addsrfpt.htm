@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddSrfPt</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSurface & Polysurface Methods\nAddSrfPt");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"surface_methods.htm\">Surface & Polysurface Methods<\/a> > AddSrfPt<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddSrfPt</h1>
+<p>Creates a new surface from either 3 or 4 corner points.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddSrfPt (arrPoints)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.679%;" />
+<col style="width: 90.321%;" />
+<tr style="height: 24px;" valign="top">
+<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrPoints</p>
+</td>
+<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array. &#160;An array of either 3 or 4 corner points.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.847%;" />
+<col style="width: 90.153%;" />
+<tr valign="top">
+<td style="width: 9.847%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String</p>
+</td>
+<td style="width: 90.153%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The identifier of the new object if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.847%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 90.153%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrPoints</p>
+<p class="Code" style="margin-left: 12px;">arrPoints = Rhino.GetPoints(True,,"Pick 3 or 4 corner points")</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrPoints) Then</p>
+<p class="Code" style="margin-left: 24px;">Rhino.AddSrfPt arrPoints</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="addedgesrf.htm">AddEdgeSrf</a></p>
+<p><a href="addsrfcontrolptgrid.htm">AddSrfControlPtGrid</a></p>
+<p><a href="addsrfptgrid.htm">AddSrfPtGrid</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

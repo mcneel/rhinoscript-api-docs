@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="05 29, 2002 4:41:36 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Selection Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSelection Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > Selection Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Selection Methods</h1>
+<p>The following methods are available for selecting and obtaining the 
+ identifiers of objects.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 19.536%;" />
+	<col style="width: 80.464%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Head">Method</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="allobjects.htm">AllObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of all objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="filterobjects.htm">FilterObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Filters 
+		 an array of object identifiers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="firstobject.htm">FirstObject</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the first object's identifier in the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getcurveobject.htm">GetCurveObject</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Prompts 
+		 the user to pick a single curve object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getobject.htm">GetObject</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Prompts 
+		 the user to pick a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getobjectex.htm">GetObjectEx</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Extended 
+		 version of <a href="getobject.htm">GetObject</a>.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getobjects.htm">GetObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Prompts 
+		 the user to pick multiple objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getobjectsex.htm">GetObjectsEx</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Extended 
+		 version of <a href="getobjects.htm">GetObjects</a>.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getpointcoordinates.htm">GetPointCoordinates</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Prompts 
+		 the user to pick point objects, and returns their coordinates.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="getsurfaceobject.htm">GetSurfaceObject</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Prompts 
+		 the user to pick a single surface object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="hiddenobjects.htm">HiddenObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of all hidden objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="invertselectedobjects.htm">InvertSelectedObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Inverts 
+		 the current object selection.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="lastcreatedobjects.htm">LastCreatedObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of the most recently created objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="lastobject.htm">LastObject</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the last object's identifier in the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="lockedobjects.htm">LockedObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of all locked objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="nextobject.htm">NextObject</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifier of the next object from an object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="normalobjects.htm">NormalObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of all normal objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="objectsbycolor.htm">ObjectsByColor</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 all object identifiers based on color.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="objectsbygroup.htm">ObjectsByGroup</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 all object identifiers based on group membership.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="objectsbylayer.htm">ObjectsByLayer</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 all object identifiers based on layer.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="objectsbymaterialindex.htm">ObjectsByMaterialIndex</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of all objects based on the objects' material 
+		 index.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="objectsbymaterialsource.htm">ObjectsByMaterialSource</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of all objects based on the objects' material 
+		 source.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="objectsbylayer.htm">ObjectsByName</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 all object identifiers based on user-defined name.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="objectsbyregion.htm">ObjectsByRegion</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of objects bounded by a polyline region.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="objectsbytype.htm">ObjectsByType</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 all object identifiers based on object type.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="objectsbyurl.htm">ObjectsByURL</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 all object identifiers based on user-defined URL.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="pointpick.htm">PointPick</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Picks 
+		 objects using a point selection.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="prevselectedobjects.htm">PrevSelectedObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of the previously selected objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="referenceobjects.htm">ReferenceObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of all reference objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="selectedobjects.htm">SelectedObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of currently selected objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="unselectallobjects.htm">UnselectAllObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Unselects 
+		 all objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="unselectedobjects.htm">UnselectedObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of currently unselected objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="visibleobjects.htm">VisibleObjects</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Returns 
+		 the identifiers of all objects that are visible in a view.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body"><a href="windowpick.htm">WindowPick</a></p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Picks 
+		 objects using either a window or crossing selection.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

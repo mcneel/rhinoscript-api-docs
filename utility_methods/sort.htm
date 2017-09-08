@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="06 7, 2002 11:43:25 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>SortStrings</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUtility Methods\nSortStrings");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"utility_methods.htm\">Utility Methods<\/a> > SortStrings<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>SortStrings</h1>
+<p>Sorts an array of strings.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.SortStrings (arrStrings [, blnAscending [, blnNoCase 
+ [, blnLogical]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 11.514%;" />
+	<col style="width: 88.486%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 11.514%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrStrings</p></td>
+		<td style="width: 88.486%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;An array of 
+		 string values.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 11.514%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnAscending</p></td>
+		<td style="width: 88.486%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Boolean. &#160;The sorting 
+		 mode, either ascending or descending. &#160;If omitted or True, 
+		 the strings are sorted ascending. &#160;If False, the strings 
+		 are sorted descending.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 11.514%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnNoCase</p></td>
+		<td style="width: 88.486%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Boolean. &#160;The case 
+		 sensitivity mode. &#160;If omitted or True, a case insensitive 
+		 sorting is performed. &#160;If False, a case sensitive sorting 
+		 is performed.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 11.514%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnLogical</p></td>
+		<td style="width: 88.486%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Boolean. &#160;Compares 
+		 strings logically, or naturally. &#160;Digits in the strings are 
+		 considered as numerical content rather than text. &#160;This test 
+		 is not case-sensitive.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 11.672%;" />
+	<col style="width: 88.328%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 11.672%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 88.328%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">An array sorted strings if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 11.672%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 88.328%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arr</p>
+<p class="Code" style="margin-left: 12px;">arr = Array(&quot;A&quot;, &quot;B&quot;, 
+ &quot;C&quot;, &quot;D&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, 
+ &quot;d&quot;)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;Ascending 
+ = Y, NoCase = Y: &quot; &amp; Join(Rhino.SortStrings(arr, True, True))</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;Ascending 
+ = Y, NoCase = N: &quot; &amp; Join(Rhino.SortStrings(arr, True, False))</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;Ascending 
+ = N, NoCase = Y: &quot; &amp; Join(Rhino.SortStrings(arr, False, True))</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;Ascending 
+ = N, NoCase = N: &quot; &amp; Join(Rhino.SortStrings(arr, False, False))</p>
+<h3>Also See</h3>
+<p><a href="sortnumbers.htm">SortNumbers</a></p>
+<p><a href="sortpoints.htm">SortPoints</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

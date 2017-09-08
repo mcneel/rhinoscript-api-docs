@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>LocaleID</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nApplication Methods\nLocaleID");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"application_methods.htm\">Application Methods<\/a> > LocaleID<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>LocaleID</h1>
+<p>Returns the language used for the Rhino interface. &#160;The current language is returned as a locale ID, or LCID, value.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.LocaleID ()</p>
+<h3>Parameters</h3>
+<p style="font-style: italic;">None.</p>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 10.297%;" />
+<col style="width: 89.703%;" />
+<tr valign="top">
+<td style="width: 10.297%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 89.703%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Rhino's current locale ID, or LCID. &#160;The languages currently supported by Rhino are as follows:</p>
+<table cellspacing="0" width="100%">
+<col style="width: 8.279%;" />
+<col style="width: 91.721%;" />
+<tr valign="top">
+<td style="width: 8.279%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Value</p>
+</td>
+<td style="width: 91.721%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.279%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1029</p>
+</td>
+<td style="width: 91.721%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Czech</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.279%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1031</p>
+</td>
+<td style="width: 91.721%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">German - Germany</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.279%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1033</p>
+</td>
+<td style="width: 91.721%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">English - United States</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.279%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1034</p>
+</td>
+<td style="width: 91.721%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Spanish - Spain</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.279%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1036</p>
+</td>
+<td style="width: 91.721%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">French - France</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.279%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1040</p>
+</td>
+<td style="width: 91.721%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Italian - Italy</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.279%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1041</p>
+</td>
+<td style="width: 91.721%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Japanese</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.279%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1042</p>
+</td>
+<td style="width: 91.721%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Korean</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.279%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1045</p>
+</td>
+<td style="width: 91.721%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Polish</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim intLCID</p>
+<p class="Code" style="margin-left: 12px;">intLCID = Rhino.LocaleID</p>
+<p class="Code" style="margin-left: 12px;">Select Case intLCID</p>
+<p class="Code" style="margin-left: 24px;">Case 1029</p>
+<p class="CodeComment" style="margin-left: 36px;">&#160;'Print message in Czech</p>
+<p class="Code" style="margin-left: 24px;">Case 1031</p>
+<p class="CodeComment" style="margin-left: 36px;">&#160;'Print message in German</p>
+<p class="Code" style="margin-left: 24px;">Case 1033</p>
+<p class="CodeComment" style="margin-left: 36px;">'Print message in English</p>
+<p class="Code" style="margin-left: 24px;">Case 1034</p>
+<p class="CodeComment" style="margin-left: 36px;">'Print message in Spanish</p>
+<p class="Code" style="margin-left: 24px;">Case 1036</p>
+<p class="CodeComment" style="margin-left: 36px;">'Print message in Italian</p>
+<p class="Code" style="margin-left: 24px;">Case 1040</p>
+<p class="CodeComment" style="margin-left: 36px;">'Print message in Japanese</p>
+<p class="Code" style="margin-left: 24px;">Case 1042</p>
+<p class="CodeComment" style="margin-left: 36px;">'Print message in Korean</p>
+<p class="Code" style="margin-left: 24px;">Case 1045</p>
+<p class="CodeComment" style="margin-left: 36px;">'Print message in Polish</p>
+<p class="Code" style="margin-left: 12px;">End Select</p>
+<h3>Also See</h3>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

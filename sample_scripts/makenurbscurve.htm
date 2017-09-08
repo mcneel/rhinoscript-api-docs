@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>MakeNurbsCurve</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nMakeNurbsCurve");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > MakeNurbsCurve<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>MakeNurbsCurve</h1>
+<p>The following example demonstrates how to create a NURBS curve with specified degree, control points, weights, and knot vector.</p>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Option Explicit</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Subroutine: MakeNurbsCurve</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: &#160;&#160;&#160;Makes a NURBS curve with specified degree, control points,</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;weights, and knot vector.</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Sub MakeNurbsCurve()</p>
+<p class="CodeComment" style="margin-left: 24px;">'--------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Specify degree and number of control points</p>
+<p class="CodeComment" style="margin-left: 24px;">' The degree must be &gt;= 1 and the number of control points</p>
+<p class="CodeComment" style="margin-left: 24px;">' must be &gt;= (degree+1). &#160;The number of knots is always</p>
+<p class="CodeComment" style="margin-left: 24px;">' (number of control points + degree - 1).</p>
+<p class="CodeComment" style="margin-left: 48px;">'Make a non-rational degree 3 NURBS curve with 7 control points</p>
+<p class="Code" style="margin-left: 48px;">Dim intDegree, intCVCount, intKnotCount</p>
+<p class="Code" style="margin-left: 48px;">intDegree = 3</p>
+<p class="Code" style="margin-left: 48px;">intCVCount = 10</p>
+<p class="Code" style="margin-left: 48px;">intKnotCount = intCVCount+intDegree-1</p>
+<p class="Code" style="margin-left: 48px;">&#160;</p>
+<p class="CodeComment" style="margin-left: 24px;">'--------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Control Points</p>
+<p class="CodeComment" style="margin-left: 24px;">' Specify "Euclidean" (world 3-D) locations for the control points.</p>
+<p class="CodeComment" style="margin-left: 48px;">' Make room for intCVCount control points in the arrControlPoints</p>
+<p class="CodeComment" style="margin-left: 48px;">' array. The number you pass to ReDim is the maximum valid</p>
+<p class="CodeComment" style="margin-left: 48px;">' index which is 1 less than the size of the array.</p>
+<p class="Code" style="margin-left: 48px;">Dim arrControlPoints()</p>
+<p class="Code" style="margin-left: 48px;">ReDim arrControlPoints(intCVCount-1)</p>
+<p class="Code" style="margin-left: 48px;">arrControlPoints(0) = Array(0.0, 0.0, 0.0)</p>
+<p class="Code" style="margin-left: 48px;">arrControlPoints(1) = Array(1.0, 2.0, 3.0)</p>
+<p class="Code" style="margin-left: 48px;">arrControlPoints(2) = Array(5.0, 8.0, 9.0)</p>
+<p class="Code" style="margin-left: 48px;">arrControlPoints(3) = Array(4.0, 7.0, 2.0)</p>
+<p class="Code" style="margin-left: 48px;">arrControlPoints(4) = Array(8.0, 5.0, 6.0)</p>
+<p class="Code" style="margin-left: 48px;">arrControlPoints(5) = Array(9.0, 5.0, 2.0)</p>
+<p class="Code" style="margin-left: 48px;">arrControlPoints(6) = Array(5.0, 3.0, 2.0)</p>
+<p class="Code" style="margin-left: 48px;">arrControlPoints(7) = Array(6.0, 2.0, 3.0)</p>
+<p class="Code" style="margin-left: 48px;">arrControlPoints(8) = Array(7.0, 4.0, 2.0)</p>
+<p class="Code" style="margin-left: 48px;">arrControlPoints(9) = Array(8.0, 5.0, 3.0)</p>
+<p class="Code" style="margin-left: 48px;">&#160;</p>
+<p class="CodeComment" style="margin-left: 24px;">'--------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Specify Weights</p>
+<p class="CodeComment" style="margin-left: 24px;">' Weights must be &gt; 0. &#160;In general you should set the</p>
+<p class="CodeComment" style="margin-left: 24px;">' first and last weight to 1.</p>
+<p class="CodeComment" style="margin-left: 48px;">' Make room for intCVCount weight values in the arrWeights</p>
+<p class="CodeComment" style="margin-left: 48px;">' array. The number you pass to ReDim is the maximum valid</p>
+<p class="CodeComment" style="margin-left: 48px;">' index which is 1 less than the size of the array.</p>
+<p class="Code" style="margin-left: 48px;">Dim arrWeights()</p>
+<p class="Code" style="margin-left: 48px;">ReDim arrWeights(intCVCount-1)</p>
+<p class="Code" style="margin-left: 48px;">arrWeights(0) = 1.0</p>
+<p class="Code" style="margin-left: 48px;">arrWeights(1) = 1.1</p>
+<p class="Code" style="margin-left: 48px;">arrWeights(2) = 0.7</p>
+<p class="Code" style="margin-left: 48px;">arrWeights(3) = 2.0</p>
+<p class="Code" style="margin-left: 48px;">arrWeights(4) = 1.8</p>
+<p class="Code" style="margin-left: 48px;">arrWeights(5) = 0.9</p>
+<p class="Code" style="margin-left: 48px;">arrWeights(6) = 2.0</p>
+<p class="Code" style="margin-left: 48px;">arrWeights(7) = 1.3</p>
+<p class="Code" style="margin-left: 48px;">arrWeights(8) = 0.8</p>
+<p class="Code" style="margin-left: 48px;">arrWeights(9) = 1.0</p>
+<p class="Code" style="margin-left: 48px;">&#160;</p>
+<p class="CodeComment" style="margin-left: 24px;">'--------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Specify Knots</p>
+<p class="CodeComment" style="margin-left: 48px;">' Make room for intKnotCount knot values in the arrKnots</p>
+<p class="CodeComment" style="margin-left: 48px;">' array. The number you pass to ReDim is the maximum valid</p>
+<p class="CodeComment" style="margin-left: 48px;">' index which is 1 less than the size of the array.</p>
+<p class="Code" style="margin-left: 48px;">Dim arrKnots()</p>
+<p class="Code" style="margin-left: 48px;">ReDim arrKnots(intKnotCount-1)</p>
+<p class="CodeComment" style="margin-left: 72px;">' Unless you are doing something special, knot vectors</p>
+<p class="CodeComment" style="margin-left: 72px;">' should be clamped. &#160;"Clamped" means the first and last</p>
+<p class="CodeComment" style="margin-left: 72px;">' degree many knots are the same. &#160;In this example the</p>
+<p class="CodeComment" style="margin-left: 72px;">' first three knots are 0 and the last three knots are 5.</p>
+<p class="CodeComment" style="margin-left: 72px;">' The interior knots can have multiplicity from 1</p>
+<p class="CodeComment" style="margin-left: 72px;">' (a "simple" knot) to intDegree (a "full multiplicity")</p>
+<p class="CodeComment" style="margin-left: 72px;">' knot.</p>
+<p class="CodeComment" style="margin-left: 72px;">' Start with a full multiplicity knot</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(0) = 0.0</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(1) = 0.0</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(2) = 0.0</p>
+<p class="CodeComment" style="margin-left: 72px;">' Simple interior knot</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(3) = 1.0</p>
+<p class="CodeComment" style="margin-left: 72px;">' Simple interior knot</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(4) = 3.0</p>
+<p class="CodeComment" style="margin-left: 72px;">' Full multiplicity interior knot</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(5) = 5.0</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(6) = 5.0</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(7) = 5.0</p>
+<p class="CodeComment" style="margin-left: 72px;">' Simple interior knot</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(8) = 7.12345</p>
+<p class="CodeComment" style="margin-left: 72px;">' End with a full multiplicity knot</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(9) &#160;= 9.0</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(10) = 9.0</p>
+<p class="Code" style="margin-left: 72px;">arrKnots(11) = 9.0</p>
+<p class="Code" style="margin-left: 72px;">&#160;</p>
+<p class="CodeComment" style="margin-left: 24px;">'--------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Make the NURBS curve</p>
+<p class="Code" style="margin-left: 24px;">Dim strObject</p>
+<p class="Code" style="margin-left: 24px;">strObject = Rhino.AddNurbsCurve(arrControlPoints, arrKnots, intDegree, arrWeights)</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

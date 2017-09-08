@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>FormatMessage</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nFormatMessage");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > FormatMessage<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>FormatMessage</h1>
+<p>The following example functions can be useful when formatting strings of text.</p>
+<h3>Examples</h3>
+<p class="Code" style="margin-left: 12px;">Option Explicit</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Function: &#160;&#160;&#160;FormatMessage</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: &#160;&#160;&#160;&#160;Slot-based string formatting function.</p>
+<p class="CodeComment" style="margin-left: 12px;">' Example:</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;Dim str</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;str = FormatMessage ("Hello, Mr. %1%, today is %2%.", Array("McNeel", Date))</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Function FormatMessage (strMessage, arrArguments)</p>
+<p class="Code" style="margin-left: 24px;">Dim strResult, i</p>
+<p class="Code" style="margin-left: 24px;">strResult = strMessage</p>
+<p class="Code" style="margin-left: 24px;">For i = 0 to UBound(arrArguments)</p>
+<p class="Code" style="margin-left: 36px;">strResult = Replace(strResult, "%" &amp; CStr(i+1) &amp; "%", CStr(arrArguments(i)))</p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="Code" style="margin-left: 24px;">strResult = Replace(strResult, "\n", vbCrLf)</p>
+<p class="Code" style="margin-left: 24px;">strResult = Replace(strResult, "\t", vbTab)</p>
+<p class="Code" style="margin-left: 24px;">FormatMessage = strResult</p>
+<p class="Code" style="margin-left: 12px;">End Function</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="CodeComment">'------------------------------------------------------------------------------</p>
+<p class="CodeComment">' Function: &#160;&#160;&#160;Printf</p>
+<p class="CodeComment">' Purpose: &#160;&#160;&#160;&#160;Works like the printf-function in C/C++.</p>
+<p class="CodeComment">' Arguments: &#160;&#160;A string with format characters, and an array to expand.</p>
+<p class="CodeComment">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;The format characters are always "%x", independent of the type.</p>
+<p class="CodeComment">' Example:</p>
+<p class="CodeComment">' &#160;&#160;Dim str</p>
+<p class="CodeComment">' &#160;&#160;str = Printf("Hello, Mr. %x, today is %x.", Array("McNeel", Date))</p>
+<p class="CodeComment">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Function Printf (strMessage, arrArguments)</p>
+<p class="Code" style="margin-left: 24px;">Dim strResult, intPosition, i</p>
+<p class="Code" style="margin-left: 24px;">strResult = ""</p>
+<p class="Code" style="margin-left: 24px;">intPosition = 0</p>
+<p class="Code" style="margin-left: 24px;">For i = 1 To Len(strMessage)</p>
+<p class="Code" style="margin-left: 36px;">If Mid(strMessage, i, 1) = "%" Then</p>
+<p class="Code" style="margin-left: 48px;">If i &lt; Len(strMessage) Then</p>
+<p class="Code" style="margin-left: 60px;">If Mid(strMessage, i + 1, 1) = "%" then</p>
+<p class="Code" style="margin-left: 72px;">strResult = strResult &amp; "%"</p>
+<p class="Code" style="margin-left: 72px;">i = i + 1</p>
+<p class="Code" style="margin-left: 60px;">ElseIf Mid(strMessage, i + 1, 1) = "x" Then</p>
+<p class="Code" style="margin-left: 72px;">strResult = strResult &amp; CStr(arrArguments(intPosition))</p>
+<p class="Code" style="margin-left: 72px;">intPosition = intPosition + 1</p>
+<p class="Code" style="margin-left: 72px;">i = i + 1</p>
+<p class="Code" style="margin-left: 60px;">End If</p>
+<p class="Code" style="margin-left: 48px;">End If</p>
+<p class="Code" style="margin-left: 36px;">Else</p>
+<p class="Code" style="margin-left: 48px;">strResult = strResult &amp; Mid(strMessage, i, 1)</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="Code" style="margin-left: 24px;">Printf = strResult</p>
+<p class="Code" style="margin-left: 12px;">End Function</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

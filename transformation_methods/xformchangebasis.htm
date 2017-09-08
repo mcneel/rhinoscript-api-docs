@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>XformChangeBasis</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nTransformation Methods\nXformChangeBasis");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"transformation_methods.htm\">Transformation Methods<\/a> > XformChangeBasis<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>XformChangeBasis</h1>
+<p>Returns a change of basis transformation matrix.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.XformChangeBasis (arrPlane1, arrPlane2)</p>
+<p class="Code">Rhino.XformChangeBasis (arrX0, arrY0, arrZ0, arrX1, arrY1, arrZ1)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.408%;" />
+<col style="width: 90.592%;" />
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrPlane1</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (Plane). &#160;The initial plane.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrPlane2</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (Plane). &#160;The final plane.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrX0</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The initial basis X (X0,Y0,Z0 can be any 3-D basis)</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrY0</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). The &#160;initial basis Y</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrZ0</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). The &#160;initial basis Z</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrX1</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The final basis X (X1,Y1,Z1 can be any 3-D basis)</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrY1</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The &#160;final basis Y</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrZ1</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The final basis Z</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.256%;" />
+<col style="width: 90.744%;" />
+<tr valign="top">
+<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The 4x4 transformation matrix if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Notes</h3>
+<p>If you have points defined with respect to planes, the version of <span style="font-weight: bold;"><b>XformChangeBasis</b></span> that takes two planes computes the transformation to change coordinates from one plane to another. &#160;The predefined world plane, <a href="../line_and_plane_methods/worldxyplane.htm">WorldXYPlane</a>, can be used as an argument.</p>
+<p>The version of <span style="font-weight: bold;"><b>XformChangeBasis</b></span> that takes six vectors maps (a0, b0, c0) to (a1, b1, c1) where a0*X0 + b0*Y0 + c0*Z0 = a1*X1 + b1*Y1 + c1*Z1.</p>
+<p>The change of basis transformation is not the same as the rotation transformation that rotates one orthonormal frame to another. &#160;See <a href="xformrotation.htm">XformRotation</a>.</p>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">arrObjects = Rhino.GetObjects("Select objects to shear")</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrObjects) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrCPlane = Rhino.ViewCPlane</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrPlane = Rhino.PlaneFromNormal(arrCPlane(0), arrCPlane(1))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrCob = Rhino.XformChangeBasis(Rhino.WorldXYPlane, arrPlane)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrShear2d = Rhino.XformIdentity</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrShear2d(0,2) = Tan(Rhino.ToRadians(45.0))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrCobInv = Rhino.XformChangeBasis(arrPlane, Rhino.WorldXYPlane)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrTemp = Rhino.XformMultiply(arrShear2d, arrCob)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrXform = Rhino.XformMultiply(arrCobInv, arrTemp)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.TransformObjects arrObjects, arrXform, True</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="xformcplanetoworld.htm">XformCPlaneToWorld</a></p>
+<p><a href="xformworldtocplane.htm">XformWorldToCPlane</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

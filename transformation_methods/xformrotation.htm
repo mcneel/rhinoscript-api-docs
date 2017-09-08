@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>XformRotation</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nTransformation Methods\nXformRotation");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"transformation_methods.htm\">Transformation Methods<\/a> > XformRotation<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>XformRotation</h1>
+<p>Returns a rotation transformation matrix. The <span style="font-weight: bold;"><b>XformRotation</b></span> provides several ways to compute a rotation transformation. &#160;A positive rotation angle indicates a counter-clockwise (right hand rule) rotation about the axis of rotation.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.XformRotation (arrPlane1, arrPlane2)</p>
+<p class="Code">Rhino.XformRotation (dblAngle, arrAxis, arrPoint)</p>
+<p class="Code">Rhino.XformRotation (arrStartDir, arrEndDir, arrPoint)</p>
+<p class="Code">Rhino.XformRotation (arrX0, arrY0, arrZ0, arrX1, arrY1, arrZ1)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.408%;" />
+<col style="width: 90.592%;" />
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrPlane1</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (Plane). &#160;The starting plane.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrPlane2</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (Plane). &#160;The ending plane.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">dblAngle</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Number. &#160;The rotation angle in degrees.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrAxis</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The rotation axis.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrStartDir</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The starting direction.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrEndDir</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The ending direction.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrPoint</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Point). &#160;The rotation center point.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrX0</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The initial frame X</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrY0</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The initial frame Y.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrZ0</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The initial frame Z.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrX1</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The final frame X.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrY1</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The final frame Y.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.408%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrZ1</p>
+</td>
+<td style="width: 90.592%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array (3-D Vector). &#160;The final frame Z.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.256%;" />
+<col style="width: 90.744%;" />
+<tr valign="top">
+<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The 4x4 transformation matrix.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">On error.</p>
+</td>
+</tr>
+</table>
+<h3>Notes</h3>
+<p>Option 1 creates a rotation transformation that maps <span style="font-style: italic;"><i>arrPlane1</i></span> to <span style="font-style: italic;"><i>arrPlane1.</i></span> The planes should be right hand orthonormal planes. This transformations is not the same as the change of basis transformations. For more information, see <a href="xformchangebasis.htm">XformChangeBasis</a>.</p>
+<p>Option 2 calculate the minimal transformation that rotates <span style="font-style: italic;"><i>arrStartDir</i></span> to <span style="font-style: italic;"><i>arrEndDir</i></span> while fixing <span style="font-style: italic;"><i>arrPoint</i></span>.</p>
+<p>Option 4 required that frames should be right hand orthonormal frames. The resulting rotation fixes the origin (0,0,0), maps initial X to final X, initial Y to final Y, and initial Z to final Z.</p>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">arrObjects = Rhino.GetObjects("Select objects to rotate")</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrObjects) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrCPlane = Rhino.ViewCPlane</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrXform = Rhino.XformRotation(45.0, arrCPlane(3), arrCPlane(0))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.TransformObjects arrObjects, arrXform, True</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="xformmirror.htm">XformMirror</a></p>
+<p><a href="xformplanarprojection.htm">XformPlanarProjection</a></p>
+<p><a href="xformscale.htm">XformScale</a></p>
+<p><a href="xformshear.htm">XformShear</a></p>
+<p><a href="xformtranslation.htm">XformTranslation</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Rhino Properties and Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Rhino Methods & Properties");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("Rhino Methods & Properties<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Rhino Properties &amp; Methods</h1>
+<p>The following methods and properties are available on the Rhino automation&#160;(COM) 
+ objects, both <span style="font-weight: bold;"><b>Rhino.Application</b></span> 
+ and <span style="font-weight: bold;"><b>Rhino.Interface</b></span>. The Rhino 
+ automation&#160;objects are used when <a href="../introduction/external_access.htm">automating 
+ Rhino externally</a>.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 17.305%;" />
+	<col style="width: 82.695%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Methods</p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="bringtotop.htm">BringToTop</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Brings Rhino into the foreground and activates 
+		 the window.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getpluginobject.htm">GetPlugInObject</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Retrieves an automation (COM) object from 
+		 a plug-in.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getscriptobject.htm">GetScriptObject</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Retrieves the RhinoScript automation&#160;(COM) 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isinitialized.htm">IsInitialized</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that Rhino is initialized and 
+		 ready for use.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="runscript.htm">RunScript</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Runs a Rhino command script</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 17.305%;" />
+	<col style="width: 82.695%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Properties</p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="releasewithoutclosing.htm">ReleaseWithoutClosing</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Releases the Rhino object without closing 
+		 the Rhino application.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="visible.htm">Visible</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Shows or hides the Rhino application window.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

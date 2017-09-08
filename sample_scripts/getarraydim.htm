@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>GetArrayDim</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nGetArrayDim");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > GetArrayDim<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>GetArrayDim</h1>
+<p>The following example function demonstrates how to determine the number of dimensions to an array.</p>
+<h3>Example</h3>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Function: &#160;GetArrayDim</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: &#160;&#160;Returns the number of dimensions to an array.</p>
+<p class="CodeComment" style="margin-left: 12px;">' Argument: &#160;An array to evaluate</p>
+<p class="CodeComment" style="margin-left: 12px;">' Returns: &#160;&#160;The number of dimensions if successful</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Null on error</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Public Function GetArrayDim(ByRef arrValue)</p>
+<p class="Code" style="margin-left: 24px;">If IsArray(arrValue) Then</p>
+<p class="Code" style="margin-left: 36px;">For i = 1 To 60</p>
+<p class="Code" style="margin-left: 48px;">On Error Resume Next</p>
+<p class="Code" style="margin-left: 48px;">UBound arrValue, i</p>
+<p class="Code" style="margin-left: 48px;">If Err.Number &lt;&gt; 0 Then</p>
+<p class="Code" style="margin-left: 60px;">GetArrayDim = i-1</p>
+<p class="Code" style="margin-left: 60px;">Exit Function</p>
+<p class="Code" style="margin-left: 48px;">End If</p>
+<p class="Code" style="margin-left: 36px;">Next</p>
+<p class="Code" style="margin-left: 36px;">GetArrayDim = i</p>
+<p class="Code" style="margin-left: 24px;">Else</p>
+<p class="Code" style="margin-left: 36px;">GetArrayDim = Null</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">End Function</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Function: &#160;IsUpperBound</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: &#160;&#160;Returns a Boolean value indicating whether an</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;array has been dimensioned.</p>
+<p class="CodeComment" style="margin-left: 12px;">' Argument: &#160;An array to evaluate</p>
+<p class="CodeComment" style="margin-left: 12px;">' Returns: &#160;&#160;TRUE or FALSE</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Function IsUpperBound(ByRef arr)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;IsUpperBound = False</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsArray(arr) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;On Error Resume Next</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;UBound arr</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;If Err.Number = 0 Then IsUpperBound = True</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End Function</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

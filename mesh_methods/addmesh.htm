@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddMesh</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nMesh Methods\nAddMesh");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"mesh_methods.htm\">Mesh Methods<\/a> > AddMesh<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddMesh</h1>
+<p>Adds a mesh object to the document.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddMesh (arrVertices, arrFaceVertices [, arrVertexNormals 
+ [, arrTextureCoordinates [, arrVertexColors]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.679%;" />
+	<col style="width: 90.321%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrVertices</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. Array. &#160;An array of 3-D 
+		 points defining the vertices of the mesh.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrFaceVertices</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. Array. &#160;An array containing 
+		 arrays of four numbers that define the vertex indices for each 
+		 face of the mesh. If the third and forth vertex indices of a face 
+		 are identical, a triangular face will be created. Otherwise a 
+		 quad face will be created.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrVertexNormals</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. Array. &#160;An array of 3-D 
+		 vectors defining the vertex normals of the mesh. Note, for every 
+		 vertex, the must be a corresponding vertex normal.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrTextureCoordinates</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. Array. An array of 2-D texture 
+		 coordinates. Note, for every vertex, there must be a corresponding 
+		 texture coordinate.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrVertexColors</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Array. &#160;An array of 
+		 RGB color values. Note, for every vertex, there must be a corresponding 
+		 vertex color.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 13.493%;" />
+	<col style="width: 86.507%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 13.493%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 86.507%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 13.493%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 86.507%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrVertices(8)</p>
+<p class="Code" style="margin-left: 12px;">arrVertices(0) = Array(0.0, 
+ 0.0, 0.0)</p>
+<p class="Code" style="margin-left: 12px;">arrVertices(1) = Array(5.0, 
+ 0.0, 0.0)</p>
+<p class="Code" style="margin-left: 12px;">arrVertices(2) = Array(10.0, 
+ 0.0, 0.0)</p>
+<p class="Code" style="margin-left: 12px;">arrVertices(3) = Array(0.0, 
+ 5.0, 0.0)</p>
+<p class="Code" style="margin-left: 12px;">arrVertices(4) = Array(5.0, 
+ 5.0, 0.0)</p>
+<p class="Code" style="margin-left: 12px;">arrVertices(5) = Array(10.0, 
+ 5.0, 0.0)</p>
+<p class="Code" style="margin-left: 12px;">arrVertices(6) = Array(0.0, 
+ 10.0, 0.0)</p>
+<p class="Code" style="margin-left: 12px;">arrVertices(7) = Array(5.0, 
+ 10.0, 0.0)</p>
+<p class="Code" style="margin-left: 12px;">arrVertices(8) = Array(10.0, 
+ 10.0, 0.0)</p>
+<p class="Code" style="margin-left: 12px;">Dim arrFaceVertices(7)</p>
+<p class="Code" style="margin-left: 12px;">arrFaceVertices(0) = Array(0,1,4,4)</p>
+<p class="Code" style="margin-left: 12px;">arrFaceVertices(1) = Array(2,4,1,1)</p>
+<p class="Code" style="margin-left: 12px;">arrFaceVertices(2) = Array(0,4,3,3)</p>
+<p class="Code" style="margin-left: 12px;">arrFaceVertices(3) = Array(2,5,4,4)</p>
+<p class="Code" style="margin-left: 12px;">arrFaceVertices(4) = Array(3,4,6,6)</p>
+<p class="Code" style="margin-left: 12px;">arrFaceVertices(5) = Array(5,8,4,4)</p>
+<p class="Code" style="margin-left: 12px;">arrFaceVertices(6) = Array(6,4,7,7)</p>
+<p class="Code" style="margin-left: 12px;">arrFaceVertices(7) = Array(8,7,4,4)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.AddMesh arrVertices, arrFaceVertices</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;"><img src="../images/addmesh.jpg" alt="addmesh.jpg" style="border: none;" width="479" height="280" border="0" /></p>
+<h3>Also See</h3>
+<p><a href="meshfaces.htm">MeshFaces</a></p>
+<p><a href="meshfacevertices.htm">MeshFaceVertices</a></p>
+<p><a href="meshtexturecoordinates.htm">MeshTextureCoordinates</a></p>
+<p><a href="meshvertexnormals.htm">MeshVertexNormals</a></p>
+<p><a href="meshvertices.htm">MeshVertices</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

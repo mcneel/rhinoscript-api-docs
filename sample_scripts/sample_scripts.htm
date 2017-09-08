@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Sample Scripts</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("Sample Scripts<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Sample Scripts</h1>
+<p>Several sample scripts have been include to assist you in getting started 
+ with VBScript and RhinoScript. &#160;More RhinoScript samples can be found 
+ in the <a href="https://github.com/mcneel/rhinoscript" target="_blank">RhinoScript</a> 
+ samples repository on GitHub.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 16.417%;" />
+	<col style="width: 83.583%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Method</p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="annotatecurveendpoints.htm">AnnotateCurveEndPoints</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to annotate a curve's 
+		 end points.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="arraypointsonsurface.htm">ArrayPointsOnSurface</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to array point objects 
+		 on a surface.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="circlefromcircumference.htm">CircleFromCircumference</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to create a circle from 
+		 a center point and a circumference value.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="copyobjectstolayer.htm">CopyObjectsToLayer</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to copy selected objects 
+		 to a different layer.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="createshortcut.htm">CreateShortcut</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to create a shortcut to 
+		 the current document on the Windows desktop..</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="currentmodelinfo.htm">CurrentModelInfo</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to use the File System 
+		 Object to retrieve information about a file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="curvelength.htm">CurveLength</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to determine there length 
+		 of selected curve objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="drawparametriccurve.htm">DrawParametricCurve</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates creating an interpolated curve 
+		 based on a parametric equation.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dumpdocumentdata.htm">DumpDocumentData</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to list all RhinoScript 
+		 document data to the command line.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="dynamicarray.htm">DynamicArray</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">VBScript dynamic array utility class.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="exportpoints.htm">ExportPoints</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to export the coordinates 
+		 of point and point cloud objects to a text file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="formatmessage.htm">FormatMessage</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates functions that can be useful 
+		 when formatting strings of text.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="gardenpath.htm">GardenPath</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to create a garden path.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getarraydim.htm">GetArrayDim</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to determine the number 
+		 of dimensions to an array.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="importcurvefromexcel.htm">ImportCurveFromExcel</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Creates an interpolated curve from 3-D 
+		 point coordinates read from a Microsoft Excel spreadsheet.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="makenurbscurve.htm">MakeNurbsCurve</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to create a NURBS curve.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="readtextfile.htm">ReadTextFile</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to read from a text file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="rgb_helpers.htm">RGB Helpers</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrate how to extract individual red, 
+		 green, or blue color component values from an RGB-formatted color 
+		 value.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="rhino_rvb.htm">Rhino.rvb</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Provides constant declarations useful when 
+		 using RhinoScript methods.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="ringtorus.htm">RingTorus</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates two different methods for 
+		 generating a torus-shaped surface.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.417%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="saveview.htm">SaveView</a></p></td>
+		<td style="width: 83.583%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Demonstrates how to save a named view.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

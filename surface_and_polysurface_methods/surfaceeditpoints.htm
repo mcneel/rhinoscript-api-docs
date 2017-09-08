@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>SurfaceEditPoints</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSurface & Polysurface Methods\nSurfaceEditPoints");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"surface_methods.htm\">Surface & Polysurface Methods<\/a> > SurfaceEditPoints<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>SurfaceEditPoints</h1>
+<p>Returns the edit, or Greville, points of a surface object. &#160;For each surface control point, there is a corresponding edit point.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.SurfaceEditPoints (strObject [, blnReturnParameters [, blnReturnAll]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.632%;" />
+<col style="width: 90.368%;" />
+<tr valign="top">
+<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strObject</p>
+</td>
+<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The object's identifier.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">blnReturnParameters</p>
+</td>
+<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Boolean. &#160;If False (default), edit points are returned as an array of 3-D points. If True, edit points are returned as an array U,V surface parameters.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">blnReturnAll</p>
+</td>
+<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Boolean. &#160;If True (default) all surface edit points are returned. If False, the function will returned surface edit points based on whether or not the surface is closed or periodic.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 12.831%;" />
+<col style="width: 87.169%;" />
+<tr valign="top">
+<td style="width: 12.831%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 87.169%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If <span style="font-style: italic;"><i>blnReturnParameters</i></span> <span>is omitted or False, then an array of 3-D edit points if successful.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 12.831%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 87.169%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If <span style="font-style: italic;"><i>blnReturnParameters</i></span> is True, then an array of U,V parameter values if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 12.831%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 87.169%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strObject, arrPoints</p>
+<p class="Code" style="margin-left: 12px;">strObject = Rhino.GetObject("Select a surface")</p>
+<p class="Code" style="margin-left: 12px;">If Rhino.IsSurface(strObject) Then</p>
+<p class="Code" style="margin-left: 24px;">arrPoints = Rhino.SurfaceEditPoints(strObject)</p>
+<p class="Code" style="margin-left: 24px;">If IsArray(arrPoints) Then</p>
+<p class="Code" style="margin-left: 36px;">Rhino.AddPointCloud arrPoints</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="issurface.htm">IsSurface</a></p>
+<p><a href="surfacepointcount.htm">SurfacePointCount</a></p>
+<p><a href="surfacepoints.htm">SurfacePoints</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

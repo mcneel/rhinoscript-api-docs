@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>ExtractPolyCurveSegment</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nExtractPolyCurveSegment");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > ExtractPolyCurveSegment<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>ExtractPolyCurveSegment</h1>
+<p>Extracts a segment curve from a polycurve object. A polycurve is a curve 
+ consisting of two or more curves joined together</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.ExtractPolyCurveSegment (strObject, intSegment)</p>
+<p class="Code">Rhino.ExtractPolyCurveSegment (strObject, arrSegments)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 12.591%;" />
+	<col style="width: 87.409%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strObject</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;String. &#160;The object's identifier.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">intSegment</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Number. &#160;The zero-based index of the segment curve 
+		 to extract.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrSegments</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Array. &#160;The zero-based indices of the segment curves 
+		 to extract.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 12.553%;" />
+	<col style="width: 87.447%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">String</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 <span style="font-style: italic;"><i>intSegment</i></span> is specified, 
+		 then the identifier of the extracted segment curve if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Array</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 <span style="font-style: italic;"><i>arrSegments</i></span> is specified, 
+		 then the identifiers of the extracted segment curves if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub ExplodePolyCurve</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim curve, i, count</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;curve = Rhino.GetObject(&quot;Select 
+ polycurve to explode&quot;, 4, True)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsNull(curve) 
+ Then Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If Not &#160;Rhino.IsPolyCurve(curve) 
+ Then Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;count = Rhino.PolyCurveCount(curve)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For i = 0 To count 
+ - 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.ExtractPolyCurveSegment(curve, i)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Call Rhino.DeleteObject(curve)</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3 class="Code">Also See</h3>
+<p><a href="ispolycurve.htm">IsPolyCurve</a></p>
+<p><a href="polycurvecount.htm">PolyCurveCount</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

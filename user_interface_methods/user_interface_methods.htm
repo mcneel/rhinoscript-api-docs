@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="05 31, 2002 3:59:06 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>User Interface Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Interface Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > User Interface Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>User Interface Methods</h1>
+<p>The following methods provide interaction with the user.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 15.026%;" />
+	<col style="width: 84.974%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Method</p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="browseforfolder.htm">BrowseForFolder</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a Windows browse-for-folder dialog 
+		 box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="checklistbox.htm">CheckListBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a list of strings in a checkable 
+		 list box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="combolistbox.htm">ComboListBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a list of strings in a combo list 
+		 box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="editbox.htm">EditBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a dialog box with a multi-line 
+		 edit control.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="editlistbox.htm">EditListBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a list of items in an editable 
+		 list box dialog.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getangle.htm">GetAngle</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of an angle.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getangleex.htm">GetAngleEx</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of an angle.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getboolean.htm">GetBoolean</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays boolean command-line option toggles.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getbox.htm">GetBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getcircle.htm">GetCircle</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a circle.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getcolor.htm">GetColor</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays the Rhino color picker dialog 
+		 box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getcursorpos.htm">GetCursorPos</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Retrieves the cursor's position.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getdistance.htm">GetDistance</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a distance.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getedgecurves.htm">GetEdgeCurves</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Prompts the user to pick one or more edge 
+		 curves to duplicate.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getinteger.htm">GetInteger</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a whole number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getkey.htm">GetKey</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a keyboard key.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getlayer.htm">GetLayer</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a layer selection dialog box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getlayers.htm">GetLayers</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a multiple layer selection dialog 
+		 box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getline.htm">GetLine</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Prompts the user to pick points that define 
+		 a line.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getlinetype.htm">GetLinetype</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a linetype selection dialog box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getmeshfaces.htm">GetMeshFaces</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Prompts the user to pick, or select, one 
+		 or more mesh faces.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getmeshvertices.htm">GetMeshVertices</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Prompts the user to pick, or select, one 
+		 or more mesh vertices.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getoption.htm">GetOption</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Prompts the user for one or more command 
+		 line options.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getpoint.htm">GetPoint</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a point.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getpointoncurve.htm">GetPointOnCurve</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a point constrained 
+		 to a curve.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getpointonline.htm">GetPointOnLine</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a point constrained 
+		 to an infinite line.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getpointonmesh.htm">GetPointOnMesh</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a point constrained 
+		 to a mesh.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getpointonplane.htm">GetPointOnPlane</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a point constrained 
+		 to a plane.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getpointonsurface.htm">GetPointOnSurface</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a point constrained 
+		 to a surface.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getpoints.htm">GetPoints</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of multiple points.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getpolyline.htm">GetPolyline</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Prompts the user to pick points that define 
+		 a polyline.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getprintwidth.htm">GetPrintWidth</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a print width selection dialog.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getreal.htm">GetReal</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getrectangle.htm">GetRectangle</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a rectangle.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getstring.htm">GetString</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a string.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getsurfaceisoparampoint.htm">GetSurfaceIsoParamPoint</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Pauses for user input of a point constrained 
+		 to a surface.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="htmlbox.htm">HtmlBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays an HTML-based dialog box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="integerbox.htm">IntegerBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a dialog box prompting the user 
+		 to enter a whole number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="listbox.htm">ListBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a list of strings in a simple 
+		 list box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="messagebeep.htm">MessageBeep</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Plays a wave form sound.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="messagebox.htm">MessageBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a Windows message box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="multilistbox.htm">MultiListBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a list of strings in a multiple 
+		 selection list box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="openfilename.htm">OpenFileName</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a Windows file open dialog box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="openfilenames.htm">OpenFileNames</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a multi-select Windows file open 
+		 dialog box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="orderlistbox.htm">OrderListBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a list of items in an orderable 
+		 list box dialog.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="popupmenu.htm">PopupMenu</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a context-like popup menu.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="propertylistbox.htm">PropertyListBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a list of items and values in 
+		 a property list.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="realbox.htm">RealBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a dialog box prompting the user 
+		 to enter a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="savefilename.htm">SaveFileName</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a Windows file save dialog box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="setcursorpos.htm">SetCursorPos</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Moves the cursor to the specified screen 
+		 coordinates.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.026%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="stringbox.htm">StringBox</a></p></td>
+		<td style="width: 84.974%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a dialog box prompting the user 
+		 to enter a string.</p></td>
+	</tr>
+</table>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

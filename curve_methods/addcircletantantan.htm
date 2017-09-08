@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddCircleTanTanTan</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nAddCircleTanTanTan");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > AddCircleTanTanTan<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddCircleTanTanTan</h1>
+<p>Adds a circle curve that is tangent to 3 curves to the document.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddCircleTanTanTan (strCurve1, strCurve2, strCurve3 
+ [, dblSeed1 [, dblSeed2 [, dblSeed3]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 8.73%;" />
+	<col style="width: 91.27%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strCurve1</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. The identifier 
+		 of the first curve object.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strCurve2 </p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The identifier 
+		 of the second curve object.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strCurve3 </p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The identifier 
+		 of the third curve object.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblSeed1 </p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;A 'seed' 
+		 parameter on the first curve object. If omitted, the parameter 
+		 at the start of the curve is used.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblSeed2</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;A 'seed' 
+		 parameter on the second curve object. If omitted, the parameter 
+		 at the start of the curve is used.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblSeed3</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;A 'seed' 
+		 parameter on the third curve object. If omitted, the parameter 
+		 at the start of the curve is used.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 8.74%;" />
+	<col style="width: 91.26%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">String</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">The 
+		 identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrCurve1, arrCurve2, arrCurve3</p>
+<p class="Code" style="margin-left: 12px;">arrCurve1 = Rhino.GetCurveObject(&quot;First 
+ curve&quot;)</p>
+<p class="Code" style="margin-left: 12px;">arrCurve2 = Rhino.GetCurveObject(&quot;Second 
+ curve&quot;)</p>
+<p class="Code" style="margin-left: 12px;">arrCurve3 = Rhino.GetCurveObject(&quot;Third 
+ curve&quot;)</p>
+<p class="Code" style="margin-left: 12px;">Call Rhino.AddCircleTanTanTan(arrCurve1(0), 
+ arrCurve2(0), arrCurve3(0), arrCurve1(4), arrCurve2(4), arrCurve3(4))</p>
+<h3>Also See</h3>
+<p><a href="addcurve.htm">AddCircle</a></p>
+<p><a href="addcircle3pt.htm">AddCircle3Pt</a></p>
+<p><a href="addcirclepttanpt.htm">AddCirclePtTanPt</a></p>
+<p><a href="addcircletantan.htm">AddCircleTanTan</a></p>
+<p><a href="iscircle.htm">IsCircle</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

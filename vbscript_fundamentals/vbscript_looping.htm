@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>VBScript Looping</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("VBScript Fundamentals\nVBScript Looping");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"vbscript_fundamentals.htm\">VBScript Fundamentals<\/a> > VBScript Looping<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>VBScript Looping</h1>
+<p>Looping allows you to run a group of statements repeatedly. Some loops repeat statements until a condition is <span style="font-weight: bold;"><b>False</b></span>; others repeat statements until a condition is <span style="font-weight: bold;"><b>True</b></span>. There are also loops that repeat statements a specific number of times.</p>
+<p>The following looping statements are available in VBScript:</p>
+<ul type="disc">
+<li class="p">
+<p><span style="font-weight: bold;"><b>Do...Loop</b></span>: Loops while or until a condition is True.</p>
+</li>
+<li class="p">
+<p><span style="font-weight: bold;"><b>While...Wend</b></span>: Loops while a condition is True.</p>
+</li>
+<li class="p">
+<p><span style="font-weight: bold;"><b>For...Next</b></span>: Uses a counter to run statements a specified number of times.</p>
+</li>
+<li class="p">
+<p><span style="font-weight: bold;"><b>For Each...Next</b></span>: Repeats a group of statements for each item in a collection or each element of an array.</p>
+</li>
+</ul>
+<h2>Using Do Loops</h2>
+<p>You can use <span style="font-weight: bold;"><b>Do...Loop</b></span> statements to run a block of statements an indefinite number of times. The statements are repeated either while a condition is <span style="font-weight: bold;"><b>True</b></span> or until a condition becomes <span style="font-weight: bold;"><b>True</b></span>.</p>
+<h2>Repeating Statements While a Condition is True</h2>
+<p>Use the <span style="font-weight: bold;"><b>While</b></span> keyword to check a condition in a <span style="font-weight: bold;"><b>Do...Loop</b></span> statement. You can check the condition before you enter the loop (as shown in the following <span style="font-style: italic;"><i>ChkFirstWhile</i></span> example), or you can check it after the loop has run at least once (as shown in the <span style="font-style: italic;"><i>ChkLastWhile</i></span> example). In the <span style="font-style: italic;"><i>ChkFirstWhile</i></span> procedure, if <span style="font-style: italic;"><i>myNum</i></span> is set to 9 instead of 20, the statements inside the loop will never run. In the <span style="font-style: italic;"><i>ChkLastWhile</i></span> procedure, the statements inside the loop run only once because the condition is already <span style="font-weight: bold;"><b>False</b></span>.</p>
+<p class="Code" style="margin-left: 12px;">Sub ChkFirstWhile()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim counter, myNum</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;counter = 0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;myNum = 20</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Do While myNum &gt; 10</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;myNum = myNum - 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;counter = counter + 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Loop</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox "The loop made " &amp; counter &amp; " repetitions."</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">Sub ChkLastWhile()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim counter, myNum</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;counter = 0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;myNum = 9</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Do</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;myNum = myNum - 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;counter = counter + 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Loop While myNum &gt; 10</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox "The loop made " &amp; counter &amp; " repetitions."</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h2>Repeating a Statement Until a Condition Becomes True</h2>
+<p>There are two ways to use the <span style="font-weight: bold;"><b>Until</b></span> keyword to check a condition in a <span style="font-weight: bold;"><b>Do...Loop</b></span> statement. You can check the condition before you enter the loop (as shown in the following <span style="font-style: italic;"><i>ChkFirstUntil</i></span> example), or you can check it after the loop has run at least once (as shown in the <span style="font-style: italic;"><i>ChkLastUntil</i></span> example). As long as the condition is <span style="font-weight: bold;"><b>False</b></span>, the looping occurs.</p>
+<p class="Code" style="margin-left: 12px;">Sub ChkFirstUntil()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim counter, myNum</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;counter = 0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;myNum = 20</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Do Until myNum = 10</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;myNum = myNum - 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;counter = counter + 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Loop</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox "The loop made " &amp; counter &amp; " repetitions."</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">Sub ChkLastUntil()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim counter, myNum</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;counter = 0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;myNum = 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Do</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;myNum = myNum + 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;counter = counter + 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Loop Until myNum = 10</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox "The loop made " &amp; counter &amp; " repetitions."</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h2>Exiting a Do...Loop Statement from Inside the Loop</h2>
+<p>You can exit a <span style="font-weight: bold;"><b>Do...Loop</b></span> by using the <span style="font-weight: bold;"><b>Exit Do</b></span> statement. Because you usually want to exit only in certain situations, such as to avoid an endless loop, you should use the <span style="font-weight: bold;"><b>Exit Do</b></span> statement in the <span style="font-weight: bold;"><b>True</b></span> statement block of an <span style="font-weight: bold;"><b>If...Then...Else</b></span> statement. If the condition is <span style="font-weight: bold;"><b>False</b></span>, the loop runs as usual.</p>
+<p>In the following example, <span style="font-style: italic;"><i>myNum</i></span> is assigned a value that creates an endless loop. The <span style="font-weight: bold;"><b>If...Then...Else</b></span> statement checks for this condition, preventing the endless repetition.</p>
+<p class="Code" style="margin-left: 12px;">Sub ExitExample()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim counter, myNum</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;counter = 0</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;myNum = 9</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Do Until myNum = 10</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;myNum = myNum - 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;counter = counter + 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;If myNum &lt; 10 Then Exit Do</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Loop</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox "The loop made " &amp; counter &amp; " repetitions."</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h2>Using While...Wend</h2>
+<p>The <span style="font-weight: bold;"><b>While...Wend</b></span> statement is provided in VBScript for those who are familiar with its usage. However, because of the lack of flexibility in <span style="font-weight: bold;"><b>While...Wend</b></span>, it is recommended that you use <span style="font-weight: bold;"><b>Do...Loop</b></span> instead.</p>
+<h2>Using For...Next</h2>
+<p>You can use <span style="font-weight: bold;"><b>For...Next</b></span> statements to run a block of statements a specific number of times. For loops, use a counter variable whose value increases or decreases with each repetition of the loop.</p>
+<p>The following example causes a procedure called <span style="font-style: italic;"><i>MyProc</i></span> to execute 50 times. The <span style="font-weight: bold;"><b>For</b></span> statement specifies the counter variable x and its start and end values. The <span style="font-weight: bold;"><b>Next</b></span> statement increments the counter variable by 1.</p>
+<p class="Code" style="margin-left: 12px;">Sub DoMyProc50Times()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim x</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For x = 1 To 50</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;MyProc</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p>Using the <span style="font-weight: bold;"><b>Step</b></span> keyword, you can increase or decrease the counter variable by the value you specify. In the following example, the counter variable j is incremented by 2 each time the loop repeats. When the loop is finished, the total is the sum of 2, 4, 6, 8, and 10.</p>
+<p class="Code" style="margin-left: 12px;">Sub TwosTotal()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim j, total</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For j = 2 To 10 Step 2</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;total = total + j</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox "The total is " &amp; total</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p>To decrease the counter variable, use a negative <span style="font-weight: bold;"><b>Step</b></span> value. You must specify an end value that is less than the start value. In the following example, the counter variable <span style="font-style: italic;"><i>myNum</i></span> is decreased by 2 each time the loop repeats. When the loop is finished, total is the sum of 16, 14, 12, 10, 8, 6, 4, and 2.</p>
+<p class="Code" style="margin-left: 12px;">Sub NewTotal()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim myNum, total</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For myNum = 16 To 2 Step -2</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;total = total + myNum</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;MsgBox "The total is " &amp; total</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p>You can exit any <span style="font-weight: bold;"><b>For...Next</b></span> statement before the counter reaches its end value by using the <span style="font-weight: bold;"><b>Exit For</b></span> statement. Because you usually want to exit only in certain situations, such as when an error occurs, you should use the <span style="font-weight: bold;"><b>Exit For</b></span> statement in the <span style="font-weight: bold;"><b>True</b></span> statement block of an <span style="font-weight: bold;"><b>If...Then...Else</b></span> statement. If the condition is <span style="font-weight: bold;"><b>False</b></span>, the loop runs as usual.</p>
+<h2>Using For Each...Next</h2>
+<p>A <span style="font-weight: bold;"><b>For Each...Next</b></span> loop is similar to a <span style="font-weight: bold;"><b>For...Next</b></span> loop. Instead of repeating the statements a specified number of times, a <span style="font-weight: bold;"><b>For Each...Next</b></span> loop repeats a group of statements for each item in a collection of objects or for each element of an array. This is especially helpful if you don't know how many elements are in a collection.</p>
+<p>In the following RhinoScript code example, the contents of a document's layer table is printed to the command line.</p>
+<p class="Code" style="margin-left: 12px;">Sub PrintLayerNames</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim l, n &#160;&#160;'Create variables</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;n = Rhino.LayerNames</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For Each l In n</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Rhino.Print l</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

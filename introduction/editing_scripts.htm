@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Editing Scripts</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Introduction\nEditing Scripts");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../introduction.htm\">Introduction<\/a> > Editing Scripts<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Editing Scripts</h1>
+<p>Any simple plain-text editor, such as <span style="font-weight: bold;"><b>Notepad</b></span>, 
+ can be used to create and/or edit script files. &#160;When saving your 
+ script file, make sure to give the file the default file extension for 
+ RhinoScript-specific VBScript files, which is <span style="font-weight: bold;"><b>RVB</b></span>.</p>
+<p>You can also create and edit script file from within Rhino by using 
+ the <span style="font-weight: bold;"><b>EditScript</b></span> command. &#160;The 
+ <span style="font-weight: bold;"><b>EditScript</b></span> command can be accessed 
+ from either Rhino's Tools menu, or by entering <span style="font-weight: bold;"><b>EditScript</b></span> 
+ on Rhino's command line.</p>
+<p>Note, there is no scriptable version 
+ of the <span style="font-weight: bold;"><b>EditScript</b></span> command.</p>
+<h2>The RhinoScript Editor</h2>
+<p>The RhinoScript Editor can be used to edit, run, and debug scripts. 
+ It contains standard source code editing feature, such as find and replace 
+ (with regular expressions), multiple-document interface, method browser, 
+ and an integrated help file.</p>
+<p><img src="../images/editor_all.png" style="border: none;" alt="editor_all.png" width="652" height="371" border="0" /></p>
+<h2>The Code Editor</h2>
+<p>The most important item on the RhinoScript Editor is the code editor. 
+ It is here that you make your scripts. As you can see, the editor is much 
+ more than a simple text editor. It performs automatic syntax parsing meaning 
+ you get properly colored keywords, collapsible code groups which encapsulate 
+ <span style="font-weight: bold;"><b>Sub</b></span> and <span style="font-weight: bold;"><b>Function</b></span> 
+ blocks, automatic indenting, auto-completion and error highlighting.</p>
+<p><img src="../images/editor_editor.png" style="border: none;" alt="editor_editor.png" width="652" height="371" border="0" /></p>
+<p>Auto-completion and parameter tips are grouped under the catch-phrase 
+ <span style="font-weight: bold;"><b>Intellisense</b></span>. Since VBScript is 
+ not a strongly typed language. Thus, Intellisense in the RhinoScript Editor 
+ is limited to RhinoScript methods and script scope procedures. </p>
+<p>The auto-completion list pops up as soon as <span style="font-weight: bold;"><b>Rhino.</b></span> 
+ is typed. The list updates when you keep typing to reflect the best possible 
+ match with your current text. Once the desired method is highlighted in 
+ the pop up list, press [Enter] and the complete method name will be inserted 
+ into the script. Once the method name is in place, we have to supply the 
+ arguments. Intellisense displays a tooltip showing us the required arguments 
+ and which one we are currently setting. </p>
+<p>Above the code editor you will find the document tab. The RhinoScript 
+ Editor is multiple-document capable and you can switch between documents 
+ by clicking on the appropriate tab. You can also add existing files quickly 
+ by dragging them onto the file tab.</p>
+<h2>The Method Browser</h2>
+<p>The method browser displays a categorized view of all RhinoScript methods. 
+ Use the plus and minus tree icons to expand and collapse each category. 
+ You can search for methods by typing the method name in the search field 
+ and then pressing [Enter]. If you double-click on a method, in the method 
+ browser, help on the method will appear. To use the method in your script, 
+ just drag the method into the code editor.</p>
+<p><img src="../images/editor_browser.png" style="border: none;" alt="editor_browser.png" width="652" height="371" border="0" /></p>
+<h2>The Status Bar</h2>
+<p>The status bar provides feedback on the location of the insertion caret 
+ in the currently active script. It provides both line and column coordinates, 
+ as well as procedure scope coordinate. You can jump to a specific line 
+ in your script by using the <span style="font-weight: bold;"><b>Go To Line</b></span> 
+ dialog box. But you can also scroll the line index field in the status 
+ bar. Just click + drag up and down and the currently selected line will 
+ be scrolled. </p>
+<p>The status bar exposes another quick navigation tool. If you click on 
+ the procedure scope field (the last field on the status bar) you will 
+ pop up a menu listing all defined <span style="font-weight: bold;"><b>Sub</b></span> 
+ and <span style="font-weight: bold;"><b>Function</b></span> procedures. Click 
+ on one of the names to jump to that procedure. If the caret is not inside 
+ any procedure body, the status bar will read &quot;Global scope&quot;. 
+ </p>
+<p><img src="../images/editor_statusbar.png" style="border: none;" alt="editor_statusbar.png" width="652" height="371" border="0" /></p>
+<h2>The Toolbar</h2>
+<p>The toolbar exposes standard functionality, which can also be found 
+ in the menus.</p>
+<p><img src="../images/editor_toolbar.png" style="border: none;" alt="editor_toolbar.png" width="652" height="371" border="0" /></p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 13.385%;" />
+	<col style="width: 12.278%;" />
+	<col style="width: 74.337%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Head">Button</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Head">Shortcut</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">New</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Ctrl 
+		 + N</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Create 
+		 a new script file with a custom header. </p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Open</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Ctrl 
+		 + O</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Open 
+		 an existing script file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Save</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Ctrl 
+		 + S</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Save 
+		 the currently active script.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Save 
+		 All</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">&#160;</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Save 
+		 all changes to all loaded scripts.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Save 
+		 As</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Ctrl 
+		 + Shift + S</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Save 
+		 the active script under another file name.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Run 
+		 Script</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">F5</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Run 
+		 the active script.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Debug 
+		 Script</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Ctrl 
+		 + F5</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Run 
+		 the active script with breakpoints enabled.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Toggle 
+		 Breakpoint</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">F9</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Toggle 
+		 breakpoint flag on the active line in the active script.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Find 
+		 </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Ctrl 
+		 + F</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Search 
+		 the active script for a specific string.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Replace 
+		 &#160;</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Ctrl 
+		 + R</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Replace 
+		 one string with another in the active script.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Go 
+		 To Line</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Ctrl 
+		 + G</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Display 
+		 the &quot;Go To Line&quot; dialog for the active script.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Google 
+		 Groups</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">&#160;</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Perform 
+		 a Google search for the specified keywords.</p></td>
+	</tr>
+</table>
+<h2>The Menu</h2>
+<p>The menu provides access to all the&#160;RhinoScript Editor features.</p>
+<p><img src="../images/editor_menu.png" style="border: none;" alt="editor_menu.png" width="652" height="371" border="0" /></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>FilletSurfacesEx</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSurface & Polysurface Methods\nFilletSurfacesEx");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"surface_methods.htm\">Surface & Polysurface Methods<\/a> > FilletSurfacesEx<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>FilletSurfacesEx</h1>
+<p>Creates a surface between two surfaces. Unlike <a href="filletsurfaces.htm">FilletSurfaces</a>, 
+ this method will trim the original surfaces to the fillets.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.FilletSurfacesEx (strSurface0, arrParam0, dlbRadius0, 
+ strSurface1, arrParam1, dlbRadius1 [, intFilletType [, blnExtend [, intSplitType]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.632%;" />
+	<col style="width: 90.368%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strSurface0</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;The identifier 
+		 of the first surface object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrParam0 </p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;&#160;Array. 
+		 &#160;A u,v surface parameter of <span style="font-style: italic;"><i>strSurface0 
+		 </i></span>near where the fillet is expected to hit the surface.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dlbRadius1</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;The radius, 
+		 or distance, from the intersection of <span style="font-style: italic;"><i>strSurface0</i></span> 
+		 to the edge of the fillet. Note, <span style="font-style: italic;"><i>dlbRadius1</i></span> 
+		 should always equal <span style="font-style: italic;"><i>dblRadius2</i></span> 
+		 unless <span style="font-style: italic;"><i>intFilleType</i></span> = 
+		 1 (Chamfer).</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strSurface1</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;The identifier 
+		 of the second surface object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrParam1</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;A u,v surface 
+		 parameter of <span style="font-style: italic;"><i>strSurface1 </i></span>near 
+		 where the fillet is expected to hit the surface.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dlbRadius1</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;The radius, 
+		 or distance, from the intersection of <span style="font-style: italic;"><i>strSurface1</i></span> 
+		 to the edge of the fillet. Note, <span style="font-style: italic;"><i>dlbRadius1</i></span> 
+		 should always equal <span style="font-style: italic;"><i>dblRadius2</i></span> 
+		 unless <span style="font-style: italic;"><i>intFilleType</i></span> = 
+		 1 (Chamfer)</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intFilletType</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The type 
+		 of fillet to create. The possible values are:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 11.543%;" />
+			<col style="width: 88.457%;" />
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0 (Default)</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Rolling ball</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Chamfer</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Rails</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnExtend</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Boolean. &#160;If True 
+		 (Default), then when one input surface is longer than the other, 
+		 the fillet surface is extended to the input surface edges.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intSplitType</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The type 
+		 of splitting to perform. The possible values are:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 11.543%;" />
+			<col style="width: 88.457%;" />
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Nothing</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1 (Default)</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Trim</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Split</p></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.618%;" />
+	<col style="width: 90.382%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">An array that contains 3 sub-arrays if 
+		 successful. &#160;The array will contain the following information:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 6.985%;" />
+			<col style="width: 7.792%;" />
+			<col style="width: 85.223%;" />
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Element</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Type</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">The identifiers of the fillet surfaces.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If <span style="font-style: italic;"><i>intSplitType</i></span> 
+				 is either 1 (Trim) or 2 (Split), then the identifiers 
+				 of the results of trimming or splitting <span style="font-style: italic;"><i>strSurface0. 
+				 </i></span></p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">If <span style="font-style: italic;"><i>intSplitType</i></span> 
+				 is either 1 (Trim) or 2 (Split), then the identifiers 
+				 of the results of trimming or splitting <span style="font-style: italic;"><i>strSurface1. 
+				 </i></span></p></td>
+			</tr>
+		</table>
+		<p class="Table-Body">Note, if <span style="font-style: italic;"><i>intSplitType</i></span> 
+		 is 0 (Nothing) then the array elements 1 and 2 will contain <span 
+		 style="font-style: italic;"><i>strSurface0 </i></span>and<span style="font-style: italic;"><i> 
+		 strSurface0 </i></span>respectively<span style="font-style: italic;"><i>.</i></span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code">Dim arrSrf0, arrSrf1, arrResult, arr, i, j</p>
+<p class="Code">arrSrf0 = Rhino.GetSurfaceObject(&quot;Select first surface 
+ to fillet&quot;)</p>
+<p class="Code">arrSrf1 = Rhino.GetSurfaceObject(&quot;Select second surface 
+ to fillet&quot;)</p>
+<p class="Code">arrResult = Rhino.FilletSurfacesEx(arrSrf0(0), arrSrf0(4), 
+ 1.0, arrSrf1(0), arrSrf1(4), 1.0)</p>
+<p class="Code">For i = 0 To UBound(arrResult)</p>
+<p class="Code">&#160;&#160;arr = arrResult(i)</p>
+<p class="Code">&#160;&#160;For j = 0 to UBound(arr)</p>
+<p class="Code">&#160;&#160;&#160;&#160;Call Rhino.Print(arr(j))</p>
+<p class="Code">&#160;&#160;Next</p>
+<p class="Code">Next</p>
+<h3 class="Code">Also See</h3>
+<p><a href="filletsurfaces.htm">FilletSurfaces</a></p>
+<p><a href="issurface.htm">IsSurface</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

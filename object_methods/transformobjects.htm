@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>TransformObjects</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nObject Methods\nTransformObjects");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"object_methods.htm\">Object Methods<\/a> > TransformObjects<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>TransformObjects</h1>
+<p>Moves, scales, or rotates one or more objects given a 4x4 transformation matrix. The matrix acts on the left. The following table demonstrates the transformation matrix configuration:</p>
+<p>&#160;</p>
+<table cellspacing="0">
+<col />
+<col />
+<col />
+<col />
+<tr valign="top">
+<td style="border: Solid 1px #000000;padding-right: 10px; padding-left: 10px;">
+<p>1</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>dX</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>1</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>dY</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>1</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>dZ</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>1</p>
+</td>
+</tr>
+</table>
+<h3>Syntax</h3>
+<p class="Code">Rhino.TransformObjects (arrObjects, arrMatrix [, blnCopy])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.737%;" />
+<col style="width: 90.263%;" />
+<tr style="height: 11px;" valign="top">
+<td style="width: 9.737%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrObjects</p>
+</td>
+<td style="width: 90.263%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array. &#160;An array of strings identifying the objects to transform.</p>
+</td>
+</tr>
+<tr style="height: 20px;" valign="top">
+<td style="width: 9.737%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrMatrix</p>
+</td>
+<td style="width: 90.263%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. Array. The transformation matrix (4x4 array of numbers).</p>
+</td>
+</tr>
+<tr style="height: 20px;" valign="top">
+<td style="width: 9.737%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">blnCopy</p>
+</td>
+<td style="width: 90.263%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. Boolean. Copy the objects. If omitted, the objects will not be copied (False).</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.756%;" />
+<col style="width: 90.244%;" />
+<tr valign="top">
+<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">An array of strings identifying the newly transformed objects if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">' Translate (move) objects by (10,10,0)</p>
+<p class="Code" style="margin-left: 12px;">Dim arrObjects, arrMatrix(3,3)</p>
+<p class="Code" style="margin-left: 12px;">arrMatrix(0,0) = 1 : <span style="margin-left: 12px;">arrMatrix(0,1) = 0 : arrMatrix(0,2) = 0 : arrMatrix(0,3) = 10</span></p>
+<p class="Code" style="margin-left: 12px;">arrMatrix(1,0) = 0 : <span style="margin-left: 12px;">arrMatrix(1,1) = 1 : arrMatrix(1,2) = 0 : arrMatrix(1,3) = 10</span></p>
+<p class="Code" style="margin-left: 12px;">arrMatrix(2,0) = 0 : <span style="margin-left: 12px;">arrMatrix(2,1) = 0 : arrMatrix(2,2) = 1 : arrMatrix(2,3) = 0</span></p>
+<p class="Code" style="margin-left: 12px;">arrMatrix(3,0) = 0 : <span style="margin-left: 12px;">arrMatrix(3,1) = 0 : arrMatrix(3,2) = 0 : arrMatrix(3,3) = 1</span></p>
+<p class="Code" style="margin-left: 12px;">arrObjects = Rhino.GetObjects("Select objects to translate")</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrObjects) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.TransformObjects arrObjects, arrMatrix</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="transformobject.htm">TransformObject</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

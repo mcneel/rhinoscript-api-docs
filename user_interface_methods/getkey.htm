@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>GetKey</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Interface Methods\nGetKey");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"user_interface_methods.htm\">User Interface Methods<\/a> > GetKey<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>GetKey</h1>
+<p>Pauses for user input of a keyboard key. Pressing the &lt;Esc&gt; key 
+ will cancel the operation.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.GetKey ([strMessage])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 7.122%;" />
+	<col style="width: 92.878%;" />
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strMessage</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;String. &#160;A prompt or message.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 7.141%;" />
+	<col style="width: 92.859%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Array</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">An 
+		 array that contains information about the key that was pressed 
+		 if successful. The array will contain the following:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 7.117%;" />
+			<col style="width: 92.883%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Element</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">The virtual-key code. &#160;For 
+				 more information, see <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v%3dvs.85).aspx" 
+											 target="_blank">Virtual Key 
+				 Codes</a>.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">A bit-coded number identifying 
+				 the state of modifier keys:</p>
+				<table style="border-collapse: separate;" cellspacing="0" 
+						 width="100%">
+					<col style="width: 5.23%;" />
+					<col style="width: 4.687%;" />
+					<col style="width: 90.083%;" />
+					<tr>
+						<td><p class="Table-Head">Value</p></td>
+						<td><p class="Table-Head">Hex</p></td>
+						<td><p class="Table-Head">Description</p></td>
+					</tr>
+					<tr>
+						<td><p class="Table-Body">0</p></td>
+						<td><p class="Table-Body">&amp;h0</p></td>
+						<td><p class="Table-Body">No modifier keys are 
+						 pressed or toggled.</p></td>
+					</tr>
+					<tr>
+						<td><p class="Table-Body">1</p></td>
+						<td><p class="Table-Body">&amp;h1</p></td>
+						<td><p class="Table-Body">The &lt;Shift&gt; key 
+						 is pressed.</p></td>
+					</tr>
+					<tr>
+						<td><p class="Table-Body">2</p></td>
+						<td><p class="Table-Body">&amp;h2</p></td>
+						<td><p class="Table-Body">The &lt;Control&gt; key 
+						 is pressed.</p></td>
+					</tr>
+					<tr>
+						<td><p class="Table-Body">4</p></td>
+						<td><p class="Table-Body">&amp;h4</p></td>
+						<td><p class="Table-Body">The &lt;Alt&gt; key is 
+						 pressed.</p></td>
+					</tr>
+					<tr>
+						<td><p class="Table-Body">8</p></td>
+						<td><p class="Table-Body">&amp;h8</p></td>
+						<td><p class="Table-Body">The &lt;Caps Lock&gt; 
+						 key is on.</p></td>
+					</tr>
+					<tr>
+						<td><p class="Table-Body">16</p></td>
+						<td><p class="Table-Body">&amp;h10</p></td>
+						<td><p class="Table-Body">The &lt;Num Lock&gt; 
+						 key is on.</p></td>
+					</tr>
+					<tr>
+						<td><p class="Table-Body">32</p></td>
+						<td><p class="Table-Body">&amp;h20</p></td>
+						<td><p class="Table-Body">The &lt;Scroll Lock&gt; 
+						 key is on.</p></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub TestGetKey</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim key, shift, 
+ ctrl, alt, capslock, numlock, scrllock</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;key = Rhino.GetKey(&quot;Press 
+ a key&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;While Not IsNull(key)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;shift 
+ = CBool(key(1) And &amp;h1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;ctrl 
+ = CBool(key(1) And &amp;h2)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;alt 
+ = CBool(key(1) And &amp;h4)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;capslock 
+ = CBool(key(1) And &amp;h8)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;numlock 
+ = CBool(key(1) And &amp;h10)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;scrllock 
+ = CBool(key(1) And &amp;h20)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(&quot;Virtual key: &quot; &amp; CStr(key(0)) &amp; &quot;, 
+ flags: &quot; &amp; CStr(key(1)))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(&quot; &#160;Chr: &quot; &amp; Chr(key(0)))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(&quot; &#160;Shift: &quot; &amp; CStr(shift))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(&quot; &#160;Ctrl: &quot; &amp; CStr(ctrl))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(&quot; &#160;Alt: &quot; &amp; CStr(alt))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(&quot; &#160;CapsLock: &quot; &amp; CStr(capslock))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(&quot; &#160;NumLock: &quot; &amp; CStr(numlock))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(&quot; &#160;ScrollLock: &quot; &amp; CStr(scrllock))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;key 
+ = Rhino.GetKey</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Wend</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3>Also See</h3>
+<p><a href="../utility_methods/getasynckeystate.htm">GetAsyncKeyState</a></p>
+<p><a href="getstring.htm">GetString</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

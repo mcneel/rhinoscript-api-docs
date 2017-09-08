@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="05 30, 2002 9:24:32 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Object Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nObject Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > Object Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Object Methods</h1>
+<p>The following methods are available for querying or manipulating the 
+ general properties of Rhino objects.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 16.094%;" />
+	<col style="width: 83.906%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Method</p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addobjectdisplaymode.htm">AddObjectDisplayMode</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Assigns separate display attributes to 
+		 individual objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addobjectmesh.htm">AddObjectMesh</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds custom render mesh parameters to an 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="bendobject.htm">BendObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deforms objects by bending along a spine 
+		 arc.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="boxmorphobject.htm">BoxMorphObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Bounding box morphs an object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="changeobjectspace.htm">ChangeObjectSpace</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Changes the space of objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="copyobject.htm">CopyObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Copies a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="copyobjects.htm">CopyObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Copies one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="deleteobject.htm">DeleteObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deletes a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="deleteobjects.htm">DeleteObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deletes one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="enableobjectmesh.htm">EnableObjectMesh</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Enables or disables an object's custom 
+		 render mesh parameters.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="flashobject.htm">FlashObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Flashes one or more objects</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="flowobject.htm">FlowObject</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Re-aligns objects from a base curve to 
+		 a target curve.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="hideobject.htm">HideObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Hides a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="hideobjects.htm">HideObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Hides one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="islayoutobject.htm">IsLayoutObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that an object resides in either 
+		 layout or model space.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobject.htm">IsObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object exist.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectchild.htm">IsObjectChild</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that an object is a history descendant, 
+		 or child object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjecthidden.htm">IsObjectHidden</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is hidden.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectinbox.htm">IsObjectInBox</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object's bounding box is inside 
+		 of another bounding box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectingroup.htm">IsObjectInGroup</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a member of a group.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectlocked.htm">IsObjectLocked</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is locked.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectnormal.htm">IsObjectNormal</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object has normal display attributes.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectparent.htm">IsObjectParent</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that an object is a history antecedent, 
+		 or parent object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectreference.htm">IsObjectReference</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a reference object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectselectable.htm">IsObjectSelectable</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object can be selected.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectselected.htm">IsObjectSelected</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is selected.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectsolid.htm">IsObjectSolid</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is closed, solid object</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isobjectvalid.htm">IsObjectValid</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object's geometry is valid.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isvisibleinview.htm">IsVisibleInView</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is visible in a view.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="lockobject.htm">LockObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Locks a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="lockobjects.htm">LockObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Locks one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="maelstromobject.htm">MaelstromObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deforms objects in a spiral as if they 
+		 were caught in a whirlpool.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="matchobjectattributes.htm">MatchObjectAttributes</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Matches the attributes of one object to 
+		 another.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="mirrorobject.htm">MirrorObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Mirrors a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="mirrorobjects.htm">MirrorObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Mirrors one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="moveobject.htm">MoveObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Moves a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="moveobjects.htm">MoveObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Moves one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectcastsshadows.htm">ObjectCastsShadows</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or sets an object's casts shadows 
+		 property.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectchildren.htm">ObjectChildren</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the identifiers of history descendants, 
+		 or children, of a parent object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectclash.htm">ObjectClash</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Performs clash and clearance analysis.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectcolor.htm">ObjectColor</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's color.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectcolorsource.htm">ObjectColorSource</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's color source.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectdatacrc.htm">ObjectDataCRC</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the CRC value of an object's data, 
+		 or geometry.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectdescription.htm">ObjectDescription</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns a short text description of the 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectdisplaymode.htm">ObjectDisplayMode</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns an object's display mode.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectdump.htm">ObjectDump</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns a detailed description of the object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectgroups.htm">ObjectGroups</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns an object's groups.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objecthashistory.htm">ObjectHasHistory</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that an object has history.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objecthasmesh.htm">ObjectHasMesh</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that an object has custom render 
+		 mesh parameters.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectlayer.htm">ObjectLayer</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's layer.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectlayer.htm">ObjectLayout</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes the layout or model 
+		 space of an object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectlinetype.htm">ObjectLinetype</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's linetype.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectlinetypesource.htm">ObjectLinetypeSource</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's linetype 
+		 source.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmaterialindex.htm">ObjectMaterialIndex</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's rendering 
+		 material index.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmaterialsource.htm">ObjectMaterialSource</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's rendering 
+		 material source.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmeshdensity.htm">ObjectMeshDensity</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies an object's custom 
+		 render mesh density parameter.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmeshmaxangle.htm">ObjectMeshMaxAngle</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies an object's custom 
+		 render mesh maximum angle parameter.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmeshmaxaspectratio.htm">ObjectMeshMaxAspectRatio</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies an object's custom 
+		 render mesh maximum aspect ratio parameter.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmeshmaxdistedgetosrf.htm">ObjectMeshMaxDistEdgeToSrf</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies an object's custom 
+		 render mesh maximum distance, edge to surface parameter.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmeshmaxedgelength.htm">ObjectMeshMaxEdgeLength</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies an object's custom 
+		 render mesh maximum edge length parameter.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmeshminedgelength.htm">ObjectMeshMinEdgeLength</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies an object's custom 
+		 render mesh minimum edge length parameter.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmeshmininitialgridquads.htm">ObjectMeshMinInitialGridQuads</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies an object's custom 
+		 render mesh minimum initial grid quads parameter.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmeshquality.htm">ObjectMeshQuality</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies an object's custom 
+		 render mesh quality parameter.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectmeshsettings.htm">ObjectMeshSettings</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies an object's custom 
+		 render mesh settings.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectname.htm">ObjectName</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's name.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectnames.htm">ObjectNames</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes the names of one or 
+		 more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectparents.htm">ObjectParents</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the identifiers of history antecedents, 
+		 or parents, of an object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectprintcolor.htm">ObjectPrintColor</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's print color.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectprintcolorsource.htm">ObjectPrintColorSource</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's print color 
+		 source.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectprintwidth.htm">ObjectPrintWidth</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's print width.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectprintwidthsource.htm">ObjectPrintWidthSource</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's print width 
+		 source.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectreceivesshadows.htm">ObjectReceivesShadows</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or sets an object's receives shadows 
+		 property.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectserialnumber.htm">ObjectSerialNumber</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the unique serial number of an 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objectspace.htm">ObjectSpace</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the active working space of an 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objecttopgroup.htm">ObjectTopGroup</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns an object's top-level groups.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objecttype.htm">ObjectType</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns an object's type.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="objecturl.htm">ObjectURL</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or changes an object's URL.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="orientobject.htm">OrientObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Orients a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="orientobjects.htm">OrientObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Orients one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="remapobject.htm">RemapObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Remaps an object to a different coordinate 
+		 system.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="remapobjects.htm">RemapObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Remaps one or more objects to a different 
+		 coordinate system.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="removeobjectdisplaymode.htm">RemoveObjectDisplayMode</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Removes separate display attributes to 
+		 individual objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="replacegeometry.htm">ReplaceGeometry</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Replaces the geometry of an object with 
+		 that of another object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="rotateobject.htm">RotateObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Rotates a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="rotateobjects.htm">RotateObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Rotates one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="scaleobject.htm">ScaleObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Scales a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="scaleobjects.htm">ScaleObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Scales one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="selectobject.htm">SelectObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Selects a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="selectobjects.htm">SelectObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Selects one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="shearobject.htm">ShearObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Shears a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="shearobjects.htm">ShearObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Shears one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="showobject.htm">ShowObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Shows, or unhides, a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="showobjects.htm">ShowObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Shows, or unhides, one or more object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="splopobject.htm">SplopObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Copies, rotates, scales, and wraps objects 
+		 on a surface</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="sporphobject.htm">SporphObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deforms an object from a source surface 
+		 to a target surface.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="stretchobject.htm">StretchObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deforms an object by scaling selected portions 
+		 in one direction.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="taperobject.htm">TaperObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deforms objects toward or away from a specified 
+		 axis.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="transformobject.htm">TransformObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Moves, scales, or rotates a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="transformobjects.htm">TransformObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Moves, scales, or rotates one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="twistobject.htm">TwistObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deforms objects by rotating them around 
+		 an axis.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="unlockobject.htm">UnlockObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Unlocks a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="unlockobjects.htm">UnlockObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Unlocks one or more objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="unselectobject.htm">UnselectObject</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Unselects a single object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 16.094%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="unselectobjects.htm">UnselectObjects</a></p></td>
+		<td style="width: 83.906%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Unselects one or more objects.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

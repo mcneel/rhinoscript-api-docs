@@ -1,0 +1,403 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<indexdata>
+<key name="SelectedObjects" >
+  <topic name="SelectedObjects" url="selection_methods/selectedobjects.htm" />
+</key>
+<key name="Selection Methods" >
+  <topic name="Selection Methods" url="selection_methods/selection_methods.htm" />
+</key>
+<key name="SelectLayers" >
+  <topic name="SelectLayers" url="layer_methods/selectlayers.htm" />
+</key>
+<key name="SelectObject" >
+  <topic name="SelectObject" url="object_methods/selectobject.htm" />
+</key>
+<key name="SelectObjectGrip" >
+  <topic name="SelectObjectGrip" url="object_grip_methods/selectobjectgrip.htm" />
+</key>
+<key name="SelectObjectGrips" >
+  <topic name="SelectObjectGrips" url="object_grip_methods/selectobjectgrips.htm" />
+</key>
+<key name="SelectObjects" >
+  <topic name="SelectObjects" url="object_methods/selectobjects.htm" />
+</key>
+<key name="SelectObjectsOfNamedPosition" >
+  <topic name="SelectObjectsOfNamedPosition" url="named_position_methods/selectobjectsofnamedposition.htm" />
+</key>
+<key name="SendKeystrokes" >
+  <topic name="SendKeystrokes" url="application_methods/sendkeystrokes.htm" />
+</key>
+<key name="SerialNumber" >
+  <topic name="SerialNumber" url="application_methods/serialnumber.htm" />
+</key>
+<key name="SetAttributeData" >
+  <topic name="SetAttributeData" url="user_data_methods/setattributedata.htm" />
+</key>
+<key name="SetCursorPos" >
+  <topic name="SetCursorPos" url="user_interface_methods/setcursorpos.htm" />
+</key>
+<key name="SetDocumentData" >
+  <topic name="SetDocumentData" url="user_data_methods/setdocumentdata.htm" />
+</key>
+<key name="SetDocumentUserText" >
+  <topic name="SetDocumentUserText" url="user_data_methods/setdocumentusertext.htm" />
+</key>
+<key name="SetGroupUserText" >
+  <topic name="SetGroupUserText" url="group_methods/setgroupusertext.htm" />
+</key>
+<key name="SetLayerUserText" >
+  <topic name="SetLayerUserText" url="layer_methods/setlayerusertext.htm" />
+</key>
+<key name="SetObjectData" >
+  <topic name="SetObjectData" url="user_data_methods/setobjectdata.htm" />
+</key>
+<key name="SetRuntimeData" >
+  <topic name="SetRuntimeData" url="user_data_methods/setruntimedata.htm" />
+</key>
+<key name="SetUserText" >
+  <topic name="SetUserText" url="user_data_methods/setusertext.htm" />
+</key>
+<key name="ShearObject" >
+  <topic name="ShearObject" url="object_methods/shearobject.htm" />
+</key>
+<key name="ShearObjects" >
+  <topic name="ShearObjects" url="object_methods/shearobjects.htm" />
+</key>
+<key name="ShootRay" >
+  <topic name="ShootRay" url="surface_and_polysurface_methods/shootray.htm" />
+</key>
+<key name="ShortPath" >
+  <topic name="ShortPath" url="surface_and_polysurface_methods/shortpath.htm" />
+</key>
+<key name="ShowGrid" >
+  <topic name="ShowGrid" url="view_methods/showgrid.htm" />
+</key>
+<key name="ShowGridAxes" >
+  <topic name="ShowGridAxes" url="view_methods/showgridaxes.htm" />
+</key>
+<key name="ShowGroup" >
+  <topic name="ShowGroup" url="group_methods/showgroup.htm" />
+</key>
+<key name="ShowIsocurves" >
+  <topic name="ShowIsocurves" url="application_methods/showisocurves.htm" />
+</key>
+<key name="ShowObject" >
+  <topic name="ShowObject" url="object_methods/showobject.htm" />
+</key>
+<key name="ShowObjects" >
+  <topic name="ShowObjects" url="object_methods/showobjects.htm" />
+</key>
+<key name="ShowToolBar" >
+  <topic name="ShowToolBar" url="toolbar_methods/showtoolbar.htm" />
+</key>
+<key name="ShowViewTitle" >
+  <topic name="ShowViewTitle" url="view_methods/showviewtitle.htm" />
+</key>
+<key name="ShowWorldAxes" >
+  <topic name="ShowWorldAxes" url="view_methods/showworldaxes.htm" />
+</key>
+<key name="ShrinkTrimmedSurface" >
+  <topic name="ShrinkTrimmedSurface" url="surface_and_polysurface_methods/shrinktrimmedsurface.htm" />
+</key>
+<key name="SimplifyArray" >
+  <topic name="SimplifyArray" url="utility_methods/simplifyarray.htm" />
+</key>
+<key name="SimplifyCurve" >
+  <topic name="SimplifyCurve" url="curve_methods/simplifycurve.htm" />
+</key>
+<key name="SinH" >
+  <topic name="SinH" url="math_methods/sinh.htm" />
+</key>
+<key name="Sleep" >
+  <topic name="Sleep" url="utility_methods/sleep.htm" />
+</key>
+<key name="SmoothCurve" >
+  <topic name="SmoothCurve" url="curve_methods/smoothcurve.htm" />
+</key>
+<key name="SmoothMesh" >
+  <topic name="SmoothMesh" url="mesh_methods/smoothmesh.htm" />
+</key>
+<key name="SmoothSurface" >
+  <topic name="SmoothSurface" url="surface_and_polysurface_methods/smoothsurface.htm" />
+</key>
+<key name="Snap" >
+  <topic name="Snap" url="application_methods/snap.htm" />
+</key>
+<key name="SnapToLocked" >
+  <topic name="SnapToLocked" url="application_methods/snaptolocked.htm" />
+</key>
+<key name="SoftEditCurve" >
+  <topic name="SoftEditCurve" url="curve_methods/softeditcurve.htm" />
+</key>
+<key name="SoftEditSurface" >
+  <topic name="SoftEditSurface" url="surface_and_polysurface_methods/softeditsurface.htm" />
+</key>
+<key name="SolveQuadratic" >
+  <topic name="SolveQuadratic" url="math_methods/solvequadratic.htm" />
+</key>
+<key name="SortNumbers" >
+  <topic name="SortNumbers" url="utility_methods/sortnumbers.htm" />
+</key>
+<key name="SortPointList" >
+  <topic name="SortPointList" url="utility_methods/sortpointlist.htm" />
+</key>
+<key name="SortPoints" >
+  <topic name="SortPoints" url="utility_methods/sortpoints.htm" />
+</key>
+<key name="SortPointsByDistance" >
+  <topic name="SortPointsByDistance" url="utility_methods/sortpointsbydistance.htm" />
+</key>
+<key name="SortStrings" >
+  <topic name="Sort" url="utility_methods/sort.htm" />
+</key>
+<key name="SplitBrep" >
+  <topic name="SplitBrep" url="surface_and_polysurface_methods/splitbrep.htm" />
+</key>
+<key name="SplitCurve" >
+  <topic name="SplitCurve" url="curve_methods/splitcurve.htm" />
+</key>
+<key name="SplitDisjointMesh" >
+  <topic name="SplitDisjointMesh" url="mesh_methods/splitdisjointmesh.htm" />
+</key>
+<key name="SplitSurface" >
+  <topic name="SplitSurface" url="surface_and_polysurface_methods/splitsurface.htm" />
+</key>
+<key name="SplitSurfaceEx" >
+  <topic name="SplitSurfaceEx" url="surface_and_polysurface_methods/splitsurfaceex.htm" />
+</key>
+<key name="SplopObject" >
+  <topic name="SplopObject" url="object_methods/splopobject.htm" />
+</key>
+<key name="SpoolToPrinter" >
+  <topic name="SpoolToPrinter" url="utility_methods/spooltoprinter.htm" />
+</key>
+<key name="SporphObject" >
+  <topic name="SporphObject" url="object_methods/sporphobject.htm" />
+</key>
+<key name="SpotLightHardness" >
+  <topic name="SpotLightHardness" url="light_methods/spotlighthardness.htm" />
+</key>
+<key name="SpotLightRadius" >
+  <topic name="SpotLightRadius" url="light_methods/spotlightradius.htm" />
+</key>
+<key name="SpotLightShadowIntensity" >
+  <topic name="SpotLightShadowIntensity" url="light_methods/spotlightshadowintensity.htm" />
+</key>
+<key name="Started" >
+  <topic name="Getting Started" url="introduction/getting_started.htm" />
+  <key name="Getting" >
+    <topic name="Getting Started" url="introduction/getting_started.htm" />
+  </key>
+</key>
+<key name="StartupScriptCount" >
+  <topic name="StartupScriptCount" url="application_methods/startupscriptcount.htm" />
+</key>
+<key name="StartupScriptList" >
+  <topic name="StartupScriptList" url="application_methods/startupscriptlist.htm" />
+</key>
+<key name="StatusBarDistance" >
+  <topic name="StatusBarDistance" url="application_methods/statusbardistance.htm" />
+</key>
+<key name="StatusBarMessage" >
+  <topic name="StatusBarMessage" url="application_methods/statusbarmessage.htm" />
+</key>
+<key name="StatusBarNumber" >
+  <topic name="StatusBarNumber" url="application_methods/statusbarnumber.htm" />
+</key>
+<key name="StatusBarPoint" >
+  <topic name="StatusBarPoint" url="application_methods/statusbarpoint.htm" />
+</key>
+<key name="StatusBarProgressMeter" >
+  <topic name="StatusBarProgressMeter" url="application_methods/statusbarprogressmeter.htm" />
+</key>
+<key name="Str2Pt" >
+  <topic name="Str2Pt" url="utility_methods/str2pt.htm" />
+</key>
+<key name="Str2PtArray" >
+  <topic name="Str2PtArray" url="utility_methods/str2ptarray.htm" />
+</key>
+<key name="StretchObject" >
+  <topic name="StretchObject" url="object_methods/stretchobject.htm" />
+</key>
+<key name="StringBox" >
+  <topic name="StringBox" url="user_interface_methods/stringbox.htm" />
+</key>
+<key name="Strtok" >
+  <topic name="Strtok" url="utility_methods/strtok.htm" />
+</key>
+<key name="Sum" >
+  <topic name="Sum" url="math_methods/sum.htm" />
+</key>
+<key name="Surface Methods" >
+  <topic name="Surface Methods" url="surface_and_polysurface_methods/surface_methods.htm" />
+</key>
+<key name="SurfaceArea" >
+  <topic name="SurfaceArea" url="surface_and_polysurface_methods/surfacearea.htm" />
+</key>
+<key name="SurfaceAreaCentroid" >
+  <topic name="SurfaceAreaCentroid" url="surface_and_polysurface_methods/surfaceareacentroid.htm" />
+</key>
+<key name="SurfaceAreaMoments" >
+  <topic name="SurfaceAreaMoments" url="surface_and_polysurface_methods/surfaceareamoments.htm" />
+</key>
+<key name="SurfaceClosestPoint" >
+  <topic name="SurfaceClosestPoint" url="surface_and_polysurface_methods/surfaceclosestpoint.htm" />
+</key>
+<key name="SurfaceCone" >
+  <topic name="SurfaceCone" url="surface_and_polysurface_methods/surfacecone.htm" />
+</key>
+<key name="SurfaceContourPoints" >
+  <topic name="SurfaceContourPoints" url="surface_and_polysurface_methods/surfacecontourpoints.htm" />
+</key>
+<key name="SurfaceCount" >
+  <topic name="SurfaceCount" url="surface_and_polysurface_methods/surfacecount.htm" />
+</key>
+<key name="SurfaceCurvature" >
+  <topic name="SurfaceCurvature" url="surface_and_polysurface_methods/surfacecurvature.htm" />
+</key>
+<key name="SurfaceCurvatureAnalysis" >
+  <topic name="SurfaceCurvatureAnalysis" url="surface_and_polysurface_methods/surfacecurvatureanalysis.htm" />
+</key>
+<key name="SurfaceCylinder" >
+  <topic name="SurfaceCylinder" url="surface_and_polysurface_methods/surfacecylinder.htm" />
+</key>
+<key name="SurfaceDegree" >
+  <topic name="SurfaceDegree" url="surface_and_polysurface_methods/surfacedegree.htm" />
+</key>
+<key name="SurfaceDivideAlongCreases" >
+  <topic name="SurfaceDivideAlongCreases" url="surface_and_polysurface_methods/surfacedividealongcreases.htm" />
+</key>
+<key name="SurfaceDomain" >
+  <topic name="SurfaceDomain" url="surface_and_polysurface_methods/surfacedomain.htm" />
+</key>
+<key name="SurfaceDraftAnglePoint" >
+  <topic name="SurfaceDraftAnglePoint" url="surface_and_polysurface_methods/surfacedraftanglepoint.htm" />
+</key>
+<key name="SurfaceEditPoints" >
+  <topic name="SurfaceEditPoints" url="surface_and_polysurface_methods/surfaceeditpoints.htm" />
+</key>
+<key name="SurfaceEvaluate" >
+  <topic name="SurfaceEvaluate" url="surface_and_polysurface_methods/surfaceevaluate.htm" />
+</key>
+<key name="SurfaceFrame" >
+  <topic name="SurfaceFrame" url="surface_and_polysurface_methods/surfaceframe.htm" />
+</key>
+<key name="SurfaceIsocurveDensity" >
+  <topic name="SurfaceIsocurveDensity" url="surface_and_polysurface_methods/surfaceisocurvedensity.htm" />
+</key>
+<key name="SurfaceKnotCount" >
+  <topic name="SurfaceKnotCount" url="surface_and_polysurface_methods/surfaceknotcount.htm" />
+</key>
+<key name="SurfaceKnots" >
+  <topic name="SurfaceKnots" url="surface_and_polysurface_methods/surfaceknots.htm" />
+</key>
+<key name="SurfaceNormal" >
+  <topic name="SurfaceNormal" url="surface_and_polysurface_methods/surfacenormal.htm" />
+</key>
+<key name="SurfaceNormalizedParameter" >
+  <topic name="SurfaceNormalizedParameter" url="surface_and_polysurface_methods/surfacenormalizedparameter.htm" />
+</key>
+<key name="SurfaceParameter" >
+  <topic name="SurfaceParameter" url="surface_and_polysurface_methods/surfaceparameter.htm" />
+</key>
+<key name="SurfacePointCount" >
+  <topic name="SurfacePointCount" url="surface_and_polysurface_methods/surfacepointcount.htm" />
+</key>
+<key name="SurfacePoints" >
+  <topic name="SurfacePoints" url="surface_and_polysurface_methods/surfacepoints.htm" />
+</key>
+<key name="SurfacePrincipalCurvature" >
+  <topic name="SurfacePrincipalCurvature" url="surface_and_polysurface_methods/surfaceprincipalcurvature.htm" />
+</key>
+<key name="SurfaceSeam" >
+  <topic name="SurfaceSeam" url="surface_and_polysurface_methods/surfaceseam.htm" />
+</key>
+<key name="SurfaceSphere" >
+  <topic name="SurfaceSphere" url="surface_and_polysurface_methods/surfacesphere.htm" />
+</key>
+<key name="SurfaceSurfaceIntersection" >
+  <topic name="SurfaceSurfaceIntersection" url="surface_and_polysurface_methods/surfacesurfaceintersection.htm" />
+</key>
+<key name="SurfaceTorus" >
+  <topic name="SurfaceTorus" url="surface_and_polysurface_methods/surfacetorus.htm" />
+</key>
+<key name="SurfaceVolume" >
+  <topic name="SurfaceVolume" url="surface_and_polysurface_methods/surfacevolume.htm" />
+</key>
+<key name="SurfaceVolumeCentroid" >
+  <topic name="SurfaceVolumeCentroid" url="surface_and_polysurface_methods/surfacevolumecentroid.htm" />
+</key>
+<key name="SurfaceVolumeMoments" >
+  <topic name="SurfaceVolumeMoments" url="surface_and_polysurface_methods/surfacevolumemoments.htm" />
+</key>
+<key name="SurfaceWeights" >
+  <topic name="SurfaceWeights" url="surface_and_polysurface_methods/surfaceweights.htm" />
+</key>
+<key name="SynchronizeCPlanes" >
+  <topic name="SynchronizeCPlanes" url="view_methods/synchronizecplanes.htm" />
+</key>
+<key name="TanH" >
+  <topic name="TanH" url="math_methods/tanh.htm" />
+</key>
+<key name="TaperObject" >
+  <topic name="TaperObject" url="object_methods/taperobject.htm" />
+</key>
+<key name="TemplateFile" >
+  <topic name="TemplateFile" url="application_methods/templatefile.htm" />
+</key>
+<key name="TemplateFolder" >
+  <topic name="TemplateFolder" url="application_methods/templatefolder.htm" />
+</key>
+<key name="TextDotFont" >
+  <topic name="TextDotFont" url="geometry_methods/textdotfont.htm" />
+</key>
+<key name="TextDotHeight" >
+  <topic name="TextDotHeight" url="geometry_methods/textdotheight.htm" />
+</key>
+<key name="TextDotPoint" >
+  <topic name="TextDotPoint" url="geometry_methods/textdotpoint.htm" />
+</key>
+<key name="TextDotText" >
+  <topic name="TextDotText" url="geometry_methods/textdottext.htm" />
+</key>
+<key name="TextObjectFont" >
+  <topic name="TextObjectFont" url="geometry_methods/textobjectfont.htm" />
+</key>
+<key name="TextObjectFormula" >
+  <topic name="TextObjectFormula" url="geometry_methods/textobjectformula.htm" />
+</key>
+<key name="TextObjectHeight" >
+  <topic name="TextObjectHeight" url="geometry_methods/textobjectheight.htm" />
+</key>
+<key name="TextObjectJustification" >
+  <topic name="TextObjectJustification" url="geometry_methods/textobjectjustification.htm" />
+</key>
+<key name="TextObjectMask" >
+  <topic name="TextObjectMask" url="geometry_methods/textobjectmask.htm" />
+</key>
+<key name="TextObjectPlane" >
+  <topic name="TextObjectPlane" url="geometry_methods/textobjectplane.htm" />
+</key>
+<key name="TextObjectPoint" >
+  <topic name="TextObjectPoint" url="geometry_methods/textobjectpoint.htm" />
+</key>
+<key name="TextObjectStyle" >
+  <topic name="TextObjectStyle" url="geometry_methods/textobjectstyle.htm" />
+</key>
+<key name="TextObjectText" >
+  <topic name="TextObjectText" url="geometry_methods/textobjecttext.htm" />
+</key>
+<key name="TextOut" >
+  <topic name="TextOut" url="utility_methods/textout.htm" />
+</key>
+<key name="TiltView" >
+  <topic name="TiltView" url="view_methods/tiltview.htm" />
+</key>
+<key name="ToDegrees" >
+  <topic name="ToDegrees" url="math_methods/todegrees.htm" />
+</key>
+<key name="ToolbarCollectionCount" >
+  <topic name="ToolbarCollectionCount" url="toolbar_methods/toolbarcollectioncount.htm" />
+</key>
+
+</indexdata>

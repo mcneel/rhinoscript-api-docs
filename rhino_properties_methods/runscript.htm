@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>RunScript</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Rhino Methods & Properties\nRunScript");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"rhino_properties_and_methods.htm\">Rhino Methods & Properties<\/a> > RunScript<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>RunScript</h1>
+<p>Runs a Rhino command script. &#160;All Rhino commands can be used in 
+ command scripts. &#160;The command can be a build-in Rhino command or 
+ a command that is provided by a 3rd party plug-in.</p>
+<p>Write command scripts just as you would type the command sequence at 
+ the command line. A space between characters or a new line act like pressing 
+ &lt;Enter&gt; at the command line. &#160;For more information on writing 
+ command scripts, see &quot;Scripting&quot; in the Rhino help file.</p>
+<p>Note, this method is designed to run one command and one command only. 
+ &#160;Do not combine multiple Rhino commands into a single call to this 
+ method. &#160;For example:</p>
+<p>&#160;</p>
+<p>WRONG:</p>
+<p class="Code" style="margin-left: 8px;">RunScript&quot;_Line _SelLast 
+ _Invert&quot;</p>
+<p>&#160;</p>
+<p>CORRECT:</p>
+<p class="Code">RunScript &quot;_Line&quot;</p>
+<p class="Code">RunScript &quot;_SelLast&quot;</p>
+<p class="Code">RunScript &quot;_Invert&quot;</p>
+<p>&#160;</p>
+<p>Also, the exclamation point and space character ( ! ) combination used 
+ by button macros and batch-driven scripts to cancel the previous command 
+ is not valid. &#160;For example:</p>
+<p>&#160;</p>
+<p>WRONG:</p>
+<p class="Code">RunScript &quot;! _Line _Pause _Pause&quot;</p>
+<p>&#160;</p>
+<p>CORRECT:</p>
+<p class="Code">RunScript &quot;_Line _Pause _Pause&quot;</p>
+<h3>Syntax</h3>
+<p class="Code">RunScript (strCommand [, blnEcho])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.804%;" />
+	<col style="width: 89.196%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 10.804%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strCommand</p></td>
+		<td style="width: 89.196%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;A Rhino command 
+		 including any arguments.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.804%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intEcho</p></td>
+		<td style="width: 89.196%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. The command echo 
+		 mode, where 0 = no echo, 1 = echo..</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.883%;" />
+	<col style="width: 89.117%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 10.883%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Number</p></td>
+		<td style="width: 89.117%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">0 failure, 1 success.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim objRhino</p>
+<p class="Code" style="margin-left: 12px;">On Error Resume Next</p>
+<p class="Code" style="margin-left: 12px;">Set objRhino = CreateObject(&quot;Rhino.Application&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If Err.Number == 0 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If 1 = objRhino.IsInitalized 
+ Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;objPlugIn.RunScript 
+ &quot;_Line 0,0,0 2,2,2&quot;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="06 7, 2002 11:48:17 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>BrowseForFolder</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Interface Methods\nBrowseForFolder");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"user_interface_methods.htm\">User Interface Methods<\/a> > BrowseForFolder<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>BrowseForFolder</h1>
+<p>Displays the Windows browse-for-folder dialog box allowing the user to select a folder.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.BrowseForFolder ([strFolder [, strMessage [, strTitle]]])</p>
+<h3>Parameters</h3>
+<table style="left: 0px; top: 152px;" cellspacing="0" width="100%">
+<col style="width: 10.252%;" />
+<col style="width: 89.748%;" />
+<tr style="height: 20px;" valign="top">
+<td style="width: 10.252%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strFolder</p>
+</td>
+<td style="width: 89.748%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;String. &#160;A default folder.</p>
+</td>
+</tr>
+<tr style="height: 20px;" valign="top">
+<td style="width: 10.252%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strMessage</p>
+</td>
+<td style="width: 89.748%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;String. &#160;A prompt or message.</p>
+</td>
+</tr>
+<tr style="height: 20px;" valign="top">
+<td style="width: 10.252%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strTitle</p>
+</td>
+<td style="width: 89.748%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;String. &#160;A dialog box title.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 10.252%;" />
+<col style="width: 89.748%;" />
+<tr valign="top">
+<td style="width: 10.252%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String</p>
+</td>
+<td style="width: 89.748%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The selected folder if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 10.252%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 89.748%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strFolder</p>
+<p class="Code" style="margin-left: 12px;">strFolder = Rhino.BrowseForFolder("C:\Program Files\" )</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strFolder) Then</p>
+<p class="Code" style="margin-left: 24px;">Rhino.Print strFolder</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<p>&#160;</p>
+<p><img src="../images/browseforfolder.jpg" style="border: none;" alt="browseforfolder.jpg" width="324" height="338" border="0" /></p>
+<p>&#160;</p>
+<h3>Also See</h3>
+<p><a href="openfilename.htm">OpenFileName</a></p>
+<p><a href="savefilename.htm">SaveFileName</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>BoxMorphObject</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nObject Methods\nBoxMorphObject");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"object_methods.htm\">Object Methods<\/a> > BoxMorphObject<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>BoxMorphObject</h1>
+<p>Deforms an object by mapping its eight bounding box points to eight 
+ new points.</p>
+<p>Note, this function only works on non-planar, objects unless the <span 
+	 style="font-style: italic;"><i>arrOrigBoxPoints </i></span>optional argument 
+ is specified. In such a case, <span style="font-style: italic;"><i>arrOrigBoxPoints 
+ </i></span><span>should define a</span> non-degenerate box, and the planar 
+ objects should be positioned inside of this box.</p>
+<p><img src="../images/boxmorphobject.jpg" alt="boxmorphobject.jpg" style="border: none;" width="409" height="295" border="0" /></p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.BoxMorphObject (strObject, arrBoxPoints [, blnCopy 
+ [, arrOrigBoxPoints]])</p>
+<p class="Code">Rhino.BoxMorphObject (arrObjects, arrBoxPoints [, blnCopy 
+ [, arrOrigBoxPoints]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.679%;" />
+	<col style="width: 90.321%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strObject</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. String. The identifier of the 
+		 object to deform.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrObjects</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. Array. An array of strings identifying 
+		 the objects to deform.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrBoxPoints</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. Array. An array of eight 3-D 
+		 points that contain the modified bounding box points.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnCopy</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. Boolean. Copy the object. If 
+		 omitted, the object(s) will not be copied (False).</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrOrigBoxPoints</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. Array. An array of eight 3-D 
+		 points that define the original, or starting, box. If omitted, 
+		 the object(s) bounding box is used.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.756%;" />
+	<col style="width: 90.244%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the deformed object if 
+		 successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">An array of strings identifying the deformed 
+		 objects if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strObject, arrBox, arrPoint</p>
+<p class="Code" style="margin-left: 12px;">strObject = Rhino.GetObject(&quot;Select 
+ object to box morph&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strObject) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrBox = Rhino.BoundingBox(strObject)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrPoint = arrBox(6)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrPoint(2) = arrPoint(2) 
+ * 2</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrBox(6) = arrPoint</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.BoxMorphObject 
+ strObject, arrBox</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="bendobject.htm">BendObject</a></p>
+<p><a href="flowobject.htm">FlowObject</a></p>
+<p><a href="../geometry_methods/boundingbox.htm">BoundingBox</a></p>
+<p><a href="maelstromobject.htm">MaelstromObject</a></p>
+<p><a href="sporphobject.htm">SporphObject</a></p>
+<p><a href="stretchobject.htm">StretchObject</a></p>
+<p><a href="taperobject.htm">TaperObject</a></p>
+<p><a href="twistobject.htm">TwistObject</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

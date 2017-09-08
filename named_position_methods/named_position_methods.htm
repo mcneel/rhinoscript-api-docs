@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Named Position Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nNamed Position Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > Named Position Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Named Position Methods</h1>
+<p>Rhino's <span style="font-weight: bold;"><b>NamedPosition</b></span> command 
+ allows you to save the locations of objects and restore them at a later 
+ time. &#160;The command is implemented in the Named Positions plug-in, 
+ or <span style="font-style: italic;"><i>NamedPositions.rhp</i></span>. Because 
+ the <span style="font-weight: bold;"><b>NamedPosition </b></span>command resides 
+ in a plug-in, you will first need to get the plug-in's scriptable object, 
+ using <a href="../application_methods/getpluginobject.htm">GetPlugInObject</a>, 
+ before you can call any of these methods.</p>
+<p>For example:</p>
+<p>&#160;</p>
+<p class="Code">Sub TestNamedPositions</p>
+<p class="Code">&#160;&#160;Dim objPlugIn</p>
+<p class="Code">&#160;&#160;On Error Resume Next</p>
+<p class="Code">&#160;&#160;Set objPlugIn = Rhino.GetPluginObject(&quot;Named 
+ Position&quot;)</p>
+<p class="Code">&#160;&#160;If Err Then</p>
+<p class="Code">&#160;&#160;&#160;&#160;MsgBox Err.Description</p>
+<p class="Code">&#160;&#160;&#160;&#160;Exit Sub</p>
+<p class="Code">&#160;&#160;End If</p>
+<p class="Code">&#160;&#160;'TODO: call a named position method...</p>
+<p class="Code">End Sub</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 15.247%;" />
+	<col style="width: 84.753%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 15.247%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Method</p></td>
+		<td style="width: 84.753%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.247%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="appendnamedposition.htm">AppendNamedPosition</a></p></td>
+		<td style="width: 84.753%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds objects to an existing named position..</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.247%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="deletenamedposition.htm">DeleteNamedPosition</a></p></td>
+		<td style="width: 84.753%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deletes a named position.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.247%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="namedpositioncount.htm">NamedPositionCount</a></p></td>
+		<td style="width: 84.753%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the number of named positions.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.247%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="namedpositions.htm">NamedPositions</a></p></td>
+		<td style="width: 84.753%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the names of the named positions.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.247%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="renamenamedposition.htm">RenameNamedPosition</a></p></td>
+		<td style="width: 84.753%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Renames an existing named position.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.247%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="restorenamedposition.htm">RestoreNamedPosition</a></p></td>
+		<td style="width: 84.753%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Restores an existing named position.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.247%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="savenamedposition.htm">SaveNamedPosition</a></p></td>
+		<td style="width: 84.753%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Saves a new named position.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.247%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="selectobjectsofnamedposition.htm">SelectObjectsOfNamedPosition</a></p></td>
+		<td style="width: 84.753%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Select the objects of a named position.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 15.247%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="updatenamedposition.htm">UpdateNamedPosition</a></p></td>
+		<td style="width: 84.753%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Updates an existing named position.</p></td>
+	</tr>
+</table>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

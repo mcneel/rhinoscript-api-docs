@@ -1,0 +1,412 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<indexdata>
+<key name="DimensionUserText" >
+  <topic name="DimensionUserText" url="dimension_methods/dimensionusertext.htm" />
+</key>
+<key name="DimensionValue" >
+  <topic name="DimensionValue" url="dimension_methods/dimensionvalue.htm" />
+</key>
+<key name="DimStyleAnglePrecision" >
+  <topic name="DimStyleAnglePrecision" url="dimension_methods/dimstyleangleprecision.htm" />
+</key>
+<key name="DimStyleArrowSize" >
+  <topic name="DimStyleArrowSize" url="dimension_methods/dimstylearrowsize.htm" />
+</key>
+<key name="DimStyleCentermarkSize" >
+  <topic name="DimStyleCentermarkSize" url="dimension_methods/dimstylecentermarksize.htm" />
+</key>
+<key name="DimStyleCount" >
+  <topic name="DimStyleCount" url="dimension_methods/dimstylecount.htm" />
+</key>
+<key name="DimStyleDimLineExtension" >
+  <topic name="DimStyleDimLineExtension" url="dimension_methods/dimstyledimlineextension.htm" />
+</key>
+<key name="DimStyleExtension" >
+  <topic name="DimStyleExtension" url="dimension_methods/dimstyleextension.htm" />
+</key>
+<key name="DimStyleFieldOverride" >
+  <topic name="DimStyleFieldOverride" url="dimension_methods/dimstylefieldoverride.htm" />
+</key>
+<key name="DimStyleFont" >
+  <topic name="DimStyleFont" url="dimension_methods/dimstylefont.htm" />
+</key>
+<key name="DimStyleLeaderArrowSize" >
+  <topic name="DimStyleLeaderArrowSize" url="dimension_methods/dimstyleleaderarrowsize.htm" />
+</key>
+<key name="DimStyleLengthFactor" >
+  <topic name="DimStyleLengthFactor" url="dimension_methods/dimstylelengthfactor.htm" />
+</key>
+<key name="DimStyleLinearPrecision" >
+  <topic name="DimStyleLinearPrecision" url="dimension_methods/dimstylelinearprecision.htm" />
+</key>
+<key name="DimStyleNames" >
+  <topic name="DimStyleNames" url="dimension_methods/dimstylenames.htm" />
+</key>
+<key name="DimStyleNumberFormat" >
+  <topic name="DimStyleNumberFormat" url="dimension_methods/dimstylenumberformat.htm" />
+</key>
+<key name="DimStyleOffset" >
+  <topic name="DimStyleOffset" url="dimension_methods/dimstyleoffset.htm" />
+</key>
+<key name="DimStylePrefix" >
+  <topic name="DimStylePrefix" url="dimension_methods/dimstyleprefix.htm" />
+</key>
+<key name="DimStyleScale" >
+  <topic name="DimStyleScale" url="dimension_methods/dimstylescale.htm" />
+</key>
+<key name="DimStyleSuffix" >
+  <topic name="DimStyleSuffix" url="dimension_methods/dimstylesuffix.htm" />
+</key>
+<key name="DimStyleTextAlignment" >
+  <topic name="DimStyleTextAlignment" url="dimension_methods/dimstyletextalignment.htm" />
+</key>
+<key name="DimStyleTextGap" >
+  <topic name="DimStyleTextGap" url="dimension_methods/dimstyletextgap.htm" />
+</key>
+<key name="DimStyleTextHeight" >
+  <topic name="DimStyleTextHeight" url="dimension_methods/dimstyletextheight.htm" />
+</key>
+<key name="DisjointMeshCount" >
+  <topic name="DisjointMeshCount" url="mesh_methods/disjointmeshcount.htm" />
+</key>
+<key name="DisplayOleAlerts" >
+  <topic name="DisplayOleAlerts" url="application_methods/displayolealerts.htm" />
+</key>
+<key name="Distance" >
+  <topic name="Distance" url="math_methods/distance.htm" />
+</key>
+<key name="DistanceToPlane" >
+  <topic name="DistanceToPlane" url="line_and_plane_methods/distancetoplane.htm" />
+</key>
+<key name="DivideCurve" >
+  <topic name="DivideCurve" url="curve_methods/dividecurve.htm" />
+</key>
+<key name="DivideCurveEquidistant" >
+  <topic name="DivideCurveEquidistant" url="curve_methods/dividecurveequidistant.htm" />
+</key>
+<key name="DivideCurveLength" >
+  <topic name="DivideCurveLength" url="curve_methods/dividecurvelength.htm" />
+</key>
+<key name="Document Methods" >
+  <topic name="Document Methods" url="document_methods/document_methods.htm" />
+</key>
+<key name="DocumentDataCount" >
+  <topic name="DocumentDataCount" url="user_data_methods/documentdatacount.htm" />
+</key>
+<key name="DocumentInfo" >
+  <topic name="DocumentInfo" url="document_methods/documentinfo.htm" />
+</key>
+<key name="DocumentModified" >
+  <topic name="DocumentModified" url="document_methods/documentmodified.htm" />
+</key>
+<key name="DocumentName" >
+  <topic name="DocumentName" url="document_methods/documentname.htm" />
+</key>
+<key name="DocumentPath" >
+  <topic name="DocumentPath" url="document_methods/documentpath.htm" />
+</key>
+<key name="DocumentURL" >
+  <topic name="DocumentURL" url="document_methods/documenturl.htm" />
+</key>
+<key name="DrawParametricCurve" >
+  <topic name="DrawParametricCurve" url="sample_scripts/drawparametriccurve.htm" />
+</key>
+<key name="DumpDocumentData" >
+  <topic name="DumpDocumentData" url="sample_scripts/dumpdocumentdata.htm" />
+</key>
+<key name="DuplicateEdgeCurves" >
+  <topic name="DuplicateEdgeCurves" url="surface_and_polysurface_methods/duplicateedgecurves.htm" />
+</key>
+<key name="DuplicateHatchBorders" >
+  <topic name="DuplicateHatchBorders" url="hatch_methods/duplicatehatchborders.htm" />
+</key>
+<key name="DuplicateMeshBorder" >
+  <topic name="DuplicateMeshBorder" url="mesh_methods/duplicatemeshborder.htm" />
+</key>
+<key name="DuplicateSurfaceBorder" >
+  <topic name="DuplicateSurfaceBorder" url="surface_and_polysurface_methods/duplicatesurfaceborder.htm" />
+</key>
+<key name="DynamicArray" >
+  <topic name="DynamicArray" url="sample_scripts/dynamicarray.htm" />
+</key>
+<key name="E" >
+  <topic name="E" url="math_methods/e.htm" />
+</key>
+<key name="EdgeAnalysisColor" >
+  <topic name="EdgeAnalysisColor" url="application_methods/edgeanalysiscolor.htm" />
+</key>
+<key name="EdgeAnalysisMode" >
+  <topic name="EdgeAnalysisMode" url="application_methods/edgeanalysismode.htm" />
+</key>
+<key name="EditBox" >
+  <topic name="EditBox" url="user_interface_methods/editbox.htm" />
+</key>
+<key name="EditListBox" >
+  <topic name="EditListBox" url="user_interface_methods/editlistbox.htm" />
+</key>
+<key name="EllipseCenterPoint" >
+  <topic name="EllipseCenterPoint" url="curve_methods/ellipsecenterpoint.htm" />
+</key>
+<key name="EllipseFocalDistance" >
+  <topic name="EllipseFocalDistance" url="curve_methods/ellipsefocaldistance.htm" />
+</key>
+<key name="EllipseFoci" >
+  <topic name="EllipseFoci" url="curve_methods/ellipsefoci.htm" />
+</key>
+<key name="EllipseQuadPoints" >
+  <topic name="EllipseQuadPoints" url="curve_methods/ellipsequadpoints.htm" />
+</key>
+<key name="EnableAutosave" >
+  <topic name="EnableAutosave" url="application_methods/enableautosave.htm" />
+</key>
+<key name="EnableHistoryRecording" >
+  <topic name="EnableHistoryRecording" url="application_methods/enablehistoryrecording.htm" />
+</key>
+<key name="EnableLight" >
+  <topic name="EnableLight" url="light_methods/enablelight.htm" />
+</key>
+<key name="EnableModelSpaceHatchScale" >
+  <topic name="EnableModelSpaceHatchScale" url="document_methods/enablemodelspacehatchscale.htm" />
+</key>
+<key name="EnableModelSpaceTextScale" >
+  <topic name="EnableModelSpaceTextScale" url="document_methods/enablemodelspacetextscale.htm" />
+</key>
+<key name="EnableObjectGrips" >
+  <topic name="EnableObjectGrips" url="object_grip_methods/enableobjectgrips.htm" />
+</key>
+<key name="EnableObjectMesh" >
+  <topic name="EnableObjectMesh" url="object_methods/enableobjectmesh.htm" />
+</key>
+<key name="EnablePlugIn" >
+  <topic name="EnablePlugIn" url="application_methods/enableplugin.htm" />
+</key>
+<key name="EnableRedraw" >
+  <topic name="EnableRedraw" url="document_methods/enableredraw.htm" />
+</key>
+<key name="EvaluateCurve" >
+  <topic name="EvaluateCurve" url="curve_methods/evaluatecurve.htm" />
+</key>
+<key name="EvaluatePlane" >
+  <topic name="EvaluatePlane" url="line_and_plane_methods/evaluateplane.htm" />
+</key>
+<key name="EvaluateSurface" >
+  <topic name="EvaluateSurface" url="surface_and_polysurface_methods/evaluatesurface.htm" />
+</key>
+<key name="ExeFolder" >
+  <topic name="ExeFolder" url="application_methods/exefolder.htm" />
+</key>
+<key name="ExePlatform" >
+  <topic name="ExePlatform" url="application_methods/exeplatform.htm" />
+</key>
+<key name="ExeServiceRelease" >
+  <topic name="ExeServiceRelease" url="application_methods/exeservicerelease.htm" />
+</key>
+<key name="ExeVersion" >
+  <topic name="ExeVersion" url="application_methods/exeversion.htm" />
+</key>
+<key name="Exit" >
+  <topic name="Exit" url="application_methods/exit.htm" />
+</key>
+<key name="ExpandLayer" >
+  <topic name="ExpandLayer" url="layer_methods/expandlayer.htm" />
+</key>
+<key name="ExplodeBlockInstance" >
+  <topic name="ExplodeBlockInstance" url="block_methods/explodeblockinstance.htm" />
+</key>
+<key name="ExplodeCurves" >
+  <topic name="ExplodeCurves" url="curve_methods/explodecurves.htm" />
+</key>
+<key name="ExplodeHatch" >
+  <topic name="ExplodeHatch" url="hatch_methods/explodehatch.htm" />
+</key>
+<key name="ExplodeMeshes" >
+  <topic name="ExplodeMeshes" url="mesh_methods/explodemeshes.htm" />
+</key>
+<key name="ExplodePolysurfaces" >
+  <topic name="ExplodePolysurfaces" url="surface_and_polysurface_methods/explodepolysurfaces.htm" />
+</key>
+<key name="ExportLayerStates" >
+  <topic name="ExportLayerStates" url="layer_state_methods/exportlayerstates.htm" />
+</key>
+<key name="ExportPoints" >
+  <topic name="ExportPoints" url="sample_scripts/exportpoints.htm" />
+</key>
+<key name="ExportViewDisplayMode" >
+  <topic name="ExportViewDisplayMode" url="view_methods/exportviewdisplaymode.htm" />
+</key>
+<key name="ExtendCurve" >
+  <topic name="ExtendCurve" url="curve_methods/extendcurve.htm" />
+</key>
+<key name="ExtendCurveLength" >
+  <topic name="ExtendCurveLength" url="curve_methods/extendcurvelength.htm" />
+</key>
+<key name="ExtendCurvePoint" >
+  <topic name="ExtendCurvePoint" url="curve_methods/extendcurvepoint.htm" />
+</key>
+<key name="ExtendSurface" >
+  <topic name="ExtendSurface" url="surface_and_polysurface_methods/extendsurface.htm" />
+</key>
+<key name="External Access" >
+  <topic name="External Access" url="introduction/external_access.htm" />
+</key>
+<key name="ExtractAnalysisMesh" >
+  <topic name="ExtractAnalysisMesh" url="mesh_methods/extractanalysismesh.htm" />
+</key>
+<key name="ExtractIsoCurve" >
+  <topic name="ExtractIsoCurve" url="surface_and_polysurface_methods/extractisocurve.htm" />
+</key>
+<key name="ExtractPolyCurveSegment" >
+  <topic name="ExtractPolyCurveSegment" url="curve_methods/extractpolycurvesegment.htm" />
+</key>
+<key name="ExtractPreviewImage" >
+  <topic name="ExtractPreviewImage" url="document_methods/extractpreviewimage.htm" />
+</key>
+<key name="ExtractRenderMesh" >
+  <topic name="ExtractRenderMesh" url="mesh_methods/extractrendermesh.htm" />
+</key>
+<key name="ExtractSurface" >
+  <topic name="ExtractSurface" url="surface_and_polysurface_methods/extractsurface.htm" />
+</key>
+<key name="ExtrudeCurve" >
+  <topic name="ExtrudeCurve" url="surface_and_polysurface_methods/extrudecurve.htm" />
+</key>
+<key name="ExtrudeCurveNormal" >
+  <topic name="ExtrudeCurveNormal" url="surface_and_polysurface_methods/extrudecurvenormal.htm" />
+</key>
+<key name="ExtrudeCurvePoint" >
+  <topic name="ExtrudeCurvePoint" url="surface_and_polysurface_methods/extrudecurvepoint.htm" />
+</key>
+<key name="ExtrudeCurveStraight" >
+  <topic name="ExtrudeCurveStraight" url="surface_and_polysurface_methods/extrudecurvestraight.htm" />
+</key>
+<key name="ExtrudeCurveTapered" >
+  <topic name="ExtrudeCurveTapered" url="surface_and_polysurface_methods/extrudecurvetapered.htm" />
+</key>
+<key name="ExtrudeSurface" >
+  <topic name="ExtrudeSurface" url="surface_and_polysurface_methods/extrudesurface.htm" />
+</key>
+<key name="FairCurve" >
+  <topic name="FairCurve" url="curve_methods/faircurve.htm" />
+</key>
+<key name="FilletCurves" >
+  <topic name="FilletCurves" url="curve_methods/filletcurves.htm" />
+</key>
+<key name="FilletSurfaces" >
+  <topic name="FilletSurfaces" url="surface_and_polysurface_methods/filletsurfaces.htm" />
+</key>
+<key name="FilletSurfacesEx" >
+  <topic name="FilletSurfacesEx" url="surface_and_polysurface_methods/filletsurfacesex.htm" />
+</key>
+<key name="FilterObjects" >
+  <topic name="FilterObjects" url="selection_methods/filterobjects.htm" />
+</key>
+<key name="FindDuplicateNumbers" >
+  <topic name="FindDuplicateNumbers" url="utility_methods/findduplicatenumbers.htm" />
+</key>
+<key name="FindDuplicatePoints" >
+  <topic name="FindDuplicatePoints" url="utility_methods/findduplicatepoints.htm" />
+</key>
+<key name="FindDuplicateStrings" >
+  <topic name="FindDuplicateStrings" url="utility_methods/findduplicatestrings.htm" />
+</key>
+<key name="FindFile" >
+  <topic name="FindFile" url="application_methods/findfile.htm" />
+</key>
+<key name="FirstObject" >
+  <topic name="FirstObject" url="selection_methods/firstobject.htm" />
+</key>
+<key name="FitCurve" >
+  <topic name="FitCurve" url="curve_methods/fitcurve.htm" />
+</key>
+<key name="FitSurface" >
+  <topic name="FitSurface" url="surface_and_polysurface_methods/fitsurface.htm" />
+</key>
+<key name="FlashObject" >
+  <topic name="FlashObject" url="object_methods/flashobject.htm" />
+</key>
+<key name="FlipClippingPlane" >
+  <topic name="FlipClippingPlane" url="geometry_methods/flipclippingplane.htm" />
+</key>
+<key name="FlipMesh" >
+  <topic name="FlipMesh" url="mesh_methods/flipmesh.htm" />
+</key>
+<key name="FlipSurface" >
+  <topic name="FlipSurface" url="surface_and_polysurface_methods/flipsurface.htm" />
+</key>
+<key name="Floor" >
+  <topic name="Floor" url="math_methods/floor.htm" />
+</key>
+<key name="FlowObject" >
+  <topic name="FlowObject" url="object_methods/flowobject.htm" />
+</key>
+<key name="FMod" >
+  <topic name="FMod" url="math_methods/fmod.htm" />
+</key>
+<key name="FormatMessage" >
+  <topic name="FormatMessage" url="sample_scripts/formatmessage.htm" />
+</key>
+<key name="GardenPath" >
+  <topic name="GardenPath" url="sample_scripts/gardenpath.htm" />
+</key>
+<key name="Geometry Methods" >
+  <topic name="Geometry Methods" url="geometry_methods/geometry_methods.htm" />
+</key>
+<key name="GetAngle" >
+  <topic name="GetAngle" url="user_interface_methods/getangle.htm" />
+</key>
+<key name="GetAngleEx" >
+  <topic name="GetAngleEx" url="user_interface_methods/getangleex.htm" />
+</key>
+<key name="GetArrayDim" >
+  <topic name="GetArrayDim" url="sample_scripts/getarraydim.htm" />
+</key>
+<key name="GetAsyncKeyState" >
+  <topic name="GetAsyncKeyState" url="utility_methods/getasynckeystate.htm" />
+</key>
+<key name="GetAttributeData" >
+  <topic name="GetAttributeData" url="user_data_methods/getattributedata.htm" />
+</key>
+<key name="GetBoolean" >
+  <topic name="GetBoolean" url="user_interface_methods/getboolean.htm" />
+</key>
+<key name="GetBox" >
+  <topic name="GetBox" url="user_interface_methods/getbox.htm" />
+</key>
+<key name="GetCircle" >
+  <topic name="GetCircle" url="user_interface_methods/getcircle.htm" />
+</key>
+<key name="GetColor" >
+  <topic name="GetColor" url="user_interface_methods/getcolor.htm" />
+</key>
+<key name="GetCursorPos" >
+  <topic name="GetCursorPos" url="user_interface_methods/getcursorpos.htm" />
+</key>
+<key name="GetCurveObject" >
+  <topic name="GetCurveObject" url="selection_methods/getcurveobject.htm" />
+</key>
+<key name="GetDistance" >
+  <topic name="GetDistance" url="user_interface_methods/getdistance.htm" />
+</key>
+<key name="GetDocumentData" >
+  <topic name="GetDocumentData" url="user_data_methods/getdocumentdata.htm" />
+</key>
+<key name="GetDocumentUserText" >
+  <topic name="GetDocumentUserText" url="user_data_methods/getdocumentusertext.htm" />
+</key>
+<key name="GetEdgeCurves" >
+  <topic name="GetEdgeCurves" url="user_interface_methods/getedgecurves.htm" />
+</key>
+<key name="GetGroupUserText" >
+  <topic name="GetGroupUserText" url="group_methods/getgroupusertext.htm" />
+</key>
+<key name="GetInteger" >
+  <topic name="GetInteger" url="user_interface_methods/getinteger.htm" />
+</key>
+<key name="GetKey" >
+  <topic name="GetKey" url="user_interface_methods/getkey.htm" />
+</key>
+<key name="GetLayer" >
+  <topic name="GetLayer" url="user_interface_methods/getlayer.htm" />
+</key>
+
+</indexdata>

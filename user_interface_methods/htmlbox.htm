@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="06 3, 2002 4:38:43 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>HtmlBox</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Interface Methods\nHtmlBox");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"user_interface_methods.htm\">User Interface Methods<\/a> > HtmlBox<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>HtmlBox</h1>
+<p>Displays a custom, modal HTML dialog page. A modal dialog box retains 
+ the input focus while open. The user cannot switch windows until the dialog 
+ box is closed.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.HtmlBox (strFileName [, arrArguments [, strOptions 
+ [, blnModal]]])</p>
+<h3>Parameters</h3>
+<table style="left: 0px; top: 152px;" cellspacing="0" width="100%">
+	<col style="width: 11.498%;" />
+	<col style="width: 88.502%;" />
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 11.498%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strFileName</p></td>
+		<td style="width: 88.502%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;The filename 
+		 the HTML dialog page to display.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 11.498%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">vaArguments</p></td>
+		<td style="width: 88.502%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Variant. &#160;An argument, 
+		 or a zero-based, one-dimensional array of arguments, to pass to 
+		 the HTML-dialog page.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 11.498%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strOptions</p></td>
+		<td style="width: 88.502%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;The window 
+		 ornaments for the dialog box, using one or more of the following 
+		 semicolon-delimited values:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 28.428%;" />
+			<col style="width: 71.572%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">dialogHeight:sHeight</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Sets the height of the dialog window.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">dialogLeft:sXPos</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Sets the left position of the dialog 
+				 window relative to the upper-left corner of the desktop.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">dialogTop:sYPos</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Sets the top position of the dialog 
+				 window relative to the upper-left corner of the desktop.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">dialogWidth:sWidth</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Sets the width of the dialog window.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">center:{ yes | no | 1 | 0 | on 
+				 | off }</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Specifies whether to center the 
+				 dialog window within the desktop. The default is yes.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">dialogHide:{ yes | no | 1 | 0 | 
+				 on | off }</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Specifies whether the dialog window 
+				 is hidden when printing or using print preview. This feature 
+				 is only available when a dialog box is opened from a trusted 
+				 application. The default is no.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">edge:{ sunken | raised }</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Specifies the edge style of the 
+				 dialog window. The default is raised.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">help:{ yes | no | 1 | 0 | on | 
+				 off }</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Specifies whether the dialog window 
+				 displays the context-sensitive Help icon. The default 
+				 is yes.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">resizable:{ yes | no | 1 | 0 | 
+				 on | off }</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Specifies whether the dialog window 
+				 has fixed dimensions. The default is no.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">scroll:{ yes | no | 1 | 0 | on 
+				 | off }</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Specifies whether the dialog window 
+				 displays scrollbars. The default is yes.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">status:{ yes | no | 1 | 0 | on 
+				 | off }</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Specifies whether the dialog window 
+				 displays a status bar. The default is yes for untrusted 
+				 dialog windows and no for trusted dialog windows.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 28.428%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">unadorned:{ yes | no | 1 | 0 | 
+				 on | off }</p></td>
+				<td style="width: 71.572%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Specifies whether the dialog window 
+				 displays the border window chrome. This feature is only 
+				 available when a dialog box is opened from a trusted application. 
+				 The default is no.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 11.498%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnModal</p></td>
+		<td style="width: 88.502%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Boolean. &#160;If omitted 
+		 or True, a modal dialog will be displayed. &#160;If False, a modeless 
+		 dialog box will be displayed.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.453%;" />
+	<col style="width: 89.547%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 10.453%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Variant</p></td>
+		<td style="width: 89.547%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If <span style="font-style: italic;"><i>blnModal</i></span> 
+		 is not specified or is False, then if successful, the return value 
+		 of the method will be dependant on the developer's implementation 
+		 of the custom HTML dialog page.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.453%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Boolean</p></td>
+		<td style="width: 89.547%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If <span style="font-style: italic;"><i>blnModal</i></span> 
+		 is specified and is True, then True or False indicating success 
+		 or failure.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.453%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 89.547%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Notes</h3>
+<ul type="disc">
+	<li class="p"><p>You can also eliminate scroll bars on dialog boxes 
+	 by setting the SCROLL attribute to false in the body element for the 
+	 dialog window, or call the modal dialog box from a trusted application.</p></li>
+	<li class="p"><p>You can set the default font settings the same way 
+	 you set Cascading Style Sheets (CSS) attributes (for example, &quot;font:3;font-size:4&quot;). 
+	 To define multiple font values, use multiple font attributes.</p></li>
+	<li class="p"><p>The default unit of measure for dialogHeight and dialogWidth 
+	 in Internet Explorer 4.0 is the pixel; in Internet Explorer 5 it is 
+	 the em. The value can be an integer or floating-point number, followed 
+	 by an absolute units designator (cm, mm, in, pt, or pc) or a relative 
+	 units designator (em, ex, or px). For consistent results, specify 
+	 the dialogHeight and dialogWidth in pixels when designing modal dialog 
+	 boxes.</p></li>
+	<li class="p"><p>Although a user can manually adjust the height of 
+	 a dialog box to a smaller value - provided the dialog box is resizable 
+	 - the minimum dialogHeight you can specify is 100 pixels.</p></li>
+	<li class="p"><p>To override center, even though the default for center 
+	 is yes, you can specify either dialogLeft and/or dialogTop.</p></li>
+	<li class="p"><p>Unlike a modal dialog, where the script code is halted 
+	 until the dialog is dismissed, when a modeless dialog is displayed, 
+	 the script code will continue.</p></li>
+	<li class="p"><p>It is possible to pass the RhinoScript object to a 
+	 dialog, as <span style="font-style: italic;"><i>vaArguments</i></span>, using 
+	 the <a href="../application_methods/getpluginobject.htm">GetPlugInObject</a> 
+	 method.</p></li>
+	<li class="p"><p>It is possible for HTML dialogs to use JScript. But, 
+	 JScript cannot return arrays back to RhinoScript.</p></li>
+	<li class="p"><p>Internet Explorer (IE) 7 is the default rendering 
+	 mode for embedded IE controls (for compatibility reasons). You can 
+	 use the FEATURE_BROWSER_EMULATION registry key to change this if you 
+	 want. To run in IE11 Standards Mode, add the following new value into 
+	 the registry:</p></li>
+</ul>
+<p class="Code" style="margin-left: 48px;">[HKEY_CURRENT_USER or HKEY_LOCAL_MACHINE]</p>
+<p class="Code" style="margin-left: 48px;">&#160;\Software</p>
+<p class="Code" style="margin-left: 48px;">&#160;&#160;\Microsoft</p>
+<p class="Code" style="margin-left: 48px;">&#160;&#160;&#160;\Internet 
+ Explorer</p>
+<p class="Code" style="margin-left: 48px;">&#160;&#160;&#160;&#160;\Main</p>
+<p class="Code" style="margin-left: 48px;">&#160;&#160;&#160;&#160;&#160;\FeatureControl</p>
+<p class="Code" style="margin-left: 48px;">&#160;&#160;&#160;&#160;&#160;&#160;\FEATURE_BROWSER_EMULATION</p>
+<p class="Code" style="margin-left: 48px;">Name: &quot;rhino.exe&quot;</p>
+<p class="Code" style="margin-left: 48px;">Type: REG_DWORD</p>
+<p class="Code" style="margin-left: 48px;">Value: 11000 (decimal) or 0x2af8 
+ (hex)</p>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strLayer, strName</p>
+<p class="Code" style="margin-left: 12px;">strLayer = Rhino.CurrentLayer</p>
+<p class="Code" style="margin-left: 12px;">strName = Rhino.HtmlBox(&quot;RenameCurrentLayer.htm&quot;, 
+ strLayer, &quot;center:yes&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strName) Then</p>
+<p class="Code" style="margin-left: 24px;">Rhino.RenameLayer strLayer, 
+ strName</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<p>&#160;</p>
+<p><img src="../images/htmlbox.jpg" alt="htmlbox.jpg" style="border: none;" width="352" height="192" border="0" /></p>
+<h3 class="Code">RenameCurrentLayer.htm</h3>
+<p class="Code" style="margin-left: 12px;">&lt;HTML id=RenameLayerDialog 
+ style=&quot;width: 22em; height: 12em&quot;&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&lt;HEAD&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&lt;TITLE&gt;Rename 
+ Layer&lt;/TITLE&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&lt;SCRIPT 
+ LANGUAGE=&quot;VBScript&quot;&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;!--</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sub 
+ OnInitDialog()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;window.returnValue 
+ = Null</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Dim 
+ sArgs</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sArgs 
+ = window.dialogArguments</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;If 
+ Not IsNull(sArgs) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;txtOldName.value 
+ = CStr(sArgs)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;End 
+ If</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;End 
+ Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sub 
+ OnOk()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Dim 
+ sResult</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sResult 
+ = txtNewName.value</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;window.returnValue 
+ = sResult</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;window.close</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;End 
+ Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Sub 
+ OnCancel()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;window.returnValue 
+ = Null</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;window.close</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;End 
+ Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;--&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&lt;/SCRIPT&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&lt;/HEAD&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&lt;BODY ONLOAD=&quot;OnInitDialog()&quot; 
+ STYLE=&quot;font-family: Arial, sans-serif&quot;&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&lt;H3&gt;&lt;FONT 
+ FACE=&quot;Verdana,Arial,Times New I2&quot;&gt;Enter new layer name&lt;/FONT&gt;&lt;/H3&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&lt;P&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&lt;TABLE 
+ CELLPADDING=&quot;1&quot; CELLSPACING=&quot;2&quot; BORDER=&quot;0&quot;&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;TR&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;TD 
+ VALIGN=CENTER&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;P&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;FONT 
+ FACE=&quot;Verdana,Arial,Times New I2&quot;&gt;Old layer name:&lt;/FONT&gt;&lt;/TD&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;TD 
+ VALIGN=CENTER&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;P&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;INPUT 
+ TYPE=TEXT NAME=&quot;txtOldName&quot; SIZE=&quot;25&quot; MAXLENGTH=&quot;256&quot;&gt;&lt;/TD&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;/TR&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;TR&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;TD 
+ VALIGN=CENTER&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;P&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;FONT 
+ FACE=&quot;Verdana,Arial,Times New I2&quot;&gt;New layer name:&lt;/FONT&gt;&lt;/TD&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;TD 
+ VALIGN=CENTER&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;P&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;INPUT 
+ TYPE=TEXT NAME=&quot;txtNewName&quot; SIZE=&quot;25&quot; MAXLENGTH=&quot;256&quot;&gt;&lt;/TD&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;/TR&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;TR&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;TD 
+ VALIGN=CENTER&gt;&lt;DIV ALIGN=RIGHT&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;P 
+ ALIGN=RIGHT&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;INPUT 
+ TYPE=SUBMIT VALUE=&quot;OK&quot; ID=&quot;cmdOK&quot; ONCLICK=&quot;OnOk()&quot; 
+ STYLE=&quot;width: 5em; left; border: thin solid THREEDSHADOW&quot;&gt;&lt;/TD&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;TD 
+ VALIGN=CENTER&gt;&lt;CENTER&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;P 
+ ALIGN=CENTER&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;INPUT 
+ TYPE=SUBMIT VALUE=&quot;Cancel&quot; ID=&quot;cmdCancel&quot; CLASS=&quot;button&quot; 
+ ONCLICK=&quot;OnCancel()&quot; STYLE=&quot;width: 5em; left; border: thin 
+ solid THREEDSHADOW&quot;&gt;&lt;/TD&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;/TR&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&lt;/TABLE&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&lt;/P&gt;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&lt;/BODY&gt;</p>
+<p class="Code" style="margin-left: 12px;">&lt;/HTML&gt;</p>
+<h3>Also See</h3>
+<p><a href="../application_methods/getpluginobject.htm">GetPlugInObject</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="EnableObjectGrips" url="object_grip_methods/enableobjectgrips.htm" />
+<item name="NextObjectGrip" url="object_grip_methods/nextobjectgrip.htm" />
+<item name="GetObjectGrip" url="object_grip_methods/getobjectgrip.htm" />
+<item name="GetObjectGrips" url="object_grip_methods/getobjectgrips.htm" />
+<item name="ObjectGripCount" url="object_grip_methods/objectgripcount.htm" />
+<item name="ObjectGripLocation" url="object_grip_methods/objectgriplocation.htm" />
+<item name="ObjectGripLocations" url="object_grip_methods/objectgriplocations.htm" />
+<item name="ObjectGripOwner" url="object_grip_methods/objectgripowner.htm" />
+<item name="ObjectGripsOn" url="object_grip_methods/objectgripson.htm" />
+<item name="ObjectGripsSelected" url="object_grip_methods/objectgripsselected.htm" />
+<item name="PrevObjectGrip" url="object_grip_methods/prevobjectgrip.htm" />
+<item name="SelectedObjectGrips" url="object_grip_methods/selectedobjectgrips.htm" />
+<item name="SelectObjectGrip" url="object_grip_methods/selectobjectgrip.htm" />
+<item name="SelectObjectGrips" url="object_grip_methods/selectobjectgrips.htm" />
+<item name="UnselectObjectGrips" url="object_grip_methods/unselectobjectgrips.htm" />
+<item name="UnselectObjectGrip" url="object_grip_methods/unselectobjectgrip.htm" />
+
+</tocdata>

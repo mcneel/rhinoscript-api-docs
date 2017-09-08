@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddText</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nGeometry Methods\nAddText");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"geometry_methods.htm\">Geometry Methods<\/a> > AddText<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddText</h1>
+<p>Adds a text string to the document.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddText (strText, arrPoint [, dblHeight [, strFont 
+ [, intStyle [, intJustification]]]])</p>
+<p class="Code">Rhino.AddText (strText, arrPlane [, dblHeight [, strFont 
+ [, intStyle&#160;[, intJustification]]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.679%;" />
+	<col style="width: 90.321%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strText</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. String. &#160;The text to display.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPoint</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;A 3-D point.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPlane</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The plane 
+		 on which the text will lie. &#160;The origin of the plane will 
+		 be the origin point of the text.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblHeight</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The text 
+		 height. &#160;If omitted, a height of 1.0 units is used.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strFont</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;The text 
+		 font. &#160;If omitted, the Arial font is used.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intStyle</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. Number. &#160;The font style. 
+		 &#160;If omitted, a normal font style (0) is used. &#160;The font 
+		 style can be any number of the following flags:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 5.595%;" />
+			<col style="width: 94.405%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Normal</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Bold</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Italic</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intJustification</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. Number. &#160;The justification. 
+		 &#160;If omitted, a Bottom-Left justification (0) is used. &#160;The 
+		 justification can be any number of the following flags:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 5.595%;" />
+			<col style="width: 94.405%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Bottom-Left</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Bottom-Center</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Bottom-Right</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">3</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Middle-Left</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">4</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Middle-Center</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">5</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Middle-Right</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">6</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Top-Left</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">7</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Top-Middle</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">8</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Top-Right</p></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.756%;" />
+	<col style="width: 90.244%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrPoint</p>
+<p class="Code" style="margin-left: 12px;">arrPoint = Rhino.GetPoint(&quot;Pick 
+ point&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrPoint) Then</p>
+<p class="Code" style="margin-left: 24px;">Rhino.AddText &quot;Hello Rhino!&quot;, 
+ arrPoint</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="istext.htm">IsText</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

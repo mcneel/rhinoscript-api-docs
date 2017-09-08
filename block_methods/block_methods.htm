@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Block Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nBlock Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > Block Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Block Methods</h1>
+<p>A block is a collection of objects linked together to form a single 
+ entity. Using blocks lets you keep model size smaller by using block instances 
+ instead of copying identical geometry.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 18.374%;" />
+	<col style="width: 81.627%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Method</p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addblock.htm">AddBlock</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds a new block definition to the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockcontainercount.htm">BlockContainerCount</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the number of block definitions 
+		 that contain a specified block as a nested block.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockcontainers.htm">BlockContainers</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the names of block definitions 
+		 that contain a specified block as a nested block.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockcount.htm">BlockCount</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Counts the number of block definitions 
+		 in the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockdescription.htm">BlockDescription</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or sets the description of a block 
+		 definition.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockids.htm">BlockIds</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the identifiers of all block definitions 
+		 in the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockinstancecount.htm">BlockInstanceCount</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Counts the number of instances of the block 
+		 in the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockinstanceid.htm">BlockInstanceId</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the block definition identifier 
+		 of a block instance object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockinstanceinsertpoint.htm">BlockInstanceInsertPoint</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the insertion point of a block 
+		 instance.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockinstancename.htm">BlockInstanceName</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the block name of a block instance.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockinstances.htm">BlockInstances</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the identifiers of block instances.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockinstancexform.htm">BlockInstanceXform</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the transformation matrix of a 
+		 block instance.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockname.htm">BlockName</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the name of a block definition 
+		 given the block definition's identifier.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blocknames.htm">BlockNames</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the names of all block definitions 
+		 in the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockobjectcount.htm">BlockObjectCount</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the number of objects that define 
+		 a block definition.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockobjects.htm">BlockObjects</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the identifiers of the objects 
+		 that make up a block definition.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockpath.htm">BlockPath</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the path to a linked block definition.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockstatus.htm">BlockStatus</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the status of a linked block.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blocktype.htm">BlockType</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the definition, or update, type 
+		 of a block.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockurl.htm">BlockURL</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or sets the URL of a block definition.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="blockurltag.htm">BlockURLTag</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or sets the URL description of 
+		 a block definition.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="deleteblock.htm">DeleteBlock</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Deletes a block definition and it's instances.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="explodeblockinstance.htm">ExplodeBlockInstance</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Explodes a block instance.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="insertblock.htm">InsertBlock</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Inserts a block whose definition already 
+		 exists in the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isblock.htm">IsBlock</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a block definition exists.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isblockembedded.htm">IsBlockEmbedded</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a block definition is embedded/linked 
+		 from an external file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isblockinstance.htm">IsBlockInstance</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that an object is a block instance.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isblockinuse.htm">IsBlockInUse</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a block definition is being 
+		 used.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isblockobject.htm">IsBlockObject</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that an object is a block definition 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isblockreference.htm">IsBlockReference</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a block definition is from 
+		 a reference file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 18.374%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="renameblock.htm">RenameBlock</a></p></td>
+		<td style="width: 81.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Renames a block definition.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

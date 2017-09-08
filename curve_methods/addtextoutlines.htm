@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddTextOutlines</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nAddTextOutlines");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > AddTextOutlines<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddTextOutlines</h1>
+<p>Adds outline curves created from a text string to the document. The 
+ functionality is similar to what you find in Rhino's <span style="font-weight: bold;"><b>TextObject</b></span> 
+ command.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddTextOutlines (strText [, dblHeight [, strFont 
+ [, intStyle [, blnCloseLoops [, arrPlane [, dblSmallCapsScale]]]]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.679%;" />
+	<col style="width: 90.321%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strText</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. String. &#160;The text from which 
+		 to create outline curves.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblHeight</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The text 
+		 height. &#160;If omitted, a height of 1.0 units is used.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strFont</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;The text 
+		 font. &#160;If omitted, the Arial font is used.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intStyle</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. Number. &#160;The font style. 
+		 &#160;If omitted, a normal font style (0) is used. &#160;The font 
+		 style can be any number of the following flags:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 5.595%;" />
+			<col style="width: 94.405%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Normal</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Bold</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.595%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 94.405%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Italic</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnCloseLoops</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Boolean. &#160;Set this 
+		 value to True when dealing with normal fonts and when you expect 
+		 closed loops. You may want to set this to False when specifying 
+		 a single-stroke font where you don't want closed loops. If omitted, 
+		 True is specified.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPlane</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Array. &#160;The plane 
+		 on which the outline curves will lie. &#160;If omitted, the curves 
+		 will lie on the world X-Y plane with the lower-left corner of 
+		 output curves bounding box at (0,0,0).</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblSmallCapsScale</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. Displays lower-case 
+		 letters as small caps. Set the relative text size to a percentage 
+		 of the normal text.. Set to 1.0 (Default) for no small caps.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.756%;" />
+	<col style="width: 90.244%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">An array containing one or more arrays 
+		 of curve object identifier (one array for each glyph or letter) 
+		 if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrGlyphs, arrGlyph, i, 
+ strCurve</p>
+<p class="Code" style="margin-left: 12px;">arrGlyphs = Rhino.AddTextOutlines(&quot;Hello 
+ Rhino!&quot;, 10)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrGlyphs) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For i = 0 to UBound(arrGlyphs)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(&quot;Glyph &quot; &amp; CStr(i))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;arrGlyph 
+ = arrGlyphs(i)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;If IsArray(arrGlyph) 
+ Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;For 
+ Each strCurve in arrGlyph</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Call 
+ Rhino.Print(strCurve)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;End 
+ If</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="../surface_and_polysurface_methods/addplanarsrf.htm">AddPlanarSrf</a></p>
+<p><a href="../surface_and_polysurface_methods/extrudecurve.htm">ExtrudeCurve</a></p>
+<p><a href="../surface_and_polysurface_methods/extrudesurface.htm">ExtrudeSurface</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

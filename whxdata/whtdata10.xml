@@ -1,0 +1,28 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="AddDirectionalLight" url="light_methods/adddirectionallight.htm" />
+<item name="AddLinearLight" url="light_methods/addlinearlight.htm" />
+<item name="AddPointLight" url="light_methods/addpointlight.htm" />
+<item name="AddRectangularLight" url="light_methods/addrectangularlight.htm" />
+<item name="AddSpotLight" url="light_methods/addspotlight.htm" />
+<item name="EnableLight" url="light_methods/enablelight.htm" />
+<item name="IsDirectionalLight" url="light_methods/isdirectionallight.htm" />
+<item name="IsLight" url="light_methods/islight.htm" />
+<item name="IsLightEnabled" url="light_methods/islightenabled.htm" />
+<item name="IsLightReference" url="light_methods/islightreference.htm" />
+<item name="IsLinearLight" url="light_methods/islinearlight.htm" />
+<item name="IsPointLight" url="light_methods/ispointlight.htm" />
+<item name="IsRectangularLight" url="light_methods/isrectangularlight.htm" />
+<item name="IsSpotLight" url="light_methods/isspotlight.htm" />
+<item name="LightColor" url="light_methods/lightcolor.htm" />
+<item name="LightCount" url="light_methods/lightcount.htm" />
+<item name="LightDirection" url="light_methods/lightdirection.htm" />
+<item name="LightLocation" url="light_methods/lightlocation.htm" />
+<item name="LightName" url="light_methods/lightname.htm" />
+<item name="LightObjects" url="light_methods/lightobjects.htm" />
+<item name="RectangularLightPlane" url="light_methods/rectangularlightplane.htm" />
+<item name="SpotLightHardness" url="light_methods/spotlighthardness.htm" />
+<item name="SpotLightRadius" url="light_methods/spotlightradius.htm" />
+<item name="SpotLightShadowIntensity" url="light_methods/spotlightshadowintensity.htm" />
+
+</tocdata>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>ImportCurveFromExcel</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nImportCurveFromExcel");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > ImportCurveFromExcel<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>ImportCurveFromExcel</h1>
+<p>The following example demonstrates how to create an interpolated curve from 3-D point coordinates that are read from a Microsoft Excel spreadsheet.</p>
+<h3>Example</h3>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Subroutine: &#160;ImportCurveFromExcel</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: &#160;&#160;&#160;&#160;Create an interpolated curve from 3-D point coordinates read</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;from a Microsoft Excel spreadsheet.</p>
+<p class="CodeComment" style="margin-left: 12px;">'</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;The spreadsheet must contain x-coordinate values in column A,</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Y-coordinate values in column B, and Z-coordinate values in</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;column C beginning in row 1. &#160;There is no limit on the number</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;of 3-D points (rows) that can be processed.</p>
+<p class="CodeComment" style="margin-left: 12px;">'</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Load the script file using the LoadScript command.</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Run the subroutine using the RunScript command.</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Sub ImportCurveFromExcel()</p>
+<p class="CodeComment" style="margin-left: 24px;">' Declare variables and constants</p>
+<p class="Code" style="margin-left: 24px;">Const xlDown = -4121</p>
+<p class="Code" style="margin-left: 24px;">Dim sFileName, aPoints(), x, y, z</p>
+<p class="Code" style="margin-left: 24px;">Dim oExcel, oSheet, nRow, nRowCount</p>
+<p class="CodeComment" style="margin-left: 24px;">' Get the name of the file to import</p>
+<p class="Code" style="margin-left: 24px;">sFileName = Rhino.OpenFileName("Select File","Excel Files (*.xls)|*.xls||")</p>
+<p class="Code" style="margin-left: 24px;">If IsNull(sFileName) Then Exit Sub</p>
+<p class="CodeComment" style="margin-left: 24px;">' Launch Excel and open the specified file</p>
+<p class="Code" style="margin-left: 24px;">Set oExcel = CreateObject("Excel.Application")</p>
+<p class="Code" style="margin-left: 24px;">oExcel.Workbooks.Open(sFileName)</p>
+<p class="CodeComment" style="margin-left: 24px;">' Get the active worksheet</p>
+<p class="Code" style="margin-left: 24px;">Set oSheet = oExcel.ActiveSheet</p>
+<p class="CodeComment" style="margin-left: 24px;">' Count the number of rows that need to be processed</p>
+<p class="Code" style="margin-left: 24px;">nRowCount = oSheet.Range("a1", oSheet.Range("a1").End(xlDown)).Rows.Count</p>
+<p class="Code" style="margin-left: 24px;">If (nRowCount = 0 ) Then</p>
+<p class="Code" style="margin-left: 36px;">Rhino.Print "No data range found in file."</p>
+<p class="Code" style="margin-left: 36px;">Exit Sub</p>
+<p class="Code" style="margin-left: 24px;">ElseIf (nRowCount &lt; 2 ) Then</p>
+<p class="Code" style="margin-left: 36px;">Rhino.Print "Not enough points to create curve."</p>
+<p class="Code" style="margin-left: 36px;">Exit Sub</p>
+<p class="Code" style="margin-left: 24px;">End if</p>
+<p class="CodeComment" style="margin-left: 24px;">' Re-dimension the resulting array of points accordingly</p>
+<p class="Code" style="margin-left: 24px;">Redim aPoints(nRowCount-1)</p>
+<p class="CodeComment" style="margin-left: 24px;">' Process all rows</p>
+<p class="Code" style="margin-left: 24px;">Rhino.Print "Importing data..."</p>
+<p class="Code" style="margin-left: 24px;">For nRow = 1 To nRowCount</p>
+<p class="CodeComment" style="margin-left: 36px;">' Read the values from columns A, B, and C</p>
+<p class="Code" style="margin-left: 36px;">x = oSheet.Cells(nRow, 1).Value</p>
+<p class="Code" style="margin-left: 36px;">y = oSheet.Cells(nRow, 2).Value</p>
+<p class="Code" style="margin-left: 36px;">z = oSheet.Cells(nRow, 3).Value</p>
+<p class="CodeComment" style="margin-left: 36px;">' If the values are all numeric, create an array from the</p>
+<p class="CodeComment" style="margin-left: 36px;">' values and add it to the array of points</p>
+<p class="Code" style="margin-left: 36px;">If IsNumeric(x) And IsNumeric(y) And IsNumeric(z) Then</p>
+<p class="Code" style="margin-left: 48px;">aPoints(nRow-1) = Array(x,y,z)</p>
+<p class="Code" style="margin-left: 36px;">Else</p>
+<p class="Code" style="margin-left: 48px;">oExcel.Quit</p>
+<p class="Code" style="margin-left: 48px;">Set oSheet = Nothing</p>
+<p class="Code" style="margin-left: 48px;">Set oExcel = Nothing</p>
+<p class="Code" style="margin-left: 48px;">Rhino.Print "Non-numeric data found in row " &amp; CStr(nRow) &amp; "."</p>
+<p class="Code" style="margin-left: 48px;">Exit Sub</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="CodeComment" style="margin-left: 24px;">' Close Excel and disassociate object variables</p>
+<p class="Code" style="margin-left: 24px;">oExcel.Quit</p>
+<p class="Code" style="margin-left: 24px;">Set oSheet = Nothing</p>
+<p class="Code" style="margin-left: 24px;">Set oExcel = Nothing</p>
+<p class="CodeComment" style="margin-left: 24px;">' If at least two points were read in, create the curve</p>
+<p class="Code" style="margin-left: 24px;">If (UBound(aPoints) &gt; 0) Then</p>
+<p class="Code" style="margin-left: 36px;">Rhino.AddInterpCurve aPoints</p>
+<p class="Code" style="margin-left: 36px;">Rhino.Command "_Zoom _All _Extents"</p>
+<p class="Code" style="margin-left: 36px;">Rhino.Print "Curve from " &amp; CStr(nRowCount-1) &amp; " points created."</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

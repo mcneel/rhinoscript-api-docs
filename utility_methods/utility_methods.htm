@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="06 7, 2002 9:58:29 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Utility Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUtility Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > Utility Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Utility Methods</h1>
+<p>RhinoScript contains several utility methods to assist in creating scripts.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 12.893%;" />
+	<col style="width: 87.107%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Method</p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="allprocedures.htm">AllProcedures</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the user-defined procedures in 
+		 RhinoScript.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="clipboardtext.htm">ClipboardText</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns text from or sets text to the Windows 
+		 Clipboard.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="coloradjustluma.htm">ColorAdjustLuma</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Changes the luminance of an RGB value.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="colorbluevalue.htm">ColorBlueValue</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Retrieves an intensity value for the blue 
+		 component of a red-green-blue (RGB) value.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="colorgreenvalue.htm">ColorGreenValue</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Retrieves an intensity value for the green 
+		 component of a red-green-blue (RGB) value.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="colorhlstorgb.htm">ColorHLSToRGB</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Converts colors from hue-luminance-saturation 
+		 (HLS) to RGB format.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="colorhsvtorgb.htm">ColorHSVToRGB</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Converts colors from hue-saturation-value 
+		 (HSV) to RGB format.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="colorredvalue.htm">ColorRedValue</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Retrieves an intensity value for the red 
+		 component of a red-green-blue (RGB) value.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="colorrgbtohls.htm">ColorRGBToHLS</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Converts colors from RGB to hue-luminance-saturation 
+		 (HLS) format.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="colorrgbtohsv.htm">ColorRGBToHSV</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Converts colors from RGB to hue-saturation-value 
+		 (HSV) format.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="cullduplicatenumbers.htm">CullDuplicateNumbers</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Remove duplicates from an array of numbers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="cullduplicatepoints.htm">CullDuplicatePoints</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Remove duplicates from an array of 3-D 
+		 points.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="cullduplicatestrings.htm">CullDuplicateStrings</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Remove duplicates from an array of strings.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="currentprinter.htm">CurrentPrinter</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or sets the current Windows printer.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="findduplicatenumbers.htm">FindDuplicateNumbers</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Finds duplicate numbers in a VBScript Array.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="findduplicatepoints.htm">FindDuplicatePoints</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Finds duplicate points in a VBScript Array.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="findduplicatestrings.htm">FindDuplicateStrings</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Finds duplicate strings in a VBScript Array.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getasynckeystate.htm">GetAsyncKeyState</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Determines whether a key is up or down 
+		 at the time the function is called.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getsettings.htm">GetSettings</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns a string from a Windows INI-style 
+		 file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="getsystemmetrics.htm">GetSystemMetrics</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Retrieves the specified system metric or 
+		 system configuration setting.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="imageinfo.htm">ImageInfo</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns information about a bitmap image.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="intersectstrings.htm">IntersectStrings</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the intersection of two string 
+		 arrays.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isprocedure.htm">IsProcedure</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a user-defined procedure 
+		 is resident in RhinoScript.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="joinarrays.htm">JoinArrays</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Joins two one-dimensional arrays into one.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="makearray.htm">MakeArray</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Creates a new, initialized array of a user-specified 
+		 bounds.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="oncancelscript.htm">OnCancelScript</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">User-definable cancel script event handler.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="playsound.htm">PlaySound</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Plays a sound specified by the given file 
+		 name.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="printernames.htm">PrinterNames</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the name of all installed Windows 
+		 printers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="pt2str.htm">Pt2Str</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Converts a 3-D point value to a string.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="readdelimitedfile.htm">ReadDelimitedFile</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Reads a delimited text file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="readtextfile.htm">ReadTextFile</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Reads a text file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="savesettings.htm">SaveSettings</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Saves a string value to a Windows INI-style 
+		 file.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="simplifyarray.htm">SimplyArray</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Converts an array of 3-D points into a 
+		 single-dimensional array.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="sleep.htm">Sleep</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Suspends the execution of the script for 
+		 the specified interval.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="sortnumbers.htm">SortNumbers</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Sorts an array of numbers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="sortpointlist.htm">SortPointList</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Sort an array of points so they will be 
+		 connected in &quot;reasonable&quot; polyline order.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="sortpoints.htm">SortPoints</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Sorts an array of 3-D points.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="sortpointsbydistance.htm">SortPointsByDistance</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Sorts an array of 3-D point based on the 
+		 distance from a reference point.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="sort.htm">SortStrings</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Sorts an array of strings.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="spooltoprinter.htm">SpooltoPrinter</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Spools a raw file to a Windows printer.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="str2pt.htm">Str2Pt</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Converts a formatted string to a 3-D point 
+		 value.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="str2ptarray.htm">Str2PtArray</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Converts a formatted string to an array 
+		 of 3-D point value.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="strtok.htm">Strtok</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the tokens in a string.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textout.htm">TextOut</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays a text output window.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="unionstrings.htm">UnionStrings</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the union of two string arrays.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="version.htm">Version</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the version of RhinoScript.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.893%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="writetextfile.htm">WriteTextFile</a></p></td>
+		<td style="width: 87.107%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Writes an array of strings to a text file.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

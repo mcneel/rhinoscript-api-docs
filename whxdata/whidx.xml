@@ -1,0 +1,14 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<index>
+<chunkinfo url="whidata0.xml" first="ACos" last="BooleanIntersection" num="144" />
+<chunkinfo url="whidata1.xml" first="BooleanUnion" last="DimensionText" num="138" />
+<chunkinfo url="whidata2.xml" first="DimensionUserText" last="GetLayer" num="136" />
+<chunkinfo url="whidata3.xml" first="GetLayers" last="IsLayoutObject" num="142" />
+<chunkinfo url="whidata4.xml" first="IsLeader" last="LineFitFromPoints" num="137" />
+<chunkinfo url="whidata5.xml" first="LineIsFartherThan" last="MoveObject" num="109" />
+<chunkinfo url="whidata6.xml" first="MoveObjects" last="PointCompare" num="130" />
+<chunkinfo url="whidata7.xml" first="PointCoordinates" last="SelectedObjectGrips" num="124" />
+<chunkinfo url="whidata8.xml" first="SelectedObjects" last="ToolbarCollectionCount" num="133" />
+<chunkinfo url="whidata9.xml" first="ToolbarCollectionNames" last="ZoomSelected" num="133" />
+
+</index>

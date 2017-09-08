@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>SolveQuadratic</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nMath Methods\nSolveQuadratic");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"math_methods.htm\">Math Methods<\/a> > SolveQuadratic<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>SolveQuadratic</h1>
+<p>Solves a quadratic equation. A quadratic equation is a second-order polynomial equation in a single variable, <span style="font-style: italic; font-weight: bold;"><i><b>x</b></i></span>.</p>
+<p style="font-size: 12pt; font-style: italic; font-weight: bold;">ax<span style="vertical-align: Super; font-size: 9pt;"><font size="1" style="font-size:9pt;">2</font></span> + bx + c = 0</p>
+<p>with <span style="font-weight: bold;"><b>a &lt;&gt; 0</b></span> . Because it is a second-order polynomial equation, the fundamental theorem of algebra guarantees that it has two solutions. These solutions may be both real, or both complex.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.SolveQuadratic (dblA, dblB, dblC)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.679%;" />
+<col style="width: 90.321%;" />
+<tr style="height: 24px;" valign="top">
+<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">dblA</p>
+</td>
+<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Number. &#160;The A coefficient.</p>
+</td>
+</tr>
+<tr style="height: 24px;" valign="top">
+<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">dblB</p>
+</td>
+<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Number. &#160;The B coefficient.</p>
+</td>
+</tr>
+<tr style="height: 24px;" valign="top">
+<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">dblC</p>
+</td>
+<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Number. &#160;The C coefficient.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.756%;" />
+<col style="width: 90.244%;" />
+<tr valign="top">
+<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The results of the calculation, if successful, where:</p>
+<table cellspacing="0" width="100%">
+<col style="width: 8.322%;" />
+<col style="width: 8.041%;" />
+<col style="width: 83.637%;" />
+<tr valign="top">
+<td style="width: 8.322%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Element</p>
+</td>
+<td style="width: 8.041%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Type</p>
+</td>
+<td style="width: 83.637%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.322%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">0</p>
+</td>
+<td style="width: 8.041%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 83.637%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The results of the calculation, where:</p>
+<p class="Table-Body">0 = Two distinct real roots (R0 &lt; R1) are returned.</p>
+<p class="Table-Body">1 = One real root (R0 = R1) is returned.</p>
+<p class="Table-Body">2 = Two complex conjugate roots (R0 +/- (R1)*Sqr(-1)) are returned</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.322%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1</p>
+</td>
+<td style="width: 8.041%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 83.637%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The first root, or R0.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.322%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">2</p>
+</td>
+<td style="width: 8.041%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 83.637%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The second root, or R1.</p>
+</td>
+</tr>
+</table>
+<p class="Table-Body">&#160;</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrSolve</p>
+<p class="Code" style="margin-left: 12px;">arrSolve = Rhino.SolveQuadratic(2, 4, -30)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrSolve) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.Print "Root 0 = " &amp; CStr(arrSolve(1))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.Print "Root 1 = " &amp; CStr(arrSolve(2))</p>
+<p class="code">End If</p>
+<h3>Also See</h3>
+<p><a href="math_methods.htm">Math Functions</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

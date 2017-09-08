@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>PointPick</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSelection Methods\nPointPick");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"selection_methods.htm\">Selection Methods<\/a> > PointPick<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>PointPick</h1>
+<p>Picks objects using a point selection.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.PointPick (arrPoint [, strView [, blnSelect [, arrAperture 
+ [, blnGroup [, arrObjects [, blnUseOsnaps]]]]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 12.297%;" />
+	<col style="width: 87.703%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrPoint</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Array. The 3-D selection point.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strView </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;String. &#160;The title or identifier of the view. &#160;If 
+		 omitted, the current active view is used.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">blnSelect </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Boolean. &#160;Select picked objects. &#160;If omitted, 
+		 picked objects are not selected (False).</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrAperture</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Array. &#160;An array of 2 numbers that identify the x and 
+		 y values, in pixels, used to inflate the picking aperture. </p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">blnGroup </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Boolean. &#160;Honor object grouping. &#160;If omitted and 
+		 the user picks a group, the entire group will be picked (True).</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrObjects</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Array. &#160;An array of strings identifying the objects 
+		 that are allowed to be selected.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">blnUseOsnaps</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Boolean. &#160;If True, then the function will attempt to 
+		 snap to objects using the current object snap settings. If an 
+		 object snap is successful, then <span style="font-style: italic;"><i>arrPoint</i></span> 
+		 is modified to reflect the snap location before attempting to 
+		 pick objects. If False (Default), then <span style="font-style: italic;"><i>arrPoint</i></span> 
+		 is used to pick objects.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 12.213%;" />
+	<col style="width: 87.787%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 12.213%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 87.787%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">An array that contains arrays of picking 
+		 information if successful. The array of picking information will 
+		 contain the following:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 7.117%;" />
+			<col style="width: 92.883%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Element</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">String. The identifier of the object.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Array. The selection point. </p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 12.213%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 87.787%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Rhino.PointPick Array(0,0,0), 
+ , True</p>
+<h3>Also See</h3>
+<p><a href="windowpick.htm">WindowPick</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddBlendCurve</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nAddBlendCurve");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > AddBlendCurve<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddBlendCurve</h1>
+<p>Makes a curve blend between two curves at the parameters specified with 
+ the directions and continuities specified.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddBlendCurve (arrCurves, arrParameters, arrReverses, 
+ arrContinuities])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.632%;" />
+	<col style="width: 90.368%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrCurves</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;An array of 
+		 two strings which are the identifiers of the two curves objects 
+		 to blend.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrParameters</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;An array of 
+		 two numbers which are the curve parameters, one for each curve, 
+		 to be used for the blend end points.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrReverses</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. Boolean. An array of two Boolean 
+		 values, one for each curve, that specifies whether or not the 
+		 blend will go in the natural direction of the curve (False), or 
+		 if the blend will go in the opposite direction to the curve (True).</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrContinuities</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;An array of 
+		 two numbers, one for each curve, that specifies the continuity 
+		 for the blend at the end point. The possible values are as follows:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 5.146%;" />
+			<col style="width: 94.854%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 5.146%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="width: 94.854%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.146%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 94.854%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Position - location only.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.146%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 94.854%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Tangency - position and curve direction.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.146%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 94.854%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Curvature - position, direction, 
+				 and radius of curvature.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.618%;" />
+	<col style="width: 90.382%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the newly created curve 
+		 object, if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim arrCurves(1), 
+ arrParams(1), arrRevs(1), arrCont(1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim arrDomain0, 
+ arrDomain1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrCurves(0) = Rhino.AddLine(Array(0,0,0), 
+ Array(0,9,0))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrDomain = Rhino.CurveDomain(arrCurves(0))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrParams(0) = arrDomain(1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrRevs(0) = False</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrCont(0) = 2</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrCurves(1) = Rhino.AddLine(Array(1,10,0), 
+ Array(10,10,0))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrDomain = Rhino.CurveDomain(arrCurves(1))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrParams(1) = arrDomain(0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrRevs(1) = True</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrCont(1) = 2</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.AddBlendCurve 
+ arrCurves, arrParams, arrRevs, arrCont</p>
+<h3 class="Code">Also See</h3>
+<p><a href="addfilletcurve.htm">AddFilletCurve</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>VBScript Data Types</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("VBScript Fundamentals\nVBScript Data Types");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"vbscript_fundamentals.htm\">VBScript Fundamentals<\/a> > VBScript Data Types<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>VBScript Data Types</h1>
+<p>VBScript has only one data type called a <span style="font-weight: bold;"><b>Variant</b></span>. A Variant is a special kind of data type that can contain different kinds of information, depending on how it is used. Because Variant is the only data type in VBScript, it is also the data type returned by all functions in VBScript.</p>
+<p>At its simplest, a Variant can contain either numeric or string information. A Variant behaves as a number when you use it in a numeric context and as a string when you use it in a string context. That is, if you are working with data that looks like numbers, VBScript assumes that it is numbers and does what is most appropriate for numbers. Similarly, if you're working with data that can only be string data, VBScript treats it as string data. You can always make numbers behave as strings by enclosing them in quotation marks (" ").</p>
+<h2>Variant Subtypes</h2>
+<p>Beyond the simple numeric or string classifications, a Variant can make further distinctions about the specific nature of numeric information. For example, you can have numeric information that represents a date or a time. When used with other date or time data, the result is always expressed as a date or a time. You can also have a rich variety of numeric information ranging in size from Boolean values to huge floating-point numbers. These different categories of information that can be contained in a Variant are called subtypes. Most of the time, you can just put the kind of data you want in a Variant, and the Variant behaves in a way that is most appropriate for the data it contains.</p>
+<p>The following table shows subtypes of data that a Variant can contain.</p>
+<table cellspacing="0" width="100%">
+<col style="width: 11.395%;" />
+<col style="width: 88.605%;" />
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Subtype</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Empty</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Variant is uninitialized. Value is 0 for numeric variables or a zero-length string ("") for string variables.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Variant intentionally contains no valid data.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Boolean</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Contains either True or False.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Byte</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Contains integer in the range 0 to 255.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Integer (Short)</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Contains integer in the range -32,768 to 32,767.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Currency</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">-922,337,203,685,477.5808 to 922,337,203,685,477.5807.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Long</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Contains integer in the range -2,147,483,648 to 2,147,483,647.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Single</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Contains a single-precision, floating-point number in the range -3.402823E38 to -1.401298E-45 for negative values; 1.401298E-45 to 3.402823E38 for positive values.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Double</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Contains a double-precision, floating-point number in the range -1.79769313486232E308 to -4.94065645841247E-324 for negative values; 4.94065645841247E-324 to 1.79769313486232E308 for positive values.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Date (Time)</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Contains a number that represents a date between January 1, 100 to December 31, 9999.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Contains a variable-length string that can be up to approximately 2 billion characters in length.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Object</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Contains an object.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.395%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Error</p>
+</td>
+<td style="width: 88.605%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Contains an error number.</p>
+</td>
+</tr>
+</table>
+<p>You can use VBScript conversion functions to convert data from one subtype to another. In addition, the <span style="font-weight: bold;"><b>VarType</b></span> function returns information about how your data is stored within a Variant.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="ACos" url="math_methods/acos.htm" />
+<item name="ACosH" url="math_methods/acosh.htm" />
+<item name="Angle" url="math_methods/angle.htm" />
+<item name="Angle2" url="math_methods/angle2.htm" />
+<item name="ASin" url="math_methods/asin.htm" />
+<item name="ASinH" url="math_methods/asinh.htm" />
+<item name="ATan2" url="math_methods/atan2.htm" />
+<item name="ATanH" url="math_methods/atanh.htm" />
+<item name="Ceil" url="math_methods/ceil.htm" />
+<item name="CosH" url="math_methods/cosh.htm" />
+<item name="Deviation" url="math_methods/deviation.htm" />
+<item name="Distance" url="math_methods/distance.htm" />
+<item name="E" url="math_methods/e.htm" />
+<item name="Floor" url="math_methods/floor.htm" />
+<item name="FMod" url="math_methods/fmod.htm" />
+<item name="Hypot" url="math_methods/hypot.htm" />
+<item name="Log10" url="math_methods/log10.htm" />
+<item name="Max" url="math_methods/max.htm" />
+<item name="Mean" url="math_methods/mean.htm" />
+<item name="Median" url="math_methods/median.htm" />
+<item name="Min" url="math_methods/min.htm" />
+<item name="PI" url="math_methods/pi.htm" />
+<item name="Polar" url="math_methods/polar.htm" />
+<item name="Rnd" url="math_methods/rnd.htm" />
+<item name="SinH" url="math_methods/sinh.htm" />
+<item name="SolveQuadratic" url="math_methods/solvequadratic.htm" />
+<item name="Sum" url="math_methods/sum.htm" />
+<item name="TanH" url="math_methods/tanh.htm" />
+<item name="ToDegrees" url="math_methods/todegrees.htm" />
+<item name="ToRadians" url="math_methods/toradians.htm" />
+
+</tocdata>

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+ <title>GetUserText</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Data Methods\nGetUserText");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"user_data_methods.htm\">User Data Methods<\/a> > GetUserText<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>GetUserText</h1>
+<p>Returns User Text that is stored on an object. For more details on User Text, see the discussion found in the <a href="user_data_methods.htm">User Data Methods</a> summary.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.GetUserText (strObject [, strKey [, blnAttachToGeometry]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 10.801%;" />
+<col style="width: 89.199%;" />
+<tr valign="top">
+<td style="width: 10.801%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strObject</p>
+</td>
+<td style="width: 89.199%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The object's identifier.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 10.801%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strKey</p>
+</td>
+<td style="width: 89.199%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;String. &#160;The key name. &#160;If omitted or an empty string ("") is specified, all key names for the object are returned.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 10.801%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">blnAttachToGeometry</p>
+</td>
+<td style="width: 89.199%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Boolean. &#160;The location on the object to retrieve the User Text.</p>
+<table cellspacing="0" width="100%">
+<col style="width: 15.041%;" />
+<col style="width: 84.959%;" />
+<tr valign="top">
+<td style="width: 15.041%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Value</p>
+</td>
+<td style="width: 84.959%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 15.041%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">True</p>
+</td>
+<td style="width: 84.959%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Retrieve text information from the object geometry. If the information is closely associated with the geometry, attach it to the geometry. For example, a circle's radius should be attached to the geometry because the information will be invalid if the circle is control-point edited and changed into a NURBS curve.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 15.041%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">False (Default)</p>
+</td>
+<td style="width: 84.959%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Retrieve text information from the attributes of an object. If the information is higher-level attribute information, like color, then it should be attached to the object's attributes. Attribute information will persist when an object is control point edited, trimmed, copied, and so on.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 13.496%;" />
+<col style="width: 86.504%;" />
+<tr valign="top">
+<td style="width: 13.496%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String</p>
+</td>
+<td style="width: 86.504%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If <span style="font-style: italic;"><i>strKey</i></span> is specified, then the associated value if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.496%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 86.504%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If <span style="font-style: italic;"><i>strKey</i></span> is not specified, then an array of key names if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.496%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 86.504%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strObject</p>
+<p class="Code" style="margin-left: 12px;">strObject = Rhino.GetObject("Select object")</p>
+<p class="Code" style="margin-left: 12px;">If VarType(strObject) = vbString Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.Print Rhino.GetUserText(strObject, "PartNo")</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.Print Rhino.GetUserText(strObject, "Price")</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="isusertext.htm">IsUserText</a></p>
+<p><a href="setusertext.htm">SetUserText</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>OffsetBrep</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSurface & Polysurface Methods\nOffsetBrep");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"surface_methods.htm\">Surface & Polysurface Methods<\/a> > OffsetBrep<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>OffsetBrep</h1>
+<p>Offsets a surface or a polysurface by a distance.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.OffsetBrep (strObject, dblDistance [, dblTolerance 
+ [, blnBothSides [, blnCreateSolid]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.632%;" />
+	<col style="width: 90.368%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strObject</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;The object's 
+		 identifier.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblDistance</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;The distance 
+		 to offset. This is a signed distance value with respect to face 
+		 normals and flipped faces.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnCreateSolid</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Boolean. &#160;Makes a 
+		 closed solid from the input and offset surfaces by lofting a ruled 
+		 surface between all of the matching edges.&#160;The default is 
+		 False.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">blnExtend</p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Boolean. &#160;If True, 
+		 then the function maintains the sharp corners when the original 
+		 surfaces have sharps corner. &#160;If False, then the function 
+		 creates fillets at sharp corners in the original surfaces. &#160;The 
+		 default is True.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblTolerance 
+		 </p></td>
+		<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The offset 
+		 tolerance.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.618%;" />
+	<col style="width: 90.382%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifiers of the new objects if successful, 
+		 but unable to combine into a single polysurface.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Const rhObjectSurface = 8</p>
+<p class="Code" style="margin-left: 12px;">Const rhObjectPolysrf = 16</p>
+<p class="Code" style="margin-left: 12px;">Dim strObject</p>
+<p class="Code" style="margin-left: 12px;">strObject = Rhino.GetObject(&quot;Select 
+ a surface or polysurface&quot;, rhObjectSurface + rhObjectPolysrf)</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strObject) Then</p>
+<p class="Code" style="margin-left: 24px;">Rhino.OffsetBrep strObject, 
+ 10.0</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="offsetsurface.htm">OffsetSurface</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

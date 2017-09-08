@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="05 29, 2002 2:56:46 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Geometry Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nGeometry Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > Geometry Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Geometry Methods</h1>
+<p>The following methods are available for creating, querying or manipulating 
+ miscellaneous geometric objects. &#160;For methods relating to curve objects, 
+ see <a href="../curve_methods/curve_methods.htm">Curve Methods</a>. &#160;For 
+ methods relating to surface and polysurface objects, see <a href="../surface_and_polysurface_methods/surface_methods.htm">Surface 
+ and Polysurface Methods</a>. &#160;For methods relating to mesh objects, 
+ see <a href="../mesh_methods/mesh_methods.htm">Mesh Methods</a>.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 17.305%;" />
+	<col style="width: 82.695%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Method</p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addclippingplane.htm">AddClippingPlane</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds a clipping plane.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addpictureframe.htm">AddPictureFrame</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds a picture frame object to the document.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addpoint.htm">AddPoint</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds a point object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addpointcloud.htm">AddPointCloud</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds a point cloud object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addpoints.htm">AddPoints</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds one or more point objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addtext.htm">AddText</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds a text object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="addtextdot.htm">AddTextDot</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds an annotation text dot object</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="boundingbox.htm">BoundingBox</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the bounding box of objects.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="circlefrompoints.htm">CircleFromPoints</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Creates a circle fit from points.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="clippingplanedefinition.htm">ClippingPlaneDefinition</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the underlying plane 
+		 of a clipping plane object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="clippingplaneview.htm">ClippingPlaneView</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the clipped views of 
+		 a clipping plane object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="comparegeometry.htm">CompareGeometry</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Determines if two objects are geometrically 
+		 identical.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="flipclippingplane.htm">FlipClippingPlane</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Reverses the direction of a clipping plane 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isclippingplane.htm">IsClippingPlane</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a clipping plane.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isknotvectorclamped.htm">IsKnotVectorClamped</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a knot vector is clamped.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isknotvectorperiodic.htm">IsKnotVectorPeriodic</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a knot vector is periodic.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="isknotvectoruniform.htm">IsKnotVectorUniform</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a knot vector is uniform.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="ispictureframe.htm">IsPictureFrame</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that an object is a picture frame 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="ispoint.htm">IsPoint</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a point object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="ispointcloud.htm">IsPointCloud</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a point cloud object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="istext.htm">IsText</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a text object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="istextdot.htm">IsTextDot</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies an object is a text dot object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="knotvectorhasbezierspans.htm">KnotVectorHasBezierSpans</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that all knots in a knot vector 
+		 have multiplicity equal to degree.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 21.216%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="knotvectorstyle.htm">KnotVectorStyle</a></p></td>
+		<td style="width: 78.784%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the style of a knot vector.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="pointcloudcount.htm">PointCloudCount</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the number of points in a point 
+		 cloud.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="pointcloudhashiddenpoints.htm">PointCloudHasHiddenPoints</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a point cloud object has 
+		 hidden points.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="pointcloudhaspointcolors.htm">PointCloudHasPointColors</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Verifies that a point cloud object has 
+		 point colors.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="pointcloudhidepoints.htm">PointCloudHidePoints</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the hidden points of 
+		 a point cloud object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="pointcloudpointcolors.htm">PointCloudPointColors</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the point colors of 
+		 a point cloud object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="pointcloudpoints.htm">PointCloudPoints</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the points of a point cloud.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textdotfont.htm">TextDotFont</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the font of a text 
+		 dot object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textdotheight.htm">TextDotHeight</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the text height of 
+		 a text dot object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textdotpoint.htm">TextDotPoint</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the location of an 
+		 annotation text dot object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textdottext.htm">TextDotText</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the text string of 
+		 an annotation text dot object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textobjectfont.htm">TextObjectFont</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the font of a text 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textobjectformula.htm">TextObjectFormula</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the formula of a text 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textobjectheight.htm">TextObjectHeight</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the text height of 
+		 a text object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textobjectjustification.htm">TextObjectJustification</a> 
+		 </p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the justification of 
+		 a text object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textobjectmask.htm">TextObjectMask</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or set the mask of a text object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textobjectplane.htm">TextObjectPlane</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the plane of a text 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textobjectpoint.htm">TextObjectPoint</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the location of a text 
+		 object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textobjectstyle.htm">TextObjectStyle</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the font style of a 
+		 text object.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 17.305%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="textobjecttext.htm">TextObjectText</a></p></td>
+		<td style="width: 82.695%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns or modifies the text string of 
+		 a text object.</p></td>
+	</tr>
+</table>
+<p class="Table-Body">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

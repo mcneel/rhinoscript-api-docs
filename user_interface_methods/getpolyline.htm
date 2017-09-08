@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>GetPolyline</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Interface Methods\nGetPolyline");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"user_interface_methods.htm\">User Interface Methods<\/a> > GetPolyline<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>GetPolyline</h1>
+<p>Prompts the user to pick points that define a polyline.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.GetPolyline ([intFlags [, strMessage1 [, strMessage2 
+ [, strMessage3 [, strMessage4 [, intMin [, intMax]]]]]]])</p>
+<h3>Parameters</h3>
+<table style="left: 0px; top: 152px;" cellspacing="0" width="100%">
+	<col style="width: 10.627%;" />
+	<col style="width: 89.373%;" />
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intFlags </p></td>
+		<td style="width: 89.373%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Integer. &#160;The options, 
+		 or flags. Values can be added together to specify more than one 
+		 option. The default is 3.</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 9.824%;" />
+			<col style="width: 90.176%;" />
+			<tr>
+				<td><p class="Table-Head">Value</p></td>
+				<td><p class="Table-Head">Description</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body">1</p></td>
+				<td><p class="Table-Body">Permit close option. If specified, 
+				 then after 3 points have been picked, the user can type 
+				 &quot;Close&quot; and a closed polyline will be returned.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body">2</p></td>
+				<td><p class="Table-Body">Permit close snap. If specified, 
+				 then after 3 points have been picked, the user can pick 
+				 near the start point and a closed polyline will be returned.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body">4</p></td>
+				<td><p class="Table-Body">Force close. If specified, then 
+				 the returned polyline is always closed. If specified, 
+				 then <span style="font-style: italic;"><i>intMax</i></span> must 
+				 be 0 or &gt;= 4.</p></td>
+			</tr>
+		</table>
+		<p class="Table-Body">Note, the default is 3, or &quot;Permit close 
+		 option = True&quot;, &quot;Permit close snap = True&quot;, and 
+		 &quot;Force close = False&quot;.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strMessage1 
+		 </p></td>
+		<td style="width: 89.373%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;A prompt 
+		 or message for the first point.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strMessage2</p></td>
+		<td style="width: 89.373%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;A prompt 
+		 or message for the second point.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strMessage3</p></td>
+		<td style="width: 89.373%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;A prompt 
+		 or message for the third point.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strMessage4</p></td>
+		<td style="width: 89.373%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;A prompt 
+		 or message for the &quot;next&quot; point.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intMin</p></td>
+		<td style="width: 89.373%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The minimum 
+		 number of points to require. The default is 2.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.627%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intMax</p></td>
+		<td style="width: 89.373%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The maximum 
+		 number of points to require; 0 for no limit. &#160;The default 
+		 is 0.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.965%;" />
+	<col style="width: 89.035%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Array</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">An 
+		 array of 3-D points that define the polyline if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrPline</p>
+<p class="Code" style="margin-left: 12px;">arrPline = Rhino.GetPolyline</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrPline) Then</p>
+<p class="Code" style="margin-left: 24px;">Rhino.AddPolyline arrPline </p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="getbox.htm">GetBox</a></p>
+<p><a href="getline.htm">GetLine</a></p>
+<p><a href="getpolyline.htm">GetPolyline</a></p>
+<p><a href="getrectangle.htm">GetRectangle</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

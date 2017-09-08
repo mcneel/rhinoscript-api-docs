@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Math Methods</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nMath Methods");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > Math Methods<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Math Methods</h1>
+<p>The following is a list of functions and operators that are provided 
+ by native VBScript:</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.203%;" />
+	<col style="width: 90.797%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Function</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">^</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Raises a number to the power of an exponent.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">*</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Multiplies two numbers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">/</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Divides two numbers and returns a floating-point 
+		 result.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">\</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Divides two numbers and returns an integer 
+		 result.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Mod</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Divides two numbers and returns only the 
+		 remainder.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">+</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Sums two numbers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">-</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Finds the difference between two numbers 
+		 or indicates the negative value of a numeric expression.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">&amp;</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Forces string concatenation of two expressions.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Abs</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the absolute value of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Atn</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the arctangent of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Cos</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the cosine of an angle.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Exp</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns <span style="font-style: italic;"><i>e</i></span> 
+		 (the base of natural logarithms) raised to a power.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Int</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the integer portion of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Fix</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the integer portion of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Log</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the natural logarithm of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Rnd</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns a random number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Sgn</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns an integer indicating the sign 
+		 of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Sin</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the sine of an angle.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Sqr</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the square root of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.203%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Tan</p></td>
+		<td style="width: 90.797%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the tangent of an angle.</p></td>
+	</tr>
+</table>
+<p>&#160;&#160;&#160;</p>
+<p>RhinoScript extents the math capabilities of VBScript by adding the 
+ following methods:</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.303%;" />
+	<col style="width: 90.697%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Method</p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Head">Description</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="acos.htm">ACos</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the inverse cosine of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="acosh.htm">ACosH</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the inverse hyperbolic cosine of 
+		 a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="angle.htm">Angle</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Measures the angle between two points.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="angle2.htm">Angle2</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Measures the angle between two lines.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="asin.htm">ASin</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the inverse sine of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="asinh.htm">ASinH</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the inverse hyperbolic sine of 
+		 a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="atan2.htm">ATan2</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the angle from the X axis to a 
+		 point (y,x).</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="atanh.htm">ATanH</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the inverse hyperbolic tangent 
+		 of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="ceil.htm">Ceil</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the ceiling of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="cosh.htm">CosH</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the hyperbolic cosine of an angle.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="deviation.htm">Deviation</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the standard deviation from an 
+		 array of numbers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="distance.htm">Distance</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the distance between two points.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="e.htm">E</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the value of the base of the natural 
+		 system of logarithms (e).</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="floor.htm">Floor</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the floor of a number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="fmod.htm">FMod</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the floating-point remainder.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="hypot.htm">Hypot</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Calculates the hypotenuse.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="log10.htm">Log10</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the base 10 logarithm of a specified 
+		 number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="max.htm">Max</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the maximum number from an array 
+		 of numbers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="mean.htm">Mean</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the mean, or average, value from 
+		 an array of numbers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="median.htm">Median</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Return the median value from an array of 
+		 numbers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="min.htm">Min</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the minimum number from an array 
+		 of numbers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="pi.htm">PI</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the PI constant.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="polar.htm">Polar</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns a point at an angle and distance 
+		 from the point.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="rnd.htm">Rnd</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns a random number.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="sinh.htm">SinH</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the hyperbolic sine of an angle.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="solvequadratic.htm">SolveQuadratic</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Solves a quadratic equation.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="sum.htm">Sum</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the sum number from an array of 
+		 numbers.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="tanh.htm">TanH</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Returns the hyperbolic tangent of an angle.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="todegrees.htm">ToDegrees</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Converts an angle in radians to degrees.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.303%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body"><a href="toradians.htm">ToRadians</a></p></td>
+		<td style="width: 90.697%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Converts an angle in degrees to radians.</p></td>
+	</tr>
+</table>
+<p>&#160;&#160;&#160;</p>
+<p>Note, the following non-intrinsic math functions can be derived from 
+ the intrinsic math functions:</p>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<col style="width: 17.236%;" />
+	<col style="width: 82.764%;" />
+	<tr>
+		<td><p class="Table-Head">Function</p></td>
+		<td><p class="Table-Head">Derived Equivalent</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Secant</p></td>
+		<td><p class="Table-Body">Sec(X) = 1 / Cos(X)</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Cosecant</p></td>
+		<td><p class="Table-Body">Cosec(X) = 1 / Sin(X)</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Cotangent</p></td>
+		<td><p class="Table-Body">Cotan(X) = 1 / Tan(X)</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Sine</p></td>
+		<td><p class="Table-Body">Arcsin(X) = Atn(X / Sqr(-X * X + 1))</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Cosine</p></td>
+		<td><p class="Table-Body">Arccos(X) = Atn(-X / Sqr(-X * X + 1)) 
+		 + 2 * Atn(1)</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Secant</p></td>
+		<td><p class="Table-Body">Arcsec(X) = Atn(X / Sqr(X * X - 1)) + 
+		 Sgn((X) -1) * (2 * Atn(1))</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Cosecant</p></td>
+		<td><p class="Table-Body">Arccosec(X) = Atn(X / Sqr(X * X - 1)) 
+		 + (Sgn(X) - 1) * (2 * Atn(1))</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Cotangent</p></td>
+		<td><p class="Table-Body">Arccotan(X) = Atn(X) + 2 * Atn(1)</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Hyperbolic Sine</p></td>
+		<td><p class="Table-Body">HSin(X) = (Exp(X) - Exp(-X)) / 2 </p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Hyperbolic Cosine</p></td>
+		<td><p class="Table-Body">HCos(X) = (Exp(X) + Exp(-X)) / 2</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Hyperbolic Tangent</p></td>
+		<td><p class="Table-Body">HTan(X) = (Exp(X) - Exp(-X)) / (Exp(X) 
+		 + Exp(-X))</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Hyperbolic Secant</p></td>
+		<td><p class="Table-Body">HSec(X) = 2 / (Exp(X) + Exp(-X))</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Hyperbolic Cosecant</p></td>
+		<td><p class="Table-Body">HCosec(X) = 2 / (Exp(X) - Exp(-X))</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Hyperbolic Cotangent</p></td>
+		<td><p class="Table-Body">HCotan(X) = (Exp(X) + Exp(-X)) / (Exp(X) 
+		 - Exp(-X))</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Hyperbolic Sine</p></td>
+		<td><p class="Table-Body">HArcsin(X) = Log(X + Sqr(X * X + 1))</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Hyperbolic Cosine</p></td>
+		<td><p class="Table-Body">HArccos(X) = Log(X + Sqr(X * X - 1))</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Hyperbolic Tangent</p></td>
+		<td><p class="Table-Body">HArctan(X) = Log((1 + X) / (1 - X)) / 
+		 2</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Hyperbolic Secant</p></td>
+		<td><p class="Table-Body">HArcsec(X) = Log((Sqr(-X * X + 1) + 1) 
+		 / X)</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Hyperbolic Cosecant</p></td>
+		<td><p class="Table-Body">HArccosec(X) = Log((Sgn(X) * Sqr(X * 
+		 X + 1) +1) / X)</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Inverse Hyperbolic Cotangent</p></td>
+		<td><p class="Table-Body">HArccotan(X) = Log((X + 1) / (X - 1)) 
+		 / 2</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Logarithm to base N</p></td>
+		<td><p class="Table-Body">LogN(X) = Log(X) / Log(N)</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

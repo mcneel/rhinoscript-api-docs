@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>MeshPatch</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nMesh Methods\nMeshPatch");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"mesh_methods.htm\">Mesh Methods<\/a> > MeshPatch<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>MeshPatch</h1>
+<p>Creates a polygon mesh from curves and points.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.MeshPatch ([strOuterBoundaryPolyline[, strPullbackSurface 
+ [, arrInnerBoundaryCurves [, arrInnerBothsideCurves [, arrInputInnerPoints 
+ [, blnTrimback [, intDivisions]]]]]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 12.524%;" />
+	<col style="width: 87.476%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strOuterBoundaryPolyline</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;String. &#160;The identifier of the outer boundary closed 
+		 polyline curve. If provided, this will become the outer boundary 
+		 of the resulting mesh. Note: Any of the below input that is completely 
+		 outside the outer boundary will be ignored and have no impact 
+		 on the result. &#160;If any of the below input intersects the 
+		 outer boundary the result will be unpredictable and is likely 
+		 to not include the entire outer boundary.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strPullbackSurface </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;String. &#160;The identifier of the initial surface where, 
+		 if provided, 3-D input will be pulled to make a 2-D representation 
+		 used by the function that generates the mesh. &#160;Providing 
+		 a pullback surface can be helpful, for when it is similar in shape 
+		 to the pattern of the input, the pulled 2-D points will be a better 
+		 representation of the 3-D points. If all of the input is more 
+		 or less coplanar to start with, providing pullback surface has 
+		 no real benefit. </p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrInnerBoundaryCurves</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Array. &#160;An array of closed polyline curve identifiers. 
+		 These closed polylines will create holes in the output mesh. &#160;Note: 
+		 If <span style="font-style: italic;"><i>arrInnerBothsideCurves </i></span>are 
+		 the only input, then the result may be Null if <span style="font-style: italic;"><i>blnTrimback 
+		 </i></span>is set to false (see comments for <span style="font-style: italic;"><i>blnTrimback</i></span>) 
+		 because the resulting mesh could be invalid (all faces created 
+		 contained vertexes from the perimeter boundary).</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrInnerBothsideCurves</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Array. &#160;An array of polyline curve identifiers. These 
+		 polylines will create faces on both sides of the edge. &#160;Note: 
+		 If there are only input points (<span style="font-style: italic;"><i>arrInputInnerPoints</i></span>) 
+		 there is no way to guarantee a triangulation that will create 
+		 an edge between two particular points. Adding a line, or polyline, 
+		 to <span style="font-style: italic;"><i>arrInnerBothsideCurves </i></span>that 
+		 includes points from <span style="font-style: italic;"><i>arrInputInnerPoints 
+		 </i></span>will help guide the triangulation.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrInputInnerPoints</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Array. &#160;An array of point object identifiers. These 
+		 are points to be used to generate the mesh. &#160;Note: If <span 
+		 style="font-style: italic;"><i>strOuterBoundaryPolyline </i></span>is 
+		 not Null, points outside of that boundary after it has been pulled 
+		 to <span style="font-style: italic;"><i>strPullbackSurface </i></span>(or 
+		 the best plane through the input if <span style="font-style: italic;"><i>strPullbackSurface 
+		 </i></span>is Null) will be ignored.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">blnTrimback</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Boolean. Only used when a <span style="font-style: italic;"><i>strOuterBoundaryPolyline 
+		 </i></span>has not been provided. &#160;When that is the case, the 
+		 function uses the perimeter of the surface as the outer boundary 
+		 instead. &#160;If <span style="font-style: italic;"><i>blnTrimback 
+		 </i></span>is true, any face of the resulting triangulated mesh that 
+		 contains a vertex of the perimeter boundary will be removed. &#160;The 
+		 default value is True.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">intDivisions</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Number. &#160;This is only used when a <span style="font-style: italic;"><i>strOuterBoundaryPolyline 
+		 </i></span>has not been provided. &#160;When that is the case, <span 
+		 style="font-style: italic;"><i>intDivisions </i></span>becomes the number 
+		 of divisions each side of the surface's perimeter will be divided 
+		 into to create an outer boundary to work with. The default value 
+		 is 10.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 12.319%;" />
+	<col style="width: 87.681%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Array</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">The 
+		 identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strOuterBoundaryPolyline, 
+ strPullbackSurface</p>
+<p class="Code" style="margin-left: 12px;">Dim arrInnerBoundaryCurves, 
+ arrInnerBothsideCurves, arrInputInnerPoints</p>
+<p class="Code" style="margin-left: 12px;">strOuterBoundaryPolyline = Rhino.GetObject(&quot;Select 
+ closed polyline for boundary, press enter to skip&quot;, 4)</p>
+<p class="Code" style="margin-left: 12px;">strPullbackSurface = Rhino.GetObject(&quot;Select 
+ surface to pull points to, press enter to skip&quot;, 8)</p>
+<p class="Code" style="margin-left: 12px;">arrInnerBoundaryCurves = Rhino.GetObjects(&quot;Select 
+ additional closed polylines for holes, press enter to skip&quot;, 4)</p>
+<p class="Code" style="margin-left: 12px;">arrInnerBothsideCurves = Rhino.GetObjects(&quot;Select 
+ additional polylines, press enter to skip&quot;, 4)</p>
+<p class="Code" style="margin-left: 12px;">arrInputInnerPoints = Rhino.GetObjects(&quot;Select 
+ points, press enter to skip&quot;, 1)</p>
+<p class="Code" style="margin-left: 12px;">Call Rhino.MeshPatch(strOuterBoundaryPolyline, 
+ strPullbackSurface, arrInnerBoundaryCurves, arrInnerBothsideCurves, arrInputInnerPoints)</p>
+<h3 class="Code">Also See</h3>
+<p><a href="addmesh.htm">AddMesh</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

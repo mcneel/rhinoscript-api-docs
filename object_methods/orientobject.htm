@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>OrientObject</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nObject Methods\nOrientObject");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"object_methods.htm\">Object Methods<\/a> > OrientObject<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>OrientObject</h1>
+<p>Orients a single object based on input points.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.OrientObject (strObject, arrReference, arrTarget [, intFlags])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.679%;" />
+<col style="width: 90.321%;" />
+<tr style="height: 24px;" valign="top">
+<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strObject</p>
+</td>
+<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The identifier of the object to orient.</p>
+</td>
+</tr>
+<tr style="height: 24px;" valign="top">
+<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrReference</p>
+</td>
+<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array. &#160;An array of 3-D reference points. &#160;If two 3-D points are specified, then this method will function similar to Rhino's <span style="font-weight: bold;"><b>Orient</b></span> command. &#160;If more than two 3-D points are specified, then the function will orient similar to Rhino's <span style="font-weight: bold;"><b>Orient3Pt</b></span> command.</p>
+</td>
+</tr>
+<tr style="height: 24px;" valign="top">
+<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrTarget</p>
+</td>
+<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array. &#160;An array of 3-D target points. &#160;If two 3-D points are specified, then this method will function similar to Rhino's <span style="font-weight: bold;"><b>Orient</b></span> command. &#160;If more than two 3-D points are specified, then the function will orient similar to Rhino's <span style="font-weight: bold;"><b>Orient3Pt</b></span> command.</p>
+</td>
+</tr>
+<tr style="height: 24px;" valign="top">
+<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">intFlags</p>
+</td>
+<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Number. &#160;The orient flags. &#160;Values can be added together to specify multiple options.</p>
+<table cellspacing="0" width="100%">
+<col style="width: 5.193%;" />
+<col style="width: 94.807%;" />
+<tr valign="top">
+<td style="width: 5.193%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Value</p>
+</td>
+<td style="width: 94.807%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 5.193%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1</p>
+</td>
+<td style="width: 94.807%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Copy object. &#160;The default is not to copy the object.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 5.193%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">2</p>
+</td>
+<td style="width: 94.807%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Scale object. &#160;The default is not to scale the object. &#160;Note, the scale option only applies if both <span style="font-style: italic;"><i>arrReference</i></span> and <span style="font-style: italic;"><i>arrTarget</i></span> contain only two 3-D points.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.756%;" />
+<col style="width: 90.244%;" />
+<tr valign="top">
+<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String</p>
+</td>
+<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The identifier of the oriented object if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strObject, arrReference, arrTarget</p>
+<p class="Code" style="margin-left: 12px;">strObject = Rhino.GetObject("Select object to orient")</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strObject) Then</p>
+<p class="Code" style="margin-left: 24px;">arrReference = Rhino.GetPoints(,,"First reference point")</p>
+<p class="Code" style="margin-left: 24px;">If IsArray(arrReference) And (UBound(arrReference) &gt; 0) Then</p>
+<p class="Code" style="margin-left: 36px;">arrTarget = Rhino.GetPoints(,,"First target point")</p>
+<p class="Code" style="margin-left: 36px;">If IsArray(arrTarget) And (UBound(arrTarget) &gt; 0) Then</p>
+<p class="Code" style="margin-left: 48px;">Rhino.OrientObject strObject, arrReference, arrTarget</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="orientobjects.htm">OrientObjects</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

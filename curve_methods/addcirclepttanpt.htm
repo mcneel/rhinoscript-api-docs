@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddCirclePtTanPt</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nAddCirclePtTanPt");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > AddCirclePtTanPt<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddCirclePtTanPt</h1>
+<p>Adds a circle curve, created from two points and a start direction, 
+ to the document.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddCirclePtTanPt (arrStart, arrDirection, arrPoint)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 8.73%;" />
+	<col style="width: 91.27%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrStart</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The starting/ending 
+		 point of the circle.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrDirection</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The circle 
+		 direction at <span style="font-style: italic;"><i>arrStart</i></span>.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 8.73%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPoint</p></td>
+		<td style="width: 91.27%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The second 
+		 point of the circle.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 8.987%;" />
+	<col style="width: 91.013%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 8.987%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 91.013%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 8.987%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 91.013%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrPick, arrPoint, arrDomain, 
+ arrOrigin, arrTangent</p>
+<p class="Code" style="margin-left: 12px;">arrPick = Rhino.GetCurveObject(&quot;Select 
+ curve&quot;)</p>
+<p class="Code" style="margin-left: 12px;">arrPoint = Rhino.GetPoint(&quot;Point 
+ on circle&quot;)</p>
+<p class="Code" style="margin-left: 12px;">arrDomain = Rhino.CurveDomain(arrPick(0))</p>
+<p class="Code" style="margin-left: 12px;">If Abs(arrPick(4) - arrDomain(0)) 
+ &lt; Abs(arrPick(4) - arrDomain(1)) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrOrigin = Rhino.CurveStartPoint(arrPick(0))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrTangent = Rhino.VectorReverse(Rhino.CurveTangent(arrPick(0), 
+ arrDomain(0)))</p>
+<p class="Code" style="margin-left: 12px;">Else</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrOrigin = Rhino.CurveEndPoint(arrPick(0))</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrTangent = Rhino.CurveTangent(arrPick(0), 
+ arrDomain(1))</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<p class="Code" style="margin-left: 12px;">Call Rhino.AddCirclePtTanPt(arrOrigin, 
+ arrTangent, arrPoint)</p>
+<h3>Also See</h3>
+<p><a href="addcurve.htm">AddCircle</a></p>
+<p><a href="addcircle3pt.htm">AddCircle3Pt</a></p>
+<p><a href="addcircletantan.htm">AddCircleTanTan</a></p>
+<p><a href="addcircletantantan.htm">AddCircleTanTanTan</a></p>
+<p><a href="iscircle.htm">IsCircle</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

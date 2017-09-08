@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>DocumentInfo</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nDocument Methods\nDocumentInfo");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"document_methods.htm\">Document Methods<\/a> > DocumentInfo<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>DocumentInfo</h1>
+<p>Returns summary information about a saved document (3dm).</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.DocumentInfo ([strFileName])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.679%;" />
+	<col style="width: 90.321%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="width: 9.679%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strFileName</p></td>
+		<td style="width: 90.321%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;The file 
+		 name of the document to query. Of omitted, the currently loaded 
+		 document will be queried as long as it has been saved to disk.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.756%;" />
+	<col style="width: 90.244%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">An array of document if successful. The 
+		 array will contain the following information:</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 7.117%;" />
+			<col style="width: 92.883%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Element</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">String. The file name</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number. The file version</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">String. General comments and notes 
+				 useful to McNeel Technical Support.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">3</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">String. The name of the user who 
+				 created the document</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">4</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Date. The date the document was 
+				 created</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">5</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">String. The name of the user who 
+				 last edited the document.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">6</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Date. The date the document was 
+				 last saved</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">7</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number. The revision count.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">8</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">String. The application that last 
+				 saved the document.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">9</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">String. The web site, or URL, of 
+				 the application that last saved the document.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">10</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">String. Other details about the 
+				 application that last saved the document.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 7.117%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">11</p></td>
+				<td style="width: 92.883%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Number. The model <a href="unitsystem.htm">unit 
+				 system</a>.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.756%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.244%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub TestDocumentInfo</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim strFile, arrInfo, 
+ i</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;strFile = Rhino.OpenFileName(&quot;Open&quot;, 
+ &quot;Rhino Model (*.3dm)|*.3dm||&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsNull(strFile) 
+ Then Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrInfo = Rhino.DocumentInfo(strFile)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If IsNull(arrInfo) 
+ Then Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.ClearCommandHistory</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For i = 0 to UBound(arrInfo)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Rhino.Print 
+ arrInfo(i)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3>Also See</h3>
+<p><a href="documentname.htm">DocumentName</a></p>
+<p><a href="documentpath.htm">DocumentPath</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

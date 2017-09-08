@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>External Access</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Introduction\nExternal Access");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../introduction.htm\">Introduction<\/a> > External Access<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>External Access</h1>
+<p>Although the RhinoScript Automation object resides in a Rhino plug-in, 
+ external access to this object is available outside of Rhino. &#160;External 
+ access to the RhinoScript object is available through Rhino's automation, 
+ or COM, interface. &#160;Thus, it is possible to access all of the methods 
+ provided by the RhinoScript object from other automation aware products 
+ and development environments, such as Microsoft Visual Basic Script, or 
+ C#.</p>
+<h2>Rhino Objects</h2>
+<p>There are several different Rhino objects that you can create:</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 13.941%;" />
+	<col style="width: 86.059%;" />
+	<tr>
+		<td><p class="Table-Head">Object</p></td>
+		<td><p class="Table-Head">Comments</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Rhino.Application</p></td>
+		<td><p class="Table-Body">Version independent identifier</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Rhino.Application.6</p></td>
+		<td><p class="Table-Body">Version dependent identifier</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Rhino.Interface</p></td>
+		<td><p class="Table-Body">Version independent identifier</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">Rhino.Interface.6</p></td>
+		<td><p class="Table-Body">Version dependent identifier</p></td>
+	</tr>
+</table>
+<h2>More Information</h2>
+<p>For details on the methods and properties available to these objects, 
+ see <a href="../rhino_properties_methods/rhino_properties_and_methods.htm">Rhino 
+ Methods and Properties</a>.</p>
+<h2>Application verses Interface Object</h2>
+<p>Creating a Rhino Application object will always result in a new running 
+ instance of Rhino. </p>
+<p>When you create a Rhino Interface object, if an instance of Rhino is 
+ already running, you will be given a reference to this existing Interface 
+ object. If Rhino is not running, it will be launched and you be given 
+ a reference to this newly created object. Note, if more than one instance 
+ of Rhino is already running, there is no way to determine in advance which 
+ running instance to which you will be given reference.</p>
+<h2>What To Use?</h2>
+<p>If you are planning on writing an application that will automate Rhino, 
+ you will have to decide which automation object to use. </p>
+<ul type="disc">
+	<li><p>If your application will be using Rhino as a file conversion 
+	 engine or to create geometry without displaying the interface, you 
+	 will want to use Rhino's Application object.</p></li>
+	<li><p>If your application must always create a new running instance 
+	 of Rhino, then you will want to use Rhino's Application object.</p></li>
+	<li><p>If your application contains tools to automate tasks or to assist 
+	 the Rhino user in generating geometry, then you will want to use Rhino's 
+	 Interface object.</p></li>
+</ul>
+<h2>Connecting to Rhino</h2>
+<p>The following example demonstrates how to connect to Rhino from an external 
+ script written in VBScript. Note, it is possible to connect to any language 
+ that supports ActiveX automation, such as C#, Visual Basic, and C++.</p>
+<p>&#160;</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">' Try creating 
+ a Rhino Application object</p>
+<p class="Code" style="margin-left: 12px;">Dim objRhino</p>
+<p class="Code" style="margin-left: 12px;">On Error Resume Next</p>
+<p class="Code" style="margin-left: 12px;">Set objRhino = CreateObject(&quot;Rhino.Application&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If Err.Number &lt;&gt; 0 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Call WScript.Echo(&quot;Failed 
+ to create Rhino object.&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<p class="Code" style="margin-left: 12px;">Call WScript.Echo(&quot;Rhino 
+ object created.&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p>Note to developers: Rhino includes a type library (Rhino.tlb), which 
+ contains information about both the<span style="font-weight: bold;"><b> Rhino.Application</b></span> 
+ and <span style="font-weight: bold;"><b>Rhino.Interface</b></span> objects. Rhino's 
+ type library file can be found in Rhino's &quot;System&quot; folder.</p>
+<h2>Connecting to Rhino</h2>
+<p>&#160;</p>
+<p class="Code" style="margin-left: 12px; color: #008000;"><span style="color: #008000;"><font color="green" >' 
+ Try creating a Rhino Application object</font></span></p>
+<p class="Code" style="margin-left: 12px;">Dim objRhino, objRhinoScript, 
+ nRetries</p>
+<p class="Code" style="margin-left: 12px;">On Error Resume Next</p>
+<p class="Code" style="margin-left: 12px;">Set objRhino = CreateObject(&quot;Rhino.Application&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If Err.Number &lt;&gt; 0 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Call WScript.Echo(&quot;Failed 
+ to create Rhino object.&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Exit Sub</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<p class="CodeComment">' Wait for Rhino to finish initializing</p>
+<p class="Code" style="margin-left: 12px;">nRetries = 0</p>
+<p class="Code" style="margin-left: 12px;">Do While (nRetries &lt; 10)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;<span style="margin-left: 12px;">&#160;&#160;If 
+ objRhino.IsInitialized = 0 Then</span></p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ WScript.Sleep(500)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;nRetries 
+ = nRetries + 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Else</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Call 
+ WScript.Echo(&quot;Rhino initialization failed&quot;)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Exit 
+ Sub &#160;&#160;&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">Loop</p>
+<p class="CodeComment">' Try getting RhinoScript object</p>
+<p class="Code" style="margin-left: 12px;">Set objRhinoScript = objRhino.GetScriptObject</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p>Note to developers: RhinoScript includes a type library (RhinoScript.tlb), 
+ which contains information about both the RhinoScript object. RhinoScript's 
+ type library file can be found in Rhino's &quot;Plug-ins&quot; folder.</p>
+<h2>Schemes</h2>
+<p>Rhino Schemes are different sets of Rhino Options that are stored in 
+ the Windows Registry. Everything in the Options section of Rhino can be 
+ stored in a scheme. In this way, Rhino can be started with different combinations 
+ of workspaces, languages, colors, etc. depending on the need or the user, 
+ just by starting Rhino from the appropriate desktop shortcut. The schemes 
+ exist independently of each other, and can be modified as desired. </p>
+<p>If Rhino is launched via ActiveX automation, there is no way to specify 
+ an alternate scheme (being that you cannot pass command line arguments 
+ when creating COM objects). But, we have provided a hidden registry key 
+ that you can use to specify an alternate scheme. Note, this registry key 
+ only works if Rhino is launched via ActiveX automation. The registry key 
+ is: </p>
+<p class="Code">HKEY_CURRENT_USER\Software\McNeel\Rhinoceros\6.0\Global 
+ Options\Automation</p>
+<p class="Code">Name: Scheme</p>
+<p class="Code">Type: REG_SZ</p>
+<p class="Code">Value: &lt;scheme_name&gt;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

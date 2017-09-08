@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="06 7, 2002 4:20:02 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddInterpCurve</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nAddInterpCurve");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > AddInterpCurve<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddInterpCurve</h1>
+<p>Adds an interpolated curve object to &#160;the document. &#160;Options 
+ exist to make a periodic curve or to specify the tangent at the endpoints. 
+ &#160;The resulting curve is a non-rational NURBS 
+ curve of the specified degree.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddInterpCurve (arrPoints [, intDegree [, intKnotStyle 
+ [, arrStartTan [, arrEndTan]]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 8.991%;" />
+	<col style="width: 91.009%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 8.991%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPoints</p></td>
+		<td style="width: 91.009%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;An array containing 
+		 3-D points to interpolate. &#160;For periodic curves, if the final 
+		 point is a duplicate of the initial point, it is ignored. Note, 
+		 the number of control points must be &gt;= (int<span style="font-style: italic;"><i>Degree</i></span>+1).</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 8.991%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intDegree</p></td>
+		<td style="width: 91.009%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. &#160;The degree 
+		 of the curve. &#160;If omitted, degree = 3 is used. &#160;The 
+		 degree of the curve must be &gt;=1. &#160;Periodic curves must 
+		 have a degree &gt;= 2. &#160;For <span style="font-style: italic;"><i>intKnotStyle</i></span> 
+		 = 1 or 2, the degree must be 3. &#160;For <span style="font-style: italic;"><i>intKnotStyle</i></span> 
+		 = 4 or 5, the degree must be odd.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 8.991%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intKnotStyle</p></td>
+		<td style="width: 91.009%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Number. The knot style, 
+		 or spacing to use, and whether the curve should be periodic. &#160;If 
+		 omitted, uniform knots (0) are created.</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 5.035%;" />
+			<col style="width: 94.965%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 5.035%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="width: 94.965%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.035%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 94.965%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Uniform spacing (k[i+1] - k[i] 
+				 = 1). &#160;Parameter spacing between consecutive knots 
+				 is 1.0. &#160;Use this when input points are evenly spaced.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.035%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 94.965%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Chord length spacing (k[i+1] - 
+				 k[i] = |P[i-1] - P[i-2]|). &#160;Requires <span style="font-style: italic;"><i>intDegree 
+				 </i></span>= 3. &#160;When in doubt, use this spacing.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.035%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 94.965%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Sqrt chord length spacing (k[i+1] 
+				 - k[i] = sqrt(|P[i-1] - P[i-2]|). &#160;Requires <span 
+				 style="font-style: italic;"><i>intDegree </i></span>= 3. &#160;Use 
+				 with care, as it is easy to produce self-intersecting 
+				 curves.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.035%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">3</p></td>
+				<td style="width: 94.965%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Periodic with uniform spacing.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.035%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">4</p></td>
+				<td style="width: 94.965%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Periodic with chord length spacing. 
+				 &#160;Requires an odd degree value.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.035%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">5</p></td>
+				<td style="width: 94.965%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Periodic with sqrt chord length 
+				 spacing. &#160;Requires an odd degree value.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 8.991%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: normal;">arrStartTan</p></td>
+		<td style="width: 91.009%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Array. &#160;A 3-D vector 
+		 that specifies a tangency condition at the beginning of the curve. 
+		 If the curve is periodic, this argument must be omitted.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 8.991%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: normal;">arrEndTan</p></td>
+		<td style="width: 91.009%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Array. &#160;A 3-D vector 
+		 that specifies a tangency condition at the end of the curve. If 
+		 the curve is periodic, this argument must be omitted.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.087%;" />
+	<col style="width: 90.913%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.087%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 90.913%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.087%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.913%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrPoints</p>
+<p class="Code" style="margin-left: 12px;">arrPoints = Rhino.GetPoints(True, 
+ , &quot;Pick curve point&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrPoints) Then</p>
+<p class="Code" style="margin-left: 24px;">Rhino.AddInterpCurve arrPoints</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="addcurve.htm">AddCurve</a></p>
+<p><a href="addinterpcurveex.htm">AddInterpCurveEx</a></p>
+<p><a href="curvepointcount.htm">CurvePointCount</a></p>
+<p><a href="iscurve.htm">IsCurve</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>SimplifyCurve</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nSimplifyCurve");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > SimplifyCurve<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>
+SimplifyCurve</h1>
+<p>Simplify curve replaces the curve with a geometrically equivalent polycurve. The polycurve will have the following properties:</p>
+<ol type="1">
+<li class="p">
+<p>&#160;All the polycurve segments are lines, polylines, arcs, or NURBS curves.</p>
+</li>
+<li class="p">
+<p>&#160;The NURBS curves segments do not have fully multiple interior knots.</p>
+</li>
+<li class="p">
+<p>&#160;Rational NURBS curves do not have constant weights.</p>
+</li>
+<li class="p">
+<p>&#160;Any segment for which <a href="iscurvelinear.htm">IsCurveLinear</a> or <a href="isarc.htm">IsArc</a> is True is a line, polyline segment, or an arc.</p>
+</li>
+<li class="p">
+<p>&#160;Adjacent co-linear or co-circular segments are combined.</p>
+</li>
+<li class="p">
+<p>&#160;Segments that meet with G1-continuity have there ends tuned up so that they meet with G1-continuity to within machine precision.</p>
+</li>
+</ol>
+<h3>Syntax</h3>
+<p class="Code">Rhino.SimplifyCurve (strObject [, intFlags])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.632%;" />
+<col style="width: 90.368%;" />
+<tr valign="top">
+<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strObject</p>
+</td>
+<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The curve object's identifier.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.632%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">intFlags</p>
+</td>
+<td style="width: 90.368%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Number. &#160;The simplification methods to use. By default, all methods are used (intFlags = 0). The possible options are as follows:</p>
+<table cellspacing="0" width="100%">
+<col style="width: 5.662%;" />
+<col style="width: 94.338%;" />
+<tr valign="top">
+<td style="width: 5.662%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Value</p>
+</td>
+<td style="width: 94.338%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 5.662%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">0</p>
+</td>
+<td style="width: 94.338%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Use all methods.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 5.662%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1</p>
+</td>
+<td style="width: 94.338%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Do not split NURBS curves at fully multiple knots.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 5.662%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">2</p>
+</td>
+<td style="width: 94.338%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Do not replace segments with <a href="iscurvelinear.htm">IsCurveLinear</a> = True with line curves.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 5.662%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">4</p>
+</td>
+<td style="width: 94.338%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Do not replace segments with <a href="isarc.htm">IsArc</a> = True with arc curves.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 5.662%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">8</p>
+</td>
+<td style="width: 94.338%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Do not replace rational NURBS curves with constant denominator with an equivalent non-rational NURBS curve.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 5.662%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">16</p>
+</td>
+<td style="width: 94.338%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Do not adjust curves at G1-joins.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 5.662%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">32</p>
+</td>
+<td style="width: 94.338%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Do not merge adjacent co-linear lines or co-circular arcs or combine consecutive line segments into a polyline.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 9.618%;" />
+<col style="width: 90.382%;" />
+<tr valign="top">
+<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Boolean</p>
+</td>
+<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">True or False indicating success or failure.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 9.618%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 90.382%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">On error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Const rhCurveObject = 4</p>
+<p class="Code" style="margin-left: 12px;">Dim strObject</p>
+<p class="Code" style="margin-left: 12px;">strObject = Rhino.GetObject("Select a curve to simplify", rhCurveObject)</p>
+<p class="Code" style="margin-left: 12px;">If Rhino.IsCurve(strObject) Then</p>
+<p class="Code" style="margin-left: 24px;">Rhino.SimplifyCurve strObject</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="isarc.htm">IsArc</a></p>
+<p><a href="iscurvelinear.htm">IsCurveLinear</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

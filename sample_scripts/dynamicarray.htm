@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>DynamicArray</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nDynamicArray");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > DynamicArray<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>DynamicArray</h1>
+<p>DynamicArray is a VBScript class for maintaining dynamic arrays of data. That is, an array that "knows" how to add, insert, and delete it's elements.</p>
+<h3>Example</h3>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Class: &#160;&#160;DynamicArray</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: VBScript dynamic array class</p>
+<p class="CodeComment" style="margin-left: 12px;">' Usage:</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Set arr = New DynamicArray &#160;' Create an instance of DynamicArray.</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;arr.Add "Hello Rhino" &#160;&#160;&#160;&#160;&#160;&#160;' Add a new element</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Rhino.Print arr.Data(0) &#160;&#160;&#160;&#160;' Retrieve the value</p>
+<p class="CodeComment" style="margin-left: 12px;">' &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Set arr = Nothing &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Destroy the instance.</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Option Explicit</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">Class DynamicArray</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Private data member</p>
+<p class="Code" style="margin-left: 24px;">Private m_aData</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Initialize event.</p>
+<p class="Code" style="margin-left: 24px;">Private Sub Class_Initialize()</p>
+<p class="Code" style="margin-left: 36px;">m_aData = Array(0)</p>
+<p class="Code" style="margin-left: 24px;">End Sub</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Terminate event.</p>
+<p class="Code" style="margin-left: 24px;">Private Sub Class_Terminate()</p>
+<p class="Code" style="margin-left: 36px;">ReDim m_aData(0)</p>
+<p class="Code" style="margin-left: 24px;">End Sub</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Returns the value at a given position in the array.</p>
+<p class="Code" style="margin-left: 24px;">Public Property Get Data(iPos)</p>
+<p class="Code" style="margin-left: 36px;">If iPos &lt; LBound(m_aData) or iPos &gt; UBound(m_aData) Then</p>
+<p class="Code" style="margin-left: 48px;">Exit Property</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 36px;">If IsObject(m_aData(iPos)) Then</p>
+<p class="Code" style="margin-left: 48px;">Set Data = m_aData(iPos)</p>
+<p class="Code" style="margin-left: 36px;">Else</p>
+<p class="Code" style="margin-left: 48px;">Data = m_aData(iPos)</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">End Property</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Sets the value at a given position in the array.</p>
+<p class="Code" style="margin-left: 24px;">Public Property Let Data(iPos, vValue)</p>
+<p class="Code" style="margin-left: 36px;">If iPos &lt; LBound(m_aData) Then Exit Property</p>
+<p class="Code" style="margin-left: 36px;">If iPos &gt; UBound(m_aData) Then</p>
+<p class="Code" style="margin-left: 48px;">Redim Preserve m_aData(iPos)</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 36px;">If IsObject(vValue) Then</p>
+<p class="Code" style="margin-left: 48px;">Set m_aData(iPos) = vValue</p>
+<p class="Code" style="margin-left: 36px;">Else</p>
+<p class="Code" style="margin-left: 48px;">m_aData(iPos) = vValue</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">End Property</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Returns the entire array.</p>
+<p class="Code" style="margin-left: 24px;">Public Property Get DataArray()</p>
+<p class="Code" style="margin-left: 36px;">DataArray = m_aData</p>
+<p class="Code" style="margin-left: 24px;">End Property</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Returns the starting index of the array.</p>
+<p class="Code" style="margin-left: 24px;">Public Property Get StartIndex()</p>
+<p class="Code" style="margin-left: 36px;">StartIndex = LBound(m_aData)</p>
+<p class="Code" style="margin-left: 24px;">End Property</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Returns the ending index of the array.</p>
+<p class="Code" style="margin-left: 24px;">Public Property Get EndIndex()</p>
+<p class="Code" style="margin-left: 36px;">EndIndex = UBound(m_aData)</p>
+<p class="Code" style="margin-left: 24px;">End Property</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Returns the number of data elements in the array.</p>
+<p class="Code" style="margin-left: 24px;">Public Property Get Count()</p>
+<p class="Code" style="margin-left: 36px;">Count = UBound(m_aData) - LBound(m_aData)</p>
+<p class="Code" style="margin-left: 24px;">End Property</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Adds a new element to the array.</p>
+<p class="Code" style="margin-left: 24px;">Public Function Add(vValue)</p>
+<p class="Code" style="margin-left: 36px;">If IsObject(vValue) Then</p>
+<p class="Code" style="margin-left: 48px;">Set m_aData(UBound(m_aData)) = vValue</p>
+<p class="Code" style="margin-left: 36px;">Else</p>
+<p class="Code" style="margin-left: 48px;">m_aData(UBound(m_aData)) = vValue</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 36px;">Add = UBound(m_aData)</p>
+<p class="Code" style="margin-left: 36px;">Redim Preserve m_aData(UBound(m_aData) + 1)</p>
+<p class="Code" style="margin-left: 24px;">End Function</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Inserts a new element at a given position in the array.</p>
+<p class="Code" style="margin-left: 24px;">Public Function Insert(iPos, vValue)</p>
+<p class="Code" style="margin-left: 36px;">If iPos &gt; UBound(m_aData) Then</p>
+<p class="Code" style="margin-left: 48px;">Call Add(vValue)</p>
+<p class="Code" style="margin-left: 48px;">Exit Function</p>
+<p class="Code" style="margin-left: 36px;">ElseIf iPos &gt;= LBound(m_aData) Then</p>
+<p class="Code" style="margin-left: 48px;">Dim iLoop</p>
+<p class="Code" style="margin-left: 48px;">For iLoop = UBound(m_aData) to iPos + 1 Step -1</p>
+<p class="Code" style="margin-left: 60px;">If IsObject(m_aData(iLoop - 1)) Then</p>
+<p class="Code" style="margin-left: 72px;">Set m_aData(iLoop) = m_aData(iLoop - 1)</p>
+<p class="Code" style="margin-left: 60px;">Else</p>
+<p class="Code" style="margin-left: 72px;">m_aData(iLoop) = m_aData(iLoop - 1)</p>
+<p class="Code" style="margin-left: 60px;">End If</p>
+<p class="Code" style="margin-left: 48px;">Next</p>
+<p class="Code" style="margin-left: 48px;">If IsObject(vValue) Then</p>
+<p class="Code" style="margin-left: 60px;">Set m_aData(iPos) = vValue</p>
+<p class="Code" style="margin-left: 48px;">Else</p>
+<p class="Code" style="margin-left: 60px;">m_aData(iPos) = vValue</p>
+<p class="Code" style="margin-left: 48px;">End If</p>
+<p class="Code" style="margin-left: 48px;">Insert = UBound(m_aData)</p>
+<p class="Code" style="margin-left: 48px;">Redim Preserve m_aData(UBound(m_aData) + 1)</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 24px;">End Function</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Deletes an element from the array. Shrinks the array by 1.</p>
+<p class="Code" style="margin-left: 24px;">Public Sub Delete(iPos)</p>
+<p class="Code" style="margin-left: 36px;">If iPos &lt; LBound(m_aData) or iPos &gt; UBound(m_aData) Then</p>
+<p class="Code" style="margin-left: 48px;">Exit Sub</p>
+<p class="Code" style="margin-left: 36px;">End If</p>
+<p class="Code" style="margin-left: 36px;">Dim iLoop</p>
+<p class="Code" style="margin-left: 36px;">For iLoop = iPos to UBound(m_aData) - 1</p>
+<p class="Code" style="margin-left: 48px;">If IsObject(m_aData(iLoop + 1)) Then</p>
+<p class="Code" style="margin-left: 60px;">Set m_aData(iLoop) = m_aData(iLoop + 1)</p>
+<p class="Code" style="margin-left: 48px;">Else</p>
+<p class="Code" style="margin-left: 60px;">m_aData(iLoop) = m_aData(iLoop + 1)</p>
+<p class="Code" style="margin-left: 48px;">End If</p>
+<p class="Code" style="margin-left: 36px;">Next</p>
+<p class="Code" style="margin-left: 36px;">Redim Preserve m_aData(UBound(m_aData) - 1)</p>
+<p class="Code" style="margin-left: 24px;">End Sub</p>
+<p class="CodeComment" style="margin-left: 24px;">'-------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 24px;">' Reinitializes the array. Removes any existing elements.</p>
+<p class="Code" style="margin-left: 24px;">Public Sub Flush()</p>
+<p class="Code" style="margin-left: 36px;">ReDim m_aData(0)</p>
+<p class="Code" style="margin-left: 24px;">End Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;</p>
+<p class="Code" style="margin-left: 12px;">End Class</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

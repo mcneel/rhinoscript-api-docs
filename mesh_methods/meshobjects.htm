@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>MeshObjects</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nMesh Methods\nMeshObjects");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"mesh_methods.htm\">Mesh Methods<\/a> > MeshObjects<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>MeshObjects</h1>
+<p>Creates mesh objects from surface, polysurface, and extrusion objects. 
+ Blocks that contain surface, polysurface, and extrusion objects can also 
+ be meshes.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.MeshObjects (arrObjects [, intStyle [, arrMeshParameters]])</p>
+<p class="Code">Rhino.MeshObjects (strObject [, intStyle [, arrMeshParameters]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 14.782%;" />
+	<col style="width: 85.218%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrObjects</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 Array. An array of strings identifying the objects to mesh.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strObject</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 String. The identifier of the object to mesh.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">intStyle</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Number. &#160;The user interface style.</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 13.645%;" />
+			<col style="width: 86.355%;" />
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold; margin-left: 12px; 
+					 text-indent: -12px;">Value</p></td>
+				<td style="padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold; text-indent: -8px;">Description</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">-1</p></td>
+				<td><p class="Table-Body">No user interface.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">0 
+				 (Default)</p></td>
+				<td><p class="Table-Body">Simple dialog box.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">1</p></td>
+				<td><p class="Table-Body">Detailed dialog box.</p></td>
+			</tr>
+			<tr>
+				<td><p class="Table-Body" style="margin-left: 12px;">2</p></td>
+				<td><p class="Table-Body">Command line, or scriptable, 
+				 interface.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrMeshParameters</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Array. &#160;The parameters to use during meshing. See <a href="meshparameters.htm">MeshParameters</a> for more information. 
+		 If omitted, then the document's current render mesh parameters 
+		 are used.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 14.767%;" />
+	<col style="width: 85.233%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Array</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 <span style="font-style: italic;"><i>arrObjects</i></span> was specified, 
+		 then the identifiers of the new mesh objects if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">String</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 <span style="font-style: italic;"><i>strObject </i></span>was specified, 
+		 then the identifier of the new mesh object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">arrObjects = Rhino.GetObjects(&quot;Select 
+ objects to mesh&quot;)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrObjects) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;arrMP = Rhino.MeshParameters(0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.MeshObjects 
+ arrObjects, -1, arrMP</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="ismesh.htm">IsMesh</a></p>
+<p><a href="../surface_and_polysurface_methods/ispolysurface.htm">IsPolysurface</a></p>
+<p><a href="../surface_and_polysurface_methods/issurface.htm">IsSurface</a></p>
+<p><a href="meshparameters.htm">MeshParameters</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

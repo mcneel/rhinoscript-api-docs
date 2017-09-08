@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>ExtendCurveLength</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nCurve Methods\nExtendCurveLength");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"curve_methods.htm\">Curve Methods<\/a> > ExtendCurveLength<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>ExtendCurveLength</h1>
+<p>Extends a non-closed curve object by a line, arc, or smooth extension 
+ for a specified distance. &#160;Negative length values will shorten the 
+ curve.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.ExtendCurveLength (strObject, intType, intSide, dblLength)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.661%;" />
+	<col style="width: 89.339%;" />
+	<tr valign="top">
+		<td style="width: 10.661%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strObject</p></td>
+		<td style="width: 89.339%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;The object's 
+		 identifier.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="width: 10.661%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intType</p></td>
+		<td style="width: 89.339%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;Type of extension.</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 5.783%;" />
+			<col style="width: 94.217%;" />
+			<tr valign="top">
+				<td style="width: 5.783%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="width: 94.217%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr valign="top">
+				<td style="width: 5.783%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 94.217%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Line - Creates an line extension 
+				 tangent to the original curve.</p></td>
+			</tr>
+			<tr valign="top">
+				<td style="width: 5.783%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 94.217%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Arc - Creates an arc extension 
+				 tangent to the original curve.</p></td>
+			</tr>
+			<tr valign="top">
+				<td style="width: 5.783%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 94.217%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Smooth - Creates a smooth curve 
+				 extension curvature continuous with the original curve.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr valign="top">
+		<td style="width: 10.661%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">intSide</p></td>
+		<td style="width: 89.339%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;The size 
+		 to &#160;extent.</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 6.045%;" />
+			<col style="width: 93.955%;" />
+			<tr valign="top">
+				<td style="width: 6.045%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Value</p></td>
+				<td style="width: 93.955%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body" style="font-weight: bold;">Description</p></td>
+			</tr>
+			<tr valign="top">
+				<td style="width: 6.045%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 93.955%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Extend from the start of the curve.</p></td>
+			</tr>
+			<tr valign="top">
+				<td style="width: 6.045%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 93.955%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Extend from the end of the curve.</p></td>
+			</tr>
+			<tr valign="top">
+				<td style="width: 6.045%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 93.955%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">Extend from both the start and 
+				 the end of the curve.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr valign="top">
+		<td style="width: 10.661%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblLength</p></td>
+		<td style="width: 89.339%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;The distance 
+		 to extend the curve.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 11.545%;" />
+	<col style="width: 88.455%;" />
+	<tr valign="top">
+		<td style="width: 11.545%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 88.455%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the extended object if 
+		 successful.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="width: 11.545%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 88.455%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Const rhObjectCurve = 4</p>
+<p class="Code" style="margin-left: 12px;">Dim strCurve, dblLength</p>
+<p class="Code" style="margin-left: 12px;">strCurve = Rhino.GetObject(&quot;Select 
+ curve to extend&quot;, rhObjectCurve)</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strCurve) Then</p>
+<p class="Code" style="margin-left: 24px;">dblLength = 3.0</p>
+<p class="Code" style="margin-left: 24px;">dblLength = Rhino.GetReal(&quot;Length 
+ to extend&quot;, dblLength)</p>
+<p class="Code" style="margin-left: 24px;">If IsNumeric(dblLength) Then</p>
+<p class="Code" style="margin-left: 36px;">Rhino.ExtendCurveLength strCurve, 
+ 2, 2, dblLength</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3 class="Code">Also See</h3>
+<p><a href="extendcurve.htm">ExtendCurve</a></p>
+<p><a href="extendcurvepoint.htm">ExtendCurvePoint</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

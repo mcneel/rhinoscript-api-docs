@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>DrawParametricCurve</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Sample Scripts\nDrawParametricCurve");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"sample_scripts.htm\">Sample Scripts<\/a> > DrawParametricCurve<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>DrawParametricCurve</h1>
+<p>The following example demonstrates creating an interpolated curve based on a parametric equation.</p>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Option Explicit</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Subroutine: DrawParametricCurve</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: &#160;&#160;&#160;Create a interpolated curve based on a parametric equation.</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Sub DrawParametricCurve()</p>
+<p class="Code" style="margin-left: 24px;">Dim t0, t1, t, intCount, <span style="margin-left: 12px;">x, arrPoint, arrPoints()</span></p>
+<p class="CodeComment" style="margin-left: 24px;">' Get the minimum parameter</p>
+<p class="Code" style="margin-left: 24px;">t0 = Rhino.GetReal("Minimum t value", 0.0)</p>
+<p class="Code" style="margin-left: 24px;">If IsNull(t0) Then Exit Sub</p>
+<p class="CodeComment" style="margin-left: 24px;">' Get the maximum parameter</p>
+<p class="Code" style="margin-left: 24px;">t1 = Rhino.GetReal("Maximum t value", 1.0)</p>
+<p class="Code" style="margin-left: 24px;">If IsNull(t1) Then Exit Sub</p>
+<p class="CodeComment" style="margin-left: 24px;">' Get the number of sampling points to interpolate through</p>
+<p class="Code" style="margin-left: 24px;">intCount = Rhino.GetInteger("Number of points", 50, 2)</p>
+<p class="Code" style="margin-left: 24px;">If IsNull(intCount) Then Exit Sub</p>
+<p class="CodeComment" style="margin-left: 24px;">' Get the first point</p>
+<p class="Code" style="margin-left: 24px;">ReDim <span style="margin-left: 12px;">arrPoints</span>(intCount - 1)</p>
+<p class="Code" style="margin-left: 24px;"><span style="margin-left: 12px;">arrPoint</span> = CalculatePoint(t0)</p>
+<p class="Code" style="margin-left: 24px;"><span style="margin-left: 12px;">arrPoints</span>(0) = <span style="margin-left: 12px;">arrPoint</span></p>
+<p class="CodeComment" style="margin-left: 24px;">' Get the rest of the points</p>
+<p class="Code" style="margin-left: 24px;">For x = 1 To intCount - 2</p>
+<p class="Code" style="margin-left: 36px;">t = (1.0 - (x / intCount) ) * t0 + (x / intCount) * t1</p>
+<p class="Code" style="margin-left: 36px;"><span style="margin-left: 12px;">arrPoint</span> = CalculatePoint(t)</p>
+<p class="Code" style="margin-left: 36px;"><span style="margin-left: 12px;">arrPoints</span>(x) = <span style="margin-left: 12px;">arrPoint</span></p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="CodeComment" style="margin-left: 24px;"><span style="margin-left: 12px;">'</span> Get the last point</p>
+<p class="Code" style="margin-left: 24px;"><span style="margin-left: 12px;">arrPoint</span> = CalculatePoint(t1)</p>
+<p class="Code" style="margin-left: 24px;"><span style="margin-left: 12px;">arrPoints</span>(intCount - 1) = <span style="margin-left: 12px;">arrPoint</span></p>
+<p class="CodeComment" style="margin-left: 24px;"><span style="margin-left: 12px;">'</span> Add the curve</p>
+<p class="Code" style="margin-left: 24px;">Rhino.AddInterpCurve <span style="margin-left: 12px;">arrPoints</span></p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p style="margin-left: 12px;">&#160;</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="CodeComment" style="margin-left: 12px;">' Function: &#160;&#160;CalculatePoint</p>
+<p class="CodeComment" style="margin-left: 12px;">' Purpose: &#160;&#160;&#160;Customizable function that solves a parametric equation.</p>
+<p class="CodeComment" style="margin-left: 12px;">'------------------------------------------------------------------------------</p>
+<p class="Code" style="margin-left: 12px;">Function CalculatePoint(t)</p>
+<p class="Code" style="margin-left: 24px;">Dim <span style="margin-left: 12px;">arrPoint</span>(2)</p>
+<p class="Code" style="margin-left: 24px;">If IsNumeric(t) Then</p>
+<p class="Code" style="margin-left: 36px;"><span style="margin-left: 12px;">arrPoint</span>(0) = (4 * (1 - t) + 1 * t) * sin(3 * 6.2832 * t)</p>
+<p class="Code" style="margin-left: 36px;"><span style="margin-left: 12px;">arrPoint</span>(1) = (4 * (1 - t) + 1 * t) * cos(3 * 6.2832 * t)</p>
+<p class="Code" style="margin-left: 36px;"><span style="margin-left: 12px;">arrPoint</span>(2) = 5 * t</p>
+<p class="Code" style="margin-left: 36px;">CalculatePoint = <span style="margin-left: 12px;">arrPoint</span></p>
+<p class="Code" style="margin-left: 24px;">Else</p>
+<p class="Code" style="margin-left: 36px;">CalculatePoint = Null</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 12px;">End Function</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

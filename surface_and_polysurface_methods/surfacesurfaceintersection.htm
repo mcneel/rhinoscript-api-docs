@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>SurfaceSurfaceIntersection</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSurface & Polysurface Methods\nSurfaceSurfaceIntersection");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"surface_methods.htm\">Surface & Polysurface Methods<\/a> > SurfaceSurfaceIntersection<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>SurfaceSurfaceIntersection</h1>
+<p>Calculates the intersection of a surface object with another surface object. Note, this function works on untrimmed surfaces.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.SurfaceSurfaceIntersection (strSurfaceA, strSurfaceB [, dblTolerance [, blnCreate]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 11.813%;" />
+<col style="width: 88.187%;" />
+<tr valign="top">
+<td style="width: 11.813%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strSurfaceA</p>
+</td>
+<td style="width: 88.187%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The identifier of the first surface object.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.813%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strSurfaceB</p>
+</td>
+<td style="width: 88.187%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The identifier of the second surface object.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.813%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">dblTolerance</p>
+</td>
+<td style="width: 88.187%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Number. &#160;The absolute tolerance in drawing units. &#160;If omitted, the document's current absolute tolerance is used.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.813%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">blnCreate</p>
+</td>
+<td style="width: 88.187%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Boolean. &#160;Create the intersection curves and points. &#160;If omitted, intersection geometry will not be created.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 11.545%;" />
+<col style="width: 88.455%;" />
+<tr valign="top">
+<td style="width: 11.545%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 88.455%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If <span style="font-style: italic;"><i>blnCreate</i></span> is not specified or is equal to False, an array numbers identifying the intersection event type if successful. &#160;The array will contain one or more of the following intersection event types:</p>
+<table cellspacing="0" width="86.872%">
+<col style="width: 7.968%;" />
+<col style="width: 92.032%;" />
+<tr valign="top">
+<td style="width: 7.968%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Type</p>
+</td>
+<td style="width: 92.032%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 7.968%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1</p>
+</td>
+<td style="width: 92.032%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Transverse surface-surface intersection curve.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 7.968%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">2</p>
+</td>
+<td style="width: 92.032%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Tangent surface-surface intersection curve.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 7.968%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">3</p>
+</td>
+<td style="width: 92.032%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Overlap surface-surface intersection curve.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 7.968%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">4</p>
+</td>
+<td style="width: 92.032%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Transverse surface-surface intersection point.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 7.968%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">5</p>
+</td>
+<td style="width: 92.032%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Tangent surface-surface intersection point.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.545%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 88.455%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If <span style="font-style: italic;"><i>blnCreate</i></span> is specified and is equal to True, a two-dimensional array of intersection information if successful. &#160;The array will contain one or more of the following elements:</p>
+<table cellspacing="0" width="100%">
+<col style="width: 8.533%;" />
+<col style="width: 8.57%;" />
+<col style="width: 82.897%;" />
+<tr valign="top">
+<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Element</p>
+</td>
+<td style="width: 8.57%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Type</p>
+</td>
+<td style="width: 82.897%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">(n, 0)</p>
+</td>
+<td style="width: 8.57%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Number</p>
+</td>
+<td style="width: 82.897%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The intersection event type. &#160;See the above table for details.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.533%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">(n, 1)</p>
+</td>
+<td style="width: 8.57%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String</p>
+</td>
+<td style="width: 82.897%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The identifier of the intersection curve or point object that was created.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.545%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 88.455%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub SSX()</p>
+<p class="Code" style="margin-left: 24px;">Const rhObjectSurface = 8</p>
+<p class="Code" style="margin-left: 24px;">Dim strSurfaceA, strSurfaceB, arrSSX</p>
+<p class="Code" style="margin-left: 24px;">strSurfaceA = Rhino.GetObject("Select first surface", rhObjectSurface)</p>
+<p class="Code" style="margin-left: 24px;">If IsNull(strSurfaceA) Or Rhino.IsSurface(strSurfaceA) = False Then Exit Sub</p>
+<p class="Code" style="margin-left: 24px;">strSurfaceB = Rhino.GetObject("Select second surface", rhObjectSurface)</p>
+<p class="Code" style="margin-left: 24px;">If IsNull(strSurfaceB) Or Rhino.IsSurface(strSurfaceB) = False Then Exit Sub</p>
+<p class="Code" style="margin-left: 24px;">arrSSX = Rhino.SurfaceSurfaceIntersection(strSurfaceA, strSurfaceB,, True)</p>
+<p class="Code" style="margin-left: 24px;">If Not IsArray(arrSSX) Then</p>
+<p class="Code" style="margin-left: 36px;">Rhino.Print "Surfaces do not intersect."</p>
+<p class="Code" style="margin-left: 36px;">Exit Sub</p>
+<p class="Code" style="margin-left: 24px;">End If</p>
+<p class="Code" style="margin-left: 24px;">For i = 0 to UBound(arrSSX)</p>
+<p class="Code" style="margin-left: 36px;">Select Case arrSSX(i,0)</p>
+<p class="Code" style="margin-left: 48px;">Case 1 Rhino.Print "Transverse surface-surface intersection curve."</p>
+<p class="Code" style="margin-left: 48px;">Case 2 Rhino.Print "Tangent surface-surface intersection curve."</p>
+<p class="Code" style="margin-left: 48px;">Case 3 Rhino.Print "Overlap surface-surface intersection curve."</p>
+<p class="Code" style="margin-left: 48px;">Case 4 Rhino.Print "Transverse surface-surface intersection point."</p>
+<p class="Code" style="margin-left: 48px;">Case 5 Rhino.Print "Tangent surface-surface intersection point."</p>
+<p class="Code" style="margin-left: 36px;">End Select</p>
+<p class="Code" style="margin-left: 36px;">Rhino.SelectObject arrSSX(i,1)</p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3>Also See</h3>
+<p><a href="../curve_methods/curvecurveintersection.htm">CurveCurveIntersection</a></p>
+<p><a href="../curve_methods/curvesurfaceintersection.htm">CurveSurfaceIntersection</a></p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

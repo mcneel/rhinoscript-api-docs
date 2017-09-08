@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>SurfaceCurvatureAnalysis</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSurface & Polysurface Methods\nSurfaceCurvatureAnalysis");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"surface_methods.htm\">Surface & Polysurface Methods<\/a> > SurfaceCurvatureAnalysis<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>SurfaceCurvatureAnalysis</h1>
+<p>Returns the curvature of a surface. &#160;See the Rhino help file for details on surface curvature analysis.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.SurfaceCurvatureAnalysis (strObject)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 8.276%;" />
+<col style="width: 91.724%;" />
+<tr valign="top">
+<td style="width: 8.276%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strObject</p>
+</td>
+<td style="width: 91.724%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The object's identifier.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 8.177%;" />
+<col style="width: 91.823%;" />
+<tr valign="top">
+<td style="width: 8.177%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 91.823%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">An array of curvature information if successful. &#160;The array will contain the following information:</p>
+<table cellspacing="0" width="100%">
+<col style="width: 6.087%;" />
+<col style="width: 6.087%;" />
+<col style="width: 87.827%;" />
+<tr valign="top">
+<td style="width: 6.087%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Element</p>
+</td>
+<td style="width: 6.087%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Type</p>
+</td>
+<td style="width: 87.827%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 6.087%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">0</p>
+</td>
+<td style="width: 6.087%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 87.827%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">An array containing three values: the min Gaussian curvature, the max Gaussian curvature, and the infinity status.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 6.087%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1</p>
+</td>
+<td style="width: 6.087%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 87.827%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">An array containing three values: the min unsigned mean curvature, the max unsigned mean curvature, and the infinity comparison.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 6.087%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">2</p>
+</td>
+<td style="width: 6.087%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 87.827%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">An array containing three values: the min maximum unsigned radius of curvature, the max maximum unsigned radius of curvature, and the infinity comparison.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 6.087%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">3</p>
+</td>
+<td style="width: 6.087%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 87.827%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">An array containing three values: the min minimum unsigned radius of curvature, the max minimum unsigned radius of curvature, and the infinity comparison.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 8.177%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 91.823%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub TestSurfaceCurvatureAnalysis</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Const rhObjectSurface = 8</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim strObject, arrAnalysis</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;strObject = Rhino.GetObject("Select a surface", rhObjectSurface)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If Rhino.IsSurface(strObject) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;arrAnalysis = Rhino.SurfaceCurvatureAnalysis(strObject)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;If IsArray(arrAnalysis) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;PrintValues "Gaussian curvature: ", arrAnalysis(0)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;PrintValues "Unsigned mean curvature: ", arrAnalysis(1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;PrintValues "Unsigned maximum radius of curvature: ", arrAnalysis(2)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;PrintValues "Unsigned minimum radius of curvature: ", arrAnalysis(3)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">Sub PrintValues(str, arr)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim s0, s1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;CompareValues arr(0), arr(1), arr(2), s0, s1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Rhino.Print str &amp; s0 &amp; " to " &amp; s1</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p class="Code" style="margin-left: 12px;">&#160;</p>
+<p class="Code" style="margin-left: 12px;">Sub CompareValues(ByVal mn, ByVal mx, ByVal infinity, ByRef s0, ByRef s1)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If Abs(mn) &lt; infinity Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;s0 = CStr(mn)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;ElseIf mn &lt; 0.0 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;s0 = "-infinity"</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Else</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;s0 = "+infinity"</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If Abs(mx) &lt; infinity Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;s1 = CStr(mx)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;ElseIf mx &lt; 0.0 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;s1 = "-infinity"</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Else</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;s1 = "+infinity"</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3 class="Code">Also See</h3>
+<p><a href="surfacecurvature.htm">SurfaceCurvature</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

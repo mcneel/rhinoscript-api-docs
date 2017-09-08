@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>SortPoints</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUtility Methods\nSortPoints");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"utility_methods.htm\">Utility Methods<\/a> > SortPoints<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>SortPoints</h1>
+<p>Sorts an array of 3-D points.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.SortPoints (arrPoints [, blnAscending [, blnOrder]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 11.514%;" />
+<col style="width: 88.486%;" />
+<tr valign="top">
+<td style="width: 11.514%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">arrPoints</p>
+</td>
+<td style="width: 88.486%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;Array. &#160;An array of 3-D points.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.514%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">blnAscending</p>
+</td>
+<td style="width: 88.486%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Boolean. &#160;The sorting mode, either ascending or descending. &#160;If omitted, the points are sorted ascending (True).</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.514%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">blnOrder</p>
+</td>
+<td style="width: 88.486%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Optional. &#160;Number. &#160;The component sort order, where:</p>
+<table cellspacing="0" width="100%">
+<col style="width: 12.036%;" />
+<col style="width: 87.964%;" />
+<tr valign="top">
+<td style="width: 12.036%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Value</p>
+</td>
+<td style="width: 87.964%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-weight: bold;">Component Sort Order</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 12.036%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">0 (default)</p>
+</td>
+<td style="width: 87.964%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">X, Y, Z</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 12.036%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">1</p>
+</td>
+<td style="width: 87.964%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">X, Z, Y</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 12.036%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">2</p>
+</td>
+<td style="width: 87.964%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Y, X, Z</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 12.036%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">3</p>
+</td>
+<td style="width: 87.964%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Y, Z, X</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 12.036%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">4</p>
+</td>
+<td style="width: 87.964%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Z, X, Y</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 12.036%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">5</p>
+</td>
+<td style="width: 87.964%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Z, Y, X</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 11.672%;" />
+<col style="width: 88.328%;" />
+<tr valign="top">
+<td style="width: 11.672%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Array</p>
+</td>
+<td style="width: 88.328%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">An array of sorted 3-D points if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 11.672%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 88.328%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arr, p</p>
+<p class="Code" style="margin-left: 12px;">arr = Rhino.GetPoints(,,"First point", "Next point")</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arr) Then</p>
+<p class="Code" style="margin-left: 24px;">arr = Rhino.SortPoints(arr)</p>
+<p class="Code" style="margin-left: 24px;">For Each p in arr</p>
+<p class="Code" style="margin-left: 36px;">Rhino.Print Rhino.Pt2Str(p)</p>
+<p class="Code" style="margin-left: 24px;">Next</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="sort.htm">SortStrings</a></p>
+<p><a href="sortnumbers.htm">SortNumbers</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

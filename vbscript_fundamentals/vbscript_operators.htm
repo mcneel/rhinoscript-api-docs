@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>VBScript Operators</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("VBScript Fundamentals\nVBScript Operators");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"vbscript_fundamentals.htm\">VBScript Fundamentals<\/a> > VBScript Operators<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>VBScript Operators</h1>
+<p>VBScript has a full range of operators, including arithmetic operators, comparison operators, concatenation operators, and logical operators.</p>
+<h2>Operator Precedence</h2>
+<p>When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called operator precedence. You can use parentheses to override the order of precedence and force some parts of an expression to be evaluated before others. Operations within parentheses are always performed before those outside. Within parentheses, however, standard operator precedence is maintained.</p>
+<p>When expressions contain operators from more than one category, arithmetic operators are evaluated first, comparison operators are evaluated next, and logical operators are evaluated last. Comparison operators all have equal precedence; that is, they are evaluated in the left-to-right order in which they appear. Arithmetic and logical operators are evaluated in the following order of precedence.</p>
+<h2>Arithmetic</h2>
+<table cellspacing="0" width="100%">
+<col style="width: 13.885%;" />
+<col style="width: 86.115%;" />
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Description</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Symbol</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Exponentiation</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">^</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Unary negation</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">-</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Multiplication</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">*</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Division</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">/</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Integer division</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">\</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Modulus arithmetic</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Mod</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Addition</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">+</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Subtraction</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">-</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String concatenation</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">&amp;</p>
+</td>
+</tr>
+</table>
+<h2>Comparison</h2>
+<table cellspacing="0" width="100%">
+<col style="width: 13.885%;" />
+<col style="width: 86.115%;" />
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Description</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Symbol</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Equality</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">=</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Inequality</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">&lt;&gt;</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Less than</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">&lt;</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Greater than</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">&gt;</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Less than or equal to</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">&lt;=</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Greater than or equal to</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">&gt;=</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 13.885%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Object equivalence</p>
+</td>
+<td style="width: 86.115%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Is</p>
+</td>
+</tr>
+</table>
+<h2>Logical</h2>
+<table cellspacing="0" width="100%">
+<col style="width: 14.01%;" />
+<col style="width: 85.99%;" />
+<tr valign="top">
+<td style="width: 14.01%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Description</p>
+</td>
+<td style="width: 85.99%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Head">Symbol</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 14.01%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Logical negation</p>
+</td>
+<td style="width: 85.99%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Not</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 14.01%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Logical conjunction</p>
+</td>
+<td style="width: 85.99%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">And</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 14.01%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Logical disjunction</p>
+</td>
+<td style="width: 85.99%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Or</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 14.01%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Logical exclusion</p>
+</td>
+<td style="width: 85.99%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Xor</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 14.01%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Logical equivalence</p>
+</td>
+<td style="width: 85.99%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Eqv</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 14.01%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Logical implication</p>
+</td>
+<td style="width: 85.99%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Imp</p>
+</td>
+</tr>
+</table>
+<p>When multiplication and division occur together in an expression, each operation is evaluated as it occurs from left to right.</p>
+<p>Likewise, when addition and subtraction occur together in an expression, each operation is evaluated in order of appearance from left to right.</p>
+<p>The string concatenation (&amp;) operator is not an arithmetic operator, but in precedence it falls after all arithmetic operators and before all comparison operators.</p>
+<p>The <span style="font-weight: bold;"><b>Is</b></span> operator is an object reference comparison operator. It does not compare objects or their values; it checks only to determine if two object references refer to the same object.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

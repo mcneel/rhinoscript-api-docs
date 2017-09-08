@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>InstallType</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nApplication Methods\nInstallType");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"application_methods.htm\">Application Methods<\/a> > InstallType<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>InstallType</h1>
+<p>Returns the license installation type of this Rhino executable. &#160;The 
+ license installation types are as follows:</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 5.793%;" />
+	<col style="width: 94.207%;" />
+	<tr>
+		<td><p class="Table-Head">Value</p></td>
+		<td><p class="Table-Head">Description</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">0</p></td>
+		<td><p class="Table-Body">Undefined license</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">1</p></td>
+		<td><p class="Table-Body">Commercial license</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">2</p></td>
+		<td><p class="Table-Body">Educational license</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">3</p></td>
+		<td><p class="Table-Body">Educational Lab license</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">4</p></td>
+		<td><p class="Table-Body">Not For Resale (NFR) license</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">5</p></td>
+		<td><p class="Table-Body">Not For Resale (NFR) Lab license</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">6</p></td>
+		<td><p class="Table-Body">Beta license</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">7</p></td>
+		<td><p class="Table-Body">Beta Lab license</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">8</p></td>
+		<td><p class="Table-Body">Evaluation license</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">9</p></td>
+		<td><p class="Table-Body">Corporate license</p></td>
+	</tr>
+	<tr>
+		<td><p class="Table-Body">10</p></td>
+		<td><p class="Table-Body">Evaluation license (time-based)</p></td>
+	</tr>
+</table>
+<h3>Syntax</h3>
+<p class="Code">Rhino.InstallType ()</p>
+<h3>Parameters</h3>
+<p style="font-style: italic;">None.</p>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.309%;" />
+	<col style="width: 90.691%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.309%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Number</p></td>
+		<td style="width: 90.691%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The Rhino license installation type if 
+		 successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.309%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.691%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;Build date:&quot; 
+ &amp; CStr(Rhino.BuildDate)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;SDK Version:&quot; 
+ &amp; CStr(Rhino.SdkVersion)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;SDK Service 
+ Release:&quot; &amp; CStr(Rhino.SdkServiceRelease)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;Executable 
+ Version:&quot; &amp; CStr(Rhino.ExeVersion)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;Executable 
+ Service Release:&quot; &amp; CStr(Rhino.ExeServiceRelease)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;Serial Number:&quot; 
+ &amp; Rhino.SerialNumber</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;Node Type:&quot; 
+ &amp; CStr(Rhino.NodeType)</p>
+<p class="Code" style="margin-left: 12px;">Rhino.Print &quot;Install Type:&quot; 
+ &amp; CStr(Rhino.InstallType)</p>
+<h3>Also See</h3>
+<p><a href="builddate.htm">BuildDate</a></p>
+<p><a href="exeservicerelease.htm">ExeServiceRelease</a></p>
+<p><a href="exeversion.htm">ExeVersion</a></p>
+<p><a href="installtype.htm">InstallType</a></p>
+<p><a href="nodetype.htm">NodeType</a></p>
+<p><a href="sdkservicerelease.htm">SdkServiceRelease</a></p>
+<p><a href="sdkversion.htm">SdkVersion</a></p>
+<p><a href="serialnumber.htm">SerialNumber</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

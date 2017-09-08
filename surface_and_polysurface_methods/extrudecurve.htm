@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>ExtrudeCurve</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSurface & Polysurface Methods\nExtrudeCurve");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"surface_methods.htm\">Surface & Polysurface Methods<\/a> > ExtrudeCurve<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>ExtrudeCurve</h1>
+<p>Creates a surface by extruding a curve along a path curve.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.ExtrudeCurve (strCurve, strPath)</p>
+<h3>Parameters</h3>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 10.218%;" />
+<col style="width: 89.782%;" />
+<tr valign="top">
+<td style="width: 10.218%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strCurve</p>
+</td>
+<td style="width: 89.782%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The identifier of the curve object to extrude.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 10.218%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body" style="font-style: italic;">strPath</p>
+</td>
+<td style="width: 89.782%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Required. &#160;String. &#160;The identifier of the path curve.</p>
+</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+<col style="width: 10.195%;" />
+<col style="width: 89.805%;" />
+<tr valign="top">
+<td style="width: 10.195%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">String</p>
+</td>
+<td style="width: 89.805%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">The identifier of the new object if successful.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="width: 10.195%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">Null</p>
+</td>
+<td style="width: 89.805%; padding-right: 10px; padding-left: 10px;">
+<p class="Table-Body">If not successful, or on error.</p>
+</td>
+</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strCurve, strPath</p>
+<p class="Code" style="margin-left: 12px;">strCurve = Rhino.AddCircle(Rhino.WorldXYPlane, 5)</p>
+<p class="Code" style="margin-left: 12px;">strPath = Rhino.AddLine(Array(5,0,0), Array(10,0,10))</p>
+<p class="Code" style="margin-left: 12px;">Rhino.ExtrudeCurve strCurve, strPath</p>
+<h3 class="Code">Also See</h3>
+<p><a href="extrudecurvepoint.htm">ExtrudeCurvePoint</a></p>
+<p><a href="extrudecurvestraight.htm">ExtrudeCurveStraight</a></p>
+<p><a href="extrudecurvetapered.htm">ExtrudeCurveTapered</a></p>
+<p><a href="extrudesurface.htm">ExtrudeSurface</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

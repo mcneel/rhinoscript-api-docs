@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 8" />
+ <title>Arrays of Points</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Fundamentals\nArrays of Points");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"rhinoscript_fundamentals.htm\">RhinoScript Fundamentals<\/a> > Arrays of Points<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Arrays of Points</h1>
+<p>Many RhinoScript methods either require as an argument or return as 
+ a result an array of 3-D points. &#160;Arrays of 3-D points are zero-based, 
+ one-dimensional arrays of 3-D points (which in turn are zero-based, one-dimensional 
+ arrays of X, Y, and Z coordinate values). &#160;Arrays of 3-D points can 
+ be constructed in a number of ways. &#160;For example,</p>
+<p class="Code" style="margin-left: 12px;">Dim arrPointCloud(4)</p>
+<p class="Code" style="margin-left: 12px;">arrPointCloud(0) = Array(0.0, 
+ 0.0, 0.0)</p>
+<p class="Code" style="margin-left: 12px;">arrPointCloud(1) = Array(1.0, 
+ 2.0, 3.0)</p>
+<p class="Code" style="margin-left: 12px;">arrPointCloud(2) = Array(5.0, 
+ 8.0, 9.0)</p>
+<p class="Code" style="margin-left: 12px;">arrPointCloud(3) = Array(4.0, 
+ 7.0, 2.0)</p>
+<p class="Code" style="margin-left: 12px;">arrPointCloud(4) = Array(8.0, 
+ 5.0, 6.0)</p>
+<p>Also, representing arrays of 3-D points as a one-dimensional array instead 
+ of a multi-dimensional array, makes it easy to repeat a group of statements 
+ for each element in the array . &#160;For example,</p>
+<p class="Code" style="margin-left: 12px;">Dim arrPoint</p>
+<p class="Code" style="margin-left: 12px;">For Each arrPoint 
+ in arrPointCloud</p>
+<p class="CodeComment" style="margin-left: 24px;">' Do something with arrPoint</p>
+<p class="Code" style="margin-left: 12px;">Next</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

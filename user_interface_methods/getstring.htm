@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="06 3, 2002 4:38:37 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>GetString</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Interface Methods\nGetString");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"user_interface_methods.htm\">User Interface Methods<\/a> > GetString<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>GetString</h1>
+<p>Pauses for user input of string value.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.GetString ([strMessage [, strString [, arrStrings]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.279%;" />
+	<col style="width: 89.721%;" />
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.279%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strMessage</p></td>
+		<td style="width: 89.721%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;A prompt 
+		 or message.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.279%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strString</p></td>
+		<td style="width: 89.721%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;String. &#160;A default 
+		 value.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.279%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrStrings</p></td>
+		<td style="width: 89.721%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Array. &#160;A array of 
+		 strings to be displayed as click-able command options. Note, strings 
+		 cannot begin with a numeric character and they cannot contain 
+		 any white space.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.453%;" />
+	<col style="width: 89.547%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 10.453%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 89.547%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The string either input or selected by 
+		 the user if successful. &#160;If the user presses the Enter key 
+		 without typing in a string, an empty string &quot;&quot; is returned.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.453%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 89.547%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim strLayer</p>
+<p class="Code" style="margin-left: 12px;">strLayer = Rhino.CurrentLayer</p>
+<p class="Code" style="margin-left: 12px;">strLayer = Rhino.GetString(&quot;Layer 
+ to set current&quot;, strLayer)</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strLayer) Then</p>
+<p class="Code" style="margin-left: 24px;">Rhino.CurrentLayer strLayer</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<p class="Code" style="margin-left: 12px;">Dim arrNames(2), strName</p>
+<p class="Code" style="margin-left: 12px;">arrNames(0) = &quot;RedLayer&quot;</p>
+<p class="Code" style="margin-left: 12px;">arrNames(1) = &quot;GreenLayer&quot;</p>
+<p class="Code" style="margin-left: 12px;">arrNames(2) = &quot;BlueLayer&quot;</p>
+<p class="Code" style="margin-left: 12px;">strName = Rhino.GetString(&quot;New 
+ layer name&quot;, , arrNames)</p>
+<p class="Code" style="margin-left: 12px;">If Not IsNull(strColor) Then</p>
+<p class="Code" style="margin-left: 24px;">Rhino.AddLayer strName</p>
+<p class="Code" style="margin-left: 12px;"><span style="margin-left: 24px;">End 
+ If</span></p>
+<h3>Also See</h3>
+<p><a href="getboolean.htm">GetBoolean</a></p>
+<p><a href="stringbox.htm">StringBox</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

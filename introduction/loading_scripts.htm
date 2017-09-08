@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Loading Scripts</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Introduction\nLoading Scripts");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../introduction.htm\">Introduction<\/a> > Loading Scripts<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Loading Scripts</h1>
+<p>Scripts can be loaded into RhinoScript by either dragging a script file 
+ onto Rhino's main window, or by running the <span style="font-weight: bold;"><b>LoadScript</b></span> 
+ command. Both methods are used load script files from disk into the memory 
+ of the VBScript engine. &#160;The <span style="font-weight: bold;"><b>LoadScript</b></span> 
+ command can be accessed from either Rhino's Tools menu, or by entering 
+ &quot;LoadScript&quot; on Rhino's command line.</p>
+<p>&#160;</p>
+<p><img src="../images/loadscript.jpg" alt="loadscript.jpg" style="border: none;" width="379" height="282" border="0" /></p>
+<h2>LoadScript options and operation</h2>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.256%;" />
+	<col style="width: 90.744%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Load</p></td>
+		<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Loads the selected script file into the 
+		 memory of the VBScript engine.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Close</p></td>
+		<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Closes the dialog box.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Add</p></td>
+		<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Adds one or more script files to the list 
+		 of available script files. &#160;The default file extension for 
+		 RhinoScript-specific VBScript files is &quot; 
+		 RVB&quot;.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Remove</p></td>
+		<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Removes one or more script files from the 
+		 list of available script files.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Edit</p></td>
+		<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Loads the selected script file into the 
+		 default script file editor. &#160;See <a href="scripting_options.htm">Scripting 
+		 Options</a> for details on assigning a default script file editor.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Help</p></td>
+		<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Displays online help for this topic.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.256%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Save list</p></td>
+		<td style="width: 90.744%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If checked, the list of available script 
+		 files will be saved between sessions.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>If the loaded script file contains only VBScript subroutines or function 
+ definitions, then the script code is not run, but is parsed for syntax 
+ errors and loaded into the memory of the VBScript interpreter so it can 
+ be recalled either by the user, by running the <span style="font-weight: bold;"><b>RunScript</b></span> 
+ command, or by other VBScript functions or subroutines at a later time. 
+ &#160;This is an excellent way of loading common functions used by many 
+ different subroutines or to load large scripts that might be time consuming 
+ to load every time you want to run a script.</p>
+<p>If the loaded script file contains VBScript script code outside of the 
+ scope of a subroutine or function definition, then the script code is 
+ parsed, interpreted, and executed immediately. &#160;This is useful when 
+ defining global variables, or if you just want a block of code to run 
+ when the script file is loaded.</p>
+<h2>Scripting the LoadScript command</h2>
+<p>As is the case with most Rhino command, the <span style="font-weight: bold;"><b>LoadScript</b></span> 
+ command can be scripted, thus bypassing the interactive dialog box. &#160;To 
+ script the <span style="font-weight: bold;"><b>LoadScript</b></span> command, 
+ simply precede the command name with a hyphen when entering the command 
+ on Rhino's command line. &#160;For example:</p>
+<p class="Code">-LoadScript</p>
+<p>After entering the command, you will be prompted to enter the name of 
+ the script file to load. &#160;Simply enter the full path to the script 
+ file. &#160;Use double-quote characters to support long file names, or 
+ paths that contain white spaces. &#160;If you do not enter the full path, 
+ the <span style="font-weight: bold;"><b>LoadScript</b></span> command will search 
+ for the script file in the following locations:</p>
+<p>1. &#160;The current model's folder.</p>
+<p>2. &#160;Every folder listed in Rhino's user-defined search path. (Use 
+ the <span style="font-weight: bold;"><b>Options</b></span> command (Files page) 
+ to either view or modify this path.)</p>
+<p>3. All Rhino system folders.</p>
+<p>4. The Rhino executable folder.</p>
+<h2>Assigning the LoadScript command to a button.</h2>
+<p>The <span style="font-weight: bold;"><b>LoadScript</b></span> command can also 
+ be assigned to a Rhino toolbar button.</p>
+<p>&#160;</p>
+<p><img src="../images/loadscriptbutton.jpg" alt="loadscriptbutton.jpg" style="border: none;" width="422" height="385" border="0" /></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

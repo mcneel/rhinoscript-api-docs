@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddSrfPtGrid</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nSurface & Polysurface Methods\nAddSrfPtGrid");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"surface_methods.htm\">Surface & Polysurface Methods<\/a> > AddSrfPtGrid<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddSrfPtGrid</h1>
+<p>Creates a surface from a grid of points.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddSrfPtGrid (arrCount, arrPoints [, arrDegree [, 
+ arrClosed]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.7%;" />
+	<col style="width: 90.3%;" />
+	<tr style="height: 20px;" valign="top">
+		<td style="width: 9.7%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrCount</p></td>
+		<td style="width: 90.3%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;The number 
+		 of points in the U and V directions.</p></td>
+	</tr>
+	<tr style="height: 20px;" valign="top">
+		<td style="width: 9.7%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrPoints</p></td>
+		<td style="width: 90.3%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;An array of 
+		 3-D points.</p></td>
+	</tr>
+	<tr style="height: 20px;" valign="top">
+		<td style="width: 9.7%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrDegree</p></td>
+		<td style="width: 90.3%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Array. &#160;The degree 
+		 of the surface in the U and V directions. &#160;If omitted, the 
+		 degree of the new surface in the U and V directions will be 3.</p></td>
+	</tr>
+	<tr style="height: 20px;" valign="top">
+		<td style="width: 9.7%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrClosed</p></td>
+		<td style="width: 90.3%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Optional. &#160;Array. &#160;Whether or 
+		 not the surface is closed in the U and V directions. &#160;If 
+		 omitted, the new surface will not be closed in either the U or 
+		 V directions.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.543%;" />
+	<col style="width: 90.457%;" />
+	<tr valign="top">
+		<td style="width: 9.543%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">String</p></td>
+		<td style="width: 90.457%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">The identifier of the new object if successful.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="width: 9.543%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.457%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Sub TestAddSrfPtGrid()</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;' 
+ Locals &#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim count(1), points(), 
+ index, u, v</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;' 
+ Number of points in u direction</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;count(0) = 4</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;' 
+ Number of points in v direction &#160;</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;count(1) = 5</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;' 
+ Dimension array appropriately</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;ReDim points(count(0) 
+ * count(1) - 1)</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;' 
+ Initialize array index </p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;index = 0</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;' 
+ For every column (u)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For u = 0 To count(0) 
+ - 1</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;&#160;&#160;' 
+ For every row (v) in the column (u)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;For 
+ v = 0 To count(1) - 1</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;' 
+ Add a point</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;points(index) 
+ = Array(u,v,0)</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;' 
+ Increment the index</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;index 
+ = index + 1</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px; color: #008000;">&#160;&#160;' 
+ Add the surface</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Call Rhino.AddSrfPtGrid(count, 
+ points)</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h3 class="Code">Also See</h3>
+<p><a href="addedgesrf.htm">AddEdgeSrf</a></p>
+<p><a href="addsrfcontrolptgrid.htm">AddSrfControlPtGrid</a></p>
+<p><a href="addsrfpt.htm">AddSrfPt</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

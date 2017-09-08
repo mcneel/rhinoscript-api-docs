@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>AddPictureFrame</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nGeometry Methods\nAddPictureFrame");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"geometry_methods.htm\">Geometry Methods<\/a> > AddPictureFrame<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>AddPictureFrame</h1>
+<p>Creates a picture frame and adds it to the document.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.AddPictureFrame (arrPlane, strFileName [, dblWidth 
+ [, dblHeight [, blnSelfIllumination [, blnEmbed [, blnUseAlpha [, blnMakeMesh]]]]]])</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 11.237%;" />
+	<col style="width: 88.763%;" />
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">arrPlane</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;Array. &#160;The plane in which the PictureFrame will be 
+		 created. &#160;The bottom-left corner of picture will be at plane's 
+		 origin. The width will be in the plane's X axis direction, and 
+		 the height will be in the plane's Y axis direction.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">strFileName </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Required. 
+		 &#160;String. &#160;The path to a bitmap or image file.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">dblWidth </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Number. &#160;If both <span style="font-style: italic;"><i>dblWidth</i></span> 
+		 and <span style="font-style: italic;"><i>dblHeight</i></span> = 0, then 
+		 the width and height of the PictureFrame will be the width and 
+		 height of the image. If <span style="font-style: italic;"><i>dblWidth</i></span> 
+		 = 0 and <span style="font-style: italic;"><i>dblHeight</i></span> is 
+		 &gt; 0, or if <span style="font-style: italic;"><i>dblWidth</i></span> 
+		 &gt; 0 and <span style="font-style: italic;"><i>dblHeight</i></span> 
+		 = 0, then the non-zero value is assumed to be an aspect ratio 
+		 of the image’s width or height, which ever one is = 0. If both 
+		 <span style="font-style: italic;"><i>dblWidth</i></span> and <span style="font-style: italic;"><i>dblHeight</i></span> 
+		 are &gt; 0, then these are assumed to be the width and height 
+		 of in the current unit system. The default is 0.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">dblHeight </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Number. &#160;If both <span style="font-style: italic;"><i>dblWidth</i></span> 
+		 and <span style="font-style: italic;"><i>dblHeight</i></span> = 0, then 
+		 the width and height of the PictureFrame will be the width and 
+		 height of the image. If <span style="font-style: italic;"><i>dblWidth</i></span> 
+		 = 0 and <span style="font-style: italic;"><i>dblHeight</i></span> is 
+		 &gt; 0, or if <span style="font-style: italic;"><i>dblWidth</i></span> 
+		 &gt; 0 and <span style="font-style: italic;"><i>dblHeight</i></span> 
+		 = 0, then the non-zero value is assumed to be an aspect ratio 
+		 of the image’s width or height, which ever one is = 0. If both 
+		 <span style="font-style: italic;"><i>dblWidth</i></span> and <span style="font-style: italic;"><i>dblHeight</i></span> 
+		 are &gt; 0, then these are assumed to be the width and height 
+		 of in the current unit system. The default is 0.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">blnSelfIllumination </p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Boolean. &#160;If True, then the image mapped to the picture 
+		 frame plane always displays at full intensity and is not affected 
+		 by light or shadow. The default is True.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">blnEmbed</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Boolean. &#160;If True, then the function adds the image 
+		 to Rhino's internal bitmap table, thus making the document self-contained. 
+		 The default is False.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">blnUseAlpha</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Boolean. &#160;If False, the picture frame is created without 
+		 any transparency texture. &#160;If True, a transparency texture 
+		 is created with a &quot;mask texture&quot; set to alpha, and an 
+		 instance of the diffuse texture in the source texture slot. The 
+		 default is False.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 24px;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body" 
+			 style="font-style: italic;">blnMakeMesh</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Optional. 
+		 &#160;Boolean. &#160;If True, the function will make a PictureFrame 
+		 object from a mesh rather than a plane surface. The default is 
+		 False.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 11.214%;" />
+	<col style="width: 88.786%;" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">String</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">The 
+		 identifier of the new object if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">Null</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Table-Body">If 
+		 not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Rhino.AddPictureFrame Rhino.WorldXYPlane, 
+ &quot;C:\Users\Dale\Desktop\Lulu.jpg&quot;</p>
+<h3>Also See</h3>
+<p><a href="ispictureframe.htm">IsPictureFrame</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

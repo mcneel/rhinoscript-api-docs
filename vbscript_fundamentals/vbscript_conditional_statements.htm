@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>VBScript Conditional Statements</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("VBScript Fundamentals\nVBScript Conditional Statements");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"vbscript_fundamentals.htm\">VBScript Fundamentals<\/a> > VBScript Conditional Statements<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>VBScript Conditional Statements</h1>
+<p>You can control the flow of your script with conditional statements and looping statements. Using conditional statements, you can write VBScript code that makes decisions and repeats actions. The following conditional statements are available in VBScript:</p>
+<ul type="disc">
+<li class="p">
+<p><span style="font-weight: bold;"><b>If...Then...Else</b></span> statement</p>
+</li>
+<li class="p">
+<p><span style="font-weight: bold;"><b>Select Case</b></span> statement</p>
+</li>
+</ul>
+<h2>Making Decisions Using If...Then...Else</h2>
+<p>The <span style="font-weight: bold;"><b>If...Then...Else</b></span> statement is used to evaluate whether a condition is <span style="font-weight: bold;"><b>True</b></span> or <span style="font-weight: bold;"><b>False</b></span> and, depending on the result, to specify one or more statements to run. Usually the condition is an expression that uses a comparison operator to compare one value or variable with another. For information about comparison operators, see Comparison Operators. <span style="font-weight: bold;"><b>If...Then...Else</b></span> statements can be nested to as many levels as you need.</p>
+<h2>Running Statements if a Condition is True</h2>
+<p>To run only one statement when a condition is <span style="font-weight: bold;"><b>True</b></span>, use the single-line syntax for the <span style="font-weight: bold;"><b>If...Then...Else</b></span> statement. The following example shows the single-line syntax. Notice that this example omits the <span style="font-weight: bold;"><b>Else</b></span> keyword.</p>
+<p class="Code" style="margin-left: 12px;">Sub FixDate()</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Dim myDate</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;myDate = #11/17/2008#</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If myDate &lt; Now Then myDate = Now</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p>To run more than one line of code, you must use the multiple-line (or block) syntax. This syntax includes the <span style="font-weight: bold;"><b>End If</b></span> statement, as shown in the following example:</p>
+<p class="Code" style="margin-left: 12px;">Sub CheckValue(value)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If value = 0 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;MyLayerColor = vbRed</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;MyObjectColor = vbBlue</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h2>Running Certain Statements if a Condition is True and Running Others if a Condition is False</h2>
+<p>You can use an <span style="font-weight: bold;"><b>If...Then...Else</b></span> statement to define two blocks of executable statements: one block to run if the condition is <span style="font-weight: bold;"><b>True</b></span>, the other block to run if the condition is <span style="font-weight: bold;"><b>False</b></span>.</p>
+<p class="Code" style="margin-left: 12px;">Sub CheckValue(value)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If value = 0 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;MyLayerColor = vbRed</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;MyObjectColor = vbBlue</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Else</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;MyLayerColor = vbGreen</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;MyObjectColor = vbBlack</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<h2>Deciding Between Several Alternatives</h2>
+<p>A variation on the <span style="font-weight: bold;"><b>If...Then...Else</b></span> statement allows you to choose from several alternatives. Adding <span style="font-weight: bold;"><b>ElseIf</b></span> clauses expands the functionality of the <span style="font-weight: bold;"><b>If...Then...Else</b></span> statement so you can control program flow based on different possibilities. For example:</p>
+<p class="Code" style="margin-left: 12px;">Sub ReportValue(value)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;If value = 0 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;MsgBox value</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;ElseIf value = 1 Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;MsgBox value</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;ElseIf value = 2 then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Msgbox value</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Else</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Msgbox "Value out of range!"</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;End If</p>
+<p class="Code" style="margin-left: 12px;">End Sub</p>
+<p>You can add as many <span style="font-weight: bold;"><b>ElseIf</b></span> clauses as you need to provide alternative choices. Extensive use of the <span style="font-weight: bold;"><b>ElseIf</b></span> clauses often becomes cumbersome. A better way to choose between several alternatives is the <span style="font-weight: bold;"><b>Select Case</b></span> statement.</p>
+<h2>Making Decisions with Select Case</h2>
+<p>The <span style="font-weight: bold;"><b>Select Case</b></span> structure provides an alternative to <span style="font-weight: bold;"><b>If...Then...ElseIf</b></span> for selectively executing one block of statements from among multiple blocks of statements. A <span style="font-weight: bold;"><b>Select Case</b></span> statement provides capability similar to the <span style="font-weight: bold;"><b>If...Then...Else</b></span> statement, but it makes code more efficient and readable.</p>
+<p>A <span style="font-weight: bold;"><b>Select Case</b></span> structure works with a single test expression that is evaluated once, at the top of the structure. The result of the expression is then compared with the values for each <span style="font-weight: bold;"><b>Case</b></span> in the structure. If there is a match, the block of statements associated with that <span style="font-weight: bold;"><b>Case</b></span> is executed, as in the following example.</p>
+<p class="Code" style="margin-left: 12px;">Select Case MyVar</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Case "red" &#160;&#160;&#160;&#160;MyColor = vbRed</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Case "green" &#160;&#160;MyColor = vbGreen</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Case "blue" &#160;&#160;&#160;MyColor = vbBlue</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Case Else &#160;&#160;&#160;&#160;&#160;MsgBox "Pick another color."</p>
+<p class="Code" style="margin-left: 12px;">End Select</p>
+<p>Notice that the <span style="font-weight: bold;"><b>Select Case</b></span> structure evaluates an expression once at the top of the structure. In contrast, the <span style="font-weight: bold;"><b>If...Then...ElseIf</b></span> structure can evaluate a different expression for each <span style="font-weight: bold;"><b>ElseIf</b></span> statement. You can replace an <span style="font-weight: bold;"><b>If...Then...ElseIf</b></span> structure with a <span style="font-weight: bold;"><b>Select Case</b></span> structure only if each <span style="font-weight: bold;"><b>ElseIf</b></span> statement evaluates the same expression.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

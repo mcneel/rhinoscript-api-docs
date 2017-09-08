@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>GetBoolean</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nUser Interface Methods\nGetBoolean");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"user_interface_methods.htm\">User Interface Methods<\/a> > GetBoolean<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>GetBoolean</h1>
+<p>Pauses for user input of one or more boolean values. Boolean values 
+ are displayed as click-able command-line option toggles.</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.GetBoolean (strMessage, arrItems, arrDefaults)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.279%;" />
+	<col style="width: 89.721%;" />
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.279%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">strMessage</p></td>
+		<td style="width: 89.721%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;String. &#160;A prompt 
+		 or message.</p></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.279%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrItems</p></td>
+		<td style="width: 89.721%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;An array of 
+		 strings that describe the boolean items that will appear as command-line 
+		 option toggles. Each boolean item consists of three strings.</p>
+		<table cellspacing="0" width="100%">
+			<col style="width: 5.842%;" />
+			<col style="width: 94.158%;" />
+			<tr style="vertical-align: top;">
+				<td style="width: 5.842%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Head">Element</p></td>
+				<td style="width: 94.158%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Head">Description</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.842%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">0</p></td>
+				<td style="width: 94.158%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">A description of the boolean value.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.842%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">1</p></td>
+				<td style="width: 94.158%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">A string identifying the False 
+				 value.</p></td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="width: 5.842%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">2</p></td>
+				<td style="width: 94.158%; padding-right: 10px; padding-left: 10px;"><p 
+					 class="Table-Body">A string identifying the True value.</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top; height: 20px;">
+		<td style="width: 10.279%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrDefaults</p></td>
+		<td style="width: 89.721%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;A array of 
+		 boolean values to be used as default, or starting values.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 10.453%;" />
+	<col style="width: 89.547%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 10.453%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 89.547%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">An array of boolean values that represent 
+		 the boolean items, if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 10.453%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 89.547%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrItems, arrDefaults, arrResults, 
+ blnVal</p>
+<p class="Code" style="margin-left: 12px;">arrItems = Array( &quot;Lights&quot;, 
+ &quot;Off&quot;, &quot;On&quot;, _</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Cameras&quot;, 
+ &quot;Disabled&quot;, &quot;Enabled&quot;, _</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Action&quot;, 
+ &quot;False&quot;, &quot;True&quot; )</p>
+<p class="Code" style="margin-left: 12px;">arrDefaults = array(True, True, 
+ True)</p>
+<p class="Code" style="margin-left: 12px;">arrResults = Rhino.GetBoolean(&quot;Boolean 
+ options&quot;, arrItems, arrDefaults)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrResults) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For Each blnVal 
+ In arrResults</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Rhino.Print 
+ blnVal</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="getstring.htm">GetString</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

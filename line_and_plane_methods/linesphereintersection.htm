@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>LineSphereIntersection</title>
+<link rel="StyleSheet" href="../rhinoscript.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="../whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("RhinoScript Methods\nLine, Circle & Plane Methods\nLineSphereIntersection");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../whd_show0.gif","../whd_show2.gif","../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../whd_hide0.gif","../whd_hide2.gif","../whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../index.html", "", ">", "Home", "../title.htm");
+document.write("<a href=\"../rhinoscript_methods.htm\">RhinoScript Methods<\/a> > <a href=\"plane_methods.htm\">Line, Circle & Plane Methods<\/a> > LineSphereIntersection<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("../index.html");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>LineSphereIntersection</h1>
+<p>Calculates the intersection of a line and a sphere. &#160;&#160;</p>
+<h3>Syntax</h3>
+<p class="Code">Rhino.LineSphereIntersection (arrLine, arrSpherePlane, 
+ dblSphereRadius)</p>
+<h3>Parameters</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.88%;" />
+	<col style="width: 90.12%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.88%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrLine</p></td>
+		<td style="width: 90.12%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;Two 3-D points 
+		 identifying the starting and ending points of the line.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.88%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">arrSpherePlane</p></td>
+		<td style="width: 90.12%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Array. &#160;An equatorial 
+		 plane of the sphere. &#160;The origin of the plane will be the 
+		 center point of the sphere.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.88%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body" style="font-style: italic;">dblSphereRadius</p></td>
+		<td style="width: 90.12%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Required. &#160;Number. &#160;The radius 
+		 of the sphere.</p></td>
+	</tr>
+</table>
+<h3>Returns</h3>
+<table cellspacing="0" width="100%">
+	<col style="width: 9.658%;" />
+	<col style="width: 90.342%;" />
+	<tr style="vertical-align: top;">
+		<td style="width: 9.658%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Array</p></td>
+		<td style="width: 90.342%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">An array of intersection points, either 
+		 one or two, if successful.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="width: 9.658%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">Null</p></td>
+		<td style="width: 90.342%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="Table-Body">If not successful, or on error.</p></td>
+	</tr>
+</table>
+<h3>Example</h3>
+<p class="Code" style="margin-left: 12px;">Dim arrLine, arrPlane, dblHeight, 
+ dblRadius</p>
+<p class="Code" style="margin-left: 12px;">Dim arrPoints, i</p>
+<p class="Code" style="margin-left: 12px;">arrPlane = Rhino.WorldXYPlane</p>
+<p class="Code" style="margin-left: 12px;">dblRadius = 10</p>
+<p class="Code" style="margin-left: 12px;">arrLine = Array(Array(-10,0,0), 
+ Array(10,0,10))</p>
+<p class="Code" style="margin-left: 12px;">arrPoints = Rhino.LineSphereIntersection(arrLine, 
+ arrPlane, dblRadius)</p>
+<p class="Code" style="margin-left: 12px;">If IsArray(arrPoints) Then</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;For i = 0 To UBound(arrPoints)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;&#160;&#160;Rhino.AddPoint 
+ arrPoints(i)</p>
+<p class="Code" style="margin-left: 12px;">&#160;&#160;Next</p>
+<p class="Code" style="margin-left: 12px;">End If</p>
+<h3>Also See</h3>
+<p><a href="linearcintersection.htm">LineArcIntersection</a></p>
+<p><a href="lineboxintersection.htm">LineBoxIntersection</a></p>
+<p><a href="linecircleintersection.htm">LineCircleIntersection</a></p>
+<p><a href="linecylinderintersection.htm">LineCylinderIntersection</a></p>
+<p><a href="linelineintersection.htm">LineLineIntersection</a></p>
+<p><a href="lineplaneintersection.htm">LinePlaneIntersection</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

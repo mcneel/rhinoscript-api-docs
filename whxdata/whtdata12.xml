@@ -1,0 +1,28 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="AddMaterialToLayer" url="material_methods/addmaterialtolayer.htm" />
+<item name="AddMaterialToObject" url="material_methods/addmaterialtoobject.htm" />
+<item name="CopyMaterial" url="material_methods/copymaterial.htm" />
+<item name="IsMaterial" url="material_methods/ismaterial.htm" />
+<item name="IsMaterialDefault" url="material_methods/ismaterialdefault.htm" />
+<item name="IsMaterialReference" url="material_methods/ismaterialreference.htm" />
+<item name="MatchMaterial" url="material_methods/matchmaterial.htm" />
+<item name="MaterialBump" url="material_methods/materialbump.htm" />
+<item name="MaterialColor" url="material_methods/materialcolor.htm" />
+<item name="MaterialCount" url="material_methods/materialcount.htm" />
+<item name="MaterialEnvironmentMap" url="material_methods/materialenvironmentmap.htm" />
+<item name="MaterialName" url="material_methods/materialname.htm" />
+<item name="MaterialId" url="material_methods/materialid.htm" />
+<item name="MaterialIds" url="material_methods/materialids.htm" />
+<item name="MaterialIndex" url="material_methods/materialindex.htm" />
+<item name="MaterialIndices" url="material_methods/materialindices.htm" />
+<item name="MaterialReflectiveColor" url="material_methods/materialreflectivecolor.htm" />
+<item name="MaterialsByColor" url="material_methods/materialsbycolor.htm" />
+<item name="MaterialsByName" url="material_methods/materialsbyname.htm" />
+<item name="MaterialShine" url="material_methods/materialshine.htm" />
+<item name="MaterialTexture" url="material_methods/materialtexture.htm" />
+<item name="MaterialTransparency" url="material_methods/materialtransparency.htm" />
+<item name="MaterialTransparencyMap" url="material_methods/materialtransparencymap.htm" />
+<item name="ResetMaterial" url="material_methods/resetmaterial.htm" />
+
+</tocdata>
