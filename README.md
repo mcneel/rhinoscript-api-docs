@@ -4,5 +4,5 @@ This repository houses the Adobe RoboHelp 8-generated documentation for RhinoScr
 
 Each product variation has its own branch:
 
-* [`wip`](../../tree/wip) - Rhino WIP for Windows
+* [6`](../../tree/6) - Rhino 6 for Windows
 * [`5`](../../tree/5) - Rhino 5 for Windows
